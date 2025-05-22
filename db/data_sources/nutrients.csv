@@ -1,0 +1,47 @@
+dri_identifier,name,category,default_unit,analysis_unit,conversion_factor,description,sort_order
+PROCNT,Protein,Macronutrient,g,g,1.0,Total protein,10
+CHOCDF,Carbohydrate,Macronutrient,g,g,1.0,"Total carbohydrate, by difference",20
+FIBTG,"Fiber, total dietary",Macronutrient,g,g,1.0,Total dietary fiber,30
+FAT,"Fat, total",Macronutrient,g,g,1.0,Total lipid (fat),40
+FASAT,"Fatty acids, total saturated",Macronutrient,% kcal,g,,Saturated fatty acids percentage of total calories,41
+FALINOLEIC,"Linoleic acid (18:2)",Macronutrient,g,g,1.0,Omega-6 fatty acid,42
+FAALALIN,"Alpha-linolenic acid (18:3)",Macronutrient,g,g,1.0,Omega-3 fatty acid,43
+SUGAR_ADD,"Sugars, added",Macronutrient,% kcal,g,,Added sugars percentage of total calories,50
+CA,Calcium,Mineral,mg,mg,1.0,Calcium,100
+FE,Iron,Mineral,mg,mg,1.0,Iron,110
+MG,Magnesium,Mineral,mg,mg,1.0,Magnesium,120
+P,Phosphorus,Mineral,mg,mg,1.0,Phosphorus,130
+K,Potassium,Mineral,mg,mg,1.0,Potassium,140
+NA,Sodium,Mineral,mg,mg,1.0,Sodium,150
+ZN,Zinc,Mineral,mg,mg,1.0,Zinc,160
+ID,Iodine,Mineral,mcg,mcg,1.0,Iodine,170
+CL,Chloride,Mineral,mg,mg,1.0,Chloride,175
+CR,Chromium,Mineral,mcg,mcg,1.0,Chromium,180
+CU,Copper,Mineral,mcg,mcg,1.0,Copper,190
+FL,Fluoride,Mineral,mg,mg,1.0,Fluoride,200
+MN,Manganese,Mineral,mg,mg,1.0,Manganese,210
+MO,Molybdenum,Mineral,mcg,mcg,1.0,Molybdenum,220
+SE,Selenium,Mineral,mcg,mcg,1.0,Selenium,230
+VITA_RAE,"Vitamin A, RAE",Vitamin,mcg RAE,mcg RAE,1.0,"Vitamin A, Retinol Activity Equivalents",300
+VITE_AT,"Vitamin E, Alpha-Tocopherol",Vitamin,mg AT,mg AT,1.0,"Vitamin E, Alpha-Tocopherol",310
+VITD_IU,"Vitamin D, IU",Vitamin,IU,IU,1.0,"Vitamin D, International Units",320
+VITD_MCG,"Vitamin D, mcg",Vitamin,mcg,mcg,1.0,"Vitamin D, micrograms (1 mcg = 40 IU)",321
+VITC,"Vitamin C, ascorbic acid",Vitamin,mg,mg,1.0,Vitamin C,330
+THIA,Thiamin,Vitamin,mg,mg,1.0,Thiamin (Vitamin B1),340
+RIBF,Riboflavin,Vitamin,mg,mg,1.0,Riboflavin (Vitamin B2),350
+NIA,Niacin,Vitamin,mg,mg,1.0,Niacin (Vitamin B3),360
+VITB6,"Vitamin B6",Vitamin,mg,mg,1.0,Vitamin B6,370
+FOL_DFE,"Folate, DFE",Vitamin,mcg DFE,mcg DFE,1.0,"Folate, Dietary Folate Equivalents",380
+VITB12,"Vitamin B12",Vitamin,mcg,mcg,1.0,Vitamin B12 (Cobalamin),390
+CHOLN,Choline,Vitamin,mg,mg,1.0,Choline,400
+VITK,"Vitamin K, phylloquinone",Vitamin,mcg,mcg,1.0,Vitamin K,410
+PANTAC,"Pantothenic Acid",Vitamin,mg,mg,1.0,Pantothenic Acid (Vitamin B5),420
+BIOT,Biotin,Vitamin,mcg,mcg,1.0,Biotin (Vitamin B7),430
+WATER,Water,Other,L,L,1.0,Total Water,500
+BORON,Boron,Mineral,mg,mg,1.0,Boron,600
+NICKEL,Nickel,Mineral,mcg,mcg,1.0,Nickel,610
+VANAD,Vanadium,Mineral,mg,mg,1.0,Vanadium,620
+ARSENIC,Arsenic,Mineral,mcg,mcg,1.0,Arsenic,630
+SILICON,Silicon,Mineral,mg,mg,1.0,Silicon,640
+SULFATE,Sulfate,Mineral,mg,mg,1.0,Sulfate,650
+ENERC_KCAL,Energy,Macronutrient,kcal,kcal,1.0,Energy,1

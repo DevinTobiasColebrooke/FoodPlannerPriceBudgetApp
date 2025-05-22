@@ -1,0 +1,18 @@
+life_stage_group_id_placeholder,reference_height_cm,reference_weight_kg,median_bmi,source_document_reference
+"Adult Males Reference",177.8,70,,DGA App2 text (5ft 10in, 154 lbs)
+"Adult Females Reference",162.56,57.15,,DGA App2 text (5ft 4in, 126 lbs)
+"Infants 2-6 months",64,7,,NHANES III (Vit/Min Report Table 1-2)
+"Infants 7-11 months",72,9,,NHANES III (Vit/Min Report Table 1-2)
+"Children 1-3 years",91,13,,NHANES III (Vit/Min Report Table 1-2)
+"Children 4-8 years",118,22,15.8,NHANES III (Vit/Min Report Table 1-2)
+"Males 9-13 years",147,40,18.5,NHANES III (Vit/Min Report Table 1-2)
+"Males 14-18 years",174,64,21.3,NHANES III (Vit/Min Report Table 1-2)
+"Males 19-30 years",176,76,24.4,NHANES III (Vit/Min Report Table 1-2)
+"Females 9-13 years",148,40,18.3,NHANES III (Vit/Min Report Table 1-2)
+"Females 14-18 years",163,57,21.3,NHANES III (Vit/Min Report Table 1-2)
+"Females 19-30 years",163,61,22.8,NHANES III (Vit/Min Report Table 1-2)
+"Infants 0-11 months DLW",63.4,6.8,,IOM EER Report Table 5-2
+"Children 1-8 years DLW",104,21.3,,IOM EER Report Table 5-2
+"Children 9-18 years DLW",159.0,55.8,,IOM EER Report Table 5-2
+"Adults 19+ years DLW",167.0,75.7,,IOM EER Report Table 5-2
+"Pregnant/Lactating Women DLW",164.3,73.7,,IOM EER Report Table 5-2

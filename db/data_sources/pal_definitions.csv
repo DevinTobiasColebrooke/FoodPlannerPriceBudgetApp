@@ -1,0 +1,113 @@
+life_stage_name,pal_category,pal_range_min_value,pal_range_max_value,percentile_value,pal_value_at_percentile,coefficient_for_eer_equation,source_document_reference
+"General Adult Male",Sedentary,,,,1.00,1.00,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Male","Low Active",,,,1.11,1.11,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Male",Active,,,,1.25,1.25,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Male","Very Active",,,,1.48,1.48,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Female",Sedentary,,,,1.00,1.00,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Female","Low Active",,,,1.12,1.12,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Female",Active,,,,1.27,1.27,IOM EER 2002/2005 Table S-9 Coefficients
+"General Adult Female","Very Active",,,,1.45,1.45,IOM EER 2002/2005 Table S-9 Coefficients
+"General Boys 3-18 years",Sedentary,,,,1.00,1.00,IOM EER 2002/2005 Child Coefficients
+"General Boys 3-18 years","Low Active",,,,1.13,1.13,IOM EER 2002/2005 Child Coefficients
+"General Boys 3-18 years",Active,,,,1.26,1.26,IOM EER 2002/2005 Child Coefficients
+"General Boys 3-18 years","Very Active",,,,1.42,1.42,IOM EER 2002/2005 Child Coefficients
+"General Girls 3-18 years",Sedentary,,,,1.00,1.00,IOM EER 2002/2005 Child Coefficients
+"General Girls 3-18 years","Low Active",,,,1.16,1.16,IOM EER 2002/2005 Child Coefficients
+"General Girls 3-18 years",Active,,,,1.31,1.31,IOM EER 2002/2005 Child Coefficients
+"General Girls 3-18 years","Very Active",,,,1.56,1.56,IOM EER 2002/2005 Child Coefficients
+"Children 3-8 years",Inactive,1.00,1.30,,,,IOM EER Report Table 5-4
+"Children 3-8 years","Low active",1.31,1.43,,,,IOM EER Report Table 5-4
+"Children 3-8 years",Active,1.44,1.58,,,,IOM EER Report Table 5-4
+"Children 3-8 years","Very active",1.59,2.50,,,,IOM EER Report Table 5-4
+"Children 9-13 years",Inactive,1.00,1.43,,,,IOM EER Report Table 5-4
+"Children 9-13 years","Low active",1.44,1.58,,,,IOM EER Report Table 5-4
+"Children 9-13 years",Active,1.59,1.76,,,,IOM EER Report Table 5-4
+"Children 9-13 years","Very active",1.77,2.50,,,,IOM EER Report Table 5-4
+"Adolescents 14-18 years",Inactive,1.00,1.55,,,,IOM EER Report Table 5-4
+"Adolescents 14-18 years","Low active",1.56,1.72,,,,IOM EER Report Table 5-4
+"Adolescents 14-18 years",Active,1.73,1.91,,,,IOM EER Report Table 5-4
+"Adolescents 14-18 years","Very active",1.92,2.50,,,,IOM EER Report Table 5-4
+"Adults 19+ years",Inactive,1.00,1.52,,,,IOM EER Report Table 5-4
+"Adults 19+ years","Low active",1.53,1.67,,,,IOM EER Report Table 5-4
+"Adults 19+ years",Active,1.68,1.84,,,,IOM EER Report Table 5-4
+"Adults 19+ years","Very active",1.85,2.50,,,,IOM EER Report Table 5-4
+"Infants 0-6 months",,1.00,,,10,,,IOM EER Report Table 5-3
+"Infants 0-6 months",,1.07,,,25,,,IOM EER Report Table 5-3
+"Infants 0-6 months",,1.23,,,50,,,IOM EER Report Table 5-3
+"Infants 0-6 months",,1.40,,,75,,,IOM EER Report Table 5-3
+"Infants 0-6 months",,1.58,,,90,,,IOM EER Report Table 5-3
+"Infants 7-12 months",,1.08,,,10,,,IOM EER Report Table 5-3
+"Infants 7-12 months",,1.19,,,25,,,IOM EER Report Table 5-3
+"Infants 7-12 months",,1.31,,,50,,,IOM EER Report Table 5-3
+"Infants 7-12 months",,1.47,,,75,,,IOM EER Report Table 5-3
+"Infants 7-12 months",,1.65,,,90,,,IOM EER Report Table 5-3
+"Children 1-3 years",,1.06,,,10,,,IOM EER Report Table 5-3
+"Children 1-3 years",,1.17,,,25,,,IOM EER Report Table 5-3
+"Children 1-3 years",,1.33,,,50,,,IOM EER Report Table 5-3
+"Children 1-3 years",,1.49,,,75,,,IOM EER Report Table 5-3
+"Children 1-3 years",,1.64,,,90,,,IOM EER Report Table 5-3
+"Children 4-8 years",,1.20,,,10,,,IOM EER Report Table 5-3
+"Children 4-8 years",,1.32,,,25,,,IOM EER Report Table 5-3
+"Children 4-8 years",,1.44,,,50,,,IOM EER Report Table 5-3
+"Children 4-8 years",,1.60,,,75,,,IOM EER Report Table 5-3
+"Children 4-8 years",,1.76,,,90,,,IOM EER Report Table 5-3
+"Children 9-13 years",,1.29,,,10,,,IOM EER Report Table 5-3
+"Children 9-13 years",,1.44,,,25,,,IOM EER Report Table 5-3
+"Children 9-13 years",,1.59,,,50,,,IOM EER Report Table 5-3
+"Children 9-13 years",,1.77,,,75,,,IOM EER Report Table 5-3
+"Children 9-13 years",,1.92,,,90,,,IOM EER Report Table 5-3
+"Adolescents 14-18 years",,1.40,,,10,,,IOM EER Report Table 5-3
+"Adolescents 14-18 years",,1.56,,,25,,,IOM EER Report Table 5-3
+"Adolescents 14-18 years",,1.73,,,50,,,IOM EER Report Table 5-3
+"Adolescents 14-18 years",,1.92,,,75,,,IOM EER Report Table 5-3
+"Adolescents 14-18 years",,2.11,,,90,,,IOM EER Report Table 5-3
+"Adults 19-30 years",,1.35,,,10,,,IOM EER Report Table 5-3
+"Adults 19-30 years",,1.50,,,25,,,IOM EER Report Table 5-3
+"Adults 19-30 years",,1.67,,,50,,,IOM EER Report Table 5-3
+"Adults 19-30 years",,1.85,,,75,,,IOM EER Report Table 5-3
+"Adults 19-30 years",,2.05,,,90,,,IOM EER Report Table 5-3
+"Adults 31-50 years",,1.39,,,10,,,IOM EER Report Table 5-3
+"Adults 31-50 years",,1.53,,,25,,,IOM EER Report Table 5-3
+"Adults 31-50 years",,1.69,,,50,,,IOM EER Report Table 5-3
+"Adults 31-50 years",,1.86,,,75,,,IOM EER Report Table 5-3
+"Adults 31-50 years",,2.03,,,90,,,IOM EER Report Table 5-3
+"Adults 51-70 years",,1.39,,,10,,,IOM EER Report Table 5-3
+"Adults 51-70 years",,1.52,,,25,,,IOM EER Report Table 5-3
+"Adults 51-70 years",,1.67,,,50,,,IOM EER Report Table 5-3
+"Adults 51-70 years",,1.82,,,75,,,IOM EER Report Table 5-3
+"Adults 51-70 years",,1.99,,,90,,,IOM EER Report Table 5-3
+"Adults 71+ years",,1.31,,,10,,,IOM EER Report Table 5-3
+"Adults 71+ years",,1.46,,,25,,,IOM EER Report Table 5-3
+"Adults 71+ years",,1.62,,,50,,,IOM EER Report Table 5-3
+"Adults 71+ years",,1.79,,,75,,,IOM EER Report Table 5-3
+"Adults 71+ years",,1.95,,,90,,,IOM EER Report Table 5-3
+"Children 0-2.99 years",,1.00,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 0-2.99 years",,1.11,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 0-2.99 years",,1.27,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 0-2.99 years",,1.44,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 0-2.99 years",,1.61,,,90,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 3-8.99 years",,1.20,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 3-8.99 years",,1.31,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 3-8.99 years",,1.44,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 3-8.99 years",,1.59,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 3-8.99 years",,1.75,,,90,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 9-13.99 years",,1.29,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 9-13.99 years",,1.44,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 9-13.99 years",,1.59,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 9-13.99 years",,1.77,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Children 9-13.99 years",,1.92,,,90,,,IOM EER Report Table 5-3 (Broad Group)
+"Adolescents 14-18.99 years",,1.40,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Adolescents 14-18.99 years",,1.56,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Adolescents 14-18.99 years",,1.73,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Adolescents 14-18.99 years",,1.92,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Adolescents 14-18.99 years",,2.11,,,90,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 19-70.99 years",,1.39,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 19-70.99 years",,1.53,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 19-70.99 years",,1.68,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 19-70.99 years",,1.85,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 19-70.99 years",,2.03,,,90,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 71+ years",,1.31,,,10,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 71+ years",,1.46,,,25,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 71+ years",,1.62,,,50,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 71+ years",,1.79,,,75,,,IOM EER Report Table 5-3 (Broad Group)
+"Adults 71+ years",,1.95,,,90,,,IOM EER Report Table 5-3 (Broad Group)

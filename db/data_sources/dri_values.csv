@@ -1,0 +1,1909 @@
+```csv
+nutrient_identifier,life_stage_name,dri_type,value_numeric,value_string,unit,source_of_goal,criterion,footnote_marker,notes,source_document
+PROCNT,"Infants 7-12 months",RDA,11,,g,RDA,,,"Disclosure a: Reflects DRIs for 7-12mo or 6-12mo applied to 6-11mo. Original source: IOM DRIs Essential Guide 2006",DGA App1 T A1-1
+CHOCDF,"Infants 7-12 months",AI,95,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+FIBTG,"Infants 7-12 months",AI,,,g,AI,,d,"n/a for this age group. Disclosure a",DGA App1 T A1-1
+FAT,"Infants 7-12 months",AMDR_perc_range,,,g,AMDR,,d,"n/a for this age group. Disclosure a",DGA App1 T A1-1
+FALINOLEIC,"Infants 7-12 months",AI,4.6,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+FAALALIN,"Infants 7-12 months",AI,0.5,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+CA,"Infants 7-12 months",AI,260,,mg,AI,,,"Disclosure a. Original source: IOM DRIs Ca/VitD 2011",DGA App1 T A1-1
+FE,"Infants 7-12 months",RDA,11,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+MG,"Infants 7-12 months",AI,75,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+P,"Infants 7-12 months",AI,275,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+K,"Infants 7-12 months",AI,860,,mg,AI,,,"Disclosure a. Original source: NASEM DRIs Na/K 2019",DGA App1 T A1-1
+NA,"Infants 7-12 months",AI,370,,mg,AI,,,"Disclosure a. Original source: NASEM DRIs Na/K 2019",DGA App1 T A1-1
+ZN,"Infants 7-12 months",RDA,3,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+VITA_RAE,"Infants 7-12 months",AI,500,,mcg RAE,AI,,c,"Disclosure a",DGA App1 T A1-1
+VITE_AT,"Infants 7-12 months",AI,5,,mg AT,AI,,c,"Disclosure a",DGA App1 T A1-1
+VITD_IU,"Infants 7-12 months",AI,400,,IU,AI,,c,"Disclosure a. Original source: IOM DRIs Ca/VitD 2011",DGA App1 T A1-1
+VITC,"Infants 7-12 months",AI,50,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+THIA,"Infants 7-12 months",AI,0.3,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+RIBF,"Infants 7-12 months",AI,0.4,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+NIA,"Infants 7-12 months",AI,4,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+VITB6,"Infants 7-12 months",AI,0.3,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+VITB12,"Infants 7-12 months",AI,0.5,,mcg,AI,,,"Disclosure a",DGA App1 T A1-1
+CHOLN,"Infants 7-12 months",AI,150,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+VITK,"Infants 7-12 months",AI,2.5,,mcg,AI,,,"Disclosure a",DGA App1 T A1-1
+FOL_DFE,"Infants 7-12 months",AI,80,,mcg DFE,AI,,c,"Disclosure a",DGA App1 T A1-1
+PROCNT,"Toddlers 12-23 months",RDA,13,,g,RDA,,,"Disclosure a: Reflects DRIs for 1-3y applied to 12-23mo. Original source: IOM DRIs Essential Guide 2006",DGA App1 T A1-1
+CHOCDF,"Toddlers 12-23 months",RDA,130,,g,RDA,,,"Disclosure a",DGA App1 T A1-1
+FIBTG,"Toddlers 12-23 months",AI,19,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+FAT,"Toddlers 12-23 months",AMDR_perc_range,,"30-40",% kcal,AMDR,,,"Disclosure a",DGA App1 T A1-1
+FALINOLEIC,"Toddlers 12-23 months",AI,7,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+FAALALIN,"Toddlers 12-23 months",AI,0.7,,g,AI,,,"Disclosure a",DGA App1 T A1-1
+CA,"Toddlers 12-23 months",RDA,700,,mg,RDA,,,"Disclosure a. Original source: IOM DRIs Ca/VitD 2011",DGA App1 T A1-1
+FE,"Toddlers 12-23 months",RDA,7,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+MG,"Toddlers 12-23 months",RDA,80,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+P,"Toddlers 12-23 months",RDA,460,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+K,"Toddlers 12-23 months",AI,2000,,mg,AI,,,"Disclosure a. Original source: NASEM DRIs Na/K 2019",DGA App1 T A1-1
+NA,"Toddlers 12-23 months",CDRR,1200,,mg,CDRR,,,"Disclosure a. Original source: NASEM DRIs Na/K 2019",DGA App1 T A1-1
+ZN,"Toddlers 12-23 months",RDA,3,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+VITA_RAE,"Toddlers 12-23 months",RDA,300,,mcg RAE,RDA,,c,"Disclosure a",DGA App1 T A1-1
+VITE_AT,"Toddlers 12-23 months",RDA,6,,mg AT,RDA,,c,"Disclosure a",DGA App1 T A1-1
+VITD_IU,"Toddlers 12-23 months",RDA,600,,IU,RDA,,c,"Disclosure a. Original source: IOM DRIs Ca/VitD 2011",DGA App1 T A1-1
+VITC,"Toddlers 12-23 months",RDA,15,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+THIA,"Toddlers 12-23 months",RDA,0.5,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+RIBF,"Toddlers 12-23 months",RDA,0.5,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+NIA,"Toddlers 12-23 months",RDA,6,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+VITB6,"Toddlers 12-23 months",RDA,0.5,,mg,RDA,,,"Disclosure a",DGA App1 T A1-1
+VITB12,"Toddlers 12-23 months",RDA,0.9,,mcg,RDA,,,"Disclosure a",DGA App1 T A1-1
+CHOLN,"Toddlers 12-23 months",AI,200,,mg,AI,,,"Disclosure a",DGA App1 T A1-1
+VITK,"Toddlers 12-23 months",AI,30,,mcg,AI,,,"Disclosure a",DGA App1 T A1-1
+FOL_DFE,"Toddlers 12-23 months",RDA,150,,mcg DFE,RDA,,c,"Disclosure a",DGA App1 T A1-1
+PROCNT,"Children 2-3 years",AMDR_perc_range,,"5-20",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Children 2-3 years",RDA,13,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Children 2-3 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Children 2-3 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Children 2-3 years",AI,14,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1000,DGA App1 T A1-2
+SUGAR_ADD,"Children 2-3 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Children 2-3 years",AMDR_perc_range,,"30-40",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Children 2-3 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Children 2-3 years",AI,7,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Children 2-3 years",AI,0.7,,g,AI,,,,DGA App1 T A1-2
+CA,"Children 2-3 years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Children 2-3 years",RDA,7,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Children 2-3 years",RDA,80,,mg,RDA,,,,DGA App1 T A1-2
+P,"Children 2-3 years",RDA,460,,mg,RDA,,,,DGA App1 T A1-2
+K,"Children 2-3 years",AI,2000,,mg,AI,,,,DGA App1 T A1-2
+NA,"Children 2-3 years",CDRR,1200,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Children 2-3 years",RDA,3,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Children 2-3 years",RDA,300,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Children 2-3 years",RDA,6,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Children 2-3 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Children 2-3 years",RDA,15,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Children 2-3 years",RDA,0.5,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Children 2-3 years",RDA,0.5,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Children 2-3 years",RDA,6,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Children 2-3 years",RDA,0.5,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Children 2-3 years",RDA,0.9,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Children 2-3 years",AI,200,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Children 2-3 years",AI,30,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Children 2-3 years",RDA,150,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 4-8 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 4-8 years",RDA,19,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 4-8 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 4-8 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 4-8 years",AI,17,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1200 (1.2*14=16.8, rounded to 17),DGA App1 T A1-2
+SUGAR_ADD,"Females 4-8 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 4-8 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 4-8 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 4-8 years",AI,10,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 4-8 years",AI,0.9,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 4-8 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 4-8 years",RDA,10,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 4-8 years",RDA,130,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 4-8 years",RDA,500,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 4-8 years",AI,2300,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 4-8 years",CDRR,1500,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 4-8 years",RDA,5,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 4-8 years",RDA,400,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 4-8 years",RDA,7,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 4-8 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Females 4-8 years",RDA,25,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 4-8 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 4-8 years",RDA,1.2,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 4-8 years",AI,250,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 4-8 years",AI,55,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 4-8 years",RDA,200,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 9-13 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 9-13 years",RDA,34,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 9-13 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 9-13 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 9-13 years",AI,22,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1600 (1.6*14=22.4, rounded to 22),DGA App1 T A1-2
+SUGAR_ADD,"Females 9-13 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 9-13 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 9-13 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 9-13 years",AI,10,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 9-13 years",AI,1.0,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 9-13 years",RDA,1300,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 9-13 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 9-13 years",RDA,240,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 9-13 years",RDA,1250,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 9-13 years",AI,2300,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 9-13 years",CDRR,1800,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 9-13 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 9-13 years",RDA,600,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 9-13 years",RDA,11,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 9-13 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Females 9-13 years",RDA,45,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 9-13 years",RDA,0.9,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 9-13 years",RDA,0.9,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 9-13 years",RDA,12,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 9-13 years",RDA,1.0,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 9-13 years",RDA,1.8,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 9-13 years",AI,375,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 9-13 years",AI,60,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 9-13 years",RDA,300,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 14-18 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 14-18 years",RDA,46,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 14-18 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 14-18 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 14-18 years",AI,25,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1800 (1.8*14=25.2, rounded to 25),DGA App1 T A1-2
+SUGAR_ADD,"Females 14-18 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 14-18 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 14-18 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 14-18 years",AI,11,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 14-18 years",AI,1.1,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 14-18 years",RDA,1300,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 14-18 years",RDA,15,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 14-18 years",RDA,360,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 14-18 years",RDA,1250,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 14-18 years",AI,2300,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 14-18 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 14-18 years",RDA,9,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 14-18 years",RDA,700,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 14-18 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 14-18 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Females 14-18 years",RDA,65,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 14-18 years",RDA,1.0,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 14-18 years",RDA,1.0,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 14-18 years",RDA,14,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 14-18 years",RDA,1.2,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 14-18 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 14-18 years",AI,400,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 14-18 years",AI,75,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 14-18 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 19-30 years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 19-30 years",RDA,46,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 19-30 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 19-30 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 19-30 years",AI,28,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2000 (2.0*14=28),DGA App1 T A1-2
+SUGAR_ADD,"Females 19-30 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 19-30 years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 19-30 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 19-30 years",AI,12,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 19-30 years",AI,1.1,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 19-30 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 19-30 years",RDA,18,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 19-30 years",RDA,310,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 19-30 years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 19-30 years",AI,2600,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 19-30 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 19-30 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 19-30 years",RDA,700,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 19-30 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 19-30 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Females 19-30 years",RDA,75,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 19-30 years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 19-30 years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 19-30 years",RDA,14,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 19-30 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 19-30 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 19-30 years",AI,425,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 19-30 years",AI,90,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 19-30 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 31-50 years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 31-50 years",RDA,46,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 31-50 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 31-50 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 31-50 years",AI,25,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1800 (1.8*14=25.2, rounded to 25),DGA App1 T A1-2
+SUGAR_ADD,"Females 31-50 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 31-50 years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 31-50 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 31-50 years",AI,12,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 31-50 years",AI,1.1,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 31-50 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 31-50 years",RDA,18,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 31-50 years",RDA,320,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 31-50 years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 31-50 years",AI,2600,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 31-50 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 31-50 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 31-50 years",RDA,700,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 31-50 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 31-50 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Females 31-50 years",RDA,75,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 31-50 years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 31-50 years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 31-50 years",RDA,14,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 31-50 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 31-50 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 31-50 years",AI,425,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 31-50 years",AI,90,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 31-50 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Females 51+ years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Females 51+ years",RDA,46,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Females 51+ years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Females 51+ years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Females 51+ years",AI,22,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1600 (1.6*14=22.4, rounded to 22),DGA App1 T A1-2
+SUGAR_ADD,"Females 51+ years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Females 51+ years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Females 51+ years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Females 51+ years",AI,11,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Females 51+ years",AI,1.1,,g,AI,,,,DGA App1 T A1-2
+CA,"Females 51+ years",RDA,1200,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Females 51+ years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Females 51+ years",RDA,320,,mg,RDA,,,,DGA App1 T A1-2
+P,"Females 51+ years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Females 51+ years",AI,2600,,mg,AI,,,,DGA App1 T A1-2
+NA,"Females 51+ years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Females 51+ years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Females 51+ years",RDA,700,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Females 51+ years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Females 51+ years",RDA,600,,IU,RDA,,c,"Vitamin D RDA for males and females ages 71+ years is 800 IU.",DGA App1 T A1-2
+VITD_IU,"Females 71+ years",RDA,800,,IU,RDA,,c,"Vitamin D RDA for males and females ages 71+ years is 800 IU.",DGA App1 T A1-2
+VITC,"Females 51+ years",RDA,75,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Females 51+ years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Females 51+ years",RDA,1.1,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Females 51+ years",RDA,14,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Females 51+ years",RDA,1.5,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Females 51+ years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Females 51+ years",AI,425,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Females 51+ years",AI,90,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Females 51+ years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 4-8 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 4-8 years",RDA,19,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 4-8 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 4-8 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 4-8 years",AI,20,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1400 (1.4*14=19.6, rounded to 20),DGA App1 T A1-2
+SUGAR_ADD,"Males 4-8 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 4-8 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 4-8 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 4-8 years",AI,10,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 4-8 years",AI,0.9,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 4-8 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Males 4-8 years",RDA,10,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 4-8 years",RDA,130,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 4-8 years",RDA,500,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 4-8 years",AI,2300,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 4-8 years",CDRR,1500,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 4-8 years",RDA,5,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 4-8 years",RDA,400,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 4-8 years",RDA,7,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 4-8 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Males 4-8 years",RDA,25,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 4-8 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 4-8 years",RDA,0.6,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 4-8 years",RDA,1.2,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 4-8 years",AI,250,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 4-8 years",AI,55,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 4-8 years",RDA,200,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 9-13 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 9-13 years",RDA,34,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 9-13 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 9-13 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 9-13 years",AI,25,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1800 (1.8*14=25.2, rounded to 25),DGA App1 T A1-2
+SUGAR_ADD,"Males 9-13 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 9-13 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 9-13 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 9-13 years",AI,12,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 9-13 years",AI,1.2,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 9-13 years",RDA,1300,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Males 9-13 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 9-13 years",RDA,240,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 9-13 years",RDA,1250,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 9-13 years",AI,2500,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 9-13 years",CDRR,1800,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 9-13 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 9-13 years",RDA,600,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 9-13 years",RDA,11,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 9-13 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Males 9-13 years",RDA,45,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 9-13 years",RDA,0.9,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 9-13 years",RDA,0.9,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 9-13 years",RDA,12,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 9-13 years",RDA,1.0,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 9-13 years",RDA,1.8,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 9-13 years",AI,375,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 9-13 years",AI,60,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 9-13 years",RDA,300,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 14-18 years",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 14-18 years",RDA,52,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 14-18 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 14-18 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 14-18 years",AI,31,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-2
+SUGAR_ADD,"Males 14-18 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 14-18 years",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 14-18 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 14-18 years",AI,16,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 14-18 years",AI,1.6,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 14-18 years",RDA,1300,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Males 14-18 years",RDA,11,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 14-18 years",RDA,410,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 14-18 years",RDA,1250,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 14-18 years",AI,3000,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 14-18 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 14-18 years",RDA,11,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 14-18 years",RDA,900,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 14-18 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 14-18 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Males 14-18 years",RDA,75,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 14-18 years",RDA,1.2,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 14-18 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 14-18 years",RDA,16,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 14-18 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 14-18 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 14-18 years",AI,550,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 14-18 years",AI,75,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 14-18 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 19-30 years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 19-30 years",RDA,56,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 19-30 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 19-30 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 19-30 years",AI,34,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-2
+SUGAR_ADD,"Males 19-30 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 19-30 years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 19-30 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 19-30 years",AI,17,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 19-30 years",AI,1.6,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 19-30 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Males 19-30 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 19-30 years",RDA,400,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 19-30 years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 19-30 years",AI,3400,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 19-30 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 19-30 years",RDA,11,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 19-30 years",RDA,900,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 19-30 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 19-30 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Males 19-30 years",RDA,90,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 19-30 years",RDA,1.2,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 19-30 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 19-30 years",RDA,16,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 19-30 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 19-30 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 19-30 years",AI,550,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 19-30 years",AI,120,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 19-30 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 31-50 years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 31-50 years",RDA,56,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 31-50 years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 31-50 years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 31-50 years",AI,31,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-2
+SUGAR_ADD,"Males 31-50 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 31-50 years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 31-50 years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 31-50 years",AI,17,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 31-50 years",AI,1.6,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 31-50 years",RDA,1000,,mg,RDA,,,,DGA App1 T A1-2
+FE,"Males 31-50 years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 31-50 years",RDA,420,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 31-50 years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 31-50 years",AI,3400,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 31-50 years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 31-50 years",RDA,11,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 31-50 years",RDA,900,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 31-50 years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 31-50 years",RDA,600,,IU,RDA,,d,,DGA App1 T A1-2
+VITC,"Males 31-50 years",RDA,90,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 31-50 years",RDA,1.2,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 31-50 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 31-50 years",RDA,16,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 31-50 years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 31-50 years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 31-50 years",AI,550,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 31-50 years",AI,120,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 31-50 years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Males 51+ years",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-2
+PROCNT,"Males 51+ years",RDA,56,,g,RDA,,,,DGA App1 T A1-2
+CHOCDF,"Males 51+ years",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-2
+CHOCDF,"Males 51+ years",RDA,130,,g,RDA,,,,DGA App1 T A1-2
+FIBTG,"Males 51+ years",AI,28,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2000 (2.0*14=28),DGA App1 T A1-2
+SUGAR_ADD,"Males 51+ years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FAT,"Males 51+ years",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-2
+FASAT,"Males 51+ years",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-2
+FALINOLEIC,"Males 51+ years",AI,14,,g,AI,,,,DGA App1 T A1-2
+FAALALIN,"Males 51+ years",AI,1.6,,g,AI,,,,DGA App1 T A1-2
+CA,"Males 51+ years",RDA,1000,,mg,RDA,,b,"Calcium RDA for males ages 71+ years is 1,200 mg.",DGA App1 T A1-2
+CA,"Males 71+ years",RDA,1200,,mg,RDA,,b,"Calcium RDA for males ages 71+ years is 1,200 mg.",DGA App1 T A1-2
+FE,"Males 51+ years",RDA,8,,mg,RDA,,,,DGA App1 T A1-2
+MG,"Males 51+ years",RDA,420,,mg,RDA,,,,DGA App1 T A1-2
+P,"Males 51+ years",RDA,700,,mg,RDA,,,,DGA App1 T A1-2
+K,"Males 51+ years",AI,3400,,mg,AI,,,,DGA App1 T A1-2
+NA,"Males 51+ years",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-2
+ZN,"Males 51+ years",RDA,11,,mg,RDA,,,,DGA App1 T A1-2
+VITA_RAE,"Males 51+ years",RDA,900,,mcg RAE,RDA,,d,,DGA App1 T A1-2
+VITE_AT,"Males 51+ years",RDA,15,,mg AT,RDA,,d,,DGA App1 T A1-2
+VITD_IU,"Males 51+ years",RDA,600,,IU,RDA,,c,"Vitamin D RDA for males and females ages 71+ years is 800 IU.",DGA App1 T A1-2
+VITD_IU,"Males 71+ years",RDA,800,,IU,RDA,,c,"Vitamin D RDA for males and females ages 71+ years is 800 IU.",DGA App1 T A1-2
+VITC,"Males 51+ years",RDA,90,,mg,RDA,,,,DGA App1 T A1-2
+THIA,"Males 51+ years",RDA,1.2,,mg,RDA,,,,DGA App1 T A1-2
+RIBF,"Males 51+ years",RDA,1.3,,mg,RDA,,,,DGA App1 T A1-2
+NIA,"Males 51+ years",RDA,16,,mg,RDA,,,,DGA App1 T A1-2
+VITB6,"Males 51+ years",RDA,1.7,,mg,RDA,,,,DGA App1 T A1-2
+VITB12,"Males 51+ years",RDA,2.4,,mcg,RDA,,,,DGA App1 T A1-2
+CHOLN,"Males 51+ years",AI,550,,mg,AI,,,,DGA App1 T A1-2
+VITK,"Males 51+ years",AI,120,,mcg,AI,,,,DGA App1 T A1-2
+FOL_DFE,"Males 51+ years",RDA,400,,mcg DFE,RDA,,d,,DGA App1 T A1-2
+PROCNT,"Pregnancy 14-18 years 1st Trimester",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 14-18 years 1st Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 1st Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 1st Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 14-18 years 1st Trimester",AI,25,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1800 (1.8*14=25.2, rounded to 25),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 14-18 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 14-18 years 1st Trimester",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 14-18 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 14-18 years 1st Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 14-18 years 1st Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 14-18 years 1st Trimester",RDA,1300,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 14-18 years 1st Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 14-18 years 1st Trimester",RDA,400,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 14-18 years 1st Trimester",RDA,1250,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 14-18 years 1st Trimester",AI,2600,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 14-18 years 1st Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 14-18 years 1st Trimester",RDA,12,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 14-18 years 1st Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 14-18 years 1st Trimester",RDA,750,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 14-18 years 1st Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 14-18 years 1st Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 14-18 years 1st Trimester",RDA,80,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 14-18 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 14-18 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 14-18 years 1st Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 14-18 years 1st Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 14-18 years 1st Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 14-18 years 1st Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 14-18 years 1st Trimester",AI,75,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 14-18 years 1st Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 14-18 years 2nd Trimester",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 14-18 years 2nd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 2nd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 2nd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 14-18 years 2nd Trimester",AI,31,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 14-18 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 14-18 years 2nd Trimester",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 14-18 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 14-18 years 2nd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 14-18 years 2nd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 14-18 years 2nd Trimester",RDA,1300,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 14-18 years 2nd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 14-18 years 2nd Trimester",RDA,400,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 14-18 years 2nd Trimester",RDA,1250,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 14-18 years 2nd Trimester",AI,2600,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 14-18 years 2nd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 14-18 years 2nd Trimester",RDA,12,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 14-18 years 2nd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 14-18 years 2nd Trimester",RDA,750,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 14-18 years 2nd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 14-18 years 2nd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 14-18 years 2nd Trimester",RDA,80,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 14-18 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 14-18 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 14-18 years 2nd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 14-18 years 2nd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 14-18 years 2nd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 14-18 years 2nd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 14-18 years 2nd Trimester",AI,75,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 14-18 years 2nd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 14-18 years 3rd Trimester",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 14-18 years 3rd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 3rd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 14-18 years 3rd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 14-18 years 3rd Trimester",AI,34,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 14-18 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 14-18 years 3rd Trimester",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 14-18 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 14-18 years 3rd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 14-18 years 3rd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 14-18 years 3rd Trimester",RDA,1300,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 14-18 years 3rd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 14-18 years 3rd Trimester",RDA,400,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 14-18 years 3rd Trimester",RDA,1250,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 14-18 years 3rd Trimester",AI,2600,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 14-18 years 3rd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 14-18 years 3rd Trimester",RDA,12,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 14-18 years 3rd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 14-18 years 3rd Trimester",RDA,750,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 14-18 years 3rd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 14-18 years 3rd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 14-18 years 3rd Trimester",RDA,80,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 14-18 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 14-18 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 14-18 years 3rd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 14-18 years 3rd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 14-18 years 3rd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 14-18 years 3rd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 14-18 years 3rd Trimester",AI,75,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 14-18 years 3rd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 1st Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 1st Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 1st Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 1st Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 19-30 years 1st Trimester",AI,28,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2000 (2.0*14=28),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 19-30 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 19-30 years 1st Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 19-30 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 19-30 years 1st Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 19-30 years 1st Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 19-30 years 1st Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 19-30 years 1st Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 19-30 years 1st Trimester",RDA,350,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 19-30 years 1st Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 19-30 years 1st Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 19-30 years 1st Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 19-30 years 1st Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 19-30 years 1st Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 19-30 years 1st Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 19-30 years 1st Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 19-30 years 1st Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 19-30 years 1st Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 19-30 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 19-30 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 19-30 years 1st Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 19-30 years 1st Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 19-30 years 1st Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 19-30 years 1st Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 19-30 years 1st Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 19-30 years 1st Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 2nd Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 2nd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 2nd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 2nd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 19-30 years 2nd Trimester",AI,34,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 19-30 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 19-30 years 2nd Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 19-30 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 19-30 years 2nd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 19-30 years 2nd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 19-30 years 2nd Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 19-30 years 2nd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 19-30 years 2nd Trimester",RDA,350,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 19-30 years 2nd Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 19-30 years 2nd Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 19-30 years 2nd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 19-30 years 2nd Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 19-30 years 2nd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 19-30 years 2nd Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 19-30 years 2nd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 19-30 years 2nd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 19-30 years 2nd Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 19-30 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 19-30 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 19-30 years 2nd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 19-30 years 2nd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 19-30 years 2nd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 19-30 years 2nd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 19-30 years 2nd Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 19-30 years 2nd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 3rd Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 19-30 years 3rd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 3rd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 19-30 years 3rd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 19-30 years 3rd Trimester",AI,36,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2600 (2.6*14=36.4, rounded to 36),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 19-30 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 19-30 years 3rd Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 19-30 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 19-30 years 3rd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 19-30 years 3rd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 19-30 years 3rd Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 19-30 years 3rd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 19-30 years 3rd Trimester",RDA,350,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 19-30 years 3rd Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 19-30 years 3rd Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 19-30 years 3rd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 19-30 years 3rd Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 19-30 years 3rd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 19-30 years 3rd Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 19-30 years 3rd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 19-30 years 3rd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 19-30 years 3rd Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 19-30 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 19-30 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 19-30 years 3rd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 19-30 years 3rd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 19-30 years 3rd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 19-30 years 3rd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 19-30 years 3rd Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 19-30 years 3rd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 1st Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 1st Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 1st Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 1st Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 31-50 years 1st Trimester",AI,25,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 1800 (1.8*14=25.2, rounded to 25),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 31-50 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 31-50 years 1st Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 31-50 years 1st Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 31-50 years 1st Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 31-50 years 1st Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 31-50 years 1st Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 31-50 years 1st Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 31-50 years 1st Trimester",RDA,360,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 31-50 years 1st Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 31-50 years 1st Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 31-50 years 1st Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 31-50 years 1st Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 31-50 years 1st Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 31-50 years 1st Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 31-50 years 1st Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 31-50 years 1st Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 31-50 years 1st Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 31-50 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 31-50 years 1st Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 31-50 years 1st Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 31-50 years 1st Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 31-50 years 1st Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 31-50 years 1st Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 31-50 years 1st Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 31-50 years 1st Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 2nd Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 2nd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 2nd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 2nd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 31-50 years 2nd Trimester",AI,31,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 31-50 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 31-50 years 2nd Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 31-50 years 2nd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 31-50 years 2nd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 31-50 years 2nd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 31-50 years 2nd Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 31-50 years 2nd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 31-50 years 2nd Trimester",RDA,360,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 31-50 years 2nd Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 31-50 years 2nd Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 31-50 years 2nd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 31-50 years 2nd Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 31-50 years 2nd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 31-50 years 2nd Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 31-50 years 2nd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 31-50 years 2nd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 31-50 years 2nd Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 31-50 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 31-50 years 2nd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 31-50 years 2nd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 31-50 years 2nd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 31-50 years 2nd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 31-50 years 2nd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 31-50 years 2nd Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 31-50 years 2nd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 3rd Trimester",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-3
+PROCNT,"Pregnancy 31-50 years 3rd Trimester",RDA,71,,g,RDA,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 3rd Trimester",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-3
+CHOCDF,"Pregnancy 31-50 years 3rd Trimester",RDA,175,,g,RDA,,,,DGA App1 T A1-3
+FIBTG,"Pregnancy 31-50 years 3rd Trimester",AI,34,,g,AI,"14g/1,000 kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-3
+SUGAR_ADD,"Pregnancy 31-50 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FAT,"Pregnancy 31-50 years 3rd Trimester",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-3
+FASAT,"Pregnancy 31-50 years 3rd Trimester",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-3
+FALINOLEIC,"Pregnancy 31-50 years 3rd Trimester",AI,13,,g,AI,,,,DGA App1 T A1-3
+FAALALIN,"Pregnancy 31-50 years 3rd Trimester",AI,1.4,,g,AI,,,,DGA App1 T A1-3
+CA,"Pregnancy 31-50 years 3rd Trimester",RDA,1000,,mg,RDA,,,,DGA App1 T A1-3
+FE,"Pregnancy 31-50 years 3rd Trimester",RDA,27,,mg,RDA,,,,DGA App1 T A1-3
+MG,"Pregnancy 31-50 years 3rd Trimester",RDA,360,,mg,RDA,,,,DGA App1 T A1-3
+P,"Pregnancy 31-50 years 3rd Trimester",RDA,700,,mg,RDA,,,,DGA App1 T A1-3
+K,"Pregnancy 31-50 years 3rd Trimester",AI,2900,,mg,AI,,,,DGA App1 T A1-3
+NA,"Pregnancy 31-50 years 3rd Trimester",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-3
+ZN,"Pregnancy 31-50 years 3rd Trimester",RDA,11,,mg,RDA,,,,DGA App1 T A1-3
+ID,"Pregnancy 31-50 years 3rd Trimester",RDA,220,,mcg,RDA,,,,DGA App1 T A1-3
+VITA_RAE,"Pregnancy 31-50 years 3rd Trimester",RDA,770,,mcg RAE,RDA,,b,,DGA App1 T A1-3
+VITE_AT,"Pregnancy 31-50 years 3rd Trimester",RDA,15,,mg AT,RDA,,b,,DGA App1 T A1-3
+VITD_IU,"Pregnancy 31-50 years 3rd Trimester",RDA,600,,IU,RDA,,b,,DGA App1 T A1-3
+VITC,"Pregnancy 31-50 years 3rd Trimester",RDA,85,,mg,RDA,,,,DGA App1 T A1-3
+THIA,"Pregnancy 31-50 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+RIBF,"Pregnancy 31-50 years 3rd Trimester",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-3
+NIA,"Pregnancy 31-50 years 3rd Trimester",RDA,18,,mg,RDA,,,,DGA App1 T A1-3
+VITB6,"Pregnancy 31-50 years 3rd Trimester",RDA,1.9,,mg,RDA,,,,DGA App1 T A1-3
+VITB12,"Pregnancy 31-50 years 3rd Trimester",RDA,2.6,,mcg,RDA,,,,DGA App1 T A1-3
+CHOLN,"Pregnancy 31-50 years 3rd Trimester",AI,450,,mg,AI,,,,DGA App1 T A1-3
+VITK,"Pregnancy 31-50 years 3rd Trimester",AI,90,,mcg,AI,,,,DGA App1 T A1-3
+FOL_DFE,"Pregnancy 31-50 years 3rd Trimester",RDA,600,,mcg DFE,RDA,,b,,DGA App1 T A1-3
+PROCNT,"Lactation 14-18 years 0-6 months",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 14-18 years 0-6 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 14-18 years 0-6 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 14-18 years 0-6 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 14-18 years 0-6 months",AI,31,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 14-18 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 14-18 years 0-6 months",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 14-18 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 14-18 years 0-6 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 14-18 years 0-6 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 14-18 years 0-6 months",RDA,1300,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 14-18 years 0-6 months",RDA,10,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 14-18 years 0-6 months",RDA,360,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 14-18 years 0-6 months",RDA,1250,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 14-18 years 0-6 months",AI,2500,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 14-18 years 0-6 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 14-18 years 0-6 months",RDA,13,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 14-18 years 0-6 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 14-18 years 0-6 months",RDA,1200,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 14-18 years 0-6 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 14-18 years 0-6 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 14-18 years 0-6 months",RDA,115,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 14-18 years 0-6 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 14-18 years 0-6 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 14-18 years 0-6 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 14-18 years 0-6 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 14-18 years 0-6 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 14-18 years 0-6 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 14-18 years 0-6 months",AI,75,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 14-18 years 0-6 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+PROCNT,"Lactation 14-18 years 7-12 months",AMDR_perc_range,,"10-30",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 14-18 years 7-12 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 14-18 years 7-12 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 14-18 years 7-12 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 14-18 years 7-12 months",AI,31,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 14-18 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 14-18 years 7-12 months",AMDR_perc_range,,"25-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 14-18 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 14-18 years 7-12 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 14-18 years 7-12 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 14-18 years 7-12 months",RDA,1300,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 14-18 years 7-12 months",RDA,10,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 14-18 years 7-12 months",RDA,360,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 14-18 years 7-12 months",RDA,1250,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 14-18 years 7-12 months",AI,2500,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 14-18 years 7-12 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 14-18 years 7-12 months",RDA,13,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 14-18 years 7-12 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 14-18 years 7-12 months",RDA,1200,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 14-18 years 7-12 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 14-18 years 7-12 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 14-18 years 7-12 months",RDA,115,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 14-18 years 7-12 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 14-18 years 7-12 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 14-18 years 7-12 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 14-18 years 7-12 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 14-18 years 7-12 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 14-18 years 7-12 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 14-18 years 7-12 months",AI,75,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 14-18 years 7-12 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+PROCNT,"Lactation 19-30 years 0-6 months",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 19-30 years 0-6 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 19-30 years 0-6 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 19-30 years 0-6 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 19-30 years 0-6 months",AI,34,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 19-30 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 19-30 years 0-6 months",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 19-30 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 19-30 years 0-6 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 19-30 years 0-6 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 19-30 years 0-6 months",RDA,1000,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 19-30 years 0-6 months",RDA,9,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 19-30 years 0-6 months",RDA,310,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 19-30 years 0-6 months",RDA,700,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 19-30 years 0-6 months",AI,2800,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 19-30 years 0-6 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 19-30 years 0-6 months",RDA,12,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 19-30 years 0-6 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 19-30 years 0-6 months",RDA,1300,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 19-30 years 0-6 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 19-30 years 0-6 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 19-30 years 0-6 months",RDA,120,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 19-30 years 0-6 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 19-30 years 0-6 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 19-30 years 0-6 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 19-30 years 0-6 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 19-30 years 0-6 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 19-30 years 0-6 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 19-30 years 0-6 months",AI,90,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 19-30 years 0-6 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+PROCNT,"Lactation 19-30 years 7-12 months",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 19-30 years 7-12 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 19-30 years 7-12 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 19-30 years 7-12 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 19-30 years 7-12 months",AI,34,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2400 (2.4*14=33.6, rounded to 34),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 19-30 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 19-30 years 7-12 months",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 19-30 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 19-30 years 7-12 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 19-30 years 7-12 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 19-30 years 7-12 months",RDA,1000,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 19-30 years 7-12 months",RDA,9,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 19-30 years 7-12 months",RDA,310,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 19-30 years 7-12 months",RDA,700,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 19-30 years 7-12 months",AI,2800,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 19-30 years 7-12 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 19-30 years 7-12 months",RDA,12,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 19-30 years 7-12 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 19-30 years 7-12 months",RDA,1300,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 19-30 years 7-12 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 19-30 years 7-12 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 19-30 years 7-12 months",RDA,120,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 19-30 years 7-12 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 19-30 years 7-12 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 19-30 years 7-12 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 19-30 years 7-12 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 19-30 years 7-12 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 19-30 years 7-12 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 19-30 years 7-12 months",AI,90,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 19-30 years 7-12 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+PROCNT,"Lactation 31-50 years 0-6 months",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 31-50 years 0-6 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 31-50 years 0-6 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 31-50 years 0-6 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 31-50 years 0-6 months",AI,31,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 31-50 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 31-50 years 0-6 months",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 31-50 years 0-6 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 31-50 years 0-6 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 31-50 years 0-6 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 31-50 years 0-6 months",RDA,1000,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 31-50 years 0-6 months",RDA,9,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 31-50 years 0-6 months",RDA,320,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 31-50 years 0-6 months",RDA,700,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 31-50 years 0-6 months",AI,2800,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 31-50 years 0-6 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 31-50 years 0-6 months",RDA,12,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 31-50 years 0-6 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 31-50 years 0-6 months",RDA,1300,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 31-50 years 0-6 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 31-50 years 0-6 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 31-50 years 0-6 months",RDA,120,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 31-50 years 0-6 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 31-50 years 0-6 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 31-50 years 0-6 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 31-50 years 0-6 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 31-50 years 0-6 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 31-50 years 0-6 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 31-50 years 0-6 months",AI,90,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 31-50 years 0-6 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+PROCNT,"Lactation 31-50 years 7-12 months",AMDR_perc_range,,"10-35",% kcal,AMDR,,,,DGA App1 T A1-4
+PROCNT,"Lactation 31-50 years 7-12 months",RDA,71,,g,RDA,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 31-50 years 7-12 months",AMDR_perc_range,,"45-65",% kcal,AMDR,,,,DGA App1 T A1-4
+CHOCDF,"Lactation 31-50 years 7-12 months",RDA,210,,g,RDA,,,,DGA App1 T A1-4
+FIBTG,"Lactation 31-50 years 7-12 months",AI,31,,g,AI,"14g/1,000kcal",,Assessed Calorie Level 2200 (2.2*14=30.8, rounded to 31),DGA App1 T A1-4
+SUGAR_ADD,"Lactation 31-50 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FAT,"Lactation 31-50 years 7-12 months",AMDR_perc_range,,"20-35",% kcal,AMDR,,,,DGA App1 T A1-4
+FASAT,"Lactation 31-50 years 7-12 months",DGA_limit,,"<10",% kcal,DGA,,,,DGA App1 T A1-4
+FALINOLEIC,"Lactation 31-50 years 7-12 months",AI,13,,g,AI,,,,DGA App1 T A1-4
+FAALALIN,"Lactation 31-50 years 7-12 months",AI,1.3,,g,AI,,,,DGA App1 T A1-4
+CA,"Lactation 31-50 years 7-12 months",RDA,1000,,mg,RDA,,,,DGA App1 T A1-4
+FE,"Lactation 31-50 years 7-12 months",RDA,9,,mg,RDA,,,,DGA App1 T A1-4
+MG,"Lactation 31-50 years 7-12 months",RDA,320,,mg,RDA,,,,DGA App1 T A1-4
+P,"Lactation 31-50 years 7-12 months",RDA,700,,mg,RDA,,,,DGA App1 T A1-4
+K,"Lactation 31-50 years 7-12 months",AI,2800,,mg,AI,,,,DGA App1 T A1-4
+NA,"Lactation 31-50 years 7-12 months",CDRR,2300,,mg,CDRR,,,,DGA App1 T A1-4
+ZN,"Lactation 31-50 years 7-12 months",RDA,12,,mg,RDA,,,,DGA App1 T A1-4
+ID,"Lactation 31-50 years 7-12 months",RDA,290,,mcg,RDA,,,,DGA App1 T A1-4
+VITA_RAE,"Lactation 31-50 years 7-12 months",RDA,1300,,mcg RAE,RDA,,b,,DGA App1 T A1-4
+VITE_AT,"Lactation 31-50 years 7-12 months",RDA,19,,mg AT,RDA,,b,,DGA App1 T A1-4
+VITD_IU,"Lactation 31-50 years 7-12 months",RDA,600,,IU,RDA,,b,,DGA App1 T A1-4
+VITC,"Lactation 31-50 years 7-12 months",RDA,120,,mg,RDA,,,,DGA App1 T A1-4
+THIA,"Lactation 31-50 years 7-12 months",RDA,1.4,,mg,RDA,,,,DGA App1 T A1-4
+RIBF,"Lactation 31-50 years 7-12 months",RDA,1.6,,mg,RDA,,,,DGA App1 T A1-4
+NIA,"Lactation 31-50 years 7-12 months",RDA,17,,mg,RDA,,,,DGA App1 T A1-4
+VITB6,"Lactation 31-50 years 7-12 months",RDA,2,,mg,RDA,,,,DGA App1 T A1-4
+VITB12,"Lactation 31-50 years 7-12 months",RDA,2.8,,mcg,RDA,,,,DGA App1 T A1-4
+CHOLN,"Lactation 31-50 years 7-12 months",AI,550,,mg,AI,,,,DGA App1 T A1-4
+VITK,"Lactation 31-50 years 7-12 months",AI,90,,mcg,AI,,,,DGA App1 T A1-4
+FOL_DFE,"Lactation 31-50 years 7-12 months",RDA,500,,mcg DFE,RDA,,b,,DGA App1 T A1-4
+CA,"Infants 0-6 months",AI,210,,mg,AI,"Human milk content",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Infants 7-12 months",AI,270,,mg,AI,"Human milk + solid food",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Children 1-3 years",AI,500,,mg,AI,"Extrapolation of desirable calcium retention from 4 through 8 years",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Children 4-8 years",AI,800,,mg,AI,"Calcium accretion/∆ BMC/calcium balance",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Children 9-13 years",AI,1300,,mg,AI,"Desirable calcium retention/factorial/∆ BMC",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Adolescents 14-18 years",AI,1300,,mg,AI,"Desirable calcium retention/factorial/∆ BMC",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Adults 19-30 years",AI,1000,,mg,AI,"Desirable calcium retention/factorial",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Adults 31-50 years",AI,1000,,mg,AI,"Calcium balance",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Adults 51-70 years",AI,1200,,mg,AI,"Desirable calcium retention/factorial/∆ BMD",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Adults >70 years",AI,1200,,mg,AI,"Extrapolation of desirable calcium retention from 51 through 70 year age group/∆ BMD/fracture rate",,,IOM DRI Ca/VitD 2011 S-1
+CA,"Pregnancy <=18 years",AI,1300,,mg,AI,"Bone mineral mass",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-1
+CA,"Pregnancy 19-50 years",AI,1000,,mg,AI,"Bone mineral mass",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-1
+CA,"Lactation <=18 years",AI,1300,,mg,AI,"Bone mineral mass",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-1
+CA,"Lactation 19-50 years",AI,1000,,mg,AI,"Bone mineral mass",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-1
+P,"Infants 0-6 months",AI,100,,mg,AI,"Human milk content",,,IOM DRI Ca/VitD 2011 S-2
+P,"Infants 7-12 months",AI,275,,mg,AI,"Human milk + solid food",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 1-3 years",EAR,380,,mg,EAR,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 1-3 years",RDA,460,,mg,RDA,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 4-8 years",EAR,405,,mg,EAR,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 4-8 years",RDA,500,,mg,RDA,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 9-13 years",EAR,1055,,mg,EAR,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Children 9-13 years",RDA,1250,,mg,RDA,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adolescents 14-18 years",EAR,1055,,mg,EAR,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adolescents 14-18 years",RDA,1250,,mg,RDA,"Factorial approach",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 19-30 years",EAR,580,,mg,EAR,"Serum Pi",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 19-30 years",RDA,700,,mg,RDA,"Serum Pi",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 31-50 years",EAR,580,,mg,EAR,"Serum Pi",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 31-50 years",RDA,700,,mg,RDA,"Serum Pi",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 51-70 years",EAR,580,,mg,EAR,"Extrapolation of serum Pi from 19 through 50 years",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults 51-70 years",RDA,700,,mg,RDA,"Extrapolation of serum Pi from 19 through 50 years",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults >70 years",EAR,580,,mg,EAR,"Extrapolation of serum Pi from 19 through 50 years",,,IOM DRI Ca/VitD 2011 S-2
+P,"Adults >70 years",RDA,700,,mg,RDA,"Extrapolation of serum Pi from 19 through 50 years",,,IOM DRI Ca/VitD 2011 S-2
+P,"Pregnancy <=18 years",EAR,1055,,mg,EAR,"Factorial approach",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-2
+P,"Pregnancy <=18 years",RDA,1250,,mg,RDA,"Factorial approach",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-2
+P,"Pregnancy 19-50 years",EAR,580,,mg,EAR,"Serum Pi",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-2
+P,"Pregnancy 19-50 years",RDA,700,,mg,RDA,"Serum Pi",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-2
+P,"Lactation <=18 years",EAR,1055,,mg,EAR,"Factorial approach",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-2
+P,"Lactation <=18 years",RDA,1250,,mg,RDA,"Factorial approach",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-2
+P,"Lactation 19-50 years",EAR,580,,mg,EAR,"Serum Pi",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-2
+P,"Lactation 19-50 years",RDA,700,,mg,RDA,"Serum Pi",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-2
+MG,"Infants 0-6 months",AI,30,,mg,AI,"Human milk content",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Infants 7-12 months",AI,75,,mg,AI,"Human milk + solid food",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 1-3 years",EAR,65,,mg,EAR,"Extrapolation of balance from older children",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 1-3 years",RDA,80,,mg,RDA,"Extrapolation of balance from older children",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 4-8 years",EAR,110,,mg,EAR,"Extrapolation of balance from older children",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 4-8 years",RDA,130,,mg,RDA,"Extrapolation of balance from older children",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 9-13 years",EAR,200,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Children 9-13 years",RDA,240,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 14-18 years",EAR,340,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 14-18 years",RDA,410,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 14-18 years",EAR,300,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 14-18 years",RDA,360,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 19-30 years",EAR,330,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 19-30 years",RDA,400,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 19-30 years",EAR,255,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 19-30 years",RDA,310,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 31-50 years",EAR,350,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 31-50 years",RDA,420,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 31-50 years",EAR,265,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 31-50 years",RDA,320,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 51-70 years",EAR,350,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males 51-70 years",RDA,420,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 51-70 years",EAR,265,,mg,EAR,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females 51-70 years",RDA,320,,mg,RDA,"Balance studies",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males >70 years",EAR,350,,mg,EAR,"Intracellular studies; decreases in absorption",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Males >70 years",RDA,420,,mg,RDA,"Intracellular studies; decreases in absorption",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females >70 years",EAR,265,,mg,EAR,"Intracellular studies; decreases in absorption",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Females >70 years",RDA,320,,mg,RDA,"Intracellular studies; decreases in absorption",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy <=18 years",EAR,335,,mg,EAR,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy <=18 years",RDA,400,,mg,RDA,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy 19-30 years",EAR,290,,mg,EAR,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy 19-30 years",RDA,350,,mg,RDA,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy 31-50 years",EAR,300,,mg,EAR,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Pregnancy 31-50 years",RDA,360,,mg,RDA,"Gain in lean mass",,,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation <=18 years",EAR,300,,mg,EAR,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation <=18 years",RDA,360,,mg,RDA,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation 19-30 years",EAR,255,,mg,EAR,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation 19-30 years",RDA,310,,mg,RDA,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation 31-50 years",EAR,265,,mg,EAR,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+MG,"Lactation 31-50 years",RDA,320,,mg,RDA,"Balance studies",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-3
+VITD_MCG,"Infants 0-6 months",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Infants 0-6 months",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Infants 7-12 months",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Infants 7-12 months",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Children 1-3 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Children 1-3 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Children 4-8 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Children 4-8 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Children 9-13 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Children 9-13 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Adolescents 14-18 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Adolescents 14-18 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Adults 19-30 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Adults 19-30 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Adults 31-50 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Adults 31-50 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Adults 51-70 years",AI,10,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Adults 51-70 years",AI,400,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Adults >70 years",AI,15,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Adults >70 years",AI,600,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Pregnancy <=18 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-pregnant,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Pregnancy <=18 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-pregnant,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Pregnancy 19-50 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-pregnant,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Pregnancy 19-50 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-pregnant,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Lactation <=18 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-lactating,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Lactation <=18 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-lactating,IOM DRI Ca/VitD 2011 S-4
+VITD_MCG,"Lactation 19-50 years",AI,5,,mcg,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-lactating,IOM DRI Ca/VitD 2011 S-4
+VITD_IU,"Lactation 19-50 years",AI,200,,IU,AI,"Serum 25(OH)D",,In absence of adequate sunlight; Same as non-lactating,IOM DRI Ca/VitD 2011 S-4
+FL,"Infants 0-6 months",AI,0.01,,mg,AI,"Human milk content",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Infants 7-12 months",AI,0.5,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Children 1-3 years",AI,0.7,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Children 4-8 years",AI,1,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Children 9-13 years",AI,2,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Males 14-18 years",AI,3,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Females 14-18 years",AI,3,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Males 19-70 years",AI,4,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Females 19-70 years",AI,3,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Males >70 years",AI,4,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Females >70 years",AI,3,,mg,AI,"Caries prevention",,,IOM DRI Ca/VitD 2011 S-5
+FL,"Pregnancy <=18 years",AI,3,,mg,AI,"Caries prevention",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-5
+FL,"Pregnancy 19-50 years",AI,3,,mg,AI,"Caries prevention",,Same as non-pregnant,IOM DRI Ca/VitD 2011 S-5
+FL,"Lactation <=18 years",AI,3,,mg,AI,"Caries prevention",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-5
+FL,"Lactation 19-50 years",AI,3,,mg,AI,"Caries prevention",,Same as non-lactating,IOM DRI Ca/VitD 2011 S-5
+CA,"Infants 0-6 months",UL,,,g,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+CA,"Infants 7-12 months",UL,,,g,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+CA,"Children 1-3 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Children 4-8 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Adolescents 9-18 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Adults 19-70 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Adults >70 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Pregnancy <=18 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Pregnancy 19-50 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Lactation <=18 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+CA,"Lactation 19-50 years",UL,2.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Infants 0-6 months",UL,,,g,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+P,"Infants 7-12 months",UL,,,g,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+P,"Children 1-3 years",UL,3,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Children 4-8 years",UL,3,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Adolescents 9-18 years",UL,4,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Adults 19-70 years",UL,4,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Adults >70 years",UL,3,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Pregnancy <=18 years",UL,3.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Pregnancy 19-50 years",UL,3.5,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Lactation <=18 years",UL,4,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+P,"Lactation 19-50 years",UL,4,,g,UL,,,IOM DRI Ca/VitD 2011 S-6
+MG,"Infants 0-6 months",UL,,,mg,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+MG,"Infants 7-12 months",UL,,,mg,UL,,d,"ND. Not determinable due to lack of data of adverse effects in this age group and concern with regard to lack of ability to handle excess amounts. Source of intake should be from food only in order to prevent high levels of intake.",IOM DRI Ca/VitD 2011 S-6
+MG,"Children 1-3 years",UL,65,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Children 4-8 years",UL,110,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Adolescents 9-18 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Adults >=19 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Pregnancy <=18 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Pregnancy 19-50 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Lactation <=18 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+MG,"Lactation 19-50 years",UL,350,,mg,UL,,,"Pharmacological agents only",IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Infants 0-6 months",UL,25,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Infants 0-6 months",UL,1000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Infants 7-12 months",UL,25,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Infants 7-12 months",UL,1000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Children 1-3 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Children 1-3 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Children 4-8 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Children 4-8 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Adolescents 9-18 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Adolescents 9-18 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Adults >=19 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Adults >=19 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Pregnancy <=18 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Pregnancy <=18 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Pregnancy 19-50 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Pregnancy 19-50 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Lactation <=18 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Lactation <=18 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_MCG,"Lactation 19-50 years",UL,50,,mcg,UL,,,IOM DRI Ca/VitD 2011 S-6
+VITD_IU,"Lactation 19-50 years",UL,2000,,IU,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Infants 0-6 months",UL,0.7,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Infants 7-12 months",UL,0.9,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Children 1-3 years",UL,1.3,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Children 4-8 years",UL,2.2,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Adolescents 9-18 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Adults >=19 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Pregnancy <=18 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Pregnancy 19-50 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Lactation <=18 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+FL,"Lactation 19-50 years",UL,10,,mg,UL,,,IOM DRI Ca/VitD 2011 S-6
+WATER,"Infants 0-6 months",AI,0.7,,L,AI,"Average consumption of water from human milk",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Infants 7-12 months",AI,0.8,,L,AI,"Average consumption of water from human milk and complementary foods",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Children 1-3 years",AI,1.3,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Children 4-8 years",AI,1.7,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Males 9-13 years",AI,2.4,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Females 9-13 years",AI,2.1,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Males 14-18 years",AI,3.3,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Females 14-18 years",AI,2.3,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Males >19 years",AI,3.7,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Females >19 years",AI,2.7,,L,AI,"Median total water intake from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Pregnancy 14-50 years",AI,3.0,,L,AI,"Same as median intake for nonpregnant women from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+WATER,"Lactation 14-50 years",AI,3.8,,L,AI,"Same as median intake for nonlactating women from NHANES III",,Total Water,IOM DRI Water/Elec 2005 S-2
+K,"Infants 0-6 months",AI,0.4,,g,AI,"Average consumption of potassium from human milk",,,IOM DRI Water/Elec 2005 S-3
+K,"Infants 7-12 months",AI,0.7,,g,AI,"Average consumption of potassium from human milk and complementary foods",,,IOM DRI Water/Elec 2005 S-3
+K,"Children 1-3 years",AI,3.0,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-3
+K,"Children 4-8 years",AI,3.8,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-3
+K,"Children 9-13 years",AI,4.5,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-3
+K,"Adolescents 14-18 years",AI,4.7,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-3
+K,"Adults >18 years",AI,4.7,,g,AI,"Intake level to lower blood pressure, reduce salt sensitivity, minimize kidney stone risk",,,IOM DRI Water/Elec 2005 S-3
+K,"Pregnancy 14-50 years",AI,4.7,,g,AI,"Intake level to lower blood pressure... in nonpregnant adults",,Same as non-pregnant,IOM DRI Water/Elec 2005 S-3
+K,"Lactation 14-50 years",AI,5.1,,g,AI,"Intake level... in nonlactating adults plus average amount in breast milk (0.4 g/d)",,,IOM DRI Water/Elec 2005 S-3
+NA,"Infants 0-6 months",AI,0.12,,g,AI,"Average consumption of sodium from human milk",,,IOM DRI Water/Elec 2005 S-4
+NA,"Infants 7-12 months",AI,0.37,,g,AI,"Average consumption of sodium from human milk and complementary foods",,,IOM DRI Water/Elec 2005 S-4
+NA,"Children 1-3 years",AI,1.0,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Children 4-8 years",AI,1.2,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Children 9-13 years",AI,1.5,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adolescents 14-18 years",AI,1.5,,g,AI,"Extrapolation of adult AI based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adults 19-50 years",AI,1.5,,g,AI,"Intake level to cover losses, provide adequate intakes, maintain normal function",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adults 51-70 years",AI,1.3,,g,AI,"Extrapolated from younger adults based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adults >70 years",AI,1.2,,g,AI,"Extrapolated from younger adults based on energy intake",,,IOM DRI Water/Elec 2005 S-4
+NA,"Pregnancy 14-50 years",AI,1.5,,g,AI,"Same as for nonpregnant women",,,IOM DRI Water/Elec 2005 S-4
+NA,"Lactation 14-50 years",AI,1.5,,g,AI,"Same as for nonlactating women",,,IOM DRI Water/Elec 2005 S-4
+NA,"Infants 0-12 months",UL,,,g,UL,,d,"ND. Not determined. Intake should be from food or formula only.",IOM DRI Water/Elec 2005 S-4
+NA,"Children 1-3 years",UL,1.5,,g,UL,"Prevention of increased blood pressure",,,IOM DRI Water/Elec 2005 S-4
+NA,"Children 4-8 years",UL,1.9,,g,UL,"Prevention of increased blood pressure",,,IOM DRI Water/Elec 2005 S-4
+NA,"Children 9-13 years",UL,2.2,,g,UL,"Prevention of increased blood pressure",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adolescents 14-18 years",UL,2.3,,g,UL,"Prevention of increased blood pressure",,,IOM DRI Water/Elec 2005 S-4
+NA,"Adults >=19 years",UL,2.3,,g,UL,"Prevention of increased blood pressure",,,IOM DRI Water/Elec 2005 S-4
+NA,"Pregnancy 14-50 years",UL,2.3,,g,UL,"Prevention of increased blood pressure",,Same as non-pregnant,IOM DRI Water/Elec 2005 S-4
+NA,"Lactation 14-50 years",UL,2.3,,g,UL,"Prevention of increased blood pressure",,Same as non-lactating,IOM DRI Water/Elec 2005 S-4
+CL,"Infants 0-6 months",AI,0.18,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Infants 7-12 months",AI,0.57,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Children 1-3 years",AI,1.5,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Children 4-8 years",AI,1.9,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Children 9-13 years",AI,2.3,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adolescents 14-18 years",AI,2.3,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adults 19-50 years",AI,2.3,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adults 51-70 years",AI,2.0,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adults >70 years",AI,1.8,,g,AI,"Molar basis equal to sodium AI",,,IOM DRI Water/Elec 2005 S-4
+CL,"Pregnancy 14-50 years",AI,2.3,,g,AI,"Molar basis equal to sodium AI",,Same as non-pregnant,IOM DRI Water/Elec 2005 S-4
+CL,"Lactation 14-50 years",AI,2.3,,g,AI,"Molar basis equal to sodium AI",,Same as non-lactating,IOM DRI Water/Elec 2005 S-4
+CL,"Infants 0-12 months",UL,,,g,UL,,d,"ND. Not determined. Intake should be from food or formula only.",IOM DRI Water/Elec 2005 S-4
+CL,"Children 1-3 years",UL,2.3,,g,UL,"Molar basis equal to sodium UL",,,IOM DRI Water/Elec 2005 S-4
+CL,"Children 4-8 years",UL,2.9,,g,UL,"Molar basis equal to sodium UL",,,IOM DRI Water/Elec 2005 S-4
+CL,"Children 9-13 years",UL,3.4,,g,UL,"Molar basis equal to sodium UL",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adolescents 14-18 years",UL,3.6,,g,UL,"Molar basis equal to sodium UL",,,IOM DRI Water/Elec 2005 S-4
+CL,"Adults >=19 years",UL,3.6,,g,UL,"Molar basis equal to sodium UL",,,IOM DRI Water/Elec 2005 S-4
+CL,"Pregnancy 14-50 years",UL,3.6,,g,UL,"Molar basis equal to sodium UL",,Same as non-pregnant,IOM DRI Water/Elec 2005 S-4
+CL,"Lactation 14-50 years",UL,3.6,,g,UL,"Molar basis equal to sodium UL",,Same as non-lactating,IOM DRI Water/Elec 2005 S-4
+THIA,"Males 19-30 years",EAR,1.0,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+THIA,"Males 19-30 years",RDA,1.2,,mg,RDA,"Calculated from EAR (EAR*1.2)",,,IOM DRI B-Vit 1998 (Derived)
+THIA,"Females 19-30 years",EAR,0.9,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+THIA,"Females 19-30 years",RDA,1.1,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+THIA,"Males >70 years",EAR,1.0,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+THIA,"Males >70 years",RDA,1.2,,mg,RDA,"Calculated from EAR (EAR*1.2)",,,IOM DRI B-Vit 1998 (Derived)
+THIA,"Females >70 years",EAR,0.9,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+THIA,"Females >70 years",RDA,1.1,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+RIBF,"Males 19-30 years",EAR,1.1,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+RIBF,"Males 19-30 years",RDA,1.3,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+RIBF,"Females 19-30 years",EAR,0.9,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+RIBF,"Females 19-30 years",RDA,1.1,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+NIA,"Males 19-30 years",EAR,12,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+NIA,"Males 19-30 years",RDA,16,,mg,RDA,"Specific RDA from DGA table, consistent with EAR",,,IOM DRI B-Vit 1998
+NIA,"Females 19-30 years",EAR,11,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+NIA,"Females 19-30 years",RDA,14,,mg,RDA,"Specific RDA from DGA table, consistent with EAR",,,IOM DRI B-Vit 1998
+VITB6,"Males 19-30 years",EAR,1.1,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+VITB6,"Males 19-30 years",RDA,1.3,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+VITB6,"Females 19-30 years",EAR,1.1,,mg,EAR,,,,IOM DRI B-Vit 1998 S-1
+VITB6,"Females 19-30 years",RDA,1.3,,mg,RDA,"Calculated from EAR (EAR*1.2, rounded)",,,IOM DRI B-Vit 1998 (Derived)
+FOL_DFE,"Males 19-30 years",EAR,320,,mcg DFE,EAR,,,,IOM DRI B-Vit 1998 S-1
+FOL_DFE,"Males 19-30 years",RDA,400,,mcg DFE,RDA,"Specific RDA from DGA table, consistent with EAR",,,IOM DRI B-Vit 1998
+FOL_DFE,"Females 19-30 years",EAR,320,,mcg DFE,EAR,,,,IOM DRI B-Vit 1998 S-1
+FOL_DFE,"Females 19-30 years",RDA,400,,mcg DFE,RDA,"Specific RDA from DGA table, consistent with EAR",,,IOM DRI B-Vit 1998
+VITB12,"Males 19-30 years",EAR,2.0,,mcg,EAR,,,,IOM DRI B-Vit 1998 S-1
+VITB12,"Males 19-30 years",RDA,2.4,,mcg,RDA,"Calculated from EAR (EAR*1.2)",,,IOM DRI B-Vit 1998 (Derived)
+VITB12,"Females 19-30 years",EAR,2.0,,mcg,EAR,,,,IOM DRI B-Vit 1998 S-1
+VITB12,"Females 19-30 years",RDA,2.4,,mcg,RDA,"Calculated from EAR (EAR*1.2)",,,IOM DRI B-Vit 1998 (Derived)
+THIA,"Infants 0-6 months",AI,0.2,,mg/d,"Ch.4 Thiamin AI Summary","Observed mean thiamin intake from human milk",,,IOM DRI B-Vit 1998
+THIA,"Infants 7-12 months",AI,0.3,,mg/d,"Ch.4 Thiamin AI Summary","Extrapolated from younger infants and adult EARs",,,IOM DRI B-Vit 1998
+THIA,"Children 1-3 years",EAR,0.4,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Children 1-3 years",RDA,0.5,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Children 4-8 years",EAR,0.5,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Children 4-8 years",RDA,0.6,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 9-13 years",EAR,0.7,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 9-13 years",RDA,0.9,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 14-18 years",EAR,1.0,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 14-18 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 19-30 years",EAR,1.0,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 19-30 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 31-50 years",EAR,1.0,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 31-50 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 51-70 years",EAR,1.0,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males 51-70 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males >70 years",EAR,1.0,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Males >70 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 9-13 years",EAR,0.7,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 9-13 years",RDA,0.9,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 14-18 years",EAR,0.9,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 14-18 years",RDA,1.0,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 19-30 years",EAR,0.9,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 19-30 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 31-50 years",EAR,0.9,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 31-50 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 51-70 years",EAR,0.9,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females 51-70 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females >70 years",EAR,0.9,,mg/d,"Table 13-1","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Females >70 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Urinary thiamin excretion & erythrocyte transketolase activity; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Pregnancy (all ages)",EAR,1.2,,mg/d,"Table 13-1","Increased energy utilization and fetal/maternal growth; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Pregnancy (all ages)",RDA,1.4,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Increased energy utilization and fetal/maternal growth; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Lactation (all ages)",EAR,1.2,,mg/d,"Table 13-1","Thiamin secretion in milk and energy cost of milk production; see Ch.4",,,IOM DRI B-Vit 1998
+THIA,"Lactation (all ages)",RDA,1.4,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Thiamin secretion in milk and energy cost of milk production; see Ch.4",,,IOM DRI B-Vit 1998
+RIBF,"Infants 0-6 months",AI,0.3,,mg/d,"Ch.5 Riboflavin AI Summary","Observed mean riboflavin intake from human milk",,,IOM DRI B-Vit 1998
+RIBF,"Infants 7-12 months",AI,0.4,,mg/d,"Ch.5 Riboflavin AI Summary","Extrapolated from younger infants and adult EARs",,,IOM DRI B-Vit 1998
+RIBF,"Children 1-3 years",EAR,0.4,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Children 1-3 years",RDA,0.5,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Children 4-8 years",EAR,0.5,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Children 4-8 years",RDA,0.6,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 9-13 years",EAR,0.8,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 9-13 years",RDA,0.9,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 14-18 years",EAR,1.1,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 14-18 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 19-30 years",EAR,1.1,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 19-30 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 31-50 years",EAR,1.1,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 31-50 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 51-70 years",EAR,1.1,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males 51-70 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males >70 years",EAR,1.1,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Males >70 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 9-13 years",EAR,0.8,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 9-13 years",RDA,0.9,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 14-18 years",EAR,0.9,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 14-18 years",RDA,1.0,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 19-30 years",EAR,0.9,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 19-30 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 31-50 years",EAR,0.9,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 31-50 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 51-70 years",EAR,0.9,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females 51-70 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females >70 years",EAR,0.9,,mg/d,"Table 13-1","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Females >70 years",RDA,1.1,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","EGRAC & urinary riboflavin excretion; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Pregnancy (all ages)",EAR,1.2,,mg/d,"Table 13-1","Increased energy utilization and fetal/maternal growth; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Pregnancy (all ages)",RDA,1.4,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Increased energy utilization and fetal/maternal growth; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Lactation (all ages)",EAR,1.3,,mg/d,"Table 13-1","Riboflavin secretion in milk and energy cost of milk production; see Ch.5",,,IOM DRI B-Vit 1998
+RIBF,"Lactation (all ages)",RDA,1.6,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Riboflavin secretion in milk and energy cost of milk production; see Ch.5",,,IOM DRI B-Vit 1998
+NIA,"Infants 0-6 months",AI,2,,,mg/d of preformed niacin,"Ch.6 Niacin AI Summary","Observed mean niacin intake from human milk (preformed niacin only)",,,IOM DRI B-Vit 1998
+NIA,"Infants 7-12 months",AI,4,,,mg/d of niacin equivalents,"Ch.6 Niacin AI Summary","Extrapolated from adult EARs (niacin equivalents)",,a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Children 1-3 years",EAR,5,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Children 1-3 years",RDA,6,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Children 4-8 years",EAR,6,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Children 4-8 years",RDA,8,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 9-13 years",EAR,9,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 9-13 years",RDA,12,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 14-18 years",EAR,12,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 14-18 years",RDA,16,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 19-30 years",EAR,12,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 19-30 years",RDA,16,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 31-50 years",EAR,12,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 31-50 years",RDA,16,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 51-70 years",EAR,12,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males 51-70 years",RDA,16,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males >70 years",EAR,12,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Males >70 years",RDA,16,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 9-13 years",EAR,9,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 9-13 years",RDA,12,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 14-18 years",EAR,11,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 14-18 years",RDA,14,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 19-30 years",EAR,11,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 19-30 years",RDA,14,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 31-50 years",EAR,11,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 31-50 years",RDA,14,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 51-70 years",EAR,11,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females 51-70 years",RDA,14,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females >70 years",EAR,11,,,mg/d of niacin equivalents,"Table 13-1","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Females >70 years",RDA,14,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Urinary excretion of niacin metabolites; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Pregnancy (all ages)",EAR,14,,,mg/d of niacin equivalents,"Table 13-1","Increased energy utilization and fetal/maternal growth; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Pregnancy (all ages)",RDA,18,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Increased energy utilization and fetal/maternal growth; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Lactation (all ages)",EAR,13,,,mg/d of niacin equivalents,"Table 13-1","Niacin secretion in milk and energy cost of milk production; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+NIA,"Lactation (all ages)",RDA,17,,,mg/d of niacin equivalents,"Derived from Table 13-1 EAR (EAR * 1.3, rounded)","Niacin secretion in milk and energy cost of milk production; see Ch.6",a,"1 mg of niacin = 60 mg of tryptophan",IOM DRI B-Vit 1998
+VITB6,"Infants 0-6 months",AI,0.1,,mg/d,"Ch.7 Vitamin B6 AI Summary","Observed mean B6 intake from human milk",,,IOM DRI B-Vit 1998
+VITB6,"Infants 7-12 months",AI,0.3,,mg/d,"Ch.7 Vitamin B6 AI Summary","Extrapolated from younger infants and adult EARs",,,IOM DRI B-Vit 1998
+VITB6,"Children 1-3 years",EAR,0.4,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Children 1-3 years",RDA,0.5,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Children 4-8 years",EAR,0.5,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Children 4-8 years",RDA,0.6,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 9-13 years",EAR,0.8,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 9-13 years",RDA,1.0,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 14-18 years",EAR,1.1,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 14-18 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 19-30 years",EAR,1.1,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 19-30 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 31-50 years",EAR,1.1,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 31-50 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 51-70 years",EAR,1.4,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males 51-70 years",RDA,1.7,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males >70 years",EAR,1.4,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Males >70 years",RDA,1.7,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 9-13 years",EAR,0.8,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 9-13 years",RDA,1.0,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 14-18 years",EAR,1.0,,mg/d,"Table 13-1","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 14-18 years",RDA,1.2,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of plasma PLP levels; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 19-30 years",EAR,1.1,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 19-30 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 31-50 years",EAR,1.1,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 31-50 years",RDA,1.3,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 51-70 years",EAR,1.3,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females 51-70 years",RDA,1.5,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females >70 years",EAR,1.3,,mg/d,"Table 13-1","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Females >70 years",RDA,1.5,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels (≥ 20 nmol/L); see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Pregnancy (all ages)",EAR,1.6,,mg/d,"Table 13-1","Maintenance of plasma PLP levels and fetal/maternal growth; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Pregnancy (all ages)",RDA,1.9,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels and fetal/maternal growth; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Lactation (all ages)",EAR,1.7,,mg/d,"Table 13-1","Maintenance of plasma PLP levels and B6 secretion in milk; see Ch.7",,,IOM DRI B-Vit 1998
+VITB6,"Lactation (all ages)",RDA,2.0,,mg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of plasma PLP levels and B6 secretion in milk; see Ch.7",,,IOM DRI B-Vit 1998
+FOL_DFE,"Infants 0-6 months",AI,65,,,µg/d of DFE,"Ch.8 Folate AI Summary","Observed mean folate intake from human milk",,b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Infants 7-12 months",AI,80,,,µg/d of DFE,"Ch.8 Folate AI Summary","Extrapolated from younger infants and adult EARs",,b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Children 1-3 years",EAR,120,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Children 1-3 years",RDA,150,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Children 4-8 years",EAR,160,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Children 4-8 years",RDA,200,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 9-13 years",EAR,250,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 9-13 years",RDA,300,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 14-18 years",EAR,330,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 14-18 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 19-30 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 19-30 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 31-50 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 31-50 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 51-70 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males 51-70 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males >70 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Males >70 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 9-13 years",EAR,250,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 9-13 years",RDA,300,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 14-18 years",EAR,330,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 14-18 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 19-30 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 19-30 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 31-50 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 31-50 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 51-70 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females 51-70 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females >70 years",EAR,320,,,µg/d of DFE,"Table 13-1","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Females >70 years",RDA,400,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Erythrocyte folate, plasma homocysteine, plasma/serum folate; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Pregnancy (all ages)",EAR,520,,,µg/d of DFE,"Table 13-1","Maintenance of normal folate status and fetal/maternal growth; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Pregnancy (all ages)",RDA,600,,,µg/d of DFE,"Ch.8 Folate RDA Summary, Pregnancy","Maintenance of normal folate status and fetal/maternal growth; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Lactation (all ages)",EAR,450,,,µg/d of DFE,"Table 13-1","Folate secretion in milk; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+FOL_DFE,"Lactation (all ages)",RDA,500,,,µg/d of DFE,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Folate secretion in milk; see Ch.8",b,"DFE = Dietary Folate Equivalents. See Ch.8 for definition.",IOM DRI B-Vit 1998
+VITB12,"Infants 0-6 months",AI,0.4,,µg/d,"Ch.9 Vitamin B12 AI Summary","Observed mean B12 intake from human milk",,,IOM DRI B-Vit 1998
+VITB12,"Infants 7-12 months",AI,0.5,,µg/d,"Ch.9 Vitamin B12 AI Summary","Extrapolated from younger infants and adult EARs",,,IOM DRI B-Vit 1998
+VITB12,"Children 1-3 years",EAR,0.7,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Children 1-3 years",RDA,0.9,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Children 4-8 years",EAR,1.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Children 4-8 years",RDA,1.2,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 9-13 years",EAR,1.5,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 9-13 years",RDA,1.8,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 14-18 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 14-18 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 19-30 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 19-30 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 31-50 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 31-50 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Males 51-70 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Males 51-70 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Males >70 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Males >70 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Females 9-13 years",EAR,1.5,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 9-13 years",RDA,1.8,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 14-18 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 14-18 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 19-30 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 19-30 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 31-50 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 31-50 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Females 51-70 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Females 51-70 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Females >70 years",EAR,2.0,,µg/d,"Table 13-1","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Females >70 years",RDA,2.4,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2)","Maintenance of hematological status and normal serum B12; see Ch.9",,"*It is advisable for most of this amount to be obtained by consuming foods fortified with B12 or a B12-containing supplement.",IOM DRI B-Vit 1998
+VITB12,"Pregnancy (all ages)",EAR,2.2,,µg/d,"Table 13-1","Fetal deposition and maternal absorption efficiency; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Pregnancy (all ages)",RDA,2.6,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","Fetal deposition and maternal absorption efficiency; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Lactation (all ages)",EAR,2.4,,µg/d,"Table 13-1","B12 secretion in milk; see Ch.9",,,IOM DRI B-Vit 1998
+VITB12,"Lactation (all ages)",RDA,2.8,,µg/d,"Derived from Table 13-1 EAR (EAR * 1.2, rounded)","B12 secretion in milk; see Ch.9",,,IOM DRI B-Vit 1998
+PANTAC,"Infants 0-6 months",AI,1.7,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Observed mean pantothenic acid intake from human milk",,,IOM DRI B-Vit 1998
+PANTAC,"Infants 7-12 months",AI,1.8,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Extrapolated from younger infants and adult AIs",,,IOM DRI B-Vit 1998
+PANTAC,"Children 1-3 years",AI,2,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Extrapolated from adult AI, consistent with urinary excretion data",,,IOM DRI B-Vit 1998
+PANTAC,"Children 4-8 years",AI,3,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Extrapolated from adult AI, consistent with urinary excretion data",,,IOM DRI B-Vit 1998
+PANTAC,"Boys 9-13 years",AI,4,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Extrapolated from adult AI, consistent with urinary excretion data",,,IOM DRI B-Vit 1998
+PANTAC,"Girls 9-13 years",AI,4,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Extrapolated from adult AI, consistent with urinary excretion data",,,IOM DRI B-Vit 1998
+PANTAC,"Males 14-18 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Females 14-18 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Men 19-30 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Men 31-50 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Men 51-70 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Men >70 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Women 19-30 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Women 31-50 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Women 51-70 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Women >70 years",AI,5,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Urinary excretion and usual intakes",,,IOM DRI B-Vit 1998
+PANTAC,"Pregnancy 14-18 years",AI,6,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Based on average intakes of pregnant women",,,IOM DRI B-Vit 1998
+PANTAC,"Pregnancy 19-30 years",AI,6,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Based on average intakes of pregnant women",,,IOM DRI B-Vit 1998
+PANTAC,"Pregnancy 31-50 years",AI,6,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Based on average intakes of pregnant women",,,IOM DRI B-Vit 1998
+PANTAC,"Lactation 14-18 years",AI,7,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Pantothenic acid secretion in milk",,,IOM DRI B-Vit 1998
+PANTAC,"Lactation 19-30 years",AI,7,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Pantothenic acid secretion in milk",,,IOM DRI B-Vit 1998
+PANTAC,"Lactation 31-50 years",AI,7,,mg/d,"Ch.10 Pantothenic Acid AI Summary","Pantothenic acid secretion in milk",,,IOM DRI B-Vit 1998
+BIOTIN,"Infants 0-6 months",AI,5,,µg/d,"Ch.11 Biotin AI Summary","Observed mean biotin intake from human milk",,,IOM DRI B-Vit 1998
+BIOTIN,"Infants 7-12 months",AI,6,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from younger infants",,,IOM DRI B-Vit 1998
+BIOTIN,"Children 1-3 years",AI,8,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Children 4-8 years",AI,12,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Boys 9-13 years",AI,20,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Girls 9-13 years",AI,20,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Males 14-18 years",AI,25,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Females 14-18 years",AI,25,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Men 19-30 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Men 31-50 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Men 51-70 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Men >70 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Women 19-30 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Women 31-50 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Women 51-70 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Women >70 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Extrapolated from infant AI; supports normal urinary excretion of 3-hydroxyisovaleric acid",,,IOM DRI B-Vit 1998
+BIOTIN,"Pregnancy 14-18 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Insufficient data to justify increase over non-pregnant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Pregnancy 19-30 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Insufficient data to justify increase over non-pregnant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Pregnancy 31-50 years",AI,30,,µg/d,"Ch.11 Biotin AI Summary","Insufficient data to justify increase over non-pregnant AI",,,IOM DRI B-Vit 1998
+BIOTIN,"Lactation 14-18 years",AI,35,,µg/d,"Ch.11 Biotin AI Summary","Covers biotin secretion in milk",,,IOM DRI B-Vit 1998
+BIOTIN,"Lactation 19-30 years",AI,35,,µg/d,"Ch.11 Biotin AI Summary","Covers biotin secretion in milk",,,IOM DRI B-Vit 1998
+BIOTIN,"Lactation 31-50 years",AI,35,,µg/d,"Ch.11 Biotin AI Summary","Covers biotin secretion in milk",,,IOM DRI B-Vit 1998
+CHOLN,"Infants 0-6 months",AI,125,,mg/d,"Ch.12 Choline AI Summary","Observed mean choline intake from human milk",,,IOM DRI B-Vit 1998
+CHOLN,"Infants 7-12 months",AI,150,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from younger infants and adult AIs",,,IOM DRI B-Vit 1998
+CHOLN,"Children 1-3 years",AI,200,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from adult AI",,,IOM DRI B-Vit 1998
+CHOLN,"Children 4-8 years",AI,250,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from adult AI",,,IOM DRI B-Vit 1998
+CHOLN,"Boys 9-13 years",AI,375,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from adult AI",,,IOM DRI B-Vit 1998
+CHOLN,"Girls 9-13 years",AI,375,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from adult AI",,,IOM DRI B-Vit 1998
+CHOLN,"Males 14-18 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (elevated ALT)",,,IOM DRI B-Vit 1998
+CHOLN,"Females 14-18 years",AI,400,,mg/d,"Ch.12 Choline AI Summary","Extrapolated from adult female AI",,,IOM DRI B-Vit 1998
+CHOLN,"Men 19-30 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (elevated ALT)",,,IOM DRI B-Vit 1998
+CHOLN,"Men 31-50 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (elevated ALT)",,,IOM DRI B-Vit 1998
+CHOLN,"Men 51-70 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (elevated ALT)",,,IOM DRI B-Vit 1998
+CHOLN,"Men >70 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (elevated ALT)",,,IOM DRI B-Vit 1998
+CHOLN,"Women 19-30 years",AI,425,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (extrapolated from male data)",,,IOM DRI B-Vit 1998
+CHOLN,"Women 31-50 years",AI,425,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (extrapolated from male data)",,,IOM DRI B-Vit 1998
+CHOLN,"Women 51-70 years",AI,425,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (extrapolated from male data)",,,IOM DRI B-Vit 1998
+CHOLN,"Women >70 years",AI,425,,mg/d,"Ch.12 Choline AI Summary","Prevention of liver damage (extrapolated from male data)",,,IOM DRI B-Vit 1998
+CHOLN,"Pregnancy 14-18 years",AI,450,,mg/d,"Ch.12 Choline AI Summary","Fetal and placental accumulation of choline",,,IOM DRI B-Vit 1998
+CHOLN,"Pregnancy 19-30 years",AI,450,,mg/d,"Ch.12 Choline AI Summary","Fetal and placental accumulation of choline",,,IOM DRI B-Vit 1998
+CHOLN,"Pregnancy 31-50 years",AI,450,,mg/d,"Ch.12 Choline AI Summary","Fetal and placental accumulation of choline",,,IOM DRI B-Vit 1998
+CHOLN,"Lactation 14-18 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Choline secretion in milk",,,IOM DRI B-Vit 1998
+CHOLN,"Lactation 19-30 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Choline secretion in milk",,,IOM DRI B-Vit 1998
+CHOLN,"Lactation 31-50 years",AI,550,,mg/d,"Ch.12 Choline AI Summary","Choline secretion in milk",,,IOM DRI B-Vit 1998
+NIA,"Infants 0-12 months",UL,,,mg,UL,,c,"ND. Not determinable. Source of intake should be from formula and food only.",IOM DRI B-Vit 1998 S-2
+NIA,"Children 1-3 years",UL,10,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Children 4-8 years",UL,15,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Children 9-13 years",UL,20,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Adolescents 14-18 years",UL,30,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Adults >=19 years",UL,35,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Pregnancy <=18 years",UL,30,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Pregnancy >=19 years",UL,35,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Lactation <=18 years",UL,30,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+NIA,"Lactation >=19 years",UL,35,,mg,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+VITB6,"Infants 0-12 months",UL,,,mg,UL,,c,"ND. Not determinable. Source of intake should be from formula and food only.",IOM DRI B-Vit 1998 S-2
+VITB6,"Children 1-3 years",UL,30,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Children 4-8 years",UL,40,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Children 9-13 years",UL,60,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Adolescents 14-18 years",UL,80,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Adults >=19 years",UL,100,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Pregnancy <=18 years",UL,80,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Pregnancy >=19 years",UL,100,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Lactation <=18 years",UL,80,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+VITB6,"Lactation >=19 years",UL,100,,mg,UL,,,,IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Infants 0-12 months",UL,,,mcg DFE,UL,,c,"ND. Not determinable. Source of intake should be from formula and food only.",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Children 1-3 years",UL,300,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Children 4-8 years",UL,400,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Children 9-13 years",UL,600,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Adolescents 14-18 years",UL,800,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Adults >=19 years",UL,1000,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Pregnancy <=18 years",UL,800,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Pregnancy >=19 years",UL,1000,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Lactation <=18 years",UL,800,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+FOL_DFE,"Lactation >=19 years",UL,1000,,mcg DFE,UL,,,"Supplements, fortified foods, or combination",IOM DRI B-Vit 1998 S-2
+CHOLN,"Infants 0-12 months",UL,,,g,UL,,c,"ND. Not determinable. Source of intake should be from formula and food only.",IOM DRI B-Vit 1998 S-2
+CHOLN,"Children 1-3 years",UL,1.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Children 4-8 years",UL,1.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Children 9-13 years",UL,2.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Adolescents 14-18 years",UL,3.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Adults >=19 years",UL,3.5,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Pregnancy <=18 years",UL,3.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Pregnancy >=19 years",UL,3.5,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Lactation <=18 years",UL,3.0,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+CHOLN,"Lactation >=19 years",UL,3.5,,g,UL,,,,IOM DRI B-Vit 1998 S-2
+VITA_RAE,"Infants 0-6 months",AI,400,,mcg RAE,AI,"Average vitamin A intake from human milk",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Infants 7-12 months",AI,500,,mcg RAE,AI,"Extrapolation from 0 through 6 mo AI",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Children 1-3 years",EAR,210,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Children 1-3 years",RDA,300,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Children 4-8 years",EAR,275,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Children 4-8 years",RDA,400,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males 9-13 years",EAR,445,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males 9-13 years",RDA,600,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females 9-13 years",EAR,420,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females 9-13 years",RDA,600,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males 14-18 years",EAR,630,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males 14-18 years",RDA,900,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females 14-18 years",EAR,485,,mcg RAE,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females 14-18 years",RDA,700,,mcg RAE,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males >18 years",EAR,625,,mcg RAE,EAR,"Adequate liver vitamin A stores",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Males >18 years",RDA,900,,mcg RAE,RDA,"Adequate liver vitamin A stores",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females >18 years",EAR,500,,mcg RAE,EAR,"Adequate liver vitamin A stores",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Females >18 years",RDA,700,,mcg RAE,RDA,"Adequate liver vitamin A stores",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Pregnancy 14-18 years",EAR,530,,mcg RAE,EAR,"Adolescent female EAR plus estimated daily accumulation by fetus",,Same for all trimesters,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Pregnancy 14-18 years",RDA,750,,mcg RAE,RDA,"Adolescent female EAR plus estimated daily accumulation by fetus",,Same for all trimesters,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Pregnancy 19-50 years",EAR,550,,mcg RAE,EAR,"Adult female EAR plus estimated daily accumulation by fetus",,Same for all trimesters,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Pregnancy 19-50 years",RDA,770,,mcg RAE,RDA,"Adult female EAR plus estimated daily accumulation by fetus",,Same for all trimesters,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Lactation 14-18 years",EAR,885,,mcg RAE,EAR,"Adolescent female EAR plus average amount of vitamin A secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Lactation 14-18 years",RDA,1200,,mcg RAE,RDA,"Adolescent female EAR plus average amount of vitamin A secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Lactation 19-50 years",EAR,900,,mcg RAE,EAR,"Adult female EAR plus average amount of vitamin A secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-1
+VITA_RAE,"Lactation 19-50 years",RDA,1300,,mcg RAE,RDA,"Adult female EAR plus average amount of vitamin A secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-1
+VITK,"Infants 0-6 months",AI,2.0,,mcg,AI,"Average vitamin K intake from human milk",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Infants 7-12 months",AI,2.5,,mcg,AI,"Extrapolation from 0 through 6 mo AI",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Children 1-3 years",AI,30,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Children 4-8 years",AI,55,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Children 9-13 years",AI,60,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Males 14-18 years",AI,75,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Females 14-18 years",AI,75,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Males >18 years",AI,120,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Females >18 years",AI,90,,mcg,AI,"Median intake of vitamin K from NHANES III",,,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Pregnancy 14-18 years",AI,75,,mcg,AI,"Adolescent female median intake",,Same as non-pregnant,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Pregnancy 19-50 years",AI,90,,mcg,AI,"Adult female median intake",,Same as non-pregnant,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Lactation 14-18 years",AI,75,,mcg,AI,"Adolescent female median intake",,Same as non-lactating,IOM DRI VitA/K/Min 2001 S-2
+VITK,"Lactation 19-50 years",AI,90,,mcg,AI,"Adult female median intake",,Same as non-lactating,IOM DRI VitA/K/Min 2001 S-2
+CR,"Infants 0-6 months",AI,0.2,,mcg,AI,"Average chromium intake from human milk",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Infants 7-12 months",AI,5.5,,mcg,AI,"Average chromium intake from human milk and complementary foods",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Children 1-3 years",AI,11,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Children 4-8 years",AI,15,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Males 9-13 years",AI,25,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Females 9-13 years",AI,21,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Males 14-18 years",AI,35,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Females 14-18 years",AI,24,,mcg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Males 19-50 years",AI,35,,mcg,AI,"Average chromium intake based on food content and energy intake",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Females 19-50 years",AI,25,,mcg,AI,"Average chromium intake based on food content and energy intake",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Males >=51 years",AI,30,,mcg,AI,"Average chromium intake based on food content and energy intake",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Females >=51 years",AI,20,,mcg,AI,"Average chromium intake based on food content and energy intake",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Pregnancy 14-18 years",AI,29,,mcg,AI,"Extrapolation from adolescent AI based on body weight",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Pregnancy 19-50 years",AI,30,,mcg,AI,"Extrapolation from adult woman AI based on body weight",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Lactation 14-18 years",AI,44,,mcg,AI,"Adolescent female intake plus average amount of chromium secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-3
+CR,"Lactation 19-50 years",AI,45,,mcg,AI,"Adult female intake plus average amount of chromium secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-3
+/CU,"Infants 0-6 months",AI,200,,mcg,AI,"Average copper intake from human milk",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Infants 7-12 months",AI,220,,mcg,AI,"Average copper intake from human milk and complementary foods",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 1-3 years",EAR,260,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 1-3 years",RDA,340,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 4-8 years",EAR,340,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 4-8 years",RDA,440,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 9-13 years",EAR,540,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Children 9-13 years",RDA,700,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Males 14-18 years",EAR,685,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Males 14-18 years",RDA,890,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Females 14-18 years",EAR,685,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Females 14-18 years",RDA,890,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Adults 19-50 years",EAR,700,,mcg,EAR,"Plasma copper, serum ceruloplasmin, platelet copper, erythrocyte SOD activity",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Adults 19-50 years",RDA,900,,mcg,RDA,"Plasma copper, serum ceruloplasmin, platelet copper, erythrocyte SOD activity",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Adults >=51 years",EAR,700,,mcg,EAR,"Extrapolation from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Adults >=51 years",RDA,900,,mcg,RDA,"Extrapolation from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Pregnancy 14-18 years",EAR,785,,mcg,EAR,"Adolescent female EAR plus fetal accumulation of copper",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Pregnancy 14-18 years",RDA,1000,,mcg,RDA,"Adolescent female EAR plus fetal accumulation of copper",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Pregnancy 19-50 years",EAR,800,,mcg,EAR,"Adult female EAR plus fetal accumulation of copper",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Pregnancy 19-50 years",RDA,1000,,mcg,RDA,"Adult female EAR plus fetal accumulation of copper",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Lactation 14-18 years",EAR,985,,mcg,EAR,"Adolescent female EAR plus average amount of copper secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Lactation 14-18 years",RDA,1300,,mcg,RDA,"Adolescent female EAR plus average amount of copper secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Lactation 19-50 years",EAR,1000,,mcg,EAR,"Adult female EAR plus average amount of copper secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-4
+CU,"Lactation 19-50 years",RDA,1300,,mcg,RDA,"Adult female EAR plus average amount of copper secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-4
+ID,"Infants 0-6 months",AI,110,,mcg,AI,"Average iodine intake from human milk",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Infants 7-12 months",AI,130,,mcg,AI,"Extrapolation from 0 through 6 mo AI",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 1-3 years",EAR,65,,mcg,EAR,"Balance data on children",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 1-3 years",RDA,90,,mcg,RDA,"Balance data on children",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 4-8 years",EAR,65,,mcg,EAR,"Balance data on children",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 4-8 years",RDA,90,,mcg,RDA,"Balance data on children",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 9-13 years",EAR,73,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Children 9-13 years",RDA,120,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adolescents 14-18 years",EAR,95,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adolescents 14-18 years",RDA,150,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adults 19-50 years",EAR,95,,mcg,EAR,"Iodine turnover",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adults 19-50 years",RDA,150,,mcg,RDA,"Iodine turnover",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adults >=51 years",EAR,95,,mcg,EAR,"Extrapolation of iodine turnover studies from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Adults >=51 years",RDA,150,,mcg,RDA,"Extrapolation of iodine turnover studies from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Pregnancy 14-18 years",EAR,160,,mcg,EAR,"Balance data during pregnancy",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Pregnancy 14-18 years",RDA,220,,mcg,RDA,"Balance data during pregnancy",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Pregnancy 19-50 years",EAR,160,,mcg,EAR,"Balance data during pregnancy",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Pregnancy 19-50 years",RDA,220,,mcg,RDA,"Balance data during pregnancy",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Lactation 14-18 years",EAR,209,,mcg,EAR,"Adolescent female average requirement plus average amount of iodine secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Lactation 14-18 years",RDA,290,,mcg,RDA,"Adolescent female average requirement plus average amount of iodine secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Lactation 19-50 years",EAR,209,,mcg,EAR,"Adult female average requirement plus average amount of iodine secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-5
+ID,"Lactation 19-50 years",RDA,290,,mcg,RDA,"Adult female average requirement plus average amount of iodine secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-5
+FE,"Infants 0-6 months",AI,0.27,,mg,AI,"Average iron intake from human milk",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Infants 7-12 months",EAR,6.9,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Infants 7-12 months",RDA,11,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Children 1-3 years",EAR,3.0,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Children 1-3 years",RDA,7,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Children 4-8 years",EAR,4.1,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Children 4-8 years",RDA,10,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 9-13 years",EAR,5.9,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 9-13 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 9-13 years",EAR,5.7,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 9-13 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 14-18 years",EAR,7.7,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 14-18 years",RDA,11,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 14-18 years",EAR,7.9,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 14-18 years",RDA,15,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 19-30 years",EAR,6,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 19-30 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 19-30 years",EAR,8.1,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 19-30 years",RDA,18,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 31-50 years",EAR,6,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 31-50 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 31-50 years",EAR,8.1,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 31-50 years",RDA,18,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 51-70 years",EAR,6,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males 51-70 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 51-70 years",EAR,5,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females 51-70 years",RDA,8,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males >70 years",EAR,6,,mg,EAR,"Extrapolation of factorial analysis from 51 through 70 y",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Males >70 years",RDA,8,,mg,RDA,"Extrapolation of factorial analysis from 51 through 70 y",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females >70 years",EAR,5,,mg,EAR,"Extrapolation of factorial analysis from 51 through 70 y",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Females >70 years",RDA,8,,mg,RDA,"Extrapolation of factorial analysis from 51 through 70 y",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Pregnancy 14-18 years",EAR,23,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Pregnancy 14-18 years",RDA,27,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Pregnancy 19-50 years",EAR,22,,mg,EAR,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Pregnancy 19-50 years",RDA,27,,mg,RDA,"Factorial modeling",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Lactation 14-18 years",EAR,7,,mg,EAR,"Adolescent female EAR minus menstrual losses plus average amount of iron secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Lactation 14-18 years",RDA,10,,mg,RDA,"Adolescent female EAR minus menstrual losses plus average amount of iron secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Lactation 19-50 years",EAR,6.5,,mg,EAR,"Adult female EAR minus menstrual losses plus average amount of iron secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-6
+FE,"Lactation 19-50 years",RDA,9,,mg,RDA,"Adult female EAR minus menstrual losses plus average amount of iron secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-6
+MN,"Infants 0-6 months",AI,0.003,,mg,AI,"Average manganese intake from human milk",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Infants 7-12 months",AI,0.6,,mg,AI,"Extrapolation from adult AI",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Children 1-3 years",AI,1.2,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Children 4-8 years",AI,1.5,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Males 9-13 years",AI,1.9,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Females 9-13 years",AI,1.6,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Males 14-18 years",AI,2.2,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Females 14-18 years",AI,1.6,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Males >=19 years",AI,2.3,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Females >=19 years",AI,1.8,,mg,AI,"Median manganese intake from FDA Total Diet Study",,,IOM DRI VitA/K/Min 2001 S-7
+MN,"Pregnancy 14-18 years",AI,2.0,,mg,AI,"Extrapolation of adolescent female AI based on body weight",,Same as non-pregnant,IOM DRI VitA/K/Min 2001 S-7
+MN,"Pregnancy 19-50 years",AI,2.0,,mg,AI,"Extrapolation of adult female AI based on body weight",,Same as non-pregnant,IOM DRI VitA/K/Min 2001 S-7
+MN,"Lactation 14-18 years",AI,2.6,,mg,AI,"Median manganese intake from FDA Total Diet Study",,Same as non-lactating,IOM DRI VitA/K/Min 2001 S-7
+MN,"Lactation 19-50 years",AI,2.6,,mg,AI,"Median manganese intake from FDA Total Diet Study",,Same as non-lactating,IOM DRI VitA/K/Min 2001 S-7
+MO,"Infants 0-6 months",AI,2,,mcg,AI,"Average molybdenum intake from human milk",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Infants 7-12 months",AI,3,,mcg,AI,"Extrapolation from 0 through 6 mo",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 1-3 years",EAR,13,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 1-3 years",RDA,17,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 4-8 years",EAR,17,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 4-8 years",RDA,22,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 9-13 years",EAR,26,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Children 9-13 years",RDA,34,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adolescents 14-18 years",EAR,33,,mcg,EAR,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adolescents 14-18 years",RDA,43,,mcg,RDA,"Extrapolation from adult EAR",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adults 19-30 years",EAR,34,,mcg,EAR,"Balance data",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adults 19-30 years",RDA,45,,mcg,RDA,"Balance data",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adults >=31 years",EAR,34,,mcg,EAR,"Extrapolation of balance data from 19 through 30 y",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Adults >=31 years",RDA,45,,mcg,RDA,"Extrapolation of balance data from 19 through 30 y",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Pregnancy 14-18 years",EAR,40,,mcg,EAR,"Extrapolation of adolescent female EAR based on body weight",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Pregnancy 14-18 years",RDA,50,,mcg,RDA,"Extrapolation of adolescent female EAR based on body weight",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Pregnancy 19-50 years",EAR,40,,mcg,EAR,"Extrapolation of adult female EAR based on body weight",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Pregnancy 19-50 years",RDA,50,,mcg,RDA,"Extrapolation of adult female EAR based on body weight",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Lactation 14-18 years",EAR,35,,mcg,EAR,"Adolescent female EAR plus average amount of molybdenum secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Lactation 14-18 years",RDA,50,,mcg,RDA,"Adolescent female EAR plus average amount of molybdenum secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Lactation 19-50 years",EAR,36,,mcg,EAR,"Adult female EAR plus average amount of molybdenum secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-8
+MO,"Lactation 19-50 years",RDA,50,,mcg,RDA,"Adult female EAR plus average amount of molybdenum secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-8
+ZN,"Infants 0-6 months",AI,2,,mg,AI,"Average zinc intake from human milk",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Infants 7-12 months",EAR,2.5,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Infants 7-12 months",RDA,3,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Children 1-3 years",EAR,2.5,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Children 1-3 years",RDA,3,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Children 4-8 years",EAR,4.0,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Children 4-8 years",RDA,5,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 9-13 years",EAR,7.0,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 9-13 years",RDA,8,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 9-13 years",EAR,7.0,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 9-13 years",RDA,8,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 14-18 years",EAR,8.5,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 14-18 years",RDA,11,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 14-18 years",EAR,7.3,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 14-18 years",RDA,9,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 19-50 years",EAR,9.4,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males 19-50 years",RDA,11,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 19-50 years",EAR,6.8,,mg,EAR,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females 19-50 years",RDA,8,,mg,RDA,"Factorial analysis",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males >=51 years",EAR,9.4,,mg,EAR,"Extrapolation of factorial data from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Males >=51 years",RDA,11,,mg,RDA,"Extrapolation of factorial data from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females >=51 years",EAR,6.8,,mg,EAR,"Extrapolation of factorial data from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Females >=51 years",RDA,8,,mg,RDA,"Extrapolation of factorial data from 19 through 50 y",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Pregnancy 14-18 years",EAR,10.0,,mg,EAR,"Adolescent female EAR plus fetal accumulation of zinc",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Pregnancy 14-18 years",RDA,12,,mg,RDA,"Adolescent female EAR plus fetal accumulation of zinc",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Pregnancy 19-50 years",EAR,9.5,,mg,EAR,"Adult female average requirement plus fetal accumulation of zinc",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Pregnancy 19-50 years",RDA,11,,mg,RDA,"Adult female average requirement plus fetal accumulation of zinc",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Lactation 14-18 years",EAR,10.9,,mg,EAR,"Adolescent female EAR plus average amount of zinc secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Lactation 14-18 years",RDA,13,,mg,RDA,"Adolescent female EAR plus average amount of zinc secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Lactation 19-50 years",EAR,10.4,,mg,EAR,"Adult female EAR plus average amount of zinc secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-9
+ZN,"Lactation 19-50 years",RDA,12,,mg,RDA,"Adult female EAR plus average amount of zinc secreted in human milk",,,IOM DRI VitA/K/Min 2001 S-9
+VITA_RAE,"Infants 0-6 months",UL,600,,mcg,UL,,b,"Preformed Vitamin A; ND for Boron, Copper, Iodine, Manganese, Molybdenum, Nickel, Vanadium",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Infants 7-12 months",UL,600,,mcg,UL,,b,"Preformed Vitamin A; ND for Boron, Copper, Iodine, Manganese, Molybdenum, Nickel, Vanadium",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Children 1-3 years",UL,600,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+BORON,"Children 1-3 years",UL,3,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Children 1-3 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Children 1-3 years",UL,200,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Infants 0-12 months",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Children 1-3 years",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Children 1-3 years",UL,2,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Children 1-3 years",UL,300,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Children 1-3 years",UL,200,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Infants 0-6 months",UL,4,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Infants 7-12 months",UL,5,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Children 1-3 years",UL,7,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Children 4-8 years",UL,900,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Children 9-13 years",UL,1700,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Adolescents 14-18 years",UL,2800,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Adults >=19 years",UL,3000,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Pregnancy 14-18 years",UL,2800,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Pregnancy 19-50 years",UL,3000,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Lactation 14-18 years",UL,2800,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+VITA_RAE,"Lactation 19-50 years",UL,3000,,mcg,UL,,,"Preformed Vitamin A",IOM DRI VitA/K/Min 2001 S-10
+BORON,"Children 4-8 years",UL,6,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Children 9-13 years",UL,11,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Adolescents 14-18 years",UL,17,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Adults >=19 years",UL,20,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Pregnancy 14-18 years",UL,17,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Pregnancy 19-50 years",UL,20,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Lactation 14-18 years",UL,17,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+BORON,"Lactation 19-50 years",UL,20,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Children 4-8 years",UL,3000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Children 9-13 years",UL,5000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Adolescents 14-18 years",UL,8000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Adults >=19 years",UL,10000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Pregnancy 14-18 years",UL,8000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Pregnancy 19-50 years",UL,10000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Lactation 14-18 years",UL,8000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+CU,"Lactation 19-50 years",UL,10000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Children 4-8 years",UL,300,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Children 9-13 years",UL,600,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Adolescents 14-18 years",UL,900,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Adults >=19 years",UL,1100,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Pregnancy 14-18 years",UL,900,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Pregnancy 19-50 years",UL,1100,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Lactation 14-18 years",UL,900,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ID,"Lactation 19-50 years",UL,1100,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Children 4-13 years",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Adolescents 14-18 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Adults >=19 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Pregnancy 14-18 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Pregnancy 19-50 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Lactation 14-18 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+FE,"Lactation 19-50 years",UL,45,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Children 4-8 years",UL,3,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Children 9-13 years",UL,6,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Adolescents 14-18 years",UL,9,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Adults >=19 years",UL,11,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Pregnancy 14-18 years",UL,9,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Pregnancy 19-50 years",UL,11,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Lactation 14-18 years",UL,9,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MN,"Lactation 19-50 years",UL,11,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Children 4-8 years",UL,600,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Children 9-13 years",UL,1100,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Adolescents 14-18 years",UL,1700,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Adults >=19 years",UL,2000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Pregnancy 14-18 years",UL,1700,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Pregnancy 19-50 years",UL,2000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Lactation 14-18 years",UL,1700,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+MO,"Lactation 19-50 years",UL,2000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Children 4-8 years",UL,300,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Children 9-13 years",UL,600,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Adolescents 14-18 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Adults >=19 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Pregnancy 14-18 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Pregnancy 19-50 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Lactation 14-18 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+NICKEL,"Lactation 19-50 years",UL,1000,,mcg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Children 4-8 years",UL,12,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Children 9-13 years",UL,23,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Adolescents 14-18 years",UL,34,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Adults >=19 years",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Pregnancy 14-18 years",UL,34,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Pregnancy 19-50 years",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Lactation 14-18 years",UL,34,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+ZN,"Lactation 19-50 years",UL,40,,mg,UL,,,,IOM DRI VitA/K/Min 2001 S-10
+VANADIUM,"Adults >=19 years",UL,1.8,,mg,UL,c,Based on adverse effects in lab animals, not for children/adolescents,IOM DRI VitA/K/Min 2001 S-10
+VANADIUM,"Pregnancy 19-50 years",UL,1.8,,mg,UL,c,Based on adverse effects in lab animals, not for children/adolescents,IOM DRI VitA/K/Min 2001 S-10
+VANADIUM,"Lactation 19-50 years",UL,1.8,,mg,UL,c,Based on adverse effects in lab animals, not for children/adolescents,IOM DRI VitA/K/Min 2001 S-10
+VITC,"Infants 0-6 months",AI,40,,mg,AI,"Human milk content",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Infants 7-12 months",AI,50,,mg,AI,"Human milk + solid food",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 1-3 years",EAR,13,,mg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 1-3 years",RDA,15,,mg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 4-8 years",EAR,22,,mg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 4-8 years",RDA,25,,mg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 9-13 years",EAR,39,,mg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Children 9-13 years",RDA,45,,mg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 14-18 years",EAR,63,,mg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 14-18 years",RDA,75,,mg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 14-18 years",EAR,56,,mg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 14-18 years",RDA,65,,mg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 19-30 years",EAR,75,,mg,EAR,"Near-maximal neutrophil concentration",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 19-30 years",RDA,90,,mg,RDA,"Near-maximal neutrophil concentration",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 19-30 years",EAR,60,,mg,EAR,"Near-maximal neutrophil concentration",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 19-30 years",RDA,75,,mg,RDA,"Near-maximal neutrophil concentration",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 31-50 years",EAR,75,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 31-50 years",RDA,90,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 31-50 years",EAR,60,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 31-50 years",RDA,75,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 51-70 years",EAR,75,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males 51-70 years",RDA,90,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 51-70 years",EAR,60,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females 51-70 years",RDA,75,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males >70 years",EAR,75,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Males >70 years",RDA,90,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females >70 years",EAR,60,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Females >70 years",RDA,75,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Pregnancy <=18 years",EAR,66,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration plus transfer to the fetus",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Pregnancy <=18 years",RDA,80,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration plus transfer to the fetus",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Pregnancy 19-50 years",EAR,70,,mg,EAR,"Extrapolation of near-maximal neutrophil concentration plus transfer to the fetus",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Pregnancy 19-50 years",RDA,85,,mg,RDA,"Extrapolation of near-maximal neutrophil concentration plus transfer to the fetus",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Lactation <=18 years",EAR,96,,mg,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Lactation <=18 years",RDA,115,,mg,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Lactation 19-50 years",EAR,100,,mg,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-1
+VITC,"Lactation 19-50 years",RDA,120,,mg,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-1
+VITE_AT,"Infants 0-6 months",AI,4,,mg AT,AI,"Human milk content",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Infants 7-12 months",AI,6,,mg AT,AI,"Extrapolation from 0 to 6 mo",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 1-3 years",EAR,5,,mg AT,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 1-3 years",RDA,6,,mg AT,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 4-8 years",EAR,6,,mg AT,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 4-8 years",RDA,7,,mg AT,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 9-13 years",EAR,9,,mg AT,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Children 9-13 years",RDA,11,,mg AT,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adolescents 14-18 years",EAR,12,,mg AT,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adolescents 14-18 years",RDA,15,,mg AT,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 19-30 years",EAR,12,,mg AT,EAR,"Prevention of hydrogen peroxide-induced hemolysis",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 19-30 years",RDA,15,,mg AT,RDA,"Prevention of hydrogen peroxide-induced hemolysis",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 31-50 years",EAR,12,,mg AT,EAR,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 31-50 years",RDA,15,,mg AT,RDA,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 51-70 years",EAR,12,,mg AT,EAR,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults 51-70 years",RDA,15,,mg AT,RDA,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults >70 years",EAR,12,,mg AT,EAR,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 50 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Adults >70 years",RDA,15,,mg AT,RDA,"Extrapolation of hydrogen peroxide-induced hemolysis from 19 through 50 y",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Pregnancy <=18 years",EAR,12,,mg AT,EAR,"Plasma concentration",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Pregnancy <=18 years",RDA,15,,mg AT,RDA,"Plasma concentration",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Pregnancy 19-50 years",EAR,12,,mg AT,EAR,"Plasma concentration",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Pregnancy 19-50 years",RDA,15,,mg AT,RDA,"Plasma concentration",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Lactation <=18 years",EAR,16,,mg AT,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Lactation <=18 years",RDA,19,,mg AT,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Lactation 19-50 years",EAR,16,,mg AT,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-2
+VITE_AT,"Lactation 19-50 years",RDA,19,,mg AT,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-2
+SE,"Infants 0-6 months",AI,15,,mcg,AI,"Human milk content",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Infants 7-12 months",AI,20,,mcg,AI,"Human milk + solid food",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 1-3 years",EAR,17,,mcg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 1-3 years",RDA,20,,mcg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 4-8 years",EAR,23,,mcg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 4-8 years",RDA,30,,mcg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 9-13 years",EAR,35,,mcg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Children 9-13 years",RDA,40,,mcg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adolescents 14-18 years",EAR,45,,mcg,EAR,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adolescents 14-18 years",RDA,55,,mcg,RDA,"Extrapolation from adult",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 19-30 years",EAR,45,,mcg,EAR,"Maximizing plasma glutathione peroxidase activity",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 19-30 years",RDA,55,,mcg,RDA,"Maximizing plasma glutathione peroxidase activity",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 31-50 years",EAR,45,,mcg,EAR,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 31-50 years",RDA,55,,mcg,RDA,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 51-70 years",EAR,45,,mcg,EAR,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults 51-70 years",RDA,55,,mcg,RDA,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults >70 years",EAR,45,,mcg,EAR,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Adults >70 years",RDA,55,,mcg,RDA,"Extrapolation of plasma glutathione peroxidase activity from 19 through 30 y",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Pregnancy <=18 years",EAR,49,,mcg,EAR,"Saturation of fetal selenoprotein",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Pregnancy <=18 years",RDA,60,,mcg,RDA,"Saturation of fetal selenoprotein",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Pregnancy 19-50 years",EAR,49,,mcg,EAR,"Saturation of fetal selenoprotein",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Pregnancy 19-50 years",RDA,60,,mcg,RDA,"Saturation of fetal selenoprotein",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Lactation <=18 years",EAR,59,,mcg,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Lactation <=18 years",RDA,70,,mcg,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Lactation 19-50 years",EAR,59,,mcg,EAR,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-3
+SE,"Lactation 19-50 years",RDA,70,,mcg,RDA,"Human milk content + age specific requirement",,,IOM DRI VitC/E/Se 2000 S-3
+VITC,"Infants 0-6 months",UL,,,mg,UL,,c,"ND. Not determinable. Source of intake should be from food and formula only.",IOM DRI VitC/E/Se 2000 S-4
+VITC,"Infants 7-12 months",UL,,,mg,UL,,c,"ND. Not determinable. Source of intake should be from food and formula only.",IOM DRI VitC/E/Se 2000 S-4
+VITC,"Children 1-3 years",UL,400,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Children 4-8 years",UL,650,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Children 9-13 years",UL,1200,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Adolescents 14-18 years",UL,1800,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Adults 19-70 years",UL,2000,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Adults >70 years",UL,2000,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Pregnancy <=18 years",UL,1800,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Pregnancy 19-50 years",UL,2000,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Lactation <=18 years",UL,1800,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITC,"Lactation 19-50 years",UL,2000,,mg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Infants 0-6 months",UL,,,mg AT,UL,,c,"ND. Not determinable. Source of intake should be from food and formula only. Applies to any form of supplemental alpha-tocopherol.",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Infants 7-12 months",UL,,,mg AT,UL,,c,"ND. Not determinable. Source of intake should be from food and formula only. Applies to any form of supplemental alpha-tocopherol.",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Children 1-3 years",UL,200,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Children 4-8 years",UL,300,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Children 9-13 years",UL,600,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Adolescents 14-18 years",UL,800,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Adults >=19 years",UL,1000,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Pregnancy <=18 years",UL,800,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Pregnancy 19-50 years",UL,1000,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Lactation <=18 years",UL,800,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+VITE_AT,"Lactation 19-50 years",UL,1000,,mg AT,UL,,b,"Applies to any form of supplemental alpha-tocopherol",IOM DRI VitC/E/Se 2000 S-4
+SE,"Infants 0-6 months",UL,45,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Infants 7-12 months",UL,60,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Children 1-3 years",UL,90,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Children 4-8 years",UL,150,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Children 9-13 years",UL,280,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Adolescents 14-18 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Adults >=19 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Pregnancy <=18 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Pregnancy 19-50 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Lactation <=18 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+SE,"Lactation 19-50 years",UL,400,,mcg,UL,,,,IOM DRI VitC/E/Se 2000 S-4
+CHOCDF,"Infants 0-6 months",EAR,,,,,,,No EAR set; AI only,DRI Macronutrients 2005
+CHOCDF,"Infants 7-12 months",EAR,,,,,,,No EAR set; AI only,DRI Macronutrients 2005
+CHOCDF,"Children 1-3 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Children 4-8 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Males 9-13 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Females 9-13 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Males 14-18 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Females 14-18 years",EAR,100,,g,EAR,"Average glucose utilized by the brain",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Males >18 years",EAR,100,,g,EAR,"Brain glucose utilization",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Females >18 years",EAR,100,,g,EAR,"Brain glucose utilization",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Pregnancy 14-18 years",EAR,135,,g,EAR,"Adolescent female EAR plus fetal brain glucose utilization",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Pregnancy 19-50 years",EAR,135,,g,EAR,"Adult female EAR plus fetal brain glucose utilization",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Lactation 14-18 years",EAR,160,,g,EAR,"Adolescent female EAR plus average human milk content of carbohydrate",,,DRI Macronutrients 2005 Table S-2
+CHOCDF,"Lactation 19-50 years",EAR,160,,g,EAR,"Adult female EAR plus average human milk content of carbohydrate",,,DRI Macronutrients 2005 Table S-2
+PROCNT,"Infants 0-6 months",EAR,,,,,,,No EAR set; AI only (1.52 g/kg/d),DRI Macronutrients 2005
+PROCNT,"Infants 7-12 months",EAR,1.0,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition (Corrected per NOTE p13)",,,DRI Macronutrients 2005 Table S-7 & Note
+PROCNT,"Children 1-3 years",EAR,0.87,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition (Corrected per NOTE p13)",,,DRI Macronutrients 2005 Table S-7 & Note
+PROCNT,"Children 4-8 years",EAR,0.76,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Males 9-13 years",EAR,0.76,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Females 9-13 years",EAR,0.76,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Males 14-18 years",EAR,0.73,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Females 14-18 years",EAR,0.71,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Males >18 years",EAR,0.66,,"g/kg body weight",EAR,"Nitrogen equilibrium",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Females >18 years",EAR,0.66,,"g/kg body weight",EAR,"Nitrogen equilibrium",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Pregnancy 14-18 years",EAR,0.88,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition (2nd half of pregnancy)",c,"EAR for second half of pregnancy only",DRI Macronutrients 2005 Table S-7
+PROCNT,"Pregnancy 19-50 years",EAR,0.88,,"g/kg body weight",EAR,"Nitrogen equilibrium plus protein deposition (2nd half of pregnancy)",c,"EAR for second half of pregnancy only",DRI Macronutrients 2005 Table S-7
+PROCNT,"Lactation 14-18 years",EAR,1.05,,"g/kg body weight",EAR,"Nitrogen equilibrium plus milk nitrogen",,,DRI Macronutrients 2005 Table S-7
+PROCNT,"Lactation 19-50 years",EAR,1.05,,"g/kg body weight",EAR,"Nitrogen equilibrium plus milk nitrogen",,,DRI Macronutrients 2005 Table S-7
