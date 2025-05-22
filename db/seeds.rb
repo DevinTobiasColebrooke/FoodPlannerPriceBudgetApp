@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# Clear existing data
+puts "Destroying existing data..."
+DriDataSeederService.seed_all_data
+
+puts "Seeding completed successfully!"
