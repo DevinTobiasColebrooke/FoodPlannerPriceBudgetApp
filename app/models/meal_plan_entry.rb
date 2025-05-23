@@ -6,7 +6,7 @@ class MealPlanEntry < ApplicationRecord
   validates :meal_type, presence: true
   validates :user_id, uniqueness: { scope: [:date, :meal_type] }
 
-  enum meal_type: {
+  enum :meal_type, {
     breakfast: 'breakfast',
     lunch: 'lunch',
     dinner: 'dinner',

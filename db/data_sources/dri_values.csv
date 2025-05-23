@@ -1,4 +1,3 @@
-```csv
 nutrient_identifier,life_stage_name,dri_type,value_numeric,value_string,unit,source_of_goal,criterion,footnote_marker,notes,source_document
 PROCNT,"Infants 7-12 months",RDA,11,,g,RDA,,,"Disclosure a: Reflects DRIs for 7-12mo or 6-12mo applied to 6-11mo. Original source: IOM DRIs Essential Guide 2006",DGA App1 T A1-1
 CHOCDF,"Infants 7-12 months",AI,95,,g,AI,,,"Disclosure a",DGA App1 T A1-1

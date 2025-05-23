@@ -7,11 +7,6 @@ class LifeStageGroup < ApplicationRecord
   has_one :growth_factor, dependent: :destroy
   has_many :pal_definitions, dependent: :destroy
 
-  validates :name, presence: true, uniqueness: true
-  validates :min_age_months, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :max_age_months, presence: true, numericality: { only_integer: true, greater_than: :min_age_months }
-  validates :sex, presence: true
-
   scope :for_age, ->(age_months) { where('min_age_months <= ? AND max_age_months >= ?', age_months, age_months) }
   scope :for_sex, ->(sex) { where(sex: sex) }
   scope :for_pregnancy, ->(trimester) { where(special_condition: 'pregnancy', trimester: trimester) }

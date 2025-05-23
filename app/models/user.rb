@@ -29,13 +29,13 @@ class User < ApplicationRecord
   has_many :shopping_lists, dependent: :destroy
 
   # Enums
-  enum cooking_time_preference: { quick: 'quick', moderate: 'moderate', leisurely: 'leisurely' }, _prefix: true
-  enum meal_difficulty_preference: { easy: 'easy', medium: 'medium', involved: 'involved' }, _prefix: true
-  enum shopping_difficulty_preference: { convenient: 'convenient', cheapest: 'cheapest', balanced: 'balanced' }, _prefix: true
-  enum location_preference_type: { auto: 'auto', region: 'region' }, _prefix: true
-  enum sex: { male: 'male', female: 'female', intersex_consideration: 'intersex_consideration' }
-  enum physical_activity_level: { sedentary: 'sedentary', low_active: 'low_active', active: 'active', very_active: 'very_active' }, _prefix: true
-  enum lactation_period: { zero_to_six_months: '0-6 months', seven_to_twelve_months: '7-12 months' }, _prefix: true
+  enum :cooking_time_preference, { quick: 'quick', moderate: 'moderate', leisurely: 'leisurely' }, prefix: true
+  enum :meal_difficulty_preference, { easy: 'easy', medium: 'medium', involved: 'involved' }, prefix: true
+  enum :shopping_difficulty_preference, { convenient: 'convenient', cheapest: 'cheapest', balanced: 'balanced' }, prefix: true
+  enum :location_preference_type, { auto: 'auto', region: 'region' }, prefix: true
+  enum :sex, { male: 'male', female: 'female', intersex_consideration: 'intersex_consideration' }
+  enum :physical_activity_level, { sedentary: 'sedentary', low_active: 'low_active', active: 'active', very_active: 'very_active' }, prefix: true
+  enum :lactation_period, { zero_to_six_months: '0-6 months', seven_to_twelve_months: '7-12 months' }, prefix: true
 
   # Validations
   validates :age_in_months, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }

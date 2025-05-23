@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_22_000000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -22,8 +22,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "dietary_pattern_calorie_levels", force: :cascade do |t|
-    t.bigint "dietary_pattern_id", null: false
-    t.integer "calorie_level", null: false
+    t.bigint "dietary_pattern_id"
+    t.integer "calorie_level"
     t.integer "limit_on_calories_other_uses_kcal_day"
     t.decimal "limit_on_calories_other_uses_percent_day", precision: 5, scale: 2
     t.datetime "created_at", null: false
@@ -33,10 +33,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "dietary_pattern_food_group_recommendations", force: :cascade do |t|
-    t.bigint "dietary_pattern_calorie_level_id", null: false
-    t.bigint "food_group_id", null: false
-    t.decimal "amount_value", precision: 10, scale: 4, null: false
-    t.string "amount_frequency", limit: 10, null: false
+    t.bigint "dietary_pattern_calorie_level_id"
+    t.bigint "food_group_id"
+    t.decimal "amount_value", precision: 10, scale: 4
+    t.string "amount_frequency", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dietary_pattern_calorie_level_id", "food_group_id"], name: "idx_dp_fg_recs_on_dp_cal_level_and_fg", unique: true
@@ -45,7 +45,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "dietary_patterns", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
+    t.string "name", limit: 255
     t.text "description"
     t.string "source_document_reference", limit: 255
     t.datetime "created_at", null: false
@@ -62,12 +62,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "dri_values", force: :cascade do |t|
-    t.bigint "nutrient_id", null: false
-    t.bigint "life_stage_group_id", null: false
-    t.string "dri_type", limit: 50, null: false
+    t.bigint "nutrient_id"
+    t.bigint "life_stage_group_id"
+    t.string "dri_type", limit: 50
     t.decimal "value_numeric", precision: 12, scale: 5
     t.string "value_string", limit: 50
-    t.string "unit", limit: 50, null: false
+    t.string "unit", limit: 50
     t.string "source_of_goal", limit: 100
     t.text "criterion"
     t.string "footnote_marker", limit: 10
@@ -81,7 +81,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "eer_additive_components", force: :cascade do |t|
-    t.string "component_type", limit: 50, null: false
+    t.string "component_type", limit: 50
     t.string "source_table_reference", limit: 100
     t.bigint "life_stage_group_id"
     t.string "sex_filter", limit: 20
@@ -90,7 +90,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
     t.integer "condition_pregnancy_trimester_filter"
     t.string "condition_pre_pregnancy_bmi_category_filter", limit: 20
     t.string "condition_lactation_period_filter", limit: 20
-    t.integer "value_kcal_day", null: false
+    t.integer "value_kcal_day"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -99,10 +99,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "eer_profiles", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
+    t.string "name", limit: 255
     t.string "source_table_reference", limit: 100
     t.bigint "life_stage_group_id"
-    t.string "sex_filter", limit: 20, null: false
+    t.string "sex_filter", limit: 20
     t.integer "age_min_months_filter"
     t.integer "age_max_months_filter"
     t.string "pal_category_applicable", limit: 50
@@ -113,7 +113,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
     t.decimal "coefficient_weight_kg", precision: 12, scale: 4
     t.decimal "coefficient_pal_value", precision: 12, scale: 4
     t.decimal "coefficient_gestation_weeks", precision: 12, scale: 4
-    t.string "equation_basis", limit: 50, null: false
+    t.string "equation_basis", limit: 50
     t.decimal "standard_error_of_predicted_value_kcal", precision: 10, scale: 2
     t.text "notes"
     t.datetime "created_at", null: false
@@ -123,9 +123,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "food_groups", force: :cascade do |t|
-    t.string "name", limit: 100, null: false
+    t.string "name", limit: 100
     t.bigint "parent_food_group_id"
-    t.string "default_unit_name", limit: 50, null: false
+    t.string "default_unit_name", limit: 50
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -142,8 +142,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "growth_factors", force: :cascade do |t|
-    t.bigint "life_stage_group_id", null: false
-    t.decimal "factor_value", precision: 5, scale: 2, null: false
+    t.bigint "life_stage_group_id"
+    t.decimal "factor_value", precision: 5, scale: 2
     t.string "source_document_reference", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -170,10 +170,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "life_stage_groups", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
-    t.integer "min_age_months", null: false
-    t.integer "max_age_months", null: false
-    t.string "sex", limit: 20, null: false
+    t.string "name", limit: 255
+    t.integer "min_age_months"
+    t.integer "max_age_months"
+    t.string "sex", limit: 20
     t.string "special_condition", limit: 50
     t.integer "trimester"
     t.string "lactation_period", limit: 20
@@ -199,11 +199,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "nutrients", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
-    t.string "dri_identifier", limit: 100, null: false
-    t.string "category", limit: 100, null: false
-    t.string "default_unit", limit: 50, null: false
-    t.string "analysis_unit", limit: 50, null: false
+    t.string "name", limit: 255
+    t.string "dri_identifier", limit: 100
+    t.string "category", limit: 100
+    t.string "default_unit", limit: 50
+    t.string "analysis_unit", limit: 50
     t.decimal "conversion_factor", precision: 12, scale: 6
     t.text "description"
     t.integer "sort_order"
@@ -213,10 +213,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "pal_definitions", force: :cascade do |t|
-    t.bigint "life_stage_group_id", null: false
-    t.string "pal_category", limit: 50, null: false
-    t.decimal "pal_range_min_value", precision: 4, scale: 2, null: false
-    t.decimal "pal_range_max_value", precision: 4, scale: 2, null: false
+    t.bigint "life_stage_group_id"
+    t.string "pal_category", limit: 50
+    t.decimal "pal_range_min_value", precision: 4, scale: 2
+    t.decimal "pal_range_max_value", precision: 4, scale: 2
     t.integer "percentile_value"
     t.decimal "pal_value_at_percentile", precision: 4, scale: 2
     t.decimal "coefficient_for_eer_equation", precision: 4, scale: 2
@@ -275,7 +275,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_11_033837) do
   end
 
   create_table "reference_anthropometries", force: :cascade do |t|
-    t.bigint "life_stage_group_id", null: false
+    t.bigint "life_stage_group_id"
     t.decimal "reference_height_cm", precision: 5, scale: 1
     t.decimal "reference_weight_kg", precision: 5, scale: 2
     t.decimal "median_bmi", precision: 4, scale: 1
