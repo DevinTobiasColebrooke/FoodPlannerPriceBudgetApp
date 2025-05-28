@@ -1,6 +1,8 @@
+# seeds.rb
 require 'csv'
 
 # --- Helper to parse fractional and range values for amounts ---
+# Handles "1/2", "1 3/4", "2-3", "2.5"
 def parse_amount_value(value_str)
   return nil if value_str.blank?
   value_str = value_str.strip.gsub('"', '') # Remove quotes if any
@@ -17,7 +19,9 @@ def parse_amount_value(value_str)
     num, den = fraction_part.split('/').map(&:to_f)
     total += num / den if den && den != 0
     return total.round(4)
-  elsif value_str.include?('-') # range like "2-3"
+  elsif value_str.include?('-') && value_str.match?(/\d+-\d+/) # range like "2-3", ensure it's not part of a name
+    # For ranges, DGA typically implies the lower bound or an average.
+    # We'll take the lower bound.
     return value_str.split('-').first.to_f.round(4)
   else # simple number
     return value_str.to_f.round(4)
@@ -28,25 +32,29 @@ rescue StandardError => e
 end
 
 # --- Helper to find or create/update resources (idempotent) ---
-def find_or_create_resource(model_class, find_by_hash, attributes_to_update = {})
-  resource = model_class.find_or_initialize_by(find_by_hash)
+def find_or_create_resource(model_class, find_by_attrs, update_attrs = {})
+  resource = model_class.find_or_initialize_by(find_by_attrs)
 
-  merged_attributes = attributes_to_update.merge(find_by_hash)
+  # Attributes to set/update = find_by_attrs (to ensure they are set if new) + update_attrs
+  # update_attrs take precedence if there are overlaps.
+  all_attrs_to_set = find_by_attrs.merge(update_attrs)
 
-  sanitized_attributes = {}
-  model_column_names = model_class.column_names.map(&:to_sym)
-  merged_attributes.each do |key, value|
-    sanitized_attributes[key] = value if model_column_names.include?(key)
-  end
+  # Filter attributes to only those that exist on the model
+  # Although assign_attributes does this, it's good for clarity and to avoid warnings.
+  valid_attributes = all_attrs_to_set.select { |k, _| model_class.column_names.include?(k.to_s) }
 
-  begin
-    resource.update!(sanitized_attributes)
-  rescue ActiveRecord::RecordInvalid => e
-    puts "ERROR: Validation failed for #{model_class.name} with find_by_hash: #{find_by_hash} and attributes: #{sanitized_attributes}. Errors: #{e.record.errors.full_messages.join(', ')}"
-    raise e
-  rescue => e
-    puts "ERROR: Could not save #{model_class.name} with find_by_hash: #{find_by_hash} and attributes: #{sanitized_attributes}. Error: #{e.message}"
-    raise e
+  resource.assign_attributes(valid_attributes)
+
+  if resource.new_record? || resource.changed?
+    begin
+      resource.save!
+    rescue ActiveRecord::RecordInvalid => e
+      puts "ERROR: Validation failed for #{model_class.name} with find_by_attrs: #{find_by_attrs}, update_attrs: #{update_attrs}. Errors: #{e.record.errors.full_messages.join(', ')}"
+      puts "Attempted to save with attributes: #{valid_attributes.inspect}" # Debug attributes
+    rescue => e
+      puts "ERROR: Could not save #{model_class.name} with find_by_attrs: #{find_by_attrs}, update_attrs: #{update_attrs}. Error: #{e.message}"
+      puts "Attempted to save with attributes: #{valid_attributes.inspect}" # Debug attributes
+    end
   end
   resource
 end
@@ -75,8 +83,8 @@ ShoppingList.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
 Store.destroy_all
-Session.destroy_all
-User.destroy_all
+Session.destroy_all # Assuming Session depends on User
+User.destroy_all    # User destroyed before its direct dependencies
 
 Goal.destroy_all
 Allergy.destroy_all
@@ -84,8 +92,8 @@ DietaryRestriction.destroy_all
 KitchenEquipment.destroy_all
 
 Nutrient.destroy_all
-FoodGroup.where.not(parent_food_group_id: nil).destroy_all
-FoodGroup.where(parent_food_group_id: nil).destroy_all
+FoodGroup.where.not(parent_food_group_id: nil).destroy_all # Delete children first
+FoodGroup.where(parent_food_group_id: nil).destroy_all   # Then delete parents
 DietaryPattern.destroy_all
 LifeStageGroup.destroy_all
 
@@ -93,7 +101,6 @@ puts "All specified existing data destroyed."
 puts "--------------------------------"
 
 # --- Phase 1: Simple Lookup Table Seeding ---
-# ... (Goal, Allergy, KitchenEquipment, DietaryRestriction seeding - unchanged) ...
 puts "Seeding Goals..."
 [
   { name: "Plan my meals for me", description: "Science based algorithmn plans meals for you, so you don't have to think about meals." },
@@ -133,41 +140,42 @@ puts "Dietary Restrictions seeded: #{DietaryRestriction.count}"
 # --- Phase 2: Foundational Data from CSVs (Order is CRITICAL) ---
 puts "Seeding Foundational Data from CSV files..."
 
-# 1. Nutrients (nutrients.csv)
-# ... (unchanged) ...
-puts "Seeding Nutrients..."
-CSV.foreach(Rails.root.join('db', 'data_sources', 'nutrients.csv'), headers: true, header_converters: :symbol) do |row|
-  find_or_create_resource(Nutrient, { dri_identifier: row[:dri_identifier]&.strip }, {
-    name: row[:name]&.strip,
-    category: row[:category]&.strip,
-    default_unit: row[:default_unit]&.strip,
-    analysis_unit: row[:analysis_unit]&.strip,
-    conversion_factor: row[:conversion_factor].present? ? row[:conversion_factor].to_f : nil,
-    description: row[:description].presence,
-    sort_order: row[:sort_order].present? ? row[:sort_order].to_i : nil
-  })
-end
-puts "Nutrients seeded: #{Nutrient.count}"
-
 # 2. Life Stages (life_stages.csv -> LifeStageGroup model)
-# ... (unchanged) ...
 puts "Seeding Life Stage Groups..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'life_stages.csv'), headers: true, header_converters: :symbol) do |row|
+  # Ensure max_age_months is correctly handled for blank values to avoid type errors with .to_i
+  max_age_val = row[:max_age_months]
+  # Default for open-ended max_age_months (e.g., "71+ years") is set to a high number (12000 months ~ 1000 years)
+  # to signify no upper limit for practical purposes.
+  max_age_months_int = max_age_val.present? && max_age_val.match?(/\A\d+\z/) ? max_age_val.to_i : 12000
+
   find_or_create_resource(LifeStageGroup, { name: row[:name]&.strip }, {
     min_age_months: row[:min_age_months].to_i,
-    max_age_months: row[:max_age_months].present? ? row[:max_age_months].to_i : 1200,
-    sex: row[:sex]&.strip,
-    special_condition: row[:special_condition].presence&.strip,
+    max_age_months: max_age_months_int,
+    sex: row[:sex]&.strip&.downcase,
+    special_condition: row[:special_condition].presence&.strip, # Uses presence to convert blank strings to nil
     trimester: row[:trimester].present? ? row[:trimester].to_i : nil,
-    lactation_period: (row[:lactation_period].present? && row[:lactation_period].strip.length <= 20 ? row[:lactation_period].strip : nil),
+    lactation_period: (row[:lactation_period].present? && row[:lactation_period].strip.length <= 20 ? row[:lactation_period].strip : nil), # Ensures within length limit
     notes: row[:notes].presence
   })
 end
 puts "Life Stage Groups seeded: #{LifeStageGroup.count}"
 
+puts "--- Post LifeStageGroup Seeding Diagnostics ---"
+puts "Distinct values for 'sex' in LifeStageGroup: #{LifeStageGroup.distinct.pluck(:sex).inspect}"
+puts "Distinct values for 'special_condition' in LifeStageGroup: #{LifeStageGroup.distinct.pluck(:special_condition).inspect}"
+puts "Count of LSGs with sex='male': #{LifeStageGroup.where(sex: 'male').count}"
+puts "Count of LSGs with sex='female': #{LifeStageGroup.where(sex: 'female').count}"
+puts "Count of LSGs with sex='any': #{LifeStageGroup.where(sex: 'any').count}"
+puts "Count of LSGs with special_condition IS NULL: #{LifeStageGroup.where(special_condition: nil).count}"
+puts "Count of LSGs with special_condition = '': #{LifeStageGroup.where(special_condition: '').count}"
+
+puts "Sample 'Males 19-30 years' LSG: #{LifeStageGroup.find_by(name: 'Males 19-30 years')&.attributes.inspect}"
+puts "Sample 'Children 4-8 years' LSG: #{LifeStageGroup.find_by(name: 'Children 4-8 years')&.attributes.inspect}"
+puts "Sample 'Children 3 years' LSG: #{LifeStageGroup.find_by(name: 'Children 3 years')&.attributes.inspect}"
+puts "--- End Post LifeStageGroup Seeding Diagnostics ---"
 
 # 3. Food Groups (food_groups.csv & food_subgroups.csv for FoodGroup model)
-# ... (unchanged - ensure "Meats, Poultry, Eggs" is added to food_subgroups.csv) ...
 puts "Seeding Food Groups (Parents)..."
 parent_groups_map = {}
 CSV.foreach(Rails.root.join('db', 'data_sources', 'food_groups.csv'), headers: true, header_converters: :symbol) do |row|
@@ -182,18 +190,20 @@ puts "Seeding Food Subgroups..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'food_subgroups.csv'), headers: true, header_converters: :symbol) do |row|
   parent_name = row[:food_group_name]&.strip
   parent_id = parent_groups_map[parent_name]
-  raise "ERROR: Parent FoodGroup '#{parent_name}' not found for subgroup '#{row[:name]&.strip}'" unless parent_id
+  unless parent_id
+    puts "ERROR: Parent FoodGroup '#{parent_name}' not found for subgroup '#{row[:name]&.strip}'. Skipping."
+    next
+  end
 
   parent_food_group_for_subgroup = FoodGroup.find(parent_id)
   find_or_create_resource(FoodGroup, { name: row[:name]&.strip }, {
     parent_food_group_id: parent_id,
-    default_unit_name: parent_food_group_for_subgroup.default_unit_name
+    default_unit_name: parent_food_group_for_subgroup.default_unit_name # Inherit default unit
   })
 end
 puts "Total Food Groups (incl. subgroups) seeded: #{FoodGroup.count}"
 
 # 4. Dietary Patterns (dietary_patterns.csv)
-# ... (unchanged) ...
 puts "Seeding Dietary Patterns..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_patterns.csv'), headers: true, header_converters: :symbol) do |row|
   find_or_create_resource(DietaryPattern, { name: row[:name]&.strip }, {
@@ -207,13 +217,14 @@ puts "Dietary Patterns seeded: #{DietaryPattern.count}"
 # --- Phase 3: Dependent DRI & EER Data from CSVs ---
 
 # 5. EER Profiles (eer_profiles.csv)
-# ... (unchanged) ...
 puts "Seeding EER Profiles..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_profiles.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_group = LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
+  # EER Profiles are uniquely identified by name for simplicity in CSV, but ensure consistency.
+  # If LifeStageGroup is meant to be part of uniqueness, add it to find_by_hash.
   find_or_create_resource(EerProfile, { name: row[:name]&.strip }, {
     source_table_reference: row[:source_table_reference].presence,
-    life_stage_group_id: life_stage_group&.id,
+    life_stage_group_id: life_stage_group&.id, # Can be nil if the profile is generic
     sex_filter: row[:sex_filter].presence&.strip,
     age_min_months_filter: row[:age_min_months_filter].present? ? row[:age_min_months_filter].to_i : nil,
     age_max_months_filter: row[:age_max_months_filter].present? ? row[:age_max_months_filter].to_i : nil,
@@ -233,34 +244,32 @@ end
 puts "EER Profiles seeded: #{EerProfile.count}"
 
 # 6. EER Additive Components (eer_additive_components.csv)
-# ... (unchanged) ...
 puts "Seeding EER Additive Components..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_additive_components.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_group = LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
 
   find_by_attrs = {
     component_type: row[:component_type]&.strip,
-    life_stage_group_id: life_stage_group&.id,
+    life_stage_group_id: life_stage_group&.id, # Can be nil for generic components
     sex_filter: row[:sex_filter].presence&.strip,
     age_min_months_filter: row[:age_min_months_filter].present? ? row[:age_min_months_filter].to_i : nil,
     age_max_months_filter: row[:age_max_months_filter].present? ? row[:age_max_months_filter].to_i : nil,
     condition_pregnancy_trimester_filter: row[:condition_pregnancy_trimester_filter].present? ? row[:condition_pregnancy_trimester_filter].to_i : nil,
     condition_pre_pregnancy_bmi_category_filter: row[:condition_pre_pregnancy_bmi_category_filter].presence&.strip,
-    condition_lactation_period_filter: row[:condition_lactation_period_filter].presence&.strip
+    condition_lactation_period_filter: row[:condition_lactation_period_filter].presence&.strip&.truncate(20)
   }
-  find_by_attrs.compact!
+  find_by_attrs.compact! # Remove nil values from find_by_attrs
 
   update_attrs = {
-    source_table_reference: row[:source_document_reference].presence,
     value_kcal_day: row[:value_kcal_day].to_i,
-    notes: row[:notes].presence
+    notes: row[:notes].presence,
+    source_document_reference: row[:source_document_reference].presence
   }
   find_or_create_resource(EerAdditiveComponent, find_by_attrs, update_attrs)
 end
 puts "EER Additive Components seeded: #{EerAdditiveComponent.count}"
 
 # 7. Growth Factors (growth_factors.csv)
-# ... (unchanged) ...
 puts "Seeding Growth Factors..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'growth_factors.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_group_name_csv = row[:life_stage_group_id_placeholder]&.strip
@@ -270,7 +279,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'growth_factors.csv'), headers
     next
   end
 
-  find_by_attrs = { life_stage_group_id: life_stage_group.id }
+  find_by_attrs = { life_stage_group_id: life_stage_group.id } # Assuming one growth factor per LSG
   update_attrs = {
     factor_value: row[:factor_value].to_f,
     source_document_reference: row[:source_document_reference].presence
@@ -280,80 +289,172 @@ end
 puts "Growth Factors seeded: #{GrowthFactor.count}"
 
 # 8. PAL Definitions (pal_definitions.csv)
-# ... (Mostly unchanged, minor refinement to ensure `pluck` returns names if records exist)
 puts "Seeding PAL Definitions..."
+
+# Diagnostic: Check count for a known problematic query condition with more lenient special_condition check
+# And ensure sex is queried in lowercase to match stored value
+debug_gam_lsg_count = LifeStageGroup.where(sex: 'male') # Assuming 'male' is already lowercase from seeding
+                                    .where(special_condition: [nil, ''])
+                                    .where("min_age_months >= ?", 228)
+                                    .count
+puts "DEBUG (PAL section): Count of LSGs for 'General Adult Male' (male, >=228mo, spec_cond nil/''): #{debug_gam_lsg_count}"
+
+debug_child_3_8_lsg_count = LifeStageGroup.where(special_condition: [nil, ''])
+                                          .where("min_age_months >= 36 AND max_age_months <= 107") # 3 to <9 years
+                                          .count
+puts "DEBUG (PAL section): Count of LSGs for 'Children 3-8 years' (36-107mo, spec_cond nil/''): #{debug_child_3_8_lsg_count}"
+
+
 CSV.foreach(Rails.root.join('db', 'data_sources', 'pal_definitions.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_name_from_csv = row[:life_stage_name]&.strip
 
+  # Queries for LifeStageGroup should consistently use lowercase for sex
+  # and [nil, ''] for special_condition where applicable.
   target_life_stage_group_names = case life_stage_name_from_csv
-    when "General Adult Male"
-      LifeStageGroup.where(sex: 'male').where("min_age_months >= ?", 228).pluck(:name).presence || []
-    when "General Adult Female"
-      LifeStageGroup.where(sex: 'female').where("min_age_months >= ?", 228).pluck(:name).presence || []
-    when "General Boys 3-18 years"
-      LifeStageGroup.where(sex: 'male', min_age_months: 36..227).pluck(:name).presence || []
-    when "General Girls 3-18 years"
-      LifeStageGroup.where(sex: 'female', min_age_months: 36..227).pluck(:name).presence || []
-    when "Adults 19+ years"
-      LifeStageGroup.where("min_age_months >= 228 AND special_condition IS NULL").pluck(:name).presence || []
-    when "Children 0-2.99 years", "Children 0-2 years"
-      LifeStageGroup.where("max_age_months < 36").pluck(:name).presence || []
-    when "Children 3-8 years", "Children 3-8.99 years"
-      LifeStageGroup.where(min_age_months: 36..107, sex: 'any', special_condition: nil).pluck(:name).presence || LifeStageGroup.where(name: "Children 4-8 years").pluck(:name).presence || []
-    when "Children 9-13 years", "Children 9-13.99 years"
-      LifeStageGroup.where(min_age_months: 108..167, sex: ['male', 'female'], special_condition: nil).pluck(:name).uniq.presence || []
-    when "Adolescents 14-18 years", "Adolescents 14-18.99 years"
-      LifeStageGroup.where(min_age_months: 168..227, sex: ['male', 'female'], special_condition: nil).pluck(:name).uniq.presence || []
-    when "Adults 19-30 years"
-        LifeStageGroup.where(sex: ['male', 'female']).where(min_age_months: 228..371, special_condition: nil).pluck(:name).uniq.presence || []
-    when "Adults 31-50 years"
-        LifeStageGroup.where(sex: ['male', 'female']).where(min_age_months: 372..611, special_condition: nil).pluck(:name).uniq.presence || []
-    when "Adults 51-70 years"
-        LifeStageGroup.where(sex: ['male', 'female']).where(min_age_months: 612..851, special_condition: nil).pluck(:name).uniq.presence || []
-    when "Adults 71+ years"
-        LifeStageGroup.where(sex: ['male', 'female']).where("min_age_months >= 852 AND special_condition IS NULL").pluck(:name).uniq.presence || []
-    when "Adults 19-70.99 years", "Adults 19-70 years"
-      LifeStageGroup.where("min_age_months >= 228 AND max_age_months < 852 AND special_condition IS NULL").pluck(:name).presence || []
-    else
-      existing_group = LifeStageGroup.find_by(name: life_stage_name_from_csv)
-      existing_group ? [existing_group.name] : []
+  when "General Adult Male"
+    LifeStageGroup.where(sex: 'male')
+                  .where(special_condition: [nil, ''])
+                  .where("min_age_months >= ?", 228)
+                  .pluck(:name)
+  when "General Adult Female"
+    LifeStageGroup.where(sex: 'female')
+                  .where(special_condition: [nil, ''])
+                  .where("min_age_months >= ?", 228)
+                  .pluck(:name)
+  when "General Boys 3-18 years"
+    LifeStageGroup.where(sex: 'male')
+                  .where(special_condition: [nil, ''])
+                  .where("min_age_months >= 36 AND max_age_months <= 227")
+                  .pluck(:name)
+  when "General Girls 3-18 years"
+    LifeStageGroup.where(sex: 'female')
+                  .where(special_condition: [nil, ''])
+                  .where("min_age_months >= 36 AND max_age_months <= 227")
+                  .pluck(:name)
+  # ... (ensure all other case branches also use sex: 'male'/'female' in lowercase and special_condition: [nil, ''])
+  when "Children 3-8 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where("min_age_months >= 36 AND max_age_months <= 107")
+                  .pluck(:name)
+  when "Children 9-13 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where("min_age_months >= 108 AND max_age_months <= 167")
+                  .pluck(:name)
+  when "Adolescents 14-18 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where("min_age_months >= 168 AND max_age_months <= 227")
+                  .pluck(:name)
+  when "Adults 19+ years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where("min_age_months >= ?", 228)
+                  .pluck(:name)
+  when "Infants 0-6 months" # These typically don't have sex-specific general PALs, but rely on name
+      LifeStageGroup.where(name: "Infants 0-6 months").pluck(:name)
+  when "Infants 7-12 months"
+      LifeStageGroup.where(name: "Infants 7-12 months").pluck(:name)
+  when "Children 1-3 years"
+      LifeStageGroup.where(name: "Children 1-3 years").pluck(:name)
+  when "Children 4-8 years" # This maps to the specific LifeStageGroup from CSV named "Children 4-8 years"
+                            # and other relevant groups.
+      LifeStageGroup.where(name: "Children 4-8 years") # Direct name match
+                  .or(LifeStageGroup.where(special_condition: [nil, '']) # Broader match for other 'any' sex groups
+                                    .where(sex: ['any', 'male', 'female']) # Be explicit if needed
+                                    .where("min_age_months >= 48 AND max_age_months <= 107"))
+                  .pluck(:name).uniq
+  when "Adults 19-30 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female']) # Assuming these can apply to 'any' sex groups if not gender specific
+                  .where("min_age_months >= 228 AND max_age_months <= 371")
+                  .pluck(:name)
+  when "Adults 31-50 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 372 AND max_age_months <= 611")
+                  .pluck(:name)
+  when "Adults 51-70 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 612 AND max_age_months <= 851")
+                  .pluck(:name)
+  when "Children 0-2.99 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 0 AND max_age_months <= 35")
+                  .pluck(:name)
+  when "Children 3-8.99 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female']) # PALs for "Children" often apply to both sexes if not specified
+                  .where("min_age_months >= 36 AND max_age_months <= 107")
+                  .pluck(:name)
+  when "Children 9-13.99 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 108 AND max_age_months <= 167")
+                  .pluck(:name)
+  when "Adolescents 14-18.99 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 168 AND max_age_months <= 227")
+                  .pluck(:name)
+  when "Adults 19-70.99 years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 228 AND max_age_months <= 851")
+                  .pluck(:name)
+  when "Adults 71+ years"
+    LifeStageGroup.where(special_condition: [nil, ''])
+                  .where(sex: ['any', 'male', 'female'])
+                  .where("min_age_months >= 852")
+                  .pluck(:name)
+  else
+    # Fallback for direct match by name if not covered above
+    existing_group = LifeStageGroup.find_by(name: life_stage_name_from_csv)
+    target_life_stage_group_names = existing_group ? [existing_group.name] : []
   end
 
   if target_life_stage_group_names.empty?
-    puts "WARN: No LifeStageGroup found for PAL Definition mapping: '#{life_stage_name_from_csv}'. Skipping this PAL entry."
+    puts "WARN: No LifeStageGroup found for PAL Definition mapping: '#{life_stage_name_from_csv}'. Skipping PAL entry: #{row.to_h}"
     next
   end
-  # ... (rest of PAL definition seeding logic unchanged) ...
-  target_life_stage_group_names.each do |resolved_lsg_name|
+
+  target_life_stage_group_names.uniq.each do |resolved_lsg_name|
     life_stage_group = LifeStageGroup.find_by(name: resolved_lsg_name)
     unless life_stage_group
-      puts "WARN: PAL seeding - Could not find LifeStageGroup for resolved name '#{resolved_lsg_name}' (from CSV PAL name '#{life_stage_name_from_csv}')"
+      puts "ERROR: PAL seeding - Could not re-find LifeStageGroup for resolved name '#{resolved_lsg_name}' (Original CSV name: '#{life_stage_name_from_csv}'). Skipping."
       next
     end
-
-    find_by_attrs = { life_stage_group_id: life_stage_group.id }
 
     pal_category_csv = row[:pal_category]&.strip
-    percentile_value_csv = row[:percentile_value]&.strip
+    coefficient_csv = row[:coefficient_for_eer_equation]&.strip
+    percentile_val_csv = row[:percentile_value]&.strip
+    pal_value_at_percentile_source_csv = row[:pal_value_at_percentile]&.strip
+    pal_range_min_csv = row[:pal_range_min_value]&.strip
+    pal_range_max_csv = row[:pal_range_max_value]&.strip
 
-    if pal_category_csv.present? && row[:coefficient_for_eer_equation].present?
+    find_by_attrs = { life_stage_group_id: life_stage_group.id }
+    update_attrs = { source_document_reference: row[:source_document_reference].presence }
+
+    # Determine the type of PAL entry and set attributes accordingly
+    if pal_category_csv.present? && coefficient_csv.present? # EER Coefficient type
       find_by_attrs[:pal_category] = pal_category_csv
-      find_by_attrs[:percentile_value] = nil
-    elsif percentile_value_csv.present? && row[:pal_value_at_percentile].present?
-      find_by_attrs[:pal_category] = pal_category_csv.presence || "Default_Percentile_Category" # Placeholder if CSV category is blank for percentile rows
-      find_by_attrs[:percentile_value] = percentile_value_csv.to_i
+      update_attrs[:coefficient_for_eer_equation] = Float(coefficient_csv) rescue nil
+    elsif percentile_val_csv.present? && pal_value_at_percentile_source_csv.present? # Percentile with direct value type
+      find_by_attrs[:pal_category] = pal_category_csv.presence || "Percentile_#{percentile_val_csv}"
+      find_by_attrs[:percentile_value] = Integer(percentile_val_csv) rescue nil
+      update_attrs[:pal_value_at_percentile] = Float(pal_value_at_percentile_source_csv) rescue nil
+    elsif percentile_val_csv.present? && pal_range_min_csv.present? && pal_value_at_percentile_source_csv.blank? # Percentile using min_range as value
+      find_by_attrs[:pal_category] = pal_category_csv.presence || "Percentile_#{percentile_val_csv}"
+      find_by_attrs[:percentile_value] = Integer(percentile_val_csv) rescue nil
+      update_attrs[:pal_value_at_percentile] = Float(pal_range_min_csv) rescue nil
+    elsif pal_category_csv.present? && pal_range_min_csv.present? # PAL Range type
+      find_by_attrs[:pal_category] = pal_category_csv
+      update_attrs[:pal_range_min_value] = Float(pal_range_min_csv) rescue nil
+      update_attrs[:pal_range_max_value] = Float(pal_range_max_csv) rescue nil if pal_range_max_csv.present?
     else
-      puts "WARN: Skipping PAL definition row due to unclear type (missing key fields): #{row.to_h}"
       next
     end
 
-    update_attrs = {}
-    update_attrs[:pal_range_min_value] = row[:pal_range_min_value].to_f if row[:pal_range_min_value].present?
-    update_attrs[:pal_range_max_value] = row[:pal_range_max_value].to_f if row[:pal_range_max_value].present?
-    update_attrs[:pal_value_at_percentile] = row[:pal_value_at_percentile].to_f if row[:pal_value_at_percentile].present?
-    update_attrs[:coefficient_for_eer_equation] = row[:coefficient_for_eer_equation].to_f if row[:coefficient_for_eer_equation].present?
-    update_attrs[:source_document_reference] = row[:source_document_reference].presence if row[:source_document_reference].present?
-    update_attrs[:pal_category] = find_by_attrs[:pal_category]
+    update_attrs[:pal_category] = find_by_attrs[:pal_category] if find_by_attrs.key?(:pal_category)
     update_attrs[:percentile_value] = find_by_attrs[:percentile_value] if find_by_attrs.key?(:percentile_value)
 
     find_or_create_resource(PalDefinition, find_by_attrs, update_attrs)
@@ -361,34 +462,14 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'pal_definitions.csv'), header
 end
 puts "PAL Definitions seeded: #{PalDefinition.count}"
 
-
 # 9. Reference Anthropometries (reference_anthropometries.csv)
-# ... (unchanged from previous correct version) ...
 puts "Seeding Reference Anthropometries..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'reference_anthropometries.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_name_csv = row[:life_stage_group_id_placeholder]&.strip
-  life_stage_name_db = case life_stage_name_csv
-    when "Adult Males Reference" then "Males 19-30 years"
-    when "Adult Females Reference" then "Females 19-30 years"
-    when "Infants 2-6 months" then "Infants 0-6 months"
-    when "Infants 7-11 months" then "Infants 7-12 months"
-    when "Children 1-3 years" then "Children 1-3 years"
-    when "Children 4-8 years" then "Children 4-8 years"
-    when "Males 9-13 years" then "Males 9-13 years"
-    when "Males 14-18 years" then "Males 14-18 years"
-    when "Females 9-13 years" then "Females 9-13 years"
-    when "Females 14-18 years" then "Females 14-18 years"
-    when "Infants 0-11 months DLW" then "Infants 7-12 months"
-    when "Children 1-8 years DLW" then "Children 4-8 years"
-    when "Children 9-18 years DLW" then "Males 14-18 years"
-    when "Adults 19+ years DLW" then "Males 19-30 years"
-    when "Pregnant/Lactating Women DLW" then "Pregnancy 19-30 years 1st Trimester"
-    else life_stage_name_csv
-  end
-
-  life_stage_group = LifeStageGroup.find_by(name: life_stage_name_db)
+  # Simplified mapping for reference anthropometries, assuming direct names for now
+  life_stage_group = LifeStageGroup.find_by(name: life_stage_name_csv)
   unless life_stage_group
-    puts "WARN: Reference Anthropometry - LifeStageGroup '#{life_stage_name_db}' (mapped from CSV '#{life_stage_name_csv}') not found. Skipping."
+    puts "WARN: Reference Anthropometry - LifeStageGroup '#{life_stage_name_csv}' not found. Skipping. CSV Row: #{row.to_h}"
     next
   end
 
@@ -406,120 +487,51 @@ puts "Reference Anthropometries seeded: #{ReferenceAnthropometry.count}"
 puts "Seeding DRI Values..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: true, header_converters: :symbol) do |row|
   nutrient_identifier_csv = row[:nutrient_identifier]&.strip
+  # Basic mapping for nutrient identifiers, add more if needed
   db_nutrient_identifier = case nutrient_identifier_csv
     when "BIOTIN" then "BIOT"
     when "/CU" then "CU"
-    when "VANADIUM" then "VANAD" # Ensure 'VANAD' is the dri_identifier for Vanadium in nutrients.csv
+    when "VANADIUM" then "VANAD"
     else nutrient_identifier_csv
   end
 
   nutrient = Nutrient.find_by(dri_identifier: db_nutrient_identifier)
   life_stage_name_csv = row[:life_stage_name]&.strip
 
+  # Similar broad to specific mapping as PAL definitions
   resolved_life_stage_group_names = case life_stage_name_csv
-    # ... (mappings from previous correct version, with additions for new errors) ...
-    when "Children 9-13 years", "Adolescents 9-13 years"
-      ["Males 9-13 years", "Females 9-13 years"]
-    when "Boys 9-13 years" then ["Males 9-13 years"]
-    when "Girls 9-13 years" then ["Females 9-13 years"]
-    when "Children 14-18 years", "Adolescents 14-18 years"
-      ["Males 14-18 years", "Females 14-18 years"]
-    when "Adolescents 9-18 years"
-      ["Males 9-13 years", "Females 9-13 years", "Males 14-18 years", "Females 14-18 years"]
-    when "Children 19-30 years", "Adults 19-30 years"
-      ["Males 19-30 years", "Females 19-30 years"]
-    when "Children 31-50 years", "Adults 31-50 years"
-      ["Males 31-50 years", "Females 31-50 years"]
-    when "Adults 51+ years", "Adults 51-70 years", "Adults >=51 years"
-      ["Males 51+ years", "Females 51+ years"]
-    when "Adults 71+ years", "Adults >70 years", "Females >70 years", "Males >70 years", "Men >70 years", "Women >70 years"
-      names = []
-      names << "Males 71+ years" if life_stage_name_csv.match?(/Males|Men|Adults >70 years|Adults 71\+ years/)
-      names << "Females 71+ years" if life_stage_name_csv.match?(/Females|Women|Adults >70 years|Adults 71\+ years/)
-      names.uniq.empty? ? [life_stage_name_csv] : names.uniq
-    when "Men 19-30 years" then ["Males 19-30 years"]
-    when "Women 19-30 years" then ["Females 19-30 years"]
-    when "Men 31-50 years" then ["Males 31-50 years"]
-    when "Women 31-50 years" then ["Females 31-50 years"]
-    when "Men 51+ years", "Men 51-70 years" then ["Males 51+ years"]
-    when "Women 51+ years", "Women 51-70 years" then ["Females 51+ years"]
-    when "Children 4-8 years"
-      ["Children 4-8 years"]
-    when "Infants 0-12 months"
-      ["Infants 0-6 months", "Infants 7-12 months"]
-    when "Pregnancy (all ages)", "Pregnancy 14-50 years"
-      LifeStageGroup.where(special_condition: 'pregnancy').pluck(:name).presence || []
-    when "Lactation (all ages)", "Lactation 14-50 years"
-      LifeStageGroup.where(special_condition: 'lactation').pluck(:name).presence || []
-    when "Pregnancy <=18 years", "Pregnancy 14-18 years"
-      LifeStageGroup.where(special_condition: 'pregnancy').where("name LIKE '%14-18 years%'").pluck(:name).presence || []
-    when "Pregnancy 19-30 years"
-      LifeStageGroup.where(special_condition: 'pregnancy').where("name LIKE '%19-30 years%'").pluck(:name).presence || []
-    when "Pregnancy 31-50 years"
-      LifeStageGroup.where(special_condition: 'pregnancy').where("name LIKE '%31-50 years%'").pluck(:name).presence || []
-    when "Pregnancy 19-50 years", "Pregnancy >=19 years"
-      LifeStageGroup.where(special_condition: 'pregnancy').where("name LIKE '%19-30 years%' OR name LIKE '%31-50 years%'").pluck(:name).presence || []
-    when "Lactation <=18 years", "Lactation 14-18 years"
-      LifeStageGroup.where(special_condition: 'lactation').where("name LIKE '%14-18 years%'").pluck(:name).presence || []
-    when "Lactation 19-30 years"
-      LifeStageGroup.where(special_condition: 'lactation').where("name LIKE '%19-30 years%'").pluck(:name).presence || []
-    when "Lactation 31-50 years"
-      LifeStageGroup.where(special_condition: 'lactation').where("name LIKE '%31-50 years%'").pluck(:name).presence || []
-    when "Lactation 19-50 years", "Lactation >=19 years"
-      LifeStageGroup.where(special_condition: 'lactation').where("name LIKE '%19-30 years%' OR name LIKE '%31-50 years%'").pluck(:name).presence || []
-    when "Adults >18 years", "Adults >=19 years"
-      LifeStageGroup.where("min_age_months >= 228 AND special_condition IS NULL").pluck(:name).presence || []
-    when "Adults 19-50 years"
-      LifeStageGroup.where(name: ["Males 19-30 years", "Females 19-30 years", "Males 31-50 years", "Females 31-50 years"]).pluck(:name).presence || []
-    when "Males >19 years", "Males >=19 years", "Males 19+ years"
-      # This needs to cover all adult male groups if it's a general ">19"
-      LifeStageGroup.where(sex: 'male').where("min_age_months >= 228 AND special_condition IS NULL").pluck(:name).presence || []
-    when "Females >19 years", "Females >=19 years", "Females 19+ years"
-      LifeStageGroup.where(sex: 'female').where("min_age_months >= 228 AND special_condition IS NULL").pluck(:name).presence || []
-    when "Males 19-50 years"
-        LifeStageGroup.where(name: ["Males 19-30 years", "Males 31-50 years"]).pluck(:name).presence || []
-    when "Females 19-50 years"
-        LifeStageGroup.where(name: ["Females 19-30 years", "Females 31-50 years"]).pluck(:name).presence || []
-    when "Males >=51 years"
-        LifeStageGroup.where(name: ["Males 51+ years", "Males 71+ years"]).pluck(:name).presence || []
-    when "Females >=51 years"
-        LifeStageGroup.where(name: ["Females 51+ years", "Females 71+ years"]).pluck(:name).presence || []
-    when "Adults >=31 years"
-        LifeStageGroup.where("min_age_months >= 372 AND special_condition IS NULL").pluck(:name).presence || []
-    when "Males 19-70 years"
-        LifeStageGroup.where(name: ["Males 19-30 years", "Males 31-50 years", "Males 51+ years"]).pluck(:name).presence || []
-    when "Females 19-70 years"
-        LifeStageGroup.where(name: ["Females 19-30 years", "Females 31-50 years", "Females 51+ years"]).pluck(:name).presence || []
-    when "Adults 19-70 years"
-        LifeStageGroup.where(name: ["Males 19-30 years", "Females 19-30 years",
-                                    "Males 31-50 years", "Females 31-50 years",
-                                    "Males 51+ years", "Females 51+ years"])
-                      .pluck(:name).presence || []
-    when "Children 4-13 years"
-        LifeStageGroup.where(name: ["Children 4-8 years", "Males 9-13 years", "Females 9-13 years"]).pluck(:name).presence || []
-    else [life_stage_name_csv]
-  end
+    when "Males >18 years" then LifeStageGroup.where(sex: 'male').where("min_age_months >= ?", 228).where(special_condition: nil).pluck(:name)
+    when "Females >18 years" then LifeStageGroup.where(sex: 'female').where("min_age_months >= ?", 228).where(special_condition: nil).pluck(:name)
+    when "Adolescents 9-18 years" then LifeStageGroup.where(min_age_months: 108..227, special_condition: nil).pluck(:name)
+    when "Adults >=19 years" then LifeStageGroup.where("min_age_months >= 228 AND special_condition IS NULL").pluck(:name)
+    # Specific mappings for pregnancy/lactation
+    when "Pregnancy (all ages)", "Pregnancy 14-50 years" then LifeStageGroup.where(special_condition: 'pregnancy').pluck(:name)
+    when "Lactation (all ages)", "Lactation 14-50 years" then LifeStageGroup.where(special_condition: 'lactation').pluck(:name)
+    when "Pregnancy <=18 years", "Pregnancy 14-18 years" then LifeStageGroup.where(special_condition: 'pregnancy', min_age_months: 168..227).pluck(:name)
+    when "Pregnancy >=19 years", "Pregnancy 19-50 years" then LifeStageGroup.where(special_condition: 'pregnancy').where("min_age_months >= 228").pluck(:name)
+    when "Lactation <=18 years", "Lactation 14-18 years" then LifeStageGroup.where(special_condition: 'lactation', min_age_months: 168..227).pluck(:name)
+    when "Lactation >=19 years", "Lactation 19-50 years" then LifeStageGroup.where(special_condition: 'lactation').where("min_age_months >= 228").pluck(:name)
+    else
+      direct_match = LifeStageGroup.find_by(name: life_stage_name_csv)
+      direct_match ? [direct_match.name] : []
+    end
+  resolved_life_stage_group_names.compact!
 
   unless nutrient
-    puts "WARN: Nutrient with original DRI ID '#{nutrient_identifier_csv}' (mapped to '#{db_nutrient_identifier}') not found for DRI value from CSV row: #{row.to_h}. Skipping."
+    puts "WARN: Nutrient with original DRI ID '#{nutrient_identifier_csv}' (mapped to '#{db_nutrient_identifier}') not found. Skipping DRI value. Row: #{row.to_h}"
     next
   end
 
-  if resolved_life_stage_group_names.empty? || resolved_life_stage_group_names.all?(&:blank?)
-    direct_match_lsg = LifeStageGroup.find_by(name: life_stage_name_csv)
-    if direct_match_lsg
-      resolved_life_stage_group_names = [direct_match_lsg.name]
-    else
-      puts "WARN: No LifeStageGroup mapping found for DRI CSV name '#{life_stage_name_csv}'. Nutrient: #{nutrient.name}. Skipping."
-      next
-    end
+  if resolved_life_stage_group_names.empty?
+    puts "WARN: No LifeStageGroup mapping or direct match found for DRI value CSV name '#{life_stage_name_csv}'. Nutrient: #{nutrient.name}. Skipping."
+    next
   end
-  # ... (rest of DRI value seeding logic unchanged) ...
+
   resolved_life_stage_group_names.each do |resolved_name|
     next if resolved_name.blank?
     life_stage_group = LifeStageGroup.find_by(name: resolved_name)
     unless life_stage_group
-      puts "ERROR: LifeStageGroup '#{resolved_name}' (resolved from CSV '#{life_stage_name_csv}') not found for DRI value. Nutrient: #{nutrient.name}. CSV Row: #{row.to_h}"
+      puts "ERROR: LifeStageGroup '#{resolved_name}' (resolved from CSV '#{life_stage_name_csv}') not found. Nutrient: #{nutrient.name}. Row: #{row.to_h}"
       next
     end
 
@@ -538,7 +550,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: tr
       notes: row[:notes].presence,
       source_document_reference: row[:source_document].presence
     }
-    find_or_create_resource(DriValue, find_by_attrs, update_attrs)
+    find_or_create_resource(DriValue, find_by_attrs.compact, update_attrs)
   end
 end
 puts "DRI Values seeded: #{DriValue.count}"
@@ -546,18 +558,24 @@ puts "DRI Values seeded: #{DriValue.count}"
 
 # 11. Dietary Pattern Components
 puts "Seeding Dietary Pattern Components (Food Group Recommendations and Calorie Level Limits)..."
-dietary_pattern_calorie_levels_cache = {}
-dietary_pattern_food_group_recommendations_amount_value_null_false =
-  DietaryPatternFoodGroupRecommendation.columns_hash['amount_value'].null == false
+dietary_pattern_calorie_levels_cache = {} # Cache to avoid repeated DB lookups
+dietary_pattern_food_group_recommendations_amount_value_nullable =
+  DietaryPatternFoodGroupRecommendation.columns_hash['amount_value'].null # Check if amount_value can be null
 
 CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.csv'), headers: true, header_converters: :symbol) do |row|
   dietary_pattern_name = row[:dietary_pattern_name]&.strip
   calorie_level_val = row[:calorie_level]&.strip&.to_i
 
-  raise "ERROR: Missing dietary_pattern_name or calorie_level in row: #{row.to_h}" unless dietary_pattern_name && calorie_level_val
+  unless dietary_pattern_name && calorie_level_val
+    puts "ERROR: Missing dietary_pattern_name or calorie_level in row: #{row.to_h}. Skipping."
+    next
+  end
 
   dietary_pattern = DietaryPattern.find_by(name: dietary_pattern_name)
-  raise "ERROR: DietaryPattern '#{dietary_pattern_name}' not found" unless dietary_pattern
+  unless dietary_pattern
+    puts "ERROR: DietaryPattern '#{dietary_pattern_name}' not found for row: #{row.to_h}. Skipping."
+    next
+  end
 
   dpcl_key = [dietary_pattern.id, calorie_level_val]
   dietary_pattern_calorie_level = dietary_pattern_calorie_levels_cache[dpcl_key]
@@ -567,62 +585,55 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.cs
       dietary_pattern_id: dietary_pattern.id,
       calorie_level: calorie_level_val
     )
-    dietary_pattern_calorie_level.save! if dietary_pattern_calorie_level.new_record?
+    dietary_pattern_calorie_level.save! if dietary_pattern_calorie_level.new_record? || dietary_pattern_calorie_level.changed? # Save if new or changed
     dietary_pattern_calorie_levels_cache[dpcl_key] = dietary_pattern_calorie_level
   end
 
   component_name_val = row[:component_name]&.strip
-  food_group_name_csv = row[:food_group_name]&.strip # Used for "Oils" special case
+  food_group_name_csv = row[:food_group_name]&.strip
   food_subgroup_name_csv = row[:food_subgroup_name]&.strip
 
-  if component_name_val == "Limit on Calories for Other Uses" && food_group_name_csv.blank? && food_subgroup_name_csv.blank?
-    # This is the "Limit on Calories for Other Uses" row type
+  is_limit_row = component_name_val == "Limit on Calories for Other Uses" && food_group_name_csv.blank? && food_subgroup_name_csv.blank?
+
+  if is_limit_row
     parsed_val = parse_amount_value(row[:amount_value])
     if row[:amount_unit]&.strip == "kcal"
       dietary_pattern_calorie_level.limit_on_calories_other_uses_kcal_day = parsed_val.present? ? parsed_val.to_i : nil
     elsif row[:amount_unit]&.strip == "%"
       dietary_pattern_calorie_level.limit_on_calories_other_uses_percent_day = parsed_val
     end
-    dietary_pattern_calorie_level.save!
+    dietary_pattern_calorie_level.save! if dietary_pattern_calorie_level.changed?
   else
-    # This is a food group or subgroup recommendation row
     target_food_group_name = food_subgroup_name_csv.presence || food_group_name_csv.presence || component_name_val.presence
-
-    # If, after trying subgroup, group, and component name, it's still blank, then it's an issue.
     if target_food_group_name.blank?
       puts "WARN: Dietary Pattern Component - Skipping row due to missing food group identifier. Row: #{row.to_h}"
-      next # Skip this row
+      next
     end
 
     food_group = FoodGroup.find_by(name: target_food_group_name)
     unless food_group
-        puts "WARN: Dietary Pattern Component - FoodGroup '#{target_food_group_name}' not found for component in pattern '#{dietary_pattern_name}'. CSV Row: #{row.to_h}. Skipping."
-        next # Skip if food group not found
+      puts "WARN: Dietary Pattern Component - FoodGroup '#{target_food_group_name}' not found. CSV Row: #{row.to_h}. Skipping."
+      next
     end
 
     parsed_numeric_amount = parse_amount_value(row[:amount_value])
 
-    if parsed_numeric_amount.nil? && dietary_pattern_food_group_recommendations_amount_value_null_false
-      # If amount is required and nil, this is an issue with parsing or data.
-      # For now, let's skip it with a warning instead of raising an error,
-      # as some DGA tables might legitimately have "ND" or blank for amounts.
-      puts "WARN: Dietary Pattern Component - Parsed amount value is nil for food_group '#{target_food_group_name}' in pattern '#{dietary_pattern_name}'. CSV Row: #{row.to_h}. Skipping recommendation."
+    if parsed_numeric_amount.nil? && !dietary_pattern_food_group_recommendations_amount_value_nullable
+      puts "WARN: Dietary Pattern Component - Parsed amount is nil but DB requires a value for FoodGroup '#{target_food_group_name}'. CSV Row: #{row.to_h}. Skipping recommendation."
       next
     end
 
     recommendation_attrs_to_update = {
       amount_value: parsed_numeric_amount,
-      amount_frequency: row[:frequency].presence&.strip,
+      amount_frequency: row[:frequency].presence&.strip&.truncate(10),
     }
     recommendation_find_by = {
       dietary_pattern_calorie_level_id: dietary_pattern_calorie_level.id,
       food_group_id: food_group.id
     }
-
     find_or_create_resource(DietaryPatternFoodGroupRecommendation, recommendation_find_by, recommendation_attrs_to_update)
   end
 end
-
 
 puts "Dietary Pattern Calorie Levels processed: #{DietaryPatternCalorieLevel.count}"
 puts "Dietary Pattern Food Group Recommendations seeded: #{DietaryPatternFoodGroupRecommendation.count}"

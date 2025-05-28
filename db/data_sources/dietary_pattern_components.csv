@@ -32,7 +32,7 @@ Healthy U.S.-Style Dietary Pattern for Toddlers,800,"Protein Foods","Meats, Poul
 Healthy U.S.-Style Dietary Pattern for Toddlers,800,"Protein Foods",Eggs,Eggs,"2 ¾",ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern for Toddlers,800,"Protein Foods",Seafood,Seafood,"2-3",ounce eq,wk,Footnote e
 Healthy U.S.-Style Dietary Pattern for Toddlers,800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",1,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern for Toddlers,800,Oils,,,Oils,9,grams,day,
+Healthy U.S.-Style Dietary Pattern for Toddlers,800,Oils,,Oils,9,grams,day,
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,Vegetables,,Vegetables,1,cup eq,day,
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -49,7 +49,7 @@ Healthy U.S.-Style Dietary Pattern for Toddlers,900,"Protein Foods","Meats, Poul
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,"Protein Foods",Eggs,Eggs,"2 ¼",ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,"Protein Foods",Seafood,Seafood,"2-3",ounce eq,wk,Footnote e
 Healthy U.S.-Style Dietary Pattern for Toddlers,900,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products","1 ¼",ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern for Toddlers,900,Oils,,,Oils,8,grams,day,
+Healthy U.S.-Style Dietary Pattern for Toddlers,900,Oils,,Oils,8,grams,day,
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,Vegetables,,Vegetables,1,cup eq,day,
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -66,7 +66,7 @@ Healthy U.S.-Style Dietary Pattern for Toddlers,1000,"Protein Foods","Meats, Pou
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,"Protein Foods",Eggs,Eggs,"2 ¼",ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,"Protein Foods",Seafood,Seafood,"2-3",ounce eq,wk,Footnote e
 Healthy U.S.-Style Dietary Pattern for Toddlers,1000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products","1 ¼",ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern for Toddlers,1000,Oils,,,Oils,13,grams,day,
+Healthy U.S.-Style Dietary Pattern for Toddlers,1000,Oils,,Oils,13,grams,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,Vegetables,,Vegetables,1,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -82,9 +82,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,1000,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",10,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,"Protein Foods",Seafood,Seafood,"2-3",ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",2,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1000,Oils,,,Oils,15,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,130,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,13,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1000,Oils,,Oils,15,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,130,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,13,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -100,9 +100,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,1200,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",14,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,"Protein Foods",Seafood,Seafood,4,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",2,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1200,Oils,,,Oils,17,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,80,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,7,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1200,Oils,,Oils,17,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,80,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,7,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -118,9 +118,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,1400,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",19,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,"Protein Foods",Seafood,Seafood,6,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1400,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",3,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1400,Oils,,,Oils,17,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,90,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,6,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1400,Oils,,Oils,17,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,90,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,6,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,Vegetables,,Vegetables,2,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,4,cup eq,wk,
@@ -136,9 +136,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,1600,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",23,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,"Protein Foods",Seafood,Seafood,8,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1600,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1600,Oils,,,Oils,22,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,100,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,6,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1600,Oils,,Oils,22,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,100,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,6,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -154,9 +154,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,1800,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",23,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,"Protein Foods",Seafood,Seafood,8,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,1800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1800,Oils,,,Oils,24,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,140,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,8,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1800,Oils,,Oils,24,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,140,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,8,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -172,9 +172,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,2000,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",26,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,"Protein Foods",Seafood,Seafood,8,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2000,Oils,,,Oils,27,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,240,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,12,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2000,Oils,,Oils,27,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,240,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,12,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,Vegetables,,Vegetables,3,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -190,9 +190,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,2200,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",28,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,"Protein Foods",Seafood,Seafood,9,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2200,Oils,,,Oils,29,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,250,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,11,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2200,Oils,,Oils,29,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,250,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,11,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,Vegetables,,Vegetables,3,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -208,9 +208,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,2400,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",31,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,"Protein Foods",Seafood,Seafood,10,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2400,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2400,Oils,,,Oils,31,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,320,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,13,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2400,Oils,,Oils,31,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,320,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,13,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -226,9 +226,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,2600,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",31,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,"Protein Foods",Seafood,Seafood,10,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2600,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2600,Oils,,,Oils,34,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,350,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,13,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2600,Oils,,Oils,34,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,350,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,13,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -244,9 +244,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,2800,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,"Protein Foods",Seafood,Seafood,10,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,2800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2800,Oils,,,Oils,36,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,370,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,13,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2800,Oils,,Oils,36,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,370,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,13,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,Vegetables,,Vegetables,4,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -262,9 +262,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,3000,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,"Protein Foods",Seafood,Seafood,10,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,3000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,3000,Oils,,,Oils,44,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,440,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,15,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,3000,Oils,,Oils,44,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,440,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,15,%,day,Footnote g
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,Vegetables,,Vegetables,4,cup eq,day,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -280,9 +280,9 @@ Healthy U.S.-Style Dietary Pattern Ages 2+,3200,"Protein Foods",,"Protein Foods"
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,"Protein Foods",Seafood,Seafood,10,ounce eq,wk,"Footnote e, f"
 Healthy U.S.-Style Dietary Pattern Ages 2+,3200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy U.S.-Style Dietary Pattern Ages 2+,3200,Oils,,,Oils,51,grams,day,
-Healthy U.S.-Style Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,580,kcal,day,Footnote g
-Healthy U.S.-Style Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,18,%,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,3200,Oils,,Oils,51,grams,day,
+Healthy U.S.-Style Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,580,kcal,day,Footnote g
+Healthy U.S.-Style Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,18,%,day,Footnote g
 Healthy Vegetarian Dietary Pattern for Toddlers,700,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,700,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,700,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -297,7 +297,7 @@ Healthy Vegetarian Dietary Pattern for Toddlers,700,Dairy,,Dairy,"1 ½",cup eq,d
 Healthy Vegetarian Dietary Pattern for Toddlers,700,"Protein Foods",,"Protein Foods",1,ounce eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,700,"Protein Foods",Eggs,Eggs,"3 ½",ounce eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,700,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern for Toddlers,700,Oils,,,Oils,9,grams,day,
+Healthy Vegetarian Dietary Pattern for Toddlers,700,Oils,,Oils,9,grams,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,800,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -312,7 +312,7 @@ Healthy Vegetarian Dietary Pattern for Toddlers,800,Dairy,,Dairy,"1 ¾",cup eq,d
 Healthy Vegetarian Dietary Pattern for Toddlers,800,"Protein Foods",,"Protein Foods",1,ounce eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,800,"Protein Foods",Eggs,Eggs,"3 ½",ounce eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern for Toddlers,800,Oils,,,Oils,"8 ½",grams,day,
+Healthy Vegetarian Dietary Pattern for Toddlers,800,Oils,,Oils,"8 ½",grams,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,900,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,900,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,900,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -327,7 +327,7 @@ Healthy Vegetarian Dietary Pattern for Toddlers,900,Dairy,,Dairy,"1 ¾",cup eq,d
 Healthy Vegetarian Dietary Pattern for Toddlers,900,"Protein Foods",,"Protein Foods",1,ounce eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,900,"Protein Foods",Eggs,Eggs,"3 ½",ounce eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,900,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern for Toddlers,900,Oils,,,Oils,10,grams,day,
+Healthy Vegetarian Dietary Pattern for Toddlers,900,Oils,,Oils,10,grams,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -342,7 +342,7 @@ Healthy Vegetarian Dietary Pattern for Toddlers,1000,Dairy,,Dairy,2,cup eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,"Protein Foods",,"Protein Foods",1,ounce eq,day,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,"Protein Foods",Eggs,Eggs,"3 ½",ounce eq,wk,
 Healthy Vegetarian Dietary Pattern for Toddlers,1000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern for Toddlers,1000,Oils,,,Oils,15,grams,day,
+Healthy Vegetarian Dietary Pattern for Toddlers,1000,Oils,,Oils,15,grams,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -359,9 +359,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,1000,"Protein Foods",Eggs,Eggs,2,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",1,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,"Protein Foods","Soy Products","Soy Products",2,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1000,"Protein Foods","Nuts, Seeds","Nuts, Seeds",2,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,1000,Oils,,,Oils,15,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,170,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,17,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1000,Oils,,Oils,15,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,170,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,17,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -378,9 +378,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,1200,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",2,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,"Protein Foods","Soy Products","Soy Products",3,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1200,"Protein Foods","Nuts, Seeds","Nuts, Seeds",2,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,1200,Oils,,,Oils,17,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,140,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,12,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1200,Oils,,Oils,17,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,140,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,12,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -397,9 +397,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,1400,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",4,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,"Protein Foods","Soy Products","Soy Products",4,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1400,"Protein Foods","Nuts, Seeds","Nuts, Seeds",3,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,1400,Oils,,,Oils,17,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,160,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,11,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1400,Oils,,Oils,17,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,160,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,11,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,Vegetables,,Vegetables,2,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,4,cup eq,wk,
@@ -416,9 +416,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,1600,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",4,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,"Protein Foods","Soy Products","Soy Products",6,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1600,"Protein Foods","Nuts, Seeds","Nuts, Seeds",5,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,1600,Oils,,,Oils,22,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,150,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,9,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1600,Oils,,Oils,22,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,150,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,9,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -435,9 +435,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,1800,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",6,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,"Protein Foods","Soy Products","Soy Products",6,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,1800,"Protein Foods","Nuts, Seeds","Nuts, Seeds",6,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,1800,Oils,,,Oils,24,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,150,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,8,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1800,Oils,,Oils,24,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,150,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,8,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -454,9 +454,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,2000,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",6,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,"Protein Foods","Soy Products","Soy Products",8,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2000,"Protein Foods","Nuts, Seeds","Nuts, Seeds",7,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,2000,Oils,,,Oils,27,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,250,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,13,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2000,Oils,,Oils,27,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,250,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,13,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,Vegetables,,Vegetables,3,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -473,9 +473,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,2200,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",6,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,"Protein Foods","Soy Products","Soy Products",8,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2200,"Protein Foods","Nuts, Seeds","Nuts, Seeds",7,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,2200,Oils,,,Oils,29,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,290,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,13,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2200,Oils,,Oils,29,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,290,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,13,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,Vegetables,,Vegetables,3,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -492,9 +492,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,2400,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",8,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,"Protein Foods","Soy Products","Soy Products",9,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2400,"Protein Foods","Nuts, Seeds","Nuts, Seeds",8,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,2400,Oils,,,Oils,31,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,15,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2400,Oils,,Oils,31,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,15,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -511,9 +511,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,2600,"Protein Foods",Eggs,Eggs,3,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",9,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,"Protein Foods","Soy Products","Soy Products",10,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2600,"Protein Foods","Nuts, Seeds","Nuts, Seeds",9,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,2600,Oils,,,Oils,34,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,13,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2600,Oils,,Oils,34,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,13,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -530,9 +530,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,2800,"Protein Foods",Eggs,Eggs,4,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",10,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,"Protein Foods","Soy Products","Soy Products",11,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,2800,"Protein Foods","Nuts, Seeds","Nuts, Seeds",10,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,2800,Oils,,,Oils,36,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,13,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2800,Oils,,Oils,36,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,350,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,13,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,Vegetables,,Vegetables,4,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -549,9 +549,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,3000,"Protein Foods",Eggs,Eggs,4,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",11,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,"Protein Foods","Soy Products","Soy Products",12,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,3000,"Protein Foods","Nuts, Seeds","Nuts, Seeds",12,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,3000,Oils,,,Oils,44,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,390,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,13,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,3000,Oils,,Oils,44,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,390,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,13,%,day,Footnote e
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,Vegetables,,Vegetables,4,cup eq,day,
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -568,9 +568,9 @@ Healthy Vegetarian Dietary Pattern Ages 2+,3200,"Protein Foods",Eggs,Eggs,4,ounc
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,"Protein Foods","Beans, Peas, Lentils (Prot)","Beans, Peas, Lentils (Prot)",12,ounce eq,wk,Footnote d
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,"Protein Foods","Soy Products","Soy Products",13,ounce eq,wk,
 Healthy Vegetarian Dietary Pattern Ages 2+,3200,"Protein Foods","Nuts, Seeds","Nuts, Seeds",13,ounce eq,wk,
-Healthy Vegetarian Dietary Pattern Ages 2+,3200,Oils,,,Oils,51,grams,day,
-Healthy Vegetarian Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,500,kcal,day,Footnote e
-Healthy Vegetarian Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,16,%,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,3200,Oils,,Oils,51,grams,day,
+Healthy Vegetarian Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,500,kcal,day,Footnote e
+Healthy Vegetarian Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,16,%,day,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Vegetables,,Vegetables,1,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"2 ½",cup eq,wk,
@@ -579,16 +579,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Vegetables,Other Vegetables,Other Vegetables,"1 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Fruits,,Fruits,1,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Grains,,Grains,3,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Grains,Whole Grains,Whole Grains,"1 ½",ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Grains,Whole Grains,Whole Grains,"1 ½",ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Grains,Refined Grains,Refined Grains,"1 ½",ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Dairy,,Dairy,2,cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Dairy,,Dairy,2,cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,"Protein Foods",,"Protein Foods",2,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",10,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,"Protein Foods",Seafood,Seafood,3,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",2,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Oils,,,Oils,15,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,130,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,,,,Limit on Calories for Other Uses,13,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,Oils,,Oils,15,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,130,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1000,,,Limit on Calories for Other Uses,13,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -597,16 +597,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Vegetables,Other Vegetables,Other Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Fruits,,Fruits,1,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Grains,,Grains,4,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Grains,Whole Grains,Whole Grains,2,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Grains,Whole Grains,Whole Grains,2,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Grains,Refined Grains,Refined Grains,2,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,"Protein Foods",,"Protein Foods",3,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",14,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,"Protein Foods",Seafood,Seafood,4,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",2,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Oils,,,Oils,17,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,80,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,,,,Limit on Calories for Other Uses,7,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,Oils,,Oils,17,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,80,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1200,,,Limit on Calories for Other Uses,7,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Vegetables,,Vegetables,"1 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,1,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,3,cup eq,wk,
@@ -615,16 +615,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Vegetables,Other Vegetables,Other Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Fruits,,Fruits,"1 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Grains,,Grains,5,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Grains,Whole Grains,Whole Grains,"2 ½",ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Grains,Whole Grains,Whole Grains,"2 ½",ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Grains,Refined Grains,Refined Grains,"2 ½",ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,"Protein Foods",,"Protein Foods",4,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",19,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,"Protein Foods",Seafood,Seafood,6,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",3,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Oils,,,Oils,17,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,90,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,,,,Limit on Calories for Other Uses,6,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,Oils,,Oils,17,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,90,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1400,,,Limit on Calories for Other Uses,6,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Vegetables,,Vegetables,2,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,4,cup eq,wk,
@@ -633,16 +633,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Vegetables,Other Vegetables,Other Vegetables,"3 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Fruits,,Fruits,2,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Grains,,Grains,5,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Grains,Whole Grains,Whole Grains,3,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Grains,Whole Grains,Whole Grains,3,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Grains,Refined Grains,Refined Grains,2,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Dairy,,Dairy,2,cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Dairy,,Dairy,2,cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,"Protein Foods",,"Protein Foods","5 ½",ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",23,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,"Protein Foods",Seafood,Seafood,11,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Oils,,,Oils,22,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,120,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,,,,Limit on Calories for Other Uses,8,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,Oils,,Oils,22,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,120,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1600,,,Limit on Calories for Other Uses,8,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -651,16 +651,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Vegetables,Other Vegetables,Other Vegetables,4,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Fruits,,Fruits,2,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Grains,,Grains,6,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Grains,Whole Grains,Whole Grains,3,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Grains,Whole Grains,Whole Grains,3,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Grains,Refined Grains,Refined Grains,3,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Dairy,,Dairy,2,cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Dairy,,Dairy,2,cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,"Protein Foods",,"Protein Foods",6,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",23,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,"Protein Foods",Seafood,Seafood,15,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",4,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Oils,,,Oils,24,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,140,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,,,,Limit on Calories for Other Uses,8,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,Oils,,Oils,24,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,140,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,1800,,,Limit on Calories for Other Uses,8,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Vegetables,,Vegetables,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"1 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"5 ½",cup eq,wk,
@@ -669,16 +669,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Vegetables,Other Vegetables,Other Vegetables,4,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Fruits,,Fruits,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Grains,,Grains,6,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Grains,Whole Grains,Whole Grains,3,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Grains,Whole Grains,Whole Grains,3,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Grains,Refined Grains,Refined Grains,3,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Dairy,,Dairy,2,cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Dairy,,Dairy,2,cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,"Protein Foods",,"Protein Foods","6 ½",ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",26,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,"Protein Foods",Seafood,Seafood,15,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Oils,,,Oils,27,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,240,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,,,,Limit on Calories for Other Uses,12,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,Oils,,Oils,27,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,240,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2000,,,Limit on Calories for Other Uses,12,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Vegetables,,Vegetables,3,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -687,16 +687,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Vegetables,Other Vegetables,Other Vegetables,5,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Fruits,,Fruits,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Grains,,Grains,7,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Grains,Whole Grains,Whole Grains,"3 ½",ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Grains,Whole Grains,Whole Grains,"3 ½",ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Grains,Refined Grains,Refined Grains,"3 ½",ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Dairy,,Dairy,2,cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Dairy,,Dairy,2,cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,"Protein Foods",,"Protein Foods",7,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",28,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,"Protein Foods",Seafood,Seafood,16,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Oils,,,Oils,29,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,250,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,,,,Limit on Calories for Other Uses,11,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,Oils,,Oils,29,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,250,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2200,,,Limit on Calories for Other Uses,11,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Vegetables,,Vegetables,3,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,2,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,6,cup eq,wk,
@@ -705,16 +705,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Vegetables,Other Vegetables,Other Vegetables,5,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Fruits,,Fruits,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Grains,,Grains,8,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Grains,Whole Grains,Whole Grains,4,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Grains,Whole Grains,Whole Grains,4,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Grains,Refined Grains,Refined Grains,4,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,"Protein Foods",,"Protein Foods","7 ½",ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",31,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,"Protein Foods",Seafood,Seafood,16,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Oils,,,Oils,31,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,280,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,,,,Limit on Calories for Other Uses,12,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,Oils,,Oils,31,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,280,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2400,,,Limit on Calories for Other Uses,12,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -723,16 +723,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Vegetables,Other Vegetables,Other Vegetables,"5 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Fruits,,Fruits,"2 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Grains,,Grains,9,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Grains,Whole Grains,Whole Grains,"4 ½",ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Grains,Whole Grains,Whole Grains,"4 ½",ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Grains,Refined Grains,Refined Grains,"4 ½",ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,"Protein Foods",,"Protein Foods","7 ½",ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",31,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,"Protein Foods",Seafood,Seafood,17,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",5,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Oils,,,Oils,34,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,300,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,,,,Limit on Calories for Other Uses,12,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,Oils,,Oils,34,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,300,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2600,,,Limit on Calories for Other Uses,12,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Vegetables,,Vegetables,"3 ½",cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,7,cup eq,wk,
@@ -741,16 +741,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Vegetables,Other Vegetables,Other Vegetables,"5 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Fruits,,Fruits,3,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Grains,,Grains,10,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Grains,Whole Grains,Whole Grains,5,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Grains,Whole Grains,Whole Grains,5,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Grains,Refined Grains,Refined Grains,5,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,"Protein Foods",,"Protein Foods",8,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,"Protein Foods",Seafood,Seafood,17,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Oils,,,Oils,36,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,330,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,,,,Limit on Calories for Other Uses,12,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,Oils,,Oils,36,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,330,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,2800,,,Limit on Calories for Other Uses,12,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Vegetables,,Vegetables,4,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -759,16 +759,16 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Vegetables,Other Vegetables,Other Vegetables,7,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Fruits,,Fruits,3,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Grains,,Grains,10,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Grains,Whole Grains,Whole Grains,5,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Grains,Whole Grains,Whole Grains,5,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Grains,Refined Grains,Refined Grains,5,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,"Protein Foods",,"Protein Foods",8,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,"Protein Foods",Seafood,Seafood,17,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Oils,,,Oils,44,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,400,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,,,,Limit on Calories for Other Uses,13,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,Oils,,Oils,44,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,400,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3000,,,Limit on Calories for Other Uses,13,%,day,Footnote f
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Vegetables,,Vegetables,4,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Vegetables,Dark-Green Vegetables,Dark-Green Vegetables,"2 ½",cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Vegetables,Red and Orange Vegetables,Red and Orange Vegetables,"7 ½",cup eq,wk,
@@ -777,13 +777,13 @@ Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Vegetables,Starchy Vege
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Vegetables,Other Vegetables,Other Vegetables,7,cup eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Fruits,,Fruits,3,cup eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Grains,,Grains,10,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Grains,Whole Grains,Whole Grains,5,ounce eq,day,Footnote d (Table A3-2)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Grains,Whole Grains,Whole Grains,5,ounce eq,day,"Footnote d (Table A3-2)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Grains,Refined Grains,Refined Grains,5,ounce eq,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Dairy,,Dairy,"2 ½",cup eq,day,Footnote d (Table A3-5)
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Dairy,,Dairy,"2 ½",cup eq,day,"Footnote d (Table A3-5)"
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,"Protein Foods",,"Protein Foods",8,ounce eq,day,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,"Protein Foods","Meats, Poultry, Eggs","Meats, Poultry, Eggs",33,ounce eq,wk,
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,"Protein Foods",Seafood,Seafood,17,ounce eq,wk,Footnote e
 Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,"Protein Foods","Nuts, Seeds, Soy Products","Nuts, Seeds, Soy Products",6,ounce eq,wk,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Oils,,,Oils,51,grams,day,
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,540,kcal,day,Footnote f
-Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,,,,Limit on Calories for Other Uses,17,%,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,Oils,,Oils,51,grams,day,
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,540,kcal,day,Footnote f
+Healthy Mediterranean-Style Dietary Pattern Ages 2+,3200,,,Limit on Calories for Other Uses,17,%,day,Footnote f

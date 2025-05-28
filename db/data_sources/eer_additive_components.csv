@@ -1,32 +1,32 @@
 component_type,life_stage_group_id_placeholder,sex_filter,age_min_months_filter,age_max_months_filter,condition_pregnancy_trimester_filter,condition_pre_pregnancy_bmi_category_filter,condition_lactation_period_filter,value_kcal_day,notes,source_document_reference
-pregnancy_addition,,"female",,,1,,any,0,1st trimester,DGA App2 T A2-3
-pregnancy_addition,,"female",,,2,,any,340,2nd trimester,DGA App2 T A2-3
-pregnancy_addition,,"female",,,3,,any,452,3rd trimester,DGA App2 T A2-3
-lactation_addition,,"female",,,,,0-6,330,"Net: +500 milk, -170 weight loss",DGA App2 T A2-3 / IOM EER S-5
-lactation_addition,,"female",,,,,7-12,400,Assumes weight stability,DGA App2 T A2-3 / IOM EER S-6
-growth_addition_boys,"Boys, 0-2 years",male,0,2,,,200,Energy cost of growth 0-2.99mo,IOM EER S-8
-growth_addition_boys,"Boys, 0-2 years",male,3,5,,,50,Energy cost of growth 3-5.99mo,IOM EER S-8
-growth_addition_boys,"Boys, 0-2 years",male,6,35,,,20,Energy cost of growth 6-35.99mo,IOM EER S-8
-growth_addition_girls,"Girls, 0-2 years",female,0,2,,,180,Energy cost of growth 0-2.99mo,IOM EER S-8
-growth_addition_girls,"Girls, 0-2 years",female,3,5,,,60,Energy cost of growth 3-5.99mo,IOM EER S-8
-growth_addition_girls,"Girls, 0-2 years",female,6,11,,,20,Energy cost of growth 6-11.99mo,IOM EER S-8
-growth_addition_girls,"Girls, 0-2 years",female,12,35,,,15,Energy cost of growth 12-35.99mo,IOM EER S-8
-growth_addition_boys_3y,"Boys, 3-18 years",male,36,47,,,20,Energy cost of growth 3y,IOM EER S-8
-growth_addition_boys_4-8y,"Boys, 3-18 years",male,48,107,,,15,Energy cost of growth 4-8y,IOM EER S-8
-growth_addition_boys_9-13y,"Boys, 3-18 years",male,108,167,,,25,Energy cost of growth 9-13y,IOM EER S-8
-growth_addition_boys_14-18y,"Boys, 3-18 years",male,168,227,,,20,Energy cost of growth 14-18y,IOM EER S-8
-growth_addition_girls_3y,"Girls, 3-18 years",female,36,47,,,15,Energy cost of growth 3y,IOM EER S-8
-growth_addition_girls_4-8y,"Girls, 3-18 years",female,48,107,,,15,Energy cost of growth 4-8y,IOM EER S-8
-growth_addition_girls_9-13y,"Girls, 3-18 years",female,108,167,,,30,Energy cost of growth 9-13y,IOM EER S-8
-growth_addition_girls_14-18y,"Girls, 3-18 years",female,168,227,,,20,Energy cost of growth 14-18y,IOM EER S-8
-pregnancy_deposition,,"female",,,2,Underweight,,300,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,3,Underweight,,300,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,2,Normal,,200,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,3,Normal,,200,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,2,Overweight,,150,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,3,Overweight,,150,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,2,Obese,,-50,"Energy mobilization, 2nd/3rd trimester",IOM EER S-10
-pregnancy_deposition,,"female",,,3,Obese,,-50,"Energy mobilization, 2nd/3rd trimester",IOM EER S-10
-lactation_milk_cost_gross,,"female",,,,,0-6,540,"Gross energy cost of milk production 0-6mo",IOM EER S-11
-lactation_mobilization,,"female",,,,,0-6,-170,"Energy mobilization during lactation 0-6mo",IOM EER S-11
-lactation_milk_cost_gross_7-12,,"female",,,,,7-12,400,"Gross energy cost of milk production 7-12mo (assumes stability)",IOM EER S-12
+pregnancy_addition,,female,,,1,,any,0,1st trimester,DGA App2 T A2-3
+pregnancy_addition,,female,,,2,,any,340,2nd trimester,DGA App2 T A2-3
+pregnancy_addition,,female,,,3,,any,452,3rd trimester,DGA App2 T A2-3
+lactation_addition,,female,,,,,0-6,330,"Net: +500 milk, -170 weight loss",DGA App2 T A2-3 / IOM EER S-5
+lactation_addition,,female,,,,,7-12,400,Assumes weight stability,DGA App2 T A2-3 / IOM EER S-6
+growth_addition_boys,"Boys, 0-2 years",male,0,2,,,,200,Energy cost of growth 0-2.99mo,IOM EER S-8
+growth_addition_boys,"Boys, 0-2 years",male,3,5,,,,50,Energy cost of growth 3-5.99mo,IOM EER S-8
+growth_addition_boys,"Boys, 0-2 years",male,6,35,,,,20,Energy cost of growth 6-35.99mo,IOM EER S-8
+growth_addition_girls,"Girls, 0-2 years",female,0,2,,,,180,Energy cost of growth 0-2.99mo,IOM EER S-8
+growth_addition_girls,"Girls, 0-2 years",female,3,5,,,,60,Energy cost of growth 3-5.99mo,IOM EER S-8
+growth_addition_girls,"Girls, 0-2 years",female,6,11,,,,20,Energy cost of growth 6-11.99mo,IOM EER S-8
+growth_addition_girls,"Girls, 0-2 years",female,12,35,,,,15,Energy cost of growth 12-35.99mo,IOM EER S-8
+growth_addition_boys_3y,"Boys, 3-18 years",male,36,47,,,,20,Energy cost of growth 3y,IOM EER S-8
+growth_addition_boys_4-8y,"Boys, 3-18 years",male,48,107,,,,15,Energy cost of growth 4-8y,IOM EER S-8
+growth_addition_boys_9-13y,"Boys, 3-18 years",male,108,167,,,,25,Energy cost of growth 9-13y,IOM EER S-8
+growth_addition_boys_14-18y,"Boys, 3-18 years",male,168,227,,,,20,Energy cost of growth 14-18y,IOM EER S-8
+growth_addition_girls_3y,"Girls, 3-18 years",female,36,47,,,,15,Energy cost of growth 3y,IOM EER S-8
+growth_addition_girls_4-8y,"Girls, 3-18 years",female,48,107,,,,15,Energy cost of growth 4-8y,IOM EER S-8
+growth_addition_girls_9-13y,"Girls, 3-18 years",female,108,167,,,,30,Energy cost of growth 9-13y,IOM EER S-8
+growth_addition_girls_14-18y,"Girls, 3-18 years",female,168,227,,,,20,Energy cost of growth 14-18y,IOM EER S-8
+pregnancy_deposition,,female,,,2,Underweight,,300,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,3,Underweight,,300,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,2,Normal,,200,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,3,Normal,,200,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,2,Overweight,,150,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,3,Overweight,,150,"Energy deposition, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,2,Obese,,-50,"Energy mobilization, 2nd/3rd trimester",IOM EER S-10
+pregnancy_deposition,,female,,,3,Obese,,-50,"Energy mobilization, 2nd/3rd trimester",IOM EER S-10
+lactation_milk_cost_gross,,female,,,,,0-6,540,Gross energy cost of milk production 0-6mo,IOM EER S-11
+lactation_mobilization,,female,,,,,0-6,-170,Energy mobilization during lactation 0-6mo,IOM EER S-11
+lactation_milk_cost_gross_7-12,,female,,,,,7-12,400,Gross energy cost of milk production 7-12mo (assumes stability),IOM EER S-12

@@ -1,6 +1,6 @@
 life_stage_group_id_placeholder,reference_height_cm,reference_weight_kg,median_bmi,source_document_reference
-"Adult Males Reference",177.8,70,,DGA App2 text (5ft 10in, 154 lbs)
-"Adult Females Reference",162.56,57.15,,DGA App2 text (5ft 4in, 126 lbs)
+"Adult Males Reference",177.8,70,,DGA App2 text (5ft 10in 154 lbs)
+"Adult Females Reference",162.56,57.15,,DGA App2 text (5ft 4in 126 lbs)
 "Infants 2-6 months",64,7,,NHANES III (Vit/Min Report Table 1-2)
 "Infants 7-11 months",72,9,,NHANES III (Vit/Min Report Table 1-2)
 "Children 1-3 years",91,13,,NHANES III (Vit/Min Report Table 1-2)

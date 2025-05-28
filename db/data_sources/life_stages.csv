@@ -1,6 +1,6 @@
 name,min_age_months,max_age_months,sex,special_condition,trimester,lactation_period,notes
-Infants 0-6 months,0,6,any,,,,Data from birth to 6 months. For DRIs, often 0-6mo or 0-5.9mo.
-Infants 7-12 months,7,12,any,,,,Data from 7 to 12 months. For DRIs, often 7-12mo or 6-11.9mo.
+Infants 0-6 months,0,6,any,,,,Data from birth to 6 months. For DRIs often 0-6mo or 0-5.9mo.
+Infants 7-12 months,7,12,any,,,,Data from 7 to 12 months. For DRIs often 7-12mo or 6-11.9mo.
 Toddlers 12-23 months,12,23,any,,,,Data for DGA patterns and some DRIs. Often overlaps with 1-3y.
 Children 1-3 years,12,47,any,,,,DRI group 1-3 years.
 Children 2-3 years,24,47,any,,,,DGA specific grouping.
@@ -36,46 +36,46 @@ Lactation 19-30 years 0-6 months,228,371,female,lactation,,0-6,
 Lactation 19-30 years 7-12 months,228,371,female,lactation,,7-12,
 Lactation 31-50 years 0-6 months,372,611,female,lactation,,0-6,
 Lactation 31-50 years 7-12 months,372,611,female,lactation,,7-12,
-Adults 19-20 years Male,228,251,male,,,DGA grouping for EER table A2-2
-Adults 19-20 years Female,228,251,female,,,DGA grouping for EER table A2-2
-Adults 21-25 years Male,252,311,male,,,DGA grouping for EER table A2-2
-Adults 21-25 years Female,252,311,female,,,DGA grouping for EER table A2-2
-Adults 26-30 years Male,312,371,male,,,DGA grouping for EER table A2-2
-Adults 26-30 years Female,312,371,female,,,DGA grouping for EER table A2-2
-Adults 31-35 years Male,372,431,male,,,DGA grouping for EER table A2-2
-Adults 31-35 years Female,372,431,female,,,DGA grouping for EER table A2-2
-Adults 36-40 years Male,432,491,male,,,DGA grouping for EER table A2-2
-Adults 36-40 years Female,432,491,female,,,DGA grouping for EER table A2-2
-Adults 41-45 years Male,492,551,male,,,DGA grouping for EER table A2-2
-Adults 41-45 years Female,492,551,female,,,DGA grouping for EER table A2-2
-Adults 46-50 years Male,552,611,male,,,DGA grouping for EER table A2-2
-Adults 46-50 years Female,552,611,female,,,DGA grouping for EER table A2-2
-Adults 51-55 years Male,612,671,male,,,DGA grouping for EER table A2-2
-Adults 51-55 years Female,612,671,female,,,DGA grouping for EER table A2-2
-Adults 56-60 years Male,672,731,male,,,DGA grouping for EER table A2-2
-Adults 56-60 years Female,672,731,female,,,DGA grouping for EER table A2-2
-Adults 61-65 years Male,732,791,male,,,DGA grouping for EER table A2-2
-Adults 61-65 years Female,732,791,female,,,DGA grouping for EER table A2-2
-Adults 66-70 years Male,792,851,male,,,DGA grouping for EER table A2-2
-Adults 66-70 years Female,792,851,female,,,DGA grouping for EER table A2-2
-Adults 71-75 years Male,852,911,male,,,DGA grouping for EER table A2-2
-Adults 71-75 years Female,852,911,female,,,DGA grouping for EER table A2-2
-Adults 76+ years Male,912,,male,,,DGA grouping for EER table A2-2
-Adults 76+ years Female,912,,female,,,DGA grouping for EER table A2-2
-Children 2 years,24,35,any,,,DGA grouping for EER table A2-2
-Children 3 years,36,47,any,,,DGA grouping for EER table A2-2
-Children 4 years,48,59,any,,,DGA grouping for EER table A2-2
-Children 5 years,60,71,any,,,DGA grouping for EER table A2-2
-Children 6 years,72,83,any,,,DGA grouping for EER table A2-2
-Children 7 years,84,95,any,,,DGA grouping for EER table A2-2
-Children 8 years,96,107,any,,,DGA grouping for EER table A2-2
-Children 9 years,108,119,any,,,DGA grouping for EER table A2-2
-Children 10 years,120,131,any,,,DGA grouping for EER table A2-2
-Children 11 years,132,143,any,,,DGA grouping for EER table A2-2
-Children 12 years,144,155,any,,,DGA grouping for EER table A2-2
-Children 13 years,156,167,any,,,DGA grouping for EER table A2-2
-Children 14 years,168,179,any,,,DGA grouping for EER table A2-2
-Children 15 years,180,191,any,,,DGA grouping for EER table A2-2
-Children 16 years,192,203,any,,,DGA grouping for EER table A2-2
-Children 17 years,204,215,any,,,DGA grouping for EER table A2-2
-Children 18 years,216,227,any,,,DGA grouping for EER table A2-2
+Adults 19-20 years Male,228,251,male,,,,DGA grouping for EER table A2-2
+Adults 19-20 years Female,228,251,female,,,,DGA grouping for EER table A2-2
+Adults 21-25 years Male,252,311,male,,,,DGA grouping for EER table A2-2
+Adults 21-25 years Female,252,311,female,,,,DGA grouping for EER table A2-2
+Adults 26-30 years Male,312,371,male,,,,DGA grouping for EER table A2-2
+Adults 26-30 years Female,312,371,female,,,,DGA grouping for EER table A2-2
+Adults 31-35 years Male,372,431,male,,,,DGA grouping for EER table A2-2
+Adults 31-35 years Female,372,431,female,,,,DGA grouping for EER table A2-2
+Adults 36-40 years Male,432,491,male,,,,DGA grouping for EER table A2-2
+Adults 36-40 years Female,432,491,female,,,,DGA grouping for EER table A2-2
+Adults 41-45 years Male,492,551,male,,,,DGA grouping for EER table A2-2
+Adults 41-45 years Female,492,551,female,,,,DGA grouping for EER table A2-2
+Adults 46-50 years Male,552,611,male,,,,DGA grouping for EER table A2-2
+Adults 46-50 years Female,552,611,female,,,,DGA grouping for EER table A2-2
+Adults 51-55 years Male,612,671,male,,,,DGA grouping for EER table A2-2
+Adults 51-55 years Female,612,671,female,,,,DGA grouping for EER table A2-2
+Adults 56-60 years Male,672,731,male,,,,DGA grouping for EER table A2-2
+Adults 56-60 years Female,672,731,female,,,,DGA grouping for EER table A2-2
+Adults 61-65 years Male,732,791,male,,,,DGA grouping for EER table A2-2
+Adults 61-65 years Female,732,791,female,,,,DGA grouping for EER table A2-2
+Adults 66-70 years Male,792,851,male,,,,DGA
+Adults 66-70 years Female,792,851,female,,,,DGA grouping for EER table A2-2
+Adults 71-75 years Male,852,911,male,,,,DGA grouping for EER table A2-2
+Adults 71-75 years Female,852,911,female,,,,DGA grouping for EER table A2-2
+Adults 76+ years Male,912,,male,,,,DGA grouping for EER table A2-2
+Adults 76+ years Female,912,,female,,,,DGA grouping for EER table A2-2
+Children 2 years,24,35,any,,,,DGA grouping for EER table A2-2
+Children 3 years,36,47,any,,,,DGA grouping for EER table A2-2
+Children 4 years,48,59,any,,,,DGA grouping for EER table A2-2
+Children 5 years,60,71,any,,,,DGA grouping for EER table A2-2
+Children 6 years,72,83,any,,,,DGA grouping for EER table A2-2
+Children 7 years,84,95,any,,,,DGA grouping for EER table A2-2
+Children 8 years,96,107,any,,,,DGA grouping for EER table A2-2
+Children 9 years,108,119,any,,,,DGA grouping for EER table A2-2
+Children 10 years,120,131,any,,,,DGA grouping for EER table A2-2
+Children 11 years,132,143,any,,,,DGA grouping for EER table A2-2
+Children 12 years,144,155,any,,,,DGA grouping for EER table A2-2
+Children 13 years,156,167,any,,,,DGA grouping for EER table A2-2
+Children 14 years,168,179,any,,,,DGA grouping for EER table A2-2
+Children 15 years,180,191,any,,,,DGA grouping for EER table A2-2
+Children 16 years,192,203,any,,,,DGA grouping for EER table A2-2
+Children 17 years,204,215,any,,,,DGA grouping for EER table A2-2
+Children 18 years,216,227,any,,,,DGA grouping for EER table A2-2

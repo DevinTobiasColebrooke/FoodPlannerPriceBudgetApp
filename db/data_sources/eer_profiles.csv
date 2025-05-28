@@ -1,219 +1,219 @@
-name,source_table_reference,life_stage_group_id_placeholder,sex_filter,age_min_months_filter,age_max_months_filter,pal_category_applicable,coefficient_intercept,coefficient_age_years,coefficient_age_months,coefficient_height_cm,coefficient_weight_kg,coefficient_pal_value,coefficient_gestation_weeks,equation_basis,standard_error_of_predicted_value_kcal,notes
-EER_DGA_Toddler_12mo_M,"DGA App2 T A2-1","Infants 7-12 months",male,12,14,Average,800,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_12mo_F,"DGA App2 T A2-1","Infants 7-12 months",female,12,14,Average,800,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_15mo_M,"DGA App2 T A2-1","Toddlers 12-23 months",male,15,17,Average,900,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_15mo_F,"DGA App2 T A2-1","Toddlers 12-23 months",female,15,17,Average,800,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_18mo_M,"DGA App2 T A2-1","Toddlers 12-23 months",male,18,20,Average,1000,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_18mo_F,"DGA App2 T A2-1","Toddlers 12-23 months",female,18,20,Average,900,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_21-23mo_M,"DGA App2 T A2-1","Toddlers 12-23 months",male,21,23,Average,1000,,,,,,,,Fixed value based on reference individuals
-EER_DGA_Toddler_21-23mo_F,"DGA App2 T A2-1","Toddlers 12-23 months",female,21,23,Average,1000,,,,,,,,Fixed value based on reference individuals
-EER_DGA_M_2y_Sed,"DGA App2 T A2-2","Children 2 years",male,24,35,Sedentary,1000,,,,,,,,Fixed reference value
-EER_DGA_M_2y_Mod,"DGA App2 T A2-2","Children 2 years",male,24,35,Moderately Active,1000,,,,,,,,Fixed reference value
-EER_DGA_M_2y_Act,"DGA App2 T A2-2","Children 2 years",male,24,35,Active,1000,,,,,,,,Fixed reference value
-EER_DGA_F_2y_Sed,"DGA App2 T A2-2","Children 2 years",female,24,35,Sedentary,1000,,,,,,,,Fixed reference value
-EER_DGA_F_2y_Mod,"DGA App2 T A2-2","Children 2 years",female,24,35,Moderately Active,1000,,,,,,,,Fixed reference value
-EER_DGA_F_2y_Act,"DGA App2 T A2-2","Children 2 years",female,24,35,Active,1000,,,,,,,,Fixed reference value
-EER_DGA_M_3y_Sed,"DGA App2 T A2-2","Children 3 years",male,36,47,Sedentary,1000,,,,,,,,Fixed reference value
-EER_DGA_M_3y_Mod,"DGA App2 T A2-2","Children 3 years",male,36,47,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_M_3y_Act,"DGA App2 T A2-2","Children 3 years",male,36,47,Active,1400,,,,,,,,Fixed reference value
-EER_DGA_F_3y_Sed,"DGA App2 T A2-2","Children 3 years",female,36,47,Sedentary,1000,,,,,,,,Fixed reference value
-EER_DGA_F_3y_Mod,"DGA App2 T A2-2","Children 3 years",female,36,47,Moderately Active,1200,,,,,,,,Fixed reference value
-EER_DGA_F_3y_Act,"DGA App2 T A2-2","Children 3 years",female,36,47,Active,1400,,,,,,,,Fixed reference value
-EER_DGA_M_4y_Sed,"DGA App2 T A2-2","Children 4 years",male,48,59,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_M_4y_Mod,"DGA App2 T A2-2","Children 4 years",male,48,59,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_M_4y_Act,"DGA App2 T A2-2","Children 4 years",male,48,59,Active,1600,,,,,,,,Fixed reference value
-EER_DGA_F_4y_Sed,"DGA App2 T A2-2","Children 4 years",female,48,59,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_F_4y_Mod,"DGA App2 T A2-2","Children 4 years",female,48,59,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_F_4y_Act,"DGA App2 T A2-2","Children 4 years",female,48,59,Active,1400,,,,,,,,Fixed reference value
-EER_DGA_M_5y_Sed,"DGA App2 T A2-2","Children 5 years",male,60,71,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_M_5y_Mod,"DGA App2 T A2-2","Children 5 years",male,60,71,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_M_5y_Act,"DGA App2 T A2-2","Children 5 years",male,60,71,Active,1600,,,,,,,,Fixed reference value
-EER_DGA_F_5y_Sed,"DGA App2 T A2-2","Children 5 years",female,60,71,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_F_5y_Mod,"DGA App2 T A2-2","Children 5 years",female,60,71,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_F_5y_Act,"DGA App2 T A2-2","Children 5 years",female,60,71,Active,1600,,,,,,,,Fixed reference value
-EER_DGA_M_6y_Sed,"DGA App2 T A2-2","Children 6 years",male,72,83,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_M_6y_Mod,"DGA App2 T A2-2","Children 6 years",male,72,83,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_M_6y_Act,"DGA App2 T A2-2","Children 6 years",male,72,83,Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_6y_Sed,"DGA App2 T A2-2","Children 6 years",female,72,83,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_F_6y_Mod,"DGA App2 T A2-2","Children 6 years",female,72,83,Moderately Active,1400,,,,,,,,Fixed reference value
-EER_DGA_F_6y_Act,"DGA App2 T A2-2","Children 6 years",female,72,83,Active,1600,,,,,,,,Fixed reference value
-EER_DGA_M_7y_Sed,"DGA App2 T A2-2","Children 7 years",male,84,95,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_M_7y_Mod,"DGA App2 T A2-2","Children 7 years",male,84,95,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_M_7y_Act,"DGA App2 T A2-2","Children 7 years",male,84,95,Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_7y_Sed,"DGA App2 T A2-2","Children 7 years",female,84,95,Sedentary,1200,,,,,,,,Fixed reference value
-EER_DGA_F_7y_Mod,"DGA App2 T A2-2","Children 7 years",female,84,95,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_F_7y_Act,"DGA App2 T A2-2","Children 7 years",female,84,95,Active,1800,,,,,,,,Fixed reference value
-EER_DGA_M_8y_Sed,"DGA App2 T A2-2","Children 8 years",male,96,107,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_M_8y_Mod,"DGA App2 T A2-2","Children 8 years",male,96,107,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_M_8y_Act,"DGA App2 T A2-2","Children 8 years",male,96,107,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_8y_Sed,"DGA App2 T A2-2","Children 8 years",female,96,107,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_F_8y_Mod,"DGA App2 T A2-2","Children 8 years",female,96,107,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_F_8y_Act,"DGA App2 T A2-2","Children 8 years",female,96,107,Active,1800,,,,,,,,Fixed reference value
-EER_DGA_M_9y_Sed,"DGA App2 T A2-2","Children 9 years",male,108,119,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_M_9y_Mod,"DGA App2 T A2-2","Children 9 years",male,108,119,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_M_9y_Act,"DGA App2 T A2-2","Children 9 years",male,108,119,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_9y_Sed,"DGA App2 T A2-2","Children 9 years",female,108,119,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_F_9y_Mod,"DGA App2 T A2-2","Children 9 years",female,108,119,Moderately Active,1600,,,,,,,,Fixed reference value
-EER_DGA_F_9y_Act,"DGA App2 T A2-2","Children 9 years",female,108,119,Active,1800,,,,,,,,Fixed reference value
-EER_DGA_M_10y_Sed,"DGA App2 T A2-2","Children 10 years",male,120,131,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_M_10y_Mod,"DGA App2 T A2-2","Children 10 years",male,120,131,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_M_10y_Act,"DGA App2 T A2-2","Children 10 years",male,120,131,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_F_10y_Sed,"DGA App2 T A2-2","Children 10 years",female,120,131,Sedentary,1400,,,,,,,,Fixed reference value
-EER_DGA_F_10y_Mod,"DGA App2 T A2-2","Children 10 years",female,120,131,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_10y_Act,"DGA App2 T A2-2","Children 10 years",female,120,131,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_11y_Sed,"DGA App2 T A2-2","Children 11 years",male,132,143,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_M_11y_Mod,"DGA App2 T A2-2","Children 11 years",male,132,143,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_11y_Act,"DGA App2 T A2-2","Children 11 years",male,132,143,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_F_11y_Sed,"DGA App2 T A2-2","Children 11 years",female,132,143,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_11y_Mod,"DGA App2 T A2-2","Children 11 years",female,132,143,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_11y_Act,"DGA App2 T A2-2","Children 11 years",female,132,143,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_12y_Sed,"DGA App2 T A2-2","Children 12 years",male,144,155,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_M_12y_Mod,"DGA App2 T A2-2","Children 12 years",male,144,155,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_12y_Act,"DGA App2 T A2-2","Children 12 years",male,144,155,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_F_12y_Sed,"DGA App2 T A2-2","Children 12 years",female,144,155,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_12y_Mod,"DGA App2 T A2-2","Children 12 years",female,144,155,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_12y_Act,"DGA App2 T A2-2","Children 12 years",female,144,155,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_13y_Sed,"DGA App2 T A2-2","Children 13 years",male,156,167,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_13y_Mod,"DGA App2 T A2-2","Children 13 years",male,156,167,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_13y_Act,"DGA App2 T A2-2","Children 13 years",male,156,167,Active,2600,,,,,,,,Fixed reference value
-EER_DGA_F_13y_Sed,"DGA App2 T A2-2","Children 13 years",female,156,167,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_13y_Mod,"DGA App2 T A2-2","Children 13 years",female,156,167,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_13y_Act,"DGA App2 T A2-2","Children 13 years",female,156,167,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_14y_Sed,"DGA App2 T A2-2","Children 14 years",male,168,179,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_14y_Mod,"DGA App2 T A2-2","Children 14 years",male,168,179,Moderately Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_14y_Act,"DGA App2 T A2-2","Children 14 years",male,168,179,Active,2800,,,,,,,,Fixed reference value
-EER_DGA_F_14y_Sed,"DGA App2 T A2-2","Children 14 years",female,168,179,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_14y_Mod,"DGA App2 T A2-2","Children 14 years",female,168,179,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_14y_Act,"DGA App2 T A2-2","Children 14 years",female,168,179,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_15y_Sed,"DGA App2 T A2-2","Children 15 years",male,180,191,Sedentary,2200,,,,,,,,Fixed reference value
-EER_DGA_M_15y_Mod,"DGA App2 T A2-2","Children 15 years",male,180,191,Moderately Active,2600,,,,,,,,Fixed reference value
-EER_DGA_M_15y_Act,"DGA App2 T A2-2","Children 15 years",male,180,191,Active,3000,,,,,,,,Fixed reference value
-EER_DGA_F_15y_Sed,"DGA App2 T A2-2","Children 15 years",female,180,191,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_15y_Mod,"DGA App2 T A2-2","Children 15 years",female,180,191,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_15y_Act,"DGA App2 T A2-2","Children 15 years",female,180,191,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_16y_Sed,"DGA App2 T A2-2","Children 16 years",male,192,203,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_16y_Mod,"DGA App2 T A2-2","Children 16 years",male,192,203,Moderately Active,2800,,,,,,,,Fixed reference value
-EER_DGA_M_16y_Act,"DGA App2 T A2-2","Children 16 years",male,192,203,Active,3200,,,,,,,,Fixed reference value
-EER_DGA_F_16y_Sed,"DGA App2 T A2-2","Children 16 years",female,192,203,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_16y_Mod,"DGA App2 T A2-2","Children 16 years",female,192,203,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_16y_Act,"DGA App2 T A2-2","Children 16 years",female,192,203,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_17y_Sed,"DGA App2 T A2-2","Children 17 years",male,204,215,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_17y_Mod,"DGA App2 T A2-2","Children 17 years",male,204,215,Moderately Active,2800,,,,,,,,Fixed reference value
-EER_DGA_M_17y_Act,"DGA App2 T A2-2","Children 17 years",male,204,215,Active,3200,,,,,,,,Fixed reference value
-EER_DGA_F_17y_Sed,"DGA App2 T A2-2","Children 17 years",female,204,215,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_17y_Mod,"DGA App2 T A2-2","Children 17 years",female,204,215,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_17y_Act,"DGA App2 T A2-2","Children 17 years",female,204,215,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_18y_Sed,"DGA App2 T A2-2","Children 18 years",male,216,227,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_18y_Mod,"DGA App2 T A2-2","Children 18 years",male,216,227,Moderately Active,2800,,,,,,,,Fixed reference value
-EER_DGA_M_18y_Act,"DGA App2 T A2-2","Children 18 years",male,216,227,Active,3200,,,,,,,,Fixed reference value
-EER_DGA_F_18y_Sed,"DGA App2 T A2-2","Children 18 years",female,216,227,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_18y_Mod,"DGA App2 T A2-2","Children 18 years",female,216,227,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_18y_Act,"DGA App2 T A2-2","Children 18 years",female,216,227,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_19-20y_Sed,"DGA App2 T A2-2","Adults 19-20 years Male",male,228,251,Sedentary,2600,,,,,,,,Fixed reference value
-EER_DGA_M_19-20y_Mod,"DGA App2 T A2-2","Adults 19-20 years Male",male,228,251,Moderately Active,2800,,,,,,,,Fixed reference value
-EER_DGA_M_19-20y_Act,"DGA App2 T A2-2","Adults 19-20 years Male",male,228,251,Active,3000,,,,,,,,Fixed reference value
-EER_DGA_F_19-20y_Sed,"DGA App2 T A2-2","Adults 19-20 years Female",female,228,251,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_F_19-20y_Mod,"DGA App2 T A2-2","Adults 19-20 years Female",female,228,251,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_F_19-20y_Act,"DGA App2 T A2-2","Adults 19-20 years Female",female,228,251,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_21-25y_Sed,"DGA App2 T A2-2","Adults 21-25 years Male",male,252,311,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_21-25y_Mod,"DGA App2 T A2-2","Adults 21-25 years Male",male,252,311,Moderately Active,2800,,,,,,,,Fixed reference value
-EER_DGA_M_21-25y_Act,"DGA App2 T A2-2","Adults 21-25 years Male",male,252,311,Active,3000,,,,,,,,Fixed reference value
-EER_DGA_F_21-25y_Sed,"DGA App2 T A2-2","Adults 21-25 years Female",female,252,311,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_F_21-25y_Mod,"DGA App2 T A2-2","Adults 21-25 years Female",female,252,311,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_F_21-25y_Act,"DGA App2 T A2-2","Adults 21-25 years Female",female,252,311,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_26-30y_Sed,"DGA App2 T A2-2","Adults 26-30 years Male",male,312,371,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_26-30y_Mod,"DGA App2 T A2-2","Adults 26-30 years Male",male,312,371,Moderately Active,2600,,,,,,,,Fixed reference value
-EER_DGA_M_26-30y_Act,"DGA App2 T A2-2","Adults 26-30 years Male",male,312,371,Active,3000,,,,,,,,Fixed reference value
-EER_DGA_F_26-30y_Sed,"DGA App2 T A2-2","Adults 26-30 years Female",female,312,371,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_26-30y_Mod,"DGA App2 T A2-2","Adults 26-30 years Female",female,312,371,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_26-30y_Act,"DGA App2 T A2-2","Adults 26-30 years Female",female,312,371,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_31-35y_Sed,"DGA App2 T A2-2","Adults 31-35 years Male",male,372,431,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_31-35y_Mod,"DGA App2 T A2-2","Adults 31-35 years Male",male,372,431,Moderately Active,2600,,,,,,,,Fixed reference value
-EER_DGA_M_31-35y_Act,"DGA App2 T A2-2","Adults 31-35 years Male",male,372,431,Active,3000,,,,,,,,Fixed reference value
-EER_DGA_F_31-35y_Sed,"DGA App2 T A2-2","Adults 31-35 years Female",female,372,431,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_31-35y_Mod,"DGA App2 T A2-2","Adults 31-35 years Female",female,372,431,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_31-35y_Act,"DGA App2 T A2-2","Adults 31-35 years Female",female,372,431,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_36-40y_Sed,"DGA App2 T A2-2","Adults 36-40 years Male",male,432,491,Sedentary,2400,,,,,,,,Fixed reference value
-EER_DGA_M_36-40y_Mod,"DGA App2 T A2-2","Adults 36-40 years Male",male,432,491,Moderately Active,2600,,,,,,,,Fixed reference value
-EER_DGA_M_36-40y_Act,"DGA App2 T A2-2","Adults 36-40 years Male",male,432,491,Active,2800,,,,,,,,Fixed reference value
-EER_DGA_F_36-40y_Sed,"DGA App2 T A2-2","Adults 36-40 years Female",female,432,491,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_36-40y_Mod,"DGA App2 T A2-2","Adults 36-40 years Female",female,432,491,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_36-40y_Act,"DGA App2 T A2-2","Adults 36-40 years Female",female,432,491,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_41-45y_Sed,"DGA App2 T A2-2","Adults 41-45 years Male",male,492,551,Sedentary,2200,,,,,,,,Fixed reference value
-EER_DGA_M_41-45y_Mod,"DGA App2 T A2-2","Adults 41-45 years Male",male,492,551,Moderately Active,2600,,,,,,,,Fixed reference value
-EER_DGA_M_41-45y_Act,"DGA App2 T A2-2","Adults 41-45 years Male",male,492,551,Active,2800,,,,,,,,Fixed reference value
-EER_DGA_F_41-45y_Sed,"DGA App2 T A2-2","Adults 41-45 years Female",female,492,551,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_41-45y_Mod,"DGA App2 T A2-2","Adults 41-45 years Female",female,492,551,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_41-45y_Act,"DGA App2 T A2-2","Adults 41-45 years Female",female,492,551,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_46-50y_Sed,"DGA App2 T A2-2","Adults 46-50 years Male",male,552,611,Sedentary,2200,,,,,,,,Fixed reference value
-EER_DGA_M_46-50y_Mod,"DGA App2 T A2-2","Adults 46-50 years Male",male,552,611,Moderately Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_46-50y_Act,"DGA App2 T A2-2","Adults 46-50 years Male",male,552,611,Active,2800,,,,,,,,Fixed reference value
-EER_DGA_F_46-50y_Sed,"DGA App2 T A2-2","Adults 46-50 years Female",female,552,611,Sedentary,1800,,,,,,,,Fixed reference value
-EER_DGA_F_46-50y_Mod,"DGA App2 T A2-2","Adults 46-50 years Female",female,552,611,Moderately Active,2000,,,,,,,,Fixed reference value
-EER_DGA_F_46-50y_Act,"DGA App2 T A2-2","Adults 46-50 years Female",female,552,611,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_51-55y_Sed,"DGA App2 T A2-2","Adults 51-55 years Male",male,612,671,Sedentary,2200,,,,,,,,Fixed reference value
-EER_DGA_M_51-55y_Mod,"DGA App2 T A2-2","Adults 51-55 years Male",male,612,671,Moderately Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_51-55y_Act,"DGA App2 T A2-2","Adults 51-55 years Male",male,612,671,Active,2800,,,,,,,,Fixed reference value
-EER_DGA_F_51-55y_Sed,"DGA App2 T A2-2","Adults 51-55 years Female",female,612,671,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_51-55y_Mod,"DGA App2 T A2-2","Adults 51-55 years Female",female,612,671,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_51-55y_Act,"DGA App2 T A2-2","Adults 51-55 years Female",female,612,671,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_56-60y_Sed,"DGA App2 T A2-2","Adults 56-60 years Male",male,672,731,Sedentary,2200,,,,,,,,Fixed reference value
-EER_DGA_M_56-60y_Mod,"DGA App2 T A2-2","Adults 56-60 years Male",male,672,731,Moderately Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_56-60y_Act,"DGA App2 T A2-2","Adults 56-60 years Male",male,672,731,Active,2600,,,,,,,,Fixed reference value
-EER_DGA_F_56-60y_Sed,"DGA App2 T A2-2","Adults 56-60 years Female",female,672,731,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_56-60y_Mod,"DGA App2 T A2-2","Adults 56-60 years Female",female,672,731,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_56-60y_Act,"DGA App2 T A2-2","Adults 56-60 years Female",female,672,731,Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_61-65y_Sed,"DGA App2 T A2-2","Adults 61-65 years Male",male,732,791,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_61-65y_Mod,"DGA App2 T A2-2","Adults 61-65 years Male",male,732,791,Moderately Active,2400,,,,,,,,Fixed reference value
-EER_DGA_M_61-65y_Act,"DGA App2 T A2-2","Adults 61-65 years Male",male,732,791,Active,2600,,,,,,,,Fixed reference value
-EER_DGA_F_61-65y_Sed,"DGA App2 T A2-2","Adults 61-65 years Female",female,732,791,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_61-65y_Mod,"DGA App2 T A2-2","Adults 61-65 years Female",female,732,791,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_61-65y_Act,"DGA App2 T A2-2","Adults 61-65 years Female",female,732,791,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_66-70y_Sed,"DGA App2 T A2-2","Adults 66-70 years Male",male,792,851,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_66-70y_Mod,"DGA App2 T A2-2","Adults 66-70 years Male",male,792,851,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_66-70y_Act,"DGA App2 T A2-2","Adults 66-70 years Male",male,792,851,Active,2600,,,,,,,,Fixed reference value
-EER_DGA_F_66-70y_Sed,"DGA App2 T A2-2","Adults 66-70 years Female",female,792,851,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_66-70y_Mod,"DGA App2 T A2-2","Adults 66-70 years Female",female,792,851,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_66-70y_Act,"DGA App2 T A2-2","Adults 66-70 years Female",female,792,851,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_71-75y_Sed,"DGA App2 T A2-2","Adults 71-75 years Male",male,852,911,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_71-75y_Mod,"DGA App2 T A2-2","Adults 71-75 years Male",male,852,911,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_71-75y_Act,"DGA App2 T A2-2","Adults 71-75 years Male",male,852,911,Active,2600,,,,,,,,Fixed reference value
-EER_DGA_F_71-75y_Sed,"DGA App2 T A2-2","Adults 71-75 years Female",female,852,911,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_71-75y_Mod,"DGA App2 T A2-2","Adults 71-75 years Female",female,852,911,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_71-75y_Act,"DGA App2 T A2-2","Adults 71-75 years Female",female,852,911,Active,2000,,,,,,,,Fixed reference value
-EER_DGA_M_76+y_Sed,"DGA App2 T A2-2","Adults 76+ years Male",male,912,,Sedentary,2000,,,,,,,,Fixed reference value
-EER_DGA_M_76+y_Mod,"DGA App2 T A2-2","Adults 76+ years Male",male,912,,Moderately Active,2200,,,,,,,,Fixed reference value
-EER_DGA_M_76+y_Act,"DGA App2 T A2-2","Adults 76+ years Male",male,912,,Active,2400,,,,,,,,Fixed reference value
-EER_DGA_F_76+y_Sed,"DGA App2 T A2-2","Adults 76+ years Female",female,912,,Sedentary,1600,,,,,,,,Fixed reference value
-EER_DGA_F_76+y_Mod,"DGA App2 T A2-2","Adults 76+ years Female",female,912,,Moderately Active,1800,,,,,,,,Fixed reference value
-EER_DGA_F_76+y_Act,"DGA App2 T A2-2","Adults 76+ years Female",female,912,,Active,2000,,,,,,,,Fixed reference value
-EER_IOM_Boys_0-2y_TEE,"IOM EER S-7","Boys, 0-2 years",male,0,35,N/A,-716.45,-1.00,,17.82,15.06,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Girls_0-2y_TEE,"IOM EER S-7","Girls, 0-2 years",female,0,35,N/A,-69.15,80.00,,2.65,54.15,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Boys_3-18y_Inactive_TEE,"IOM EER S-7","Boys, 3-18 years",male,36,227,Inactive,-447.51,3.68,,13.01,13.15,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Boys_3-18y_LowActive_TEE,"IOM EER S-7","Boys, 3-18 years",male,36,227,Low active,19.12,3.68,,8.62,20.28,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Boys_3-18y_Active_TEE,"IOM EER S-7","Boys, 3-18 years",male,36,227,Active,-388.19,3.68,,12.66,20.46,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Boys_3-18y_VeryActive_TEE,"IOM EER S-7","Boys, 3-18 years",male,36,227,Very active,-671.75,3.68,,15.38,23.25,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Girls_3-18y_Inactive_TEE,"IOM EER S-7","Girls, 3-18 years",female,36,227,Inactive,55.59,-22.25,,8.43,17.07,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Girls_3-18y_LowActive_TEE,"IOM EER S-7","Girls, 3-18 years",female,36,227,Low active,-297.54,-22.25,,12.77,14.73,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Girls_3-18y_Active_TEE,"IOM EER S-7","Girls, 3-18 years",female,36,227,Active,-189.55,-22.25,,11.74,18.34,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Girls_3-18y_VeryActive_TEE,"IOM EER S-7","Girls, 3-18 years",female,36,227,Very active,-709.59,-22.25,,18.22,14.25,1.0,,,IOM 2002/2005,,"Base TEE. Add growth cost from EER Additive Components."
-EER_IOM_Men_19+_Inactive_TEE,"IOM EER S-7 / S-9","Males 19+ years",male,228,,Inactive,753.07,-10.83,,6.50,14.10,1.0,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Men_19+_LowActive_TEE,"IOM EER S-7 / S-9","Males 19+ years",male,228,,Low active,581.47,-10.83,,8.30,14.94,1.0,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Men_19+_Active_TEE,"IOM EER S-7 / S-9","Males 19+ years",male,228,,Active,1004.82,-10.83,,6.52,15.91,1.0,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Men_19+_VeryActive_TEE,"IOM EER S-7 / S-9","Males 19+ years",male,228,,Very active,-517.88,-10.83,,15.61,19.11,1.0,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Women_19+_Inactive_TEE,"IOM EER S-7 / S-9","Females 19+ years",female,228,,Inactive,584.90,-7.01,,5.72,11.71,1.0,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Women_19+_LowActive_TEE,"IOM EER S-7 / S-9","Females 19+ years",female,228,,Low active,575.77,-7.01,,6.60,12.14,1.0,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Women_19+_Active_TEE,"IOM EER S-7 / S-9","Females 19+ years",female,228,,Active,710.25,-7.01,,6.54,12.34,1.0,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Women_19+_VeryActive_TEE,"IOM EER S-7 / S-9","Females 19+ years",female,228,,Very active,511.83,-7.01,,9.07,12.56,1.0,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
-EER_IOM_Preg_Inactive_TEE,"IOM EER S-7 / S-4","Pregnancy (any age)",female,,,,Inactive,1131.20,-2.04,,0.34,12.15,,9.16,IOM 2002/2005,282.44,"TEE part. Add energy deposition for 2nd/3rd trimester. 1st trimester uses non-pregnant TEE. RMSE from Table 5-6."
-EER_IOM_Preg_LowActive_TEE,"IOM EER S-7 / S-4","Pregnancy (any age)",female,,,,Low active,693.35,-2.04,,5.73,10.20,,9.16,IOM 2002/2005,282.44,"TEE part. Add energy deposition for 2nd/3rd trimester."
-EER_IOM_Preg_Active_TEE,"IOM EER S-7 / S-4","Pregnancy (any age)",female,,,,Active,-223.84,-2.04,,13.23,8.15,,9.16,IOM 2002/2005,282.44,"TEE part. Add energy deposition for 2nd/3rd trimester."
-EER_IOM_Preg_VeryActive_TEE,"IOM EER S-7 / S-4","Pregnancy (any age)",female,,,,Very active,-779.72,-2.04,,18.45,8.73,,9.16,IOM 2002/2005,282.44,"TEE part. Add energy deposition for 2nd/3rd trimester."
-EER_IOM_Lact_Women_19+_Inactive_TEE,"IOM EER S-5 / S-7","Females 19+ years",female,228,,Inactive,584.90,-7.01,,5.72,11.71,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Women. Add milk costs."
-EER_IOM_Lact_Women_19+_LowActive_TEE,"IOM EER S-5 / S-7","Females 19+ years",female,228,,Low active,575.77,-7.01,,6.60,12.14,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Women. Add milk costs."
-EER_IOM_Lact_Women_19+_Active_TEE,"IOM EER S-5 / S-7","Females 19+ years",female,228,,Active,710.25,-7.01,,6.54,12.34,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Women. Add milk costs."
-EER_IOM_Lact_Women_19+_VeryActive_TEE,"IOM EER S-5 / S-7","Females 19+ years",female,228,,Very active,511.83,-7.01,,9.07,12.56,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Women. Add milk costs."
-EER_IOM_Lact_Girls_LT19_Inactive_TEE,"IOM EER S-5 / S-7","Girls, 3-18 years",female,36,227,Inactive,55.59,-22.25,,8.43,17.07,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Girls. Add milk costs."
-EER_IOM_Lact_Girls_LT19_LowActive_TEE,"IOM EER S-5 / S-7","Girls, 3-18 years",female,36,227,Low active,-297.54,-22.25,,12.77,14.73,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Girls. Add milk costs."
-EER_IOM_Lact_Girls_LT19_Active_TEE,"IOM EER S-5 / S-7","Girls, 3-18 years",female,36,227,Active,-189.55,-22.25,,11.74,18.34,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Girls. Add milk costs."
-EER_IOM_Lact_Girls_LT19_VeryActive_TEE,"IOM EER S-5 / S-7","Girls, 3-18 years",female,36,227,Very active,-709.59,-22.25,,18.22,14.25,1.0,,,IOM 2002/2005,,"Base TEE for Lactating Girls. Add milk costs."
+name,source_table_reference,life_stage_group_id_placeholder,sex_filter,age_min_months_filter,age_max_months_filter,pal_category_applicable,coefficient_intercept,coefficient_age_years,coefficient_age_months,coefficient_height_cm,coefficient_weight_kg,coefficient_pal_value,coefficient_gestation_weeks,equation_basis,standard_error_of_predicted_value_kcal,notes,
+EER_DGA_Toddler_12mo_M,DGA App2 T A2-1,Infants 7-12 months,male,12,14,Average,800,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_12mo_F,DGA App2 T A2-1,Infants 7-12 months,female,12,14,Average,800,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_15mo_M,DGA App2 T A2-1,Toddlers 12-23 months,male,15,17,Average,900,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_15mo_F,DGA App2 T A2-1,Toddlers 12-23 months,female,15,17,Average,800,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_18mo_M,DGA App2 T A2-1,Toddlers 12-23 months,male,18,20,Average,1000,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_18mo_F,DGA App2 T A2-1,Toddlers 12-23 months,female,18,20,Average,900,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_21-23mo_M,DGA App2 T A2-1,Toddlers 12-23 months,male,21,23,Average,1000,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_Toddler_21-23mo_F,DGA App2 T A2-1,Toddlers 12-23 months,female,21,23,Average,1000,,,,,,,,Fixed value based on reference individuals,,
+EER_DGA_M_2y_Sed,DGA App2 T A2-2,Children 2 years,male,24,35,Sedentary,1000,,,,,,,,Fixed reference value,,
+EER_DGA_M_2y_Mod,DGA App2 T A2-2,Children 2 years,male,24,35,Moderately Active,1000,,,,,,,,Fixed reference value,,
+EER_DGA_M_2y_Act,DGA App2 T A2-2,Children 2 years,male,24,35,Active,1000,,,,,,,,Fixed reference value,,
+EER_DGA_F_2y_Sed,DGA App2 T A2-2,Children 2 years,female,24,35,Sedentary,1000,,,,,,,,Fixed reference value,,
+EER_DGA_F_2y_Mod,DGA App2 T A2-2,Children 2 years,female,24,35,Moderately Active,1000,,,,,,,,Fixed reference value,,
+EER_DGA_F_2y_Act,DGA App2 T A2-2,Children 2 years,female,24,35,Active,1000,,,,,,,,Fixed reference value,,
+EER_DGA_M_3y_Sed,DGA App2 T A2-2,Children 3 years,male,36,47,Sedentary,1000,,,,,,,,Fixed reference value,,
+EER_DGA_M_3y_Mod,DGA App2 T A2-2,Children 3 years,male,36,47,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_3y_Act,DGA App2 T A2-2,Children 3 years,male,36,47,Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_3y_Sed,DGA App2 T A2-2,Children 3 years,female,36,47,Sedentary,1000,,,,,,,,Fixed reference value,,
+EER_DGA_F_3y_Mod,DGA App2 T A2-2,Children 3 years,female,36,47,Moderately Active,1200,,,,,,,,Fixed reference value,,
+EER_DGA_F_3y_Act,DGA App2 T A2-2,Children 3 years,female,36,47,Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_4y_Sed,DGA App2 T A2-2,Children 4 years,male,48,59,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_M_4y_Mod,DGA App2 T A2-2,Children 4 years,male,48,59,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_4y_Act,DGA App2 T A2-2,Children 4 years,male,48,59,Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_4y_Sed,DGA App2 T A2-2,Children 4 years,female,48,59,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_F_4y_Mod,DGA App2 T A2-2,Children 4 years,female,48,59,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_4y_Act,DGA App2 T A2-2,Children 4 years,female,48,59,Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_5y_Sed,DGA App2 T A2-2,Children 5 years,male,60,71,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_M_5y_Mod,DGA App2 T A2-2,Children 5 years,male,60,71,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_5y_Act,DGA App2 T A2-2,Children 5 years,male,60,71,Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_5y_Sed,DGA App2 T A2-2,Children 5 years,female,60,71,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_F_5y_Mod,DGA App2 T A2-2,Children 5 years,female,60,71,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_5y_Act,DGA App2 T A2-2,Children 5 years,female,60,71,Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_6y_Sed,DGA App2 T A2-2,Children 6 years,male,72,83,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_6y_Mod,DGA App2 T A2-2,Children 6 years,male,72,83,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_6y_Act,DGA App2 T A2-2,Children 6 years,male,72,83,Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_6y_Sed,DGA App2 T A2-2,Children 6 years,female,72,83,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_F_6y_Mod,DGA App2 T A2-2,Children 6 years,female,72,83,Moderately Active,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_6y_Act,DGA App2 T A2-2,Children 6 years,female,72,83,Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_7y_Sed,DGA App2 T A2-2,Children 7 years,male,84,95,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_7y_Mod,DGA App2 T A2-2,Children 7 years,male,84,95,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_7y_Act,DGA App2 T A2-2,Children 7 years,male,84,95,Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_7y_Sed,DGA App2 T A2-2,Children 7 years,female,84,95,Sedentary,1200,,,,,,,,Fixed reference value,,
+EER_DGA_F_7y_Mod,DGA App2 T A2-2,Children 7 years,female,84,95,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_7y_Act,DGA App2 T A2-2,Children 7 years,female,84,95,Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_8y_Sed,DGA App2 T A2-2,Children 8 years,male,96,107,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_M_8y_Mod,DGA App2 T A2-2,Children 8 years,male,96,107,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_8y_Act,DGA App2 T A2-2,Children 8 years,male,96,107,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_8y_Sed,DGA App2 T A2-2,Children 8 years,female,96,107,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_8y_Mod,DGA App2 T A2-2,Children 8 years,female,96,107,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_8y_Act,DGA App2 T A2-2,Children 8 years,female,96,107,Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_9y_Sed,DGA App2 T A2-2,Children 9 years,male,108,119,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_9y_Mod,DGA App2 T A2-2,Children 9 years,male,108,119,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_9y_Act,DGA App2 T A2-2,Children 9 years,male,108,119,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_9y_Sed,DGA App2 T A2-2,Children 9 years,female,108,119,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_9y_Mod,DGA App2 T A2-2,Children 9 years,female,108,119,Moderately Active,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_9y_Act,DGA App2 T A2-2,Children 9 years,female,108,119,Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_10y_Sed,DGA App2 T A2-2,Children 10 years,male,120,131,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_M_10y_Mod,DGA App2 T A2-2,Children 10 years,male,120,131,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_10y_Act,DGA App2 T A2-2,Children 10 years,male,120,131,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_F_10y_Sed,DGA App2 T A2-2,Children 10 years,female,120,131,Sedentary,1400,,,,,,,,Fixed reference value,,
+EER_DGA_F_10y_Mod,DGA App2 T A2-2,Children 10 years,female,120,131,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_10y_Act,DGA App2 T A2-2,Children 10 years,female,120,131,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_11y_Sed,DGA App2 T A2-2,Children 11 years,male,132,143,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_11y_Mod,DGA App2 T A2-2,Children 11 years,male,132,143,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_11y_Act,DGA App2 T A2-2,Children 11 years,male,132,143,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_F_11y_Sed,DGA App2 T A2-2,Children 11 years,female,132,143,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_11y_Mod,DGA App2 T A2-2,Children 11 years,female,132,143,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_11y_Act,DGA App2 T A2-2,Children 11 years,female,132,143,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_12y_Sed,DGA App2 T A2-2,Children 12 years,male,144,155,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_M_12y_Mod,DGA App2 T A2-2,Children 12 years,male,144,155,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_12y_Act,DGA App2 T A2-2,Children 12 years,male,144,155,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_F_12y_Sed,DGA App2 T A2-2,Children 12 years,female,144,155,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_12y_Mod,DGA App2 T A2-2,Children 12 years,female,144,155,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_12y_Act,DGA App2 T A2-2,Children 12 years,female,144,155,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_13y_Sed,DGA App2 T A2-2,Children 13 years,male,156,167,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_13y_Mod,DGA App2 T A2-2,Children 13 years,male,156,167,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_13y_Act,DGA App2 T A2-2,Children 13 years,male,156,167,Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_F_13y_Sed,DGA App2 T A2-2,Children 13 years,female,156,167,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_13y_Mod,DGA App2 T A2-2,Children 13 years,female,156,167,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_13y_Act,DGA App2 T A2-2,Children 13 years,female,156,167,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_14y_Sed,DGA App2 T A2-2,Children 14 years,male,168,179,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_14y_Mod,DGA App2 T A2-2,Children 14 years,male,168,179,Moderately Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_14y_Act,DGA App2 T A2-2,Children 14 years,male,168,179,Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_F_14y_Sed,DGA App2 T A2-2,Children 14 years,female,168,179,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_14y_Mod,DGA App2 T A2-2,Children 14 years,female,168,179,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_14y_Act,DGA App2 T A2-2,Children 14 years,female,168,179,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_15y_Sed,DGA App2 T A2-2,Children 15 years,male,180,191,Sedentary,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_15y_Mod,DGA App2 T A2-2,Children 15 years,male,180,191,Moderately Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_15y_Act,DGA App2 T A2-2,Children 15 years,male,180,191,Active,3000,,,,,,,,Fixed reference value,,
+EER_DGA_F_15y_Sed,DGA App2 T A2-2,Children 15 years,female,180,191,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_15y_Mod,DGA App2 T A2-2,Children 15 years,female,180,191,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_15y_Act,DGA App2 T A2-2,Children 15 years,female,180,191,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_16y_Sed,DGA App2 T A2-2,Children 16 years,male,192,203,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_16y_Mod,DGA App2 T A2-2,Children 16 years,male,192,203,Moderately Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_M_16y_Act,DGA App2 T A2-2,Children 16 years,male,192,203,Active,3200,,,,,,,,Fixed reference value,,
+EER_DGA_F_16y_Sed,DGA App2 T A2-2,Children 16 years,female,192,203,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_16y_Mod,DGA App2 T A2-2,Children 16 years,female,192,203,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_16y_Act,DGA App2 T A2-2,Children 16 years,female,192,203,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_17y_Sed,DGA App2 T A2-2,Children 17 years,male,204,215,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_17y_Mod,DGA App2 T A2-2,Children 17 years,male,204,215,Moderately Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_M_17y_Act,DGA App2 T A2-2,Children 17 years,male,204,215,Active,3200,,,,,,,,Fixed reference value,,
+EER_DGA_F_17y_Sed,DGA App2 T A2-2,Children 17 years,female,204,215,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_17y_Mod,DGA App2 T A2-2,Children 17 years,female,204,215,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_17y_Act,DGA App2 T A2-2,Children 17 years,female,204,215,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_18y_Sed,DGA App2 T A2-2,Children 18 years,male,216,227,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_18y_Mod,DGA App2 T A2-2,Children 18 years,male,216,227,Moderately Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_M_18y_Act,DGA App2 T A2-2,Children 18 years,male,216,227,Active,3200,,,,,,,,Fixed reference value,,
+EER_DGA_F_18y_Sed,DGA App2 T A2-2,Children 18 years,female,216,227,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_18y_Mod,DGA App2 T A2-2,Children 18 years,female,216,227,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_18y_Act,DGA App2 T A2-2,Children 18 years,female,216,227,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_19-20y_Sed,DGA App2 T A2-2,Adults 19-20 years Male,male,228,251,Sedentary,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_19-20y_Mod,DGA App2 T A2-2,Adults 19-20 years Male,male,228,251,Moderately Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_M_19-20y_Act,DGA App2 T A2-2,Adults 19-20 years Male,male,228,251,Active,3000,,,,,,,,Fixed reference value,,
+EER_DGA_F_19-20y_Sed,DGA App2 T A2-2,Adults 19-20 years Female,female,228,251,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_19-20y_Mod,DGA App2 T A2-2,Adults 19-20 years Female,female,228,251,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_F_19-20y_Act,DGA App2 T A2-2,Adults 19-20 years Female,female,228,251,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_21-25y_Sed,DGA App2 T A2-2,Adults 21-25 years Male,male,252,311,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_21-25y_Mod,DGA App2 T A2-2,Adults 21-25 years Male,male,252,311,Moderately Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_M_21-25y_Act,DGA App2 T A2-2,Adults 21-25 years Male,male,252,311,Active,3000,,,,,,,,Fixed reference value,,
+EER_DGA_F_21-25y_Sed,DGA App2 T A2-2,Adults 21-25 years Female,female,252,311,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_21-25y_Mod,DGA App2 T A2-2,Adults 21-25 years Female,female,252,311,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_F_21-25y_Act,DGA App2 T A2-2,Adults 21-25 years Female,female,252,311,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_26-30y_Sed,DGA App2 T A2-2,Adults 26-30 years Male,male,312,371,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_26-30y_Mod,DGA App2 T A2-2,Adults 26-30 years Male,male,312,371,Moderately Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_26-30y_Act,DGA App2 T A2-2,Adults 26-30 years Male,male,312,371,Active,3000,,,,,,,,Fixed reference value,,
+EER_DGA_F_26-30y_Sed,DGA App2 T A2-2,Adults 26-30 years Female,female,312,371,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_26-30y_Mod,DGA App2 T A2-2,Adults 26-30 years Female,female,312,371,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_26-30y_Act,DGA App2 T A2-2,Adults 26-30 years Female,female,312,371,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_31-35y_Sed,DGA App2 T A2-2,Adults 31-35 years Male,male,372,431,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_31-35y_Mod,DGA App2 T A2-2,Adults 31-35 years Male,male,372,431,Moderately Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_31-35y_Act,DGA App2 T A2-2,Adults 31-35 years Male,male,372,431,Active,3000,,,,,,,,Fixed reference value,,
+EER_DGA_F_31-35y_Sed,DGA App2 T A2-2,Adults 31-35 years Female,female,372,431,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_31-35y_Mod,DGA App2 T A2-2,Adults 31-35 years Female,female,372,431,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_31-35y_Act,DGA App2 T A2-2,Adults 31-35 years Female,female,372,431,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_36-40y_Sed,DGA App2 T A2-2,Adults 36-40 years Male,male,432,491,Sedentary,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_36-40y_Mod,DGA App2 T A2-2,Adults 36-40 years Male,male,432,491,Moderately Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_36-40y_Act,DGA App2 T A2-2,Adults 36-40 years Male,male,432,491,Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_F_36-40y_Sed,DGA App2 T A2-2,Adults 36-40 years Female,female,432,491,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_36-40y_Mod,DGA App2 T A2-2,Adults 36-40 years Female,female,432,491,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_36-40y_Act,DGA App2 T A2-2,Adults 36-40 years Female,female,432,491,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_41-45y_Sed,DGA App2 T A2-2,Adults 41-45 years Male,male,492,551,Sedentary,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_41-45y_Mod,DGA App2 T A2-2,Adults 41-45 years Male,male,492,551,Moderately Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_M_41-45y_Act,DGA App2 T A2-2,Adults 41-45 years Male,male,492,551,Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_F_41-45y_Sed,DGA App2 T A2-2,Adults 41-45 years Female,female,492,551,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_41-45y_Mod,DGA App2 T A2-2,Adults 41-45 years Female,female,492,551,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_41-45y_Act,DGA App2 T A2-2,Adults 41-45 years Female,female,492,551,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_46-50y_Sed,DGA App2 T A2-2,Adults 46-50 years Male,male,552,611,Sedentary,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_46-50y_Mod,DGA App2 T A2-2,Adults 46-50 years Male,male,552,611,Moderately Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_46-50y_Act,DGA App2 T A2-2,Adults 46-50 years Male,male,552,611,Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_F_46-50y_Sed,DGA App2 T A2-2,Adults 46-50 years Female,female,552,611,Sedentary,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_46-50y_Mod,DGA App2 T A2-2,Adults 46-50 years Female,female,552,611,Moderately Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_F_46-50y_Act,DGA App2 T A2-2,Adults 46-50 years Female,female,552,611,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_51-55y_Sed,DGA App2 T A2-2,Adults 51-55 years Male,male,612,671,Sedentary,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_51-55y_Mod,DGA App2 T A2-2,Adults 51-55 years Male,male,612,671,Moderately Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_51-55y_Act,DGA App2 T A2-2,Adults 51-55 years Male,male,612,671,Active,2800,,,,,,,,Fixed reference value,,
+EER_DGA_F_51-55y_Sed,DGA App2 T A2-2,Adults 51-55 years Female,female,612,671,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_51-55y_Mod,DGA App2 T A2-2,Adults 51-55 years Female,female,612,671,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_51-55y_Act,DGA App2 T A2-2,Adults 51-55 years Female,female,612,671,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_56-60y_Sed,DGA App2 T A2-2,Adults 56-60 years Male,male,672,731,Sedentary,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_56-60y_Mod,DGA App2 T A2-2,Adults 56-60 years Male,male,672,731,Moderately Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_56-60y_Act,DGA App2 T A2-2,Adults 56-60 years Male,male,672,731,Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_F_56-60y_Sed,DGA App2 T A2-2,Adults 56-60 years Female,female,672,731,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_56-60y_Mod,DGA App2 T A2-2,Adults 56-60 years Female,female,672,731,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_56-60y_Act,DGA App2 T A2-2,Adults 56-60 years Female,female,672,731,Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_61-65y_Sed,DGA App2 T A2-2,Adults 61-65 years Male,male,732,791,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_61-65y_Mod,DGA App2 T A2-2,Adults 61-65 years Male,male,732,791,Moderately Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_M_61-65y_Act,DGA App2 T A2-2,Adults 61-65 years Male,male,732,791,Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_F_61-65y_Sed,DGA App2 T A2-2,Adults 61-65 years Female,female,732,791,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_61-65y_Mod,DGA App2 T A2-2,Adults 61-65 years Female,female,732,791,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_61-65y_Act,DGA App2 T A2-2,Adults 61-65 years Female,female,732,791,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_66-70y_Sed,DGA App2 T A2-2,Adults 66-70 years Male,male,792,851,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_66-70y_Mod,DGA App2 T A2-2,Adults 66-70 years Male,male,792,851,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_66-70y_Act,DGA App2 T A2-2,Adults 66-70 years Male,male,792,851,Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_F_66-70y_Sed,DGA App2 T A2-2,Adults 66-70 years Female,female,792,851,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_66-70y_Mod,DGA App2 T A2-2,Adults 66-70 years Female,female,792,851,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_66-70y_Act,DGA App2 T A2-2,Adults 66-70 years Female,female,792,851,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_71-75y_Sed,DGA App2 T A2-2,Adults 71-75 years Male,male,852,911,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_71-75y_Mod,DGA App2 T A2-2,Adults 71-75 years Male,male,852,911,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_71-75y_Act,DGA App2 T A2-2,Adults 71-75 years Male,male,852,911,Active,2600,,,,,,,,Fixed reference value,,
+EER_DGA_F_71-75y_Sed,DGA App2 T A2-2,Adults 71-75 years Female,female,852,911,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_71-75y_Mod,DGA App2 T A2-2,Adults 71-75 years Female,female,852,911,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_71-75y_Act,DGA App2 T A2-2,Adults 71-75 years Female,female,852,911,Active,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_76+y_Sed,DGA App2 T A2-2,Adults 76+ years Male,male,912,,Sedentary,2000,,,,,,,,Fixed reference value,,
+EER_DGA_M_76+y_Mod,DGA App2 T A2-2,Adults 76+ years Male,male,912,,Moderately Active,2200,,,,,,,,Fixed reference value,,
+EER_DGA_M_76+y_Act,DGA App2 T A2-2,Adults 76+ years Male,male,912,,Active,2400,,,,,,,,Fixed reference value,,
+EER_DGA_F_76+y_Sed,DGA App2 T A2-2,Adults 76+ years Female,female,912,,Sedentary,1600,,,,,,,,Fixed reference value,,
+EER_DGA_F_76+y_Mod,DGA App2 T A2-2,Adults 76+ years Female,female,912,,Moderately Active,1800,,,,,,,,Fixed reference value,,
+EER_DGA_F_76+y_Act,DGA App2 T A2-2,Adults 76+ years Female,female,912,,Active,2000,,,,,,,,Fixed reference value,,
+EER_IOM_Boys_0-2y_TEE,IOM EER S-7,"Boys, 0-2 years",male,0,35,N/A,-716.45,-1,,17.82,15.06,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Girls_0-2y_TEE,IOM EER S-7,"Girls, 0-2 years",female,0,35,N/A,-69.15,80,,2.65,54.15,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Boys_3-18y_Inactive_TEE,IOM EER S-7,"Boys, 3-18 years",male,36,227,Inactive,-447.51,3.68,,13.01,13.15,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Boys_3-18y_LowActive_TEE,IOM EER S-7,"Boys, 3-18 years",male,36,227,Low active,19.12,3.68,,8.62,20.28,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Boys_3-18y_Active_TEE,IOM EER S-7,"Boys, 3-18 years",male,36,227,Active,-388.19,3.68,,12.66,20.46,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Boys_3-18y_VeryActive_TEE,IOM EER S-7,"Boys, 3-18 years",male,36,227,Very active,-671.75,3.68,,15.38,23.25,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Girls_3-18y_Inactive_TEE,IOM EER S-7,"Girls, 3-18 years",female,36,227,Inactive,55.59,-22.25,,8.43,17.07,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Girls_3-18y_LowActive_TEE,IOM EER S-7,"Girls, 3-18 years",female,36,227,Low active,-297.54,-22.25,,12.77,14.73,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Girls_3-18y_Active_TEE,IOM EER S-7,"Girls, 3-18 years",female,36,227,Active,-189.55,-22.25,,11.74,18.34,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Girls_3-18y_VeryActive_TEE,IOM EER S-7,"Girls, 3-18 years",female,36,227,Very active,-709.59,-22.25,,18.22,14.25,1,,,IOM 2002/2005,,Base TEE. Add growth cost from EER Additive Components.
+EER_IOM_Men_19+_Inactive_TEE,IOM EER S-7 / S-9,Males 19+ years,male,228,,Inactive,753.07,-10.83,,6.5,14.1,1,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Men_19+_LowActive_TEE,IOM EER S-7 / S-9,Males 19+ years,male,228,,Low active,581.47,-10.83,,8.3,14.94,1,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Men_19+_Active_TEE,IOM EER S-7 / S-9,Males 19+ years,male,228,,Active,1004.82,-10.83,,6.52,15.91,1,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Men_19+_VeryActive_TEE,IOM EER S-7 / S-9,Males 19+ years,male,228,,Very active,-517.88,-10.83,,15.61,19.11,1,,,IOM 2002/2005,338.55,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Women_19+_Inactive_TEE,IOM EER S-7 / S-9,Females 19+ years,female,228,,Inactive,584.9,-7.01,,5.72,11.71,1,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Women_19+_LowActive_TEE,IOM EER S-7 / S-9,Females 19+ years,female,228,,Low active,575.77,-7.01,,6.6,12.14,1,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Women_19+_Active_TEE,IOM EER S-7 / S-9,Females 19+ years,female,228,,Active,710.25,-7.01,,6.54,12.34,1,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Women_19+_VeryActive_TEE,IOM EER S-7 / S-9,Females 19+ years,female,228,,Very active,511.83,-7.01,,9.07,12.56,1,,,IOM 2002/2005,245.75,TEE for weight stable adults. RMSE from Table 5-6.
+EER_IOM_Preg_Inactive_TEE,IOM EER S-7 / S-4,Pregnancy (any age),female,,,Inactive,1131.2,-2.04,,0.34,12.15,,,9.16,IOM 2002/2005,282.44,TEE part. Add energy deposition for 2nd/3rd trimester. 1st trimester uses non-pregnant TEE. RMSE from Table 5-6.
+EER_IOM_Preg_LowActive_TEE,IOM EER S-7 / S-4,Pregnancy (any age),female,,,Low active,693.35,-2.04,,5.73,10.2,,,9.16,IOM 2002/2005,282.44,TEE part. Add energy deposition for 2nd/3rd trimester.
+EER_IOM_Preg_Active_TEE,IOM EER S-7 / S-4,Pregnancy (any age),female,,,Active,-223.84,-2.04,,13.23,8.15,,,9.16,IOM 2002/2005,282.44,TEE part. Add energy deposition for 2nd/3rd trimester.
+EER_IOM_Preg_VeryActive_TEE,IOM EER S-7 / S-4,Pregnancy (any age),female,,,Very active,-779.72,-2.04,,18.45,8.73,,,9.16,IOM 2002/2005,282.44,TEE part. Add energy deposition for 2nd/3rd trimester.
+EER_IOM_Lact_Women_19+_Inactive_TEE,IOM EER S-5 / S-7,Females 19+ years,female,228,,Inactive,584.9,-7.01,,5.72,11.71,1,,,IOM 2002/2005,,Base TEE for Lactating Women. Add milk costs.
+EER_IOM_Lact_Women_19+_LowActive_TEE,IOM EER S-5 / S-7,Females 19+ years,female,228,,Low active,575.77,-7.01,,6.6,12.14,1,,,IOM 2002/2005,,Base TEE for Lactating Women. Add milk costs.
+EER_IOM_Lact_Women_19+_Active_TEE,IOM EER S-5 / S-7,Females 19+ years,female,228,,Active,710.25,-7.01,,6.54,12.34,1,,,IOM 2002/2005,,Base TEE for Lactating Women. Add milk costs.
+EER_IOM_Lact_Women_19+_VeryActive_TEE,IOM EER S-5 / S-7,Females 19+ years,female,228,,Very active,511.83,-7.01,,9.07,12.56,1,,,IOM 2002/2005,,Base TEE for Lactating Women. Add milk costs.
+EER_IOM_Lact_Girls_LT19_Inactive_TEE,IOM EER S-5 / S-7,"Girls, 3-18 years",female,36,227,Inactive,55.59,-22.25,,8.43,17.07,1,,,IOM 2002/2005,,Base TEE for Lactating Girls. Add milk costs.
+EER_IOM_Lact_Girls_LT19_LowActive_TEE,IOM EER S-5 / S-7,"Girls, 3-18 years",female,36,227,Low active,-297.54,-22.25,,12.77,14.73,1,,,IOM 2002/2005,,Base TEE for Lactating Girls. Add milk costs.
+EER_IOM_Lact_Girls_LT19_Active_TEE,IOM EER S-5 / S-7,"Girls, 3-18 years",female,36,227,Active,-189.55,-22.25,,11.74,18.34,1,,,IOM 2002/2005,,Base TEE for Lactating Girls. Add milk costs.
+EER_IOM_Lact_Girls_LT19_VeryActive_TEE,IOM EER S-5 / S-7,"Girls, 3-18 years",female,36,227,Very active,-709.59,-22.25,,18.22,14.25,1,,,IOM 2002/2005,,Base TEE for Lactating Girls. Add milk costs.
