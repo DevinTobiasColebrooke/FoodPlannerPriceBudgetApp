@@ -466,19 +466,102 @@ puts "PAL Definitions seeded: #{PalDefinition.count}"
 puts "Seeding Reference Anthropometries..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'reference_anthropometries.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_name_csv = row[:life_stage_group_id_placeholder]&.strip
-  # Simplified mapping for reference anthropometries, assuming direct names for now
-  life_stage_group = LifeStageGroup.find_by(name: life_stage_name_csv)
-  unless life_stage_group
-    puts "WARN: Reference Anthropometry - LifeStageGroup '#{life_stage_name_csv}' not found. Skipping. CSV Row: #{row.to_h}"
+  resolved_lsg_names = []
+
+  # Handle empty placeholder upfront
+  unless life_stage_name_csv.present?
+    puts "WARN: Reference Anthropometry - CSV row has blank life_stage_group_id_placeholder. Skipping. CSV Row: #{row.to_h}"
     next
   end
 
-  find_or_create_resource(ReferenceAnthropometry, { life_stage_group_id: life_stage_group.id }, {
-    reference_height_cm: row[:reference_height_cm].present? ? row[:reference_height_cm].to_f : nil,
-    reference_weight_kg: row[:reference_weight_kg].present? ? row[:reference_weight_kg].to_f : nil,
-    median_bmi: row[:median_bmi].present? ? row[:median_bmi].to_f : nil,
-    source_document_reference: row[:source_document_reference].presence
-  })
+  case life_stage_name_csv
+  when "Adult Males Reference"
+    # Assumption: Maps to a representative young adult male group for general reference.
+    resolved_lsg_names = ["Males 19-30 years"]
+  when "Adult Females Reference"
+    # Assumption: Maps to a representative young adult female group for general reference.
+    resolved_lsg_names = ["Females 19-30 years"]
+  when "Infants 2-6 months"
+    # Maps to the existing broader group "Infants 0-6 months"
+    resolved_lsg_names = ["Infants 0-6 months"]
+  when "Infants 7-11 months"
+    # Maps to the existing broader group "Infants 7-12 months"
+    resolved_lsg_names = ["Infants 7-12 months"]
+  when "Children 1-3 years"
+    resolved_lsg_names = ["Children 1-3 years"]
+  when "Children 4-8 years"
+    # This reference data applies to the general "Children 4-8 years" group
+    # as well as its sex-specific counterparts.
+    resolved_lsg_names = ["Children 4-8 years", "Males 4-8 years", "Females 4-8 years"]
+  when "Males 9-13 years"
+    resolved_lsg_names = ["Males 9-13 years"]
+  when "Males 14-18 years"
+    resolved_lsg_names = ["Males 14-18 years"]
+  when "Males 19-30 years" # Distinct from "Adult Males Reference" if specific data exists
+    resolved_lsg_names = ["Males 19-30 years"]
+  when "Females 9-13 years"
+    resolved_lsg_names = ["Females 9-13 years"]
+  when "Females 14-18 years"
+    resolved_lsg_names = ["Females 14-18 years"]
+  when "Females 19-30 years" # Distinct from "Adult Females Reference"
+    resolved_lsg_names = ["Females 19-30 years"]
+  when "Infants 0-11 months DLW" # Doubly Labeled Water studies reference
+    # Covers LifeStageGroups "Infants 0-6 months" and "Infants 7-12 months"
+    resolved_lsg_names = ["Infants 0-6 months", "Infants 7-12 months"]
+  when "Children 1-8 years DLW"
+    # Covers groups overlapping with 12 to 107 months, no special conditions.
+    age_min_filter = 12  # 1 year
+    age_max_filter = 107 # 8 years and 11 months (up to, but not including, 9 years)
+    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+                                       .where("min_age_months <= ? AND COALESCE(max_age_months, 12000) >= ?", age_max_filter, age_min_filter)
+                                       .pluck(:name)
+  when "Children 9-18 years DLW"
+    # Covers groups overlapping with 108 to 227 months, no special conditions.
+    age_min_filter = 108 # 9 years
+    age_max_filter = 227 # 18 years and 11 months (up to, but not including, 19 years)
+    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+                                       .where("min_age_months <= ? AND COALESCE(max_age_months, 12000) >= ?", age_max_filter, age_min_filter)
+                                       .pluck(:name)
+  when "Adults 19+ years DLW"
+    # Covers groups from 228 months upwards, no special conditions.
+    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+                                       .where("min_age_months >= ?", 228)
+                                       .pluck(:name)
+  when "Pregnant/Lactating Women DLW"
+    # Covers all pregnant or lactating female groups.
+    resolved_lsg_names = LifeStageGroup.where(sex: 'female')
+                                       .where(special_condition: ['pregnancy', 'lactation'])
+                                       .pluck(:name)
+  else
+    # Fallback: Attempt a direct match by name if the placeholder wasn't handled above.
+    # This can be useful if new, directly named placeholders are added to the CSV.
+    group = LifeStageGroup.find_by(name: life_stage_name_csv)
+    resolved_lsg_names = [group.name] if group
+  end
+
+  # Ensure it's a unique array of names
+  resolved_lsg_names = Array(resolved_lsg_names).flatten.compact.uniq
+
+  if resolved_lsg_names.empty?
+    puts "WARN: Reference Anthropometry - LifeStageGroup placeholder '#{life_stage_name_csv}' did not map to any known LifeStageGroups. Skipping. CSV Row: #{row.to_h}"
+    next
+  end
+
+  resolved_lsg_names.each do |lsg_name|
+    life_stage_group = LifeStageGroup.find_by(name: lsg_name)
+    unless life_stage_group
+      # This error should ideally not occur if the mapping logic above and LifeStageGroup seeding are correct.
+      puts "ERROR: Reference Anthropometry - Resolved LifeStageGroup name '#{lsg_name}' (from CSV placeholder '#{life_stage_name_csv}') not found in database. Skipping this specific entry."
+      next
+    end
+
+    find_or_create_resource(ReferenceAnthropometry, { life_stage_group_id: life_stage_group.id }, {
+      reference_height_cm: row[:reference_height_cm].present? ? row[:reference_height_cm].to_f : nil,
+      reference_weight_kg: row[:reference_weight_kg].present? ? row[:reference_weight_kg].to_f : nil,
+      median_bmi: row[:median_bmi].present? ? row[:median_bmi].to_f : nil,
+      source_document_reference: row[:source_document_reference].presence
+    })
+  end
 end
 puts "Reference Anthropometries seeded: #{ReferenceAnthropometry.count}"
 
