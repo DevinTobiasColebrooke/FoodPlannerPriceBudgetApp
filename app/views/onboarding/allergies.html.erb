@@ -1,0 +1,149 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-10 pb-6">
+    <%= link_to onboarding_people_path, class: "text-fp-accent-blue hover:text-fp-accent-blue-dark inline-flex items-center" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Back
+    <% end %>
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">Allergies & Sensitivities?</h1>
+  </header>
+
+  <%= form_with model: @profile, url: onboarding_equipment_path, method: :post, class: "flex-grow space-y-6 overflow-y-auto" do |f| %>
+    <p class="text-fp-neutral-text text-center text-sm">Let us know about any food allergies or sensitivities for anyone in your household.</p>
+
+    <div>
+      <%= f.label :allergies_input, "Enter allergies (e.g., peanuts, gluten, shellfish)", class: "block font-sans text-sm font-medium text-fp-neutral-darkest mb-1" %>
+      <div class="flex gap-2 w-full">
+        <%= f.text_field :allergies_input,
+          placeholder: "Type an allergy and press Enter",
+          class: "flex-grow min-w-0 p-3 rounded-fp border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green"
+        %>
+        <button type="button" id="add-allergy-btn" class="px-4 py-2 bg-fp-accent-blue text-white rounded-fp hover:bg-fp-accent-blue-dark font-medium">Add</button>
+      </div>
+      <div id="allergy-tags-container" class="tag-input-container mt-2 min-h-[40px]">
+        <% @profile.allergies&.each do |allergy| %>
+          <span class="tag">
+            <%= allergy %>
+            <button type="button" class="remove-allergy" data-allergy="<%= allergy %>">×</button>
+          </span>
+        <% end %>
+      </div>
+      <%= f.hidden_field :allergies, value: @profile.allergies&.join(","), id: "allergies-hidden" %>
+    </div>
+
+    <div class="mt-4">
+      <p class="block font-sans text-sm font-medium text-fp-neutral-darkest mb-2">Common Allergens (optional quick select):</p>
+      <div class="grid grid-cols-2 gap-3">
+        <% common_allergies = [
+          ["Dairy", "dairy"],
+          ["Eggs", "eggs"],
+          ["Tree Nuts", "nuts"],
+          ["Peanuts", "peanuts"],
+          ["Shellfish", "shellfish"],
+          ["Soy", "soy"],
+          ["Gluten", "gluten"]
+        ] %>
+
+        <% common_allergies.each do |label, value| %>
+          <label class="flex items-center p-3 bg-fp-white rounded-fp border border-fp-neutral-medium hover:border-fp-primary-green has-[:checked]:border-fp-primary-green has-[:checked]:ring-1 has-[:checked]:ring-fp-primary-green">
+            <%= f.check_box :common_allergies,
+              { multiple: true, class: "form-checkbox-custom common-allergy-checkbox mr-2" },
+              value,
+              nil
+            %>
+            <span class="text-sm text-fp-neutral-darkest"><%= label %></span>
+          </label>
+        <% end %>
+      </div>
+    </div>
+
+    <p class="text-xs text-fp-neutral-text-light mt-6">
+      If planning for multiple people, you can specify per-person allergies later in settings or if they join your plan.
+    </p>
+
+    <footer class="pt-8 pb-6">
+      <%= f.submit "Next", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
+    </footer>
+  <% end %>
+</div>
+
+<% content_for :javascript do %>
+  <script>
+    const allergyInput = document.getElementById('allergies-input');
+    const addAllergyBtn = document.getElementById('add-allergy-btn');
+    const tagsContainer = document.getElementById('allergy-tags-container');
+    const allergiesHidden = document.getElementById('allergies-hidden');
+    const commonAllergyCheckboxes = document.querySelectorAll('.common-allergy-checkbox');
+    let allergies = allergiesHidden.value ? allergiesHidden.value.split(',') : [];
+
+    function renderTags() {
+      tagsContainer.innerHTML = '';
+      allergies.forEach((allergy, index) => {
+        const tag = document.createElement('span');
+        tag.classList.add('tag');
+        tag.textContent = allergy;
+        const removeBtn = document.createElement('button');
+        removeBtn.innerHTML = '×';
+        removeBtn.onclick = () => {
+          allergies.splice(index, 1);
+          commonAllergyCheckboxes.forEach(cb => {
+            if (cb.value.toLowerCase() === allergy.toLowerCase()) {
+              cb.checked = false;
+            }
+          });
+          allergiesHidden.value = allergies.join(',');
+          renderTags();
+        };
+        tag.appendChild(removeBtn);
+        tagsContainer.appendChild(tag);
+      });
+    }
+
+    function addAllergy(allergyText) {
+      const newAllergy = allergyText.trim();
+      if (newAllergy && !allergies.map(a => a.toLowerCase()).includes(newAllergy.toLowerCase())) {
+        allergies.push(newAllergy);
+        allergiesHidden.value = allergies.join(',');
+        renderTags();
+      }
+    }
+
+    addAllergyBtn.addEventListener('click', () => {
+      addAllergy(allergyInput.value);
+      allergyInput.value = '';
+      allergyInput.focus();
+    });
+
+    allergyInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addAllergy(allergyInput.value);
+        allergyInput.value = '';
+      }
+    });
+
+    commonAllergyCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+        const allergyValue = e.target.value;
+        if (e.target.checked) {
+          addAllergy(allergyValue);
+        } else {
+          const index = allergies.map(a => a.toLowerCase()).indexOf(allergyValue.toLowerCase());
+          if (index > -1) {
+            allergies.splice(index, 1);
+            allergiesHidden.value = allergies.join(',');
+            renderTags();
+          }
+        }
+      });
+    });
+
+    // Initialize checkboxes based on existing allergies
+    commonAllergyCheckboxes.forEach(checkbox => {
+      if (allergies.map(a => a.toLowerCase()).includes(checkbox.value.toLowerCase())) {
+        checkbox.checked = true;
+      }
+    });
+  </script>
+<% end %>

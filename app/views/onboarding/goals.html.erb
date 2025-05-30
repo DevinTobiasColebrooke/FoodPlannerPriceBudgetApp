@@ -1,0 +1,57 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-10 pb-6">
+    <%= link_to onboarding_disclosure_path, class: "text-fp-accent-blue hover:text-fp-accent-blue-dark inline-flex items-center" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Back
+    <% end %>
+    <h1 class="font-display text-4xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">What are your goals?</h1>
+  </header>
+
+  <%= form_with model: @profile, url: onboarding_people_path, method: :post, class: "flex-grow space-y-8" do |f| %>
+    <p class="text-fp-neutral-text text-center text-sm">Help us tailor your experience!</p>
+
+    <div>
+      <%= f.label :main_goal, "Main Goal", class: "block font-sans text-sm font-medium text-fp-neutral-darkest mb-1" %>
+      <span class="text-fp-error">*</span>
+      <%= f.select :main_goal,
+        options_for_select([
+          ["Select a main goal...", ""],
+          ["Save Money", "save_money"],
+          ["Eat Healthier", "eat_healthier"],
+          ["Learn to Cook", "learn_cook"],
+          ["Meal Prep Efficiency", "meal_prep"]
+        ]),
+        {},
+        class: "block w-full p-3 rounded-fp border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green"
+      %>
+    </div>
+
+    <div>
+      <p class="block font-sans text-sm font-medium text-fp-neutral-darkest mb-2">Optional Side Goals (select any):</p>
+      <div class="space-y-3">
+        <% side_goals = [
+          ["Reduce Food Waste", "reduce_waste"],
+          ["Try New Recipes", "new_recipes"],
+          ["Discover Quick Meals", "quick_meals"]
+        ] %>
+
+        <% side_goals.each do |label, value| %>
+          <label class="flex items-center p-3 bg-fp-white rounded-fp border border-fp-neutral-medium hover:border-fp-primary-green has-[:checked]:border-fp-primary-green has-[:checked]:ring-2 has-[:checked]:ring-fp-primary-green">
+            <%= f.check_box :side_goals,
+              { multiple: true, class: "form-checkbox-custom mr-3" },
+              value,
+              nil
+            %>
+            <span class="text-sm text-fp-neutral-darkest"><%= label %></span>
+          </label>
+        <% end %>
+      </div>
+    </div>
+
+    <footer class="pt-8 pb-6">
+      <%= f.submit "Next", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
+    </footer>
+  <% end %>
+</div>

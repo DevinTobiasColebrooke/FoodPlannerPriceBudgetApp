@@ -1,0 +1,62 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-10 pb-6">
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center">Welcome to Food Planner!</h1>
+  </header>
+
+  <main class="flex-grow space-y-6 overflow-y-auto">
+    <p class="text-fp-neutral-text text-center text-sm">Let's get you set up with your personalized meal planning experience.</p>
+
+    <div class="space-y-4">
+      <div class="bg-white p-4 rounded-fp shadow-sm">
+        <h2 class="font-semibold text-fp-neutral-darkest mb-2">What to Expect</h2>
+        <ul class="space-y-2 text-sm text-fp-neutral-text">
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-fp-primary-green mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Personalized meal plans based on your preferences</span>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-fp-primary-green mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Budget-friendly shopping lists with local prices</span>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-fp-primary-green mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Easy-to-follow recipes with step-by-step instructions</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-4 rounded-fp shadow-sm">
+        <h2 class="font-semibold text-fp-neutral-darkest mb-2">Getting Started</h2>
+        <p class="text-sm text-fp-neutral-text mb-4">We'll ask you a few questions to personalize your experience:</p>
+        <ol class="space-y-2 text-sm text-fp-neutral-text">
+          <li class="flex items-start">
+            <span class="bg-fp-primary-green text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">1</span>
+            <span>Your goals and preferences</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-fp-primary-green text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">2</span>
+            <span>Household size and dietary needs</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-fp-primary-green text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">3</span>
+            <span>Kitchen equipment and cooking time</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-fp-primary-green text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">4</span>
+            <span>Shopping preferences and budget</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pt-8 pb-6">
+    <%= link_to "Let's Get Started!", onboarding_disclosure_path, class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
+  </footer>
+</div>

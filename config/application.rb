@@ -38,5 +38,10 @@ module FoodPlannerPriceBudgetApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Include TypeRegistry
+    config.to_prepare do
+      ApplicationRecord.include(TypeRegistry)
+    end
   end
 end

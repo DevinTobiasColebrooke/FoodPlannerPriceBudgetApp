@@ -1,0 +1,81 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-10 pb-6">
+    <%= link_to onboarding_equipment_path, class: "text-fp-accent-blue hover:text-fp-accent-blue-dark inline-flex items-center" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Back
+    <% end %>
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">Your Cooking Style</h1>
+  </header>
+
+  <%= form_with model: @profile, url: onboarding_shopping_path, method: :post, class: "flex-grow space-y-8 overflow-y-auto" do |f| %>
+    <p class="text-fp-neutral-text text-center text-sm">How much time and effort do you typically like to spend?</p>
+
+    <div>
+      <%= f.label :cooking_time, "Time spent on cooking/prep (per main meal):", class: "block font-sans text-sm font-medium text-fp-neutral-darkest mb-1" %>
+      <%= f.select :cooking_time,
+        options_for_select([
+          ["Quick (15-30 minutes)", "quick"],
+          ["Moderate (30-60 minutes)", "moderate"],
+          ["Leisurely (60+ minutes)", "leisurely"],
+          ["It Varies Greatly", "varies"]
+        ], "moderate"),
+        {},
+        class: "block w-full p-3 rounded-fp border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green"
+      %>
+    </div>
+
+    <div>
+      <p class="block font-sans text-sm font-medium text-fp-neutral-darkest mb-2">Preferred Meal Difficulty / Prep Style:</p>
+      <div class="space-y-4">
+        <% difficulty_options = [
+          {
+            id: "difficulty-easy",
+            value: "easy",
+            title: "Easy Peasy",
+            description: "Minimal prep, simple steps. (e.g., beans from a can)"
+          },
+          {
+            id: "difficulty-medium",
+            value: "medium",
+            title: "Balanced Effort",
+            description: "Some chopping, a few more steps. (e.g., dried beans with a pressure cooker)"
+          },
+          {
+            id: "difficulty-involved",
+            value: "involved",
+            title: "More Involved",
+            description: "Enjoy the process, more complex. (e.g., dried beans, no pressure cooker)"
+          }
+        ] %>
+
+        <% difficulty_options.each do |option| %>
+          <div class="radio-card">
+            <%= f.radio_button :meal_difficulty,
+              option[:value],
+              id: option[:id],
+              class: "sr-only",
+              checked: option[:value] == "easy"
+            %>
+            <%= f.label :meal_difficulty,
+              class: "block p-3 bg-fp-white rounded-fp border-2 border-fp-neutral-medium hover:border-fp-primary-green cursor-pointer",
+              value: option[:value]
+            do %>
+              <h3 class="font-semibold text-fp-neutral-darkest text-sm"><%= option[:title] %></h3>
+              <p class="text-xs text-fp-neutral-text-light"><%= option[:description] %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <p class="text-xs text-fp-neutral-text-light mt-6">
+      We'll use this to filter recipes and estimate preparation times for you.
+    </p>
+
+    <footer class="pt-8 pb-6">
+      <%= f.submit "Next", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
+    </footer>
+  <% end %>
+</div>

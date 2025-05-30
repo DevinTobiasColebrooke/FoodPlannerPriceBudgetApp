@@ -1,0 +1,49 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-12 pb-8 text-center">
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark">Terms of Service</h1>
+    <p class="text-fp-neutral-text text-sm mt-2">Last Updated: <%= Date.today.strftime("%B %d, %Y") %></p>
+  </header>
+
+  <main class="flex-grow space-y-5 overflow-y-auto text-sm text-fp-neutral-text">
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">1. Acceptance of Terms</h2>
+      <p>By accessing or using Food Planner, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">2. User Accounts</h2>
+      <p>To use certain features of the service, you must:</p>
+      <ul class="list-disc pl-5 space-y-1.5">
+        <li>Be at least 18 years old</li>
+        <li>Provide accurate account information</li>
+        <li>Maintain the security of your account</li>
+        <li>Notify us of any unauthorized use</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">3. Service Usage</h2>
+      <p>You agree to:</p>
+      <ul class="list-disc pl-5 space-y-1.5">
+        <li>Use the service only for lawful purposes</li>
+        <li>Not interfere with the service's operation</li>
+        <li>Not attempt to access restricted areas</li>
+        <li>Not use automated systems to access the service</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">4. Disclaimer</h2>
+      <p>The service is provided "as is" without warranties of any kind. We are not responsible for any decisions made based on the information provided by our service.</p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">5. Limitation of Liability</h2>
+      <p>We shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the service.</p>
+    </section>
+  </main>
+
+  <footer class="pt-8 pb-6">
+    <%= link_to "Back", :back, class: "block text-center text-xs text-fp-neutral-text-light hover:underline" %>
+  </footer>
+</div>

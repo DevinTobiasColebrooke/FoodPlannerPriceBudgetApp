@@ -1,0 +1,18 @@
+<h1>Profile Information</h1>
+
+<%= form_with model: @profile, url: onboarding_profile_info_path, method: :post, local: true do |form| %>
+  <%# Add form fields for age, sex, activity_level, pregnancy_status, lactation_status %>
+  <%# Example for age: %>
+  <div>
+    <%= form.label :age %><br>
+    <%= form.number_field :age %>
+  </div>
+
+  <%# Add other fields similarly %>
+
+  <div>
+    <%= form.submit "Next" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", new_onboarding_disclosure_path %>

@@ -1,0 +1,50 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-12 pb-8 text-center">
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark">Privacy Policy</h1>
+    <p class="text-fp-neutral-text text-sm mt-2">Last Updated: <%= Date.today.strftime("%B %d, %Y") %></p>
+  </header>
+
+  <main class="flex-grow space-y-5 overflow-y-auto text-sm text-fp-neutral-text">
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">1. Information We Collect</h2>
+      <p>We collect information that you provide directly to us, including:</p>
+      <ul class="list-disc pl-5 space-y-1.5">
+        <li>Account information (email, name)</li>
+        <li>Dietary preferences and restrictions</li>
+        <li>Household size and composition</li>
+        <li>Location information (optional)</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">2. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul class="list-disc pl-5 space-y-1.5">
+        <li>Provide and improve our meal planning services</li>
+        <li>Personalize your experience</li>
+        <li>Generate shopping lists and cost estimates</li>
+        <li>Communicate with you about our services</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">3. Data Security</h2>
+      <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="font-semibold text-fp-neutral-darkest">4. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul class="list-disc pl-5 space-y-1.5">
+        <li>Access your personal information</li>
+        <li>Correct inaccurate data</li>
+        <li>Request deletion of your data</li>
+        <li>Opt-out of marketing communications</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pt-8 pb-6">
+    <%= link_to "Back", :back, class: "block text-center text-xs text-fp-neutral-text-light hover:underline" %>
+  </footer>
+</div>
