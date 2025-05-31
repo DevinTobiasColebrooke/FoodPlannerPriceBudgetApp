@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Food Planner - Current Meal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; color: #111827; }
+        .font-display-prototype { font-family: 'Satisfy', cursive; }
+        .text-shadow-dark-prototype { text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); }
+        .meal-details-area { flex-grow: 1; overflow-y: auto; padding: 1.5rem; padding-bottom: 2rem; }
+        .sticky-close-btn-container { position: sticky; bottom: 1.5rem; left: 0; right: 0; display: flex; justify-content: center; padding-bottom: 0.5rem; }
+        .tooltip-container { position: relative; display: inline-block; }
+        .tooltip-icon { cursor: help; color: #5A6AD4; margin-left: 2px; }
+        .tooltip-text { visibility: hidden; width: 180px; background-color: #333; color: #fff; text-align: left; border-radius: 6px; padding: 5px 8px; position: absolute; z-index: 10; bottom: 125%; left: 50%; margin-left: -90px; opacity: 0; transition: opacity 0.3s; font-size: 0.7rem; line-height: 1.3; }
+        .tooltip-container:hover .tooltip-text { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl">
+        <!-- Header Area -->
+        <header class="p-4 bg-fp-neutral-lightest shadow-sm flex justify-start items-center sticky top-0 z-10">
+            <a href="dashboard.html" class="text-fp-accent-blue hover:text-fp-accent-blue-dark inline-flex items-center w-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Dashboard
+            </a>
+            <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest text-shadow-dark-prototype text-center w-full">Breakfast</h1>
+            <div class="w-10"></div> <!-- Spacer to balance the back button -->
+        </header>
+
+        <main class="meal-details-area">
+            <img src="../svgs/381006-healthy-food/svg/003-granola.svg" alt="Oatmeal with Berries" class="w-full h-60 object-contain rounded-fp mb-4 bg-fp-neutral-lightest p-4">
+
+            <div class="bg-fp-white p-4 rounded-fp shadow-fp-card mb-4">
+                <h2 class="font-semibold text-lg text-fp-neutral-darkest mb-2">Oatmeal with Berries and Nuts</h2>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                    <p><strong class="text-fp-neutral-text-light">Main:</strong> Rolled Oats</p>
+                    <p><strong class="text-fp-neutral-text-light">Side:</strong> Mixed Berries, Almonds</p>
+                    <p><strong class="text-fp-neutral-text-light">Prep:</strong> 5 mins</p>
+                    <p><strong class="text-fp-neutral-text-light">Cook:</strong> 10 mins</p>
+                </div>
+            </div>
+            <div class="bg-fp-white p-4 rounded-fp shadow-fp-card mb-4">
+                <h3 class="font-semibold text-fp-neutral-darkest mb-2 flex items-center">
+                    Nutrition Stats (per serving)
+                    <span class="tooltip-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 tooltip-icon"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" /></svg>
+                        <span class="tooltip-text">Estimates based on standard serving sizes. Source: USDA FoodData Central.</span>
+                    </span>
+                </h3>
+                <dl class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-fp-neutral-text">
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Calories:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">~350 kcal</dd>
+                    </div>
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Protein:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">10g</dd>
+                    </div>
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Fat:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">12g</dd>
+                    </div>
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Carbs:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">55g</dd>
+                    </div>
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Fiber:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">8g</dd>
+                    </div>
+                    <div>
+                        <dt class="text-fp-neutral-text-light">Serving Size:</dt>
+                        <dd class="font-medium text-fp-neutral-darkest">1 Bowl (approx. 250g)</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="bg-fp-white p-4 rounded-fp shadow-fp-card mb-4">
+                <h3 class="font-semibold text-fp-neutral-darkest mb-2">Ingredients</h3>
+                <ul class="list-disc pl-5 text-sm space-y-1">
+                    <li>1/2 cup Rolled Oats</li>
+                    <li>1 cup Water or Milk</li>
+                    <li>1/2 cup Mixed Berries (fresh or frozen)</li>
+                    <li>1 tbsp Chopped Almonds</li>
+                    <li>1 tsp Honey or Maple Syrup (optional)</li>
+                    <li>Pinch of Cinnamon</li>
+                </ul>
+            </div>
+
+            <div class="bg-fp-white p-4 rounded-fp shadow-fp-card mb-4">
+                <h3 class="font-semibold text-fp-neutral-darkest mb-2">Instructions</h3>
+                <ol class="list-decimal pl-5 text-sm space-y-2">
+                    <li>Combine oats and water/milk in a small saucepan. Bring to a boil.</li>
+                    <li>Reduce heat and simmer for 5-7 minutes, stirring occasionally, until thickened.</li>
+                    <li>Stir in cinnamon and sweetener if using.</li>
+                    <li>Top with berries and almonds before serving.</li>
+                </ol>
+            </div>
+
+            <div class="bg-fp-neutral-lightest p-3 rounded-fp shadow-fp-card mb-4 flex items-center space-x-2">
+                <img src="../svgs/4056818-fruits-and-vegetables/svg/045-blueberry.svg" alt="Superfood" class="w-6 h-6">
+                <p class="text-xs text-fp-neutral-text">
+                    <strong>Superfood Highlight:</strong> Blueberries are rich in antioxidants and Vitamin C!
+                </p>
+            </div>
+
+            <p class="text-xs text-fp-neutral-text-light text-center italic mt-4 mb-2">
+                Nutritional data provided by U.S. Department of Agriculture, FoodData Central.
+            </p>
+
+            <div class="sticky-close-btn-container mt-10">
+                 <a href="dashboard.html" class="font-semibold py-3 px-8 rounded-full bg-fp-accent-blue text-fp-white shadow-fp-cta hover:bg-fp-accent-blue-dark text-sm inline-flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    <span>Close Meal</span>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'], display: ['Satisfy', 'cursive'], },
+                    colors: { // ...
+                        'fp-body-bg': '#E7F1D3', 'fp-primary-green': '#5AD479', 'fp-primary-green-dark': '#34C759',
+                        'fp-accent-blue': '#5A6AD4', 'fp-accent-blue-dark': '#4755c4', 'fp-neutral-text': '#111827',
+                        'fp-neutral-darkest': '#333333', 'fp-neutral-lightest': '#FBFDF8', 'fp-white': '#FFFFFF',
+                        'fp-neutral-medium': '#D1D5DB', 'fp-accent-yellow': '#F0AB1F', 'fp-neutral-text-light': '#6B7280',
+                        'gray-100': '#f3f4f6', // Added for clarity if not default
+                    }, // ...
+                    boxShadow: { 'fp-cta': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)', 'fp-card': '0 2px 8px rgba(0,0,0,0.07)', },
+                    borderRadius: { 'fp': '0.5rem', }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

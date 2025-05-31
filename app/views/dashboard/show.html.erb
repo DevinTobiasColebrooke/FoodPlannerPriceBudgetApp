@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Food Planner - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; color: #111827; }
+        .font-display-prototype { font-family: 'Satisfy', cursive; }
+        .text-shadow-dark-prototype { text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); }
+        .main-dashboard-area { flex-grow: 1; overflow-y: auto; padding: 1.5rem 1.5rem; }
+        .conceptual-timer {
+            width: 180px; height: 180px; border-radius: 50%; background-color: #fbfdf8; margin: 2.5rem auto;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative; border: 8px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .conceptual-timer .progress-segment { position: absolute; width: 100%; height: 100%; border-radius: 50%; clip-path: polygon(50% 0%, 100% 0%, 100% 33%, 50% 33%); }
+        .conceptual-timer .prep { background-color: #F0AB1F; transform: rotate(0deg) scale(1.01); z-index: 3; }
+        .conceptual-timer .cook { background-color: #FD7E14; transform: rotate(120deg) scale(1.01); z-index: 2; }
+        .conceptual-timer .eat { background-color: #5AD479; transform: rotate(240deg) scale(1.01); z-index: 1; }
+        .conceptual-timer .inner-circle { width: calc(100% - 24px); height: calc(100% - 24px); background-color: #fbfdf8; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 4; text-align: center; }
+        .conceptual-timer .time { font-size: 2.5rem; font-weight: 700; color: #333333; font-family: 'Poppins', sans-serif; }
+        .conceptual-timer .label { font-size: 0.8rem; color: #6B7280; margin-top: -0.25rem; }
+        .meal-item { cursor: pointer; transition: background-color 0.2s; }
+        .meal-item.current h3 { font-size: 1.25rem; color: #34C759; }
+        .eyebrow-buttons-container { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0 1rem 0; margin-bottom: 1rem; -ms-overflow-style: none; scrollbar-width: none; }
+        .eyebrow-buttons-container::-webkit-scrollbar { display: none; }
+        .eyebrow-btn { white-space: nowrap; }
+        .bottom-nav { background-color: #fbfdf8; border-top: 1px solid #D1D5DB; display: flex; justify-content: space-around; padding: 0.75rem 0; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #6B7280; padding: 0.25rem 0.5rem; }
+        .nav-item svg { margin-bottom: 0.125rem; }
+        .nav-item.active { color: #5AD479; }
+
+        /* Added Circular Timer Demo CSS */
+        .circular-timer-demo {
+            width: 180px; /* Adjusted for dashboard */
+            height: 180px; /* Adjusted for dashboard */
+            border-radius: 50%;
+            background-color: #fbfdf8; /* fp-neutral-lightest - Final background revealed */
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative;
+            border: 8px solid #f0f0f0; /* Base static track */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Existing shadow */
+            margin: 2.5rem auto; /* Existing margin */
+        }
+        .timer-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* Conic gradient for receding effect will be applied via inline style */
+        }
+        .timer-layer-until-prep { z-index: 5; background-color: #5A6AD4; /* Blue */ }
+        .timer-layer-prep       { z-index: 4; background-color: #F0AB1F; /* Yellow */ }
+        .timer-layer-cook       { z-index: 3; background-color: #FD7E14; /* Orange */ }
+        .timer-layer-eat        { z-index: 2; background-color: #5AD479; /* Green */ }
+        /* Base track is the border of .circular-timer-demo, final reveal is its background */
+
+        .circular-timer-demo .inner-circle {
+            width: calc(100% - 24px); height: calc(100% - 24px);
+            background-color: #fbfdf8; /* fp-neutral-lightest */
+            border-radius: 50%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 6; /* Above all timer layers */
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        .circular-timer-demo .time-left { /* Renamed from .time for consistency */
+            font-size: 2.5rem; /* Kept from old .time */
+            font-weight: 700; /* font-bold */
+            color: #333333; /* fp-neutral-darkest */
+            font-family: 'Poppins', sans-serif; /* Ensure Poppins for time */
+        }
+        .circular-timer-demo .status { /* Renamed from .label for consistency */
+            font-size: 0.8rem; /* Kept from old .label */
+            color: #6B7280; /* fp-neutral-text-light */
+            margin-top: -0.25rem; /* Kept from old .label */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl">
+        <!-- Header Area - Could include date, profile icon -->
+        <header class="p-5 bg-fp-neutral-lightest shadow-sm flex justify-between items-center">
+            <div>
+                <p class="text-xs text-fp-neutral-text-light">Tuesday, Oct 26</p>
+                <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest">Good Morning!</h1>
+            </div>
+            <button type="button" id="profileStatsBtn"> <!-- Changed from <a> to <button> for better semantics -->
+                <img src="../svgs/920999-avatar/svg/002-girl.svg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white">
+            </button>
+        </header>
+
+        <!-- Main Dashboard Area -->
+        <main class="main-dashboard-area">
+            <!-- Eyebrow Quick Actions -->
+            <div class="eyebrow-buttons-container">
+                <button class="eyebrow-btn bg-fp-primary-green text-white text-xs font-medium py-2 px-4 rounded-full shadow-fp-cta">Start Next Meal</button>
+                <button class="eyebrow-btn bg-fp-accent-blue text-white text-xs font-medium py-2 px-4 rounded-full shadow-fp-cta">Scan Barcode</button>
+                <button class="eyebrow-btn bg-white text-fp-neutral-text text-xs font-medium py-2 px-4 rounded-full border border-fp-neutral-medium shadow-sm">Quick Add Item</button>
+                <button class="eyebrow-btn bg-white text-fp-neutral-text text-xs font-medium py-2 px-4 rounded-full border border-fp-neutral-medium shadow-sm">Browse Recipes</button>
+            </div>
+
+            <!-- Conceptual Meal Timer -->
+            <div class="circular-timer-demo" id="dashboardLiveTimer">
+                <div class="timer-layer timer-layer-until-prep"></div>
+                <div class="timer-layer timer-layer-prep"></div>
+                <div class="timer-layer timer-layer-cook"></div>
+                <div class="timer-layer timer-layer-eat"></div>
+                <div class="inner-circle">
+                    <div class="time-left">03:45</div>
+                    <div class="status">Until Prep</div>
+                </div>
+            </div>
+
+            <!-- Upcoming Meals Section -->
+            <section class="mt-8">
+                <h2 class="text-lg font-semibold text-fp-neutral-darkest mb-3">Upcoming Meals</h2>
+
+                <!-- Meal Item 1 (Current / Next) -->
+                <div class="meal-item current bg-fp-neutral-lightest p-4 rounded-fp shadow-fp-card mb-3 flex items-center space-x-4">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Spaghetti Carbonara" class="w-16 h-16 rounded-md object-cover">
+                    <div class="flex-grow">
+                        <h3 class="font-semibold text-fp-primary-green-dark">Spaghetti Carbonara</h3>
+                        <p class="text-xs text-fp-neutral-text-light">Lunch - Today, 12:30 PM</p>
+                        <div class="flex items-center mt-1">
+                            <svg class="w-3 h-3 text-fp-accent-yellow mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <span class="text-xs text-fp-neutral-text-light">4.5 (23 reviews)</span>
+                        </div>
+                    </div>
+                    <svg class="w-6 h-6 text-fp-neutral-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+
+                <!-- Meal Item 2 -->
+                <div class="meal-item bg-white p-4 rounded-fp shadow-fp-card mb-3 flex items-center space-x-4 opacity-80">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Chicken Salad" class="w-16 h-16 rounded-md object-cover">
+                    <div class="flex-grow">
+                        <h3 class="font-medium text-fp-neutral-text">Chicken Salad</h3>
+                        <p class="text-xs text-fp-neutral-text-light">Dinner - Today, 7:00 PM</p>
+                    </div>
+                    <svg class="w-5 h-5 text-fp-neutral-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+
+                 <!-- Meal Item 3 -->
+                <div class="meal-item bg-white p-4 rounded-fp shadow-fp-card flex items-center space-x-4 opacity-60">
+                    <img src="https://images.unsplash.com/photo-1484723050470-6944FL35DF69c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Oatmeal with Berries" class="w-16 h-16 rounded-md object-cover">
+                    <div class="flex-grow">
+                        <h3 class="font-medium text-fp-neutral-text">Oatmeal & Berries</h3>
+                        <p class="text-xs text-fp-neutral-text-light">Breakfast - Tomorrow, 8:00 AM</p>
+                    </div>
+                    <svg class="w-5 h-5 text-fp-neutral-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav sticky bottom-0">
+            <a href="#" class="nav-item active">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                <span>Home</span>
+            </a>
+            <a href="calendar-dashboard.html" class="nav-item">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <span>Calendar</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span>Search</span>
+            </a>
+            <a href="shopping.html" class="nav-item">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <span>Shop List</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Personal Stats Popup (Hidden by default) -->
+    <div id="personalStatsPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold">Your Activity</h2>
+                <button id="closeStatsPopupBtn" class="text-fp-neutral-text-light hover:text-fp-neutral-darkest">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between">
+                    <span>Meals Logged:</span>
+                    <span class="font-semibold">128</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Recipes Tried:</span>
+                    <span class="font-semibold">45</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Avg. Prep Time:</span>
+                    <span class="font-semibold">22 min</span>
+                </div>
+                 <div class="flex justify-between">
+                    <span>Favorite Cuisine:</span>
+                    <span class="font-semibold">Italian</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-fp-neutral-medium">
+                    <h3 class="text-sm font-medium text-fp-neutral-text-light mb-1">Streak</h3>
+                    <p class="text-2xl font-bold text-fp-primary-green">14 Days <span class="text-base font-normal">Logged In!</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'], display: ['Satisfy', 'cursive'], },
+                    colors: { // ...
+                        'fp-body-bg': '#E7F1D3', 'fp-primary-green': '#5AD479', 'fp-primary-green-dark': '#34C759',
+                        'fp-accent-blue': '#5A6AD4', 'fp-accent-blue-dark': '#4755c4', 'fp-neutral-text': '#111827',
+                        'fp-neutral-darkest': '#333333', 'fp-neutral-lightest': '#FBFDF8', 'fp-white': '#FFFFFF',
+                        'fp-neutral-medium': '#D1D5DB', 'fp-error': '#DC3545', 'fp-accent-yellow': '#F0AB1F',
+                        'fp-neutral-text-light': '#6B7280', 'gray-100': '#f3f4f6',
+                    }, // ...
+                    boxShadow: { 'fp-cta': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)', 'fp-card': '0 2px 8px rgba(0,0,0,0.07)', },
+                    borderRadius: { 'fp': '0.5rem', }
+                }
+            }
+        }
+
+        // --- Circular Timer Script (Adapted from specialized_components.html) ---
+        function runInteractiveTimer(timerId) {
+            const timerContainer = document.getElementById(timerId);
+            if (!timerContainer) return;
+
+            const layers = {
+                untilPrep: timerContainer.querySelector('.timer-layer-until-prep'),
+                prep: timerContainer.querySelector('.timer-layer-prep'),
+                cook: timerContainer.querySelector('.timer-layer-cook'),
+                eat: timerContainer.querySelector('.timer-layer-eat'),
+            };
+            const timeLeftDisplay = timerContainer.querySelector('.time-left');
+            const statusDisplay = timerContainer.querySelector('.status');
+
+            const phases = [
+                { name: "Until Prep", duration: 60 * 60 * 3 + 45 * 60, color: '#5A6AD4', layer: layers.untilPrep, nextLayerColor: '#F0AB1F' }, // 03:45:00
+                { name: "Prep Time",  duration: 60 * 7 + 30, color: '#F0AB1F', layer: layers.prep, nextLayerColor: '#FD7E14' },    // 00:07:30
+                { name: "Cook Time",  duration: 60 * 3 + 45, color: '#FD7E14', layer: layers.cook, nextLayerColor: '#5AD479' },    // 00:03:45
+                { name: "Meal Time",  duration: 60 * 15, color: '#5AD479', layer: layers.eat, nextLayerColor: '#fbfdf8' }     // 00:15:00
+            ];
+
+            let currentPhaseIndex = 0;
+            let _current_time_in_phase = phases[currentPhaseIndex].duration;
+            let intervalId = null;
+
+            function formatTime(seconds) {
+                const h = Math.floor(seconds / 3600);
+                const m = Math.floor((seconds % 3600) / 60);
+                const s = seconds % 60;
+                if (h > 0) {
+                    const hoursString = h.toString();
+                    return `${hoursString}:${m.toString().padStart(2, '0')}`;
+                }
+                return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+
+            function updateTimerDisplay() {
+                timeLeftDisplay.textContent = formatTime(_current_time_in_phase);
+
+                const currentPhase = phases[currentPhaseIndex];
+                if (currentPhase.name === "Until Prep") {
+                    const now = new Date();
+                    const prepStartTime = new Date(now.getTime() + _current_time_in_phase * 1000);
+
+                    let hours = prepStartTime.getHours();
+                    const minutes = prepStartTime.getMinutes();
+                    const ampm = hours >= 12 ? 'pm' : 'am';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12; // Handle midnight (0 hours)
+                    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+                    const targetTimeFormatted = hours + ':' + formattedMinutes + ampm;
+
+                    statusDisplay.innerHTML = currentPhase.name + "<br>" + targetTimeFormatted;
+                } else {
+                    statusDisplay.textContent = currentPhase.name;
+                }
+
+                const _p = (_current_time_in_phase / currentPhase.duration) * 100;
+                const percentageReceded = 100 - _p;
+
+                currentPhase.layer.style.background = `conic-gradient(transparent 0% ${percentageReceded}%, ${currentPhase.color} ${percentageReceded}% 100%)`;
+
+                for (let i = 0; i < currentPhaseIndex; i++) {
+                    phases[i].layer.style.background = `conic-gradient(transparent 0% 100%)`;
+                }
+                for (let i = currentPhaseIndex + 1; i < phases.length; i++) {
+                    phases[i].layer.style.background = phases[i].color;
+                }
+                if (currentPhaseIndex + 1 < phases.length) {
+                    phases[currentPhaseIndex + 1].layer.style.background = phases[currentPhaseIndex + 1].color;
+                } else {
+                     if (_p === 0) currentPhase.layer.style.background = `conic-gradient(transparent 0% 100%)`;
+                }
+            }
+
+            function advancePhase() {
+                currentPhaseIndex++;
+                if (currentPhaseIndex >= phases.length) {
+                    clearInterval(intervalId);
+                    statusDisplay.textContent = "All Done!";
+                    timeLeftDisplay.textContent = "00:00";
+                    Object.values(layers).forEach(layer => layer.style.background = 'transparent');
+                    return;
+                }
+                _current_time_in_phase = phases[currentPhaseIndex].duration;
+                updateTimerDisplay();
+            }
+
+            function tick() {
+                _current_time_in_phase--;
+                if (_current_time_in_phase < 0) {
+                    advancePhase();
+                } else {
+                    updateTimerDisplay();
+                }
+            }
+
+            currentPhaseIndex = 0;
+            _current_time_in_phase = phases[currentPhaseIndex].duration;
+            layers.untilPrep.style.background = phases[0].color;
+            layers.prep.style.background = phases[1].color;
+            layers.cook.style.background = phases[2].color;
+            layers.eat.style.background = phases[3].color;
+            updateTimerDisplay();
+
+            if (intervalId) clearInterval(intervalId);
+            intervalId = setInterval(tick, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-start the timer for the dashboard
+            runInteractiveTimer('dashboardLiveTimer');
+
+            // Personal Stats Popup Logic
+            const profileStatsBtn = document.getElementById('profileStatsBtn');
+            const personalStatsPopup = document.getElementById('personalStatsPopup');
+            const closeStatsPopupBtn = document.getElementById('closeStatsPopupBtn');
+
+            if (profileStatsBtn && personalStatsPopup && closeStatsPopupBtn) {
+                profileStatsBtn.addEventListener('click', () => {
+                    personalStatsPopup.classList.remove('hidden');
+                });
+
+                closeStatsPopupBtn.addEventListener('click', () => {
+                    personalStatsPopup.classList.add('hidden');
+                });
+
+                // Optional: Close popup if clicked outside the content
+                personalStatsPopup.addEventListener('click', (event) => {
+                    if (event.target === personalStatsPopup) { // Clicked on the backdrop
+                        personalStatsPopup.classList.add('hidden');
+                    }
+                });
+            }
+            // Any other DOMContentLoaded logic for dashboard.html can go here
+        });
+    </script>
+</body>
+</html>

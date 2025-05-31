@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Food Planner - Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; color: #111827; }
+        .font-display-prototype { font-family: 'Satisfy', cursive; }
+        .main-calendar-area { flex-grow: 1; overflow-y: auto; padding: 1rem 1rem; }
+
+        .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 0 0.5rem; }
+        .calendar-header h2 { font-family: "Satisfy", cursive; font-size: 1.75rem; color: #333333; }
+        .calendar-header button { background: none; border: none; cursor: pointer; color: #5A6AD4; padding: 0.25rem; }
+
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; background-color: #D1D5DB; border: 1px solid #D1D5DB; border-radius: 0.5rem; overflow:hidden; }
+        .calendar-day-header { text-align: center; font-size: 0.7rem; font-weight: 600; color: #6B7280; padding: 0.4rem 0.1rem; background-color: #F9FAFB; }
+        .calendar-date-cell { min-height: 4.5rem; background-color: #FFFFFF; padding: 0.25rem; font-size: 0.7rem; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; position: relative; display: flex; flex-direction: column; justify-content: space-between; border: 2px solid transparent; /* For selected state border */ }
+        .calendar-date-cell:hover { background-color: #f0f4e8; }
+        .calendar-date-cell.other-month .date-number { color: #9CA3AF; }
+        .calendar-date-cell.today .date-number { font-weight: bold; color: #5AD479; background-color: #dbf8e3; border-radius: 50%; width: 1.4rem; height: 1.4rem; display: inline-flex; align-items: center; justify-content: center; margin-left: auto; }
+        .calendar-date-cell.selected { background-color: #E7F1D3 !important; border-color: #5AD479 !important; } /* Selected day highlight */
+        .calendar-date-cell.selected .date-number { font-weight: bold; }
+
+        .calendar-date-cell .date-number { text-align: right; display: block; margin-bottom: 0.1rem; font-size:0.65rem; padding-right:0.1rem; padding-top:0.1rem; }
+        .meal-indicators-container { display: flex; justify-content: flex-start; gap: 3px; margin-top: auto; padding-left: 2px; padding-bottom: 3px; }
+        .meal-indicator { display: block; width: 6px; height: 6px; border-radius: 50%; }
+        .meal-indicator-breakfast { background-color: #F0AB1F; /* fp-accent-yellow */ }
+        .meal-indicator-lunch { background-color: #5A6AD4; /* fp-accent-blue */ }
+        .meal-indicator-dinner { background-color: #FD7E14; /* fp-accent-orange */ }
+        .meal-indicator-snack { background-color: #BDDA83; /* fp-footer-bg or a light green */ }
+        .meal-indicator-text { font-size: 0.55rem; line-height: 1.1; color: #6B7280; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; padding: 0 2px; margin-top: 1px; }
+
+        .bottom-nav { background-color: #fbfdf8; border-top: 1px solid #D1D5DB; display: flex; justify-content: space-around; padding: 0.75rem 0; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #6B7280; padding: 0.25rem 0.5rem; }
+        .nav-item svg { margin-bottom: 0.125rem; }
+        .nav-item.active { color: #5AD479; }
+
+        .day-summary-section { border-top: 1px solid #D1D5DB; margin-top: 1rem; padding-top: 1rem; }
+        .legend-item { display: flex; align-items: center; font-size: 0.75rem; }
+        .legend-dot { width: 8px; height: 8px; border-radius: 50%; margin-right: 0.5rem; }
+
+        .action-button {
+            font-size: 0.75rem; padding: 0.375rem 0.75rem; border-radius: 0.375rem; /* rounded-md */
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            transition: background-color 0.2s;
+        }
+
+        /* Toggle switch for "Already Prepped" */
+        .toggle-switch-small { position: relative; display: inline-block; width: 34px; height: 20px; }
+        .toggle-switch-small input { opacity: 0; width: 0; height: 0; }
+        .slider-small { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 20px; }
+        .slider-small:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider-small { background-color: #5AD479; }
+        input:checked + .slider-small:before { transform: translateX(14px); }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl">
+        <header class="p-5 bg-fp-neutral-lightest shadow-sm flex justify-between items-center">
+            <button class="text-fp-accent-blue opacity-0 pointer-events-none">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </button>
+            <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest">My Calendar</h1>
+            <a href="#"> <!-- Link to add event or filter -->
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-fp-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </a>
+        </header>
+
+        <main class="main-calendar-area">
+            <div class="calendar-header">
+                <button title="Previous month" id="prev-month">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 id="current-month-year">October 2023</h2>
+                <button title="Next month" id="next-month">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+            <div class="calendar-grid mb-4" id="calendar-grid-dates">
+                <!-- Day Headers -->
+                <div class="calendar-day-header">Su</div><div class="calendar-day-header">Mo</div><div class="calendar-day-header">Tu</div><div class="calendar-day-header">We</div><div class="calendar-day-header">Th</div><div class="calendar-day-header">Fr</div><div class="calendar-day-header">Sa</div>
+                <!-- Dates will be populated by JS -->
+            </div>
+
+            <!-- Selected Day Summary Section (Hidden by default, shown on day click) -->
+            <div id="day-summary" class="day-summary-section mt-4 hidden bg-fp-white p-4 rounded-fp shadow-fp-card">
+                <h3 class="font-semibold text-fp-neutral-darkest mb-2" id="summary-date">Summary for October 11, 2023</h3>
+                <div class="mb-3">
+                    <p class="text-sm font-medium text-fp-neutral-darkest mb-1">Legend:</p>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs" id="summary-legend">
+                        <!-- Legend items will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="text-sm font-medium text-fp-neutral-darkest mb-1">Meals Planned:</p>
+                    <ul class="list-disc pl-5 text-sm text-fp-neutral-text space-y-0.5" id="summary-meals">
+                        <li>Breakfast: Oatmeal with Berries</li>
+                        <li>Lunch: Chicken Salad</li>
+                        <li>Dinner: Salmon & Asparagus</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-x-4 text-sm mb-3">
+                    <div><strong class="text-fp-neutral-text-light">Total Calories:</strong> <span id="summary-calories" class="font-medium">~1500 kcal</span></div>
+                    <div><strong class="text-fp-neutral-text-light">Est. Cost:</strong> <span id="summary-cost" class="font-medium">$12.50</span></div>
+                </div>
+                <div class="mb-3">
+                    <div class="flex justify-between items-center">
+                         <p class="text-sm"><strong class="text-fp-neutral-text-light">Time (Prep/Cook):</strong> <span id="summary-time">20m / 45m</span></p>
+                         <label class="flex items-center text-xs text-fp-neutral-text-light">
+                            <span class="mr-1">Prepped?</span>
+                            <span class="toggle-switch-small">
+                                <input type="checkbox" id="already-prepped">
+                                <span class="slider-small"></span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-3 mb-2">
+                    <button class="action-button bg-fp-primary-green text-white hover:bg-fp-primary-green-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                        Add Meal
+                    </button>
+                    <button class="action-button bg-fp-accent-yellow text-fp-neutral-darkest hover:bg-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 00-15.357-2m15.357 2H15" /></svg>
+                        Substitute Meal
+                    </button>
+                     <button class="action-button bg-fp-neutral-light text-fp-neutral-darkest border border-fp-neutral-medium hover:bg-fp-neutral-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                        Swap Meals
+                    </button>
+                </div>
+                <a href="current-meal.html" class="block text-center mt-3 text-sm font-medium text-fp-primary-green hover:underline">
+                    View Full Day Review →
+                </a>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+               Home
+           </a>
+           <a href="calendar-dashboard.html" class="nav-item active">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" /></svg>
+               Calendar
+           </a>
+           <a href="shopping.html" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+               Shopping
+           </a>
+           <a href="settings.html" class="nav-item">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                <path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.646.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 1.255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.333.183-.582.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-1.255c.007-.378-.137-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+               Settings
+           </a>
+       </nav>
+    </div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'], display: ['Satisfy', 'cursive'], },
+                    colors: {
+                        'fp-body-bg': '#E7F1D3', 'fp-primary-green': '#5AD479', 'fp-primary-green-dark': '#34C759',
+                        'fp-accent-blue': '#5A6AD4', 'fp-accent-blue-dark': '#4755c4', 'fp-accent-yellow': '#F0AB1F',
+                        'fp-accent-orange': '#FD7E14', 'fp-neutral-text': '#111827', 'fp-footer-bg': '#BDDA83',
+                        'fp-neutral-darkest': '#333333', 'fp-neutral-lightest': '#FBFDF8', 'fp-white': '#FFFFFF',
+                        'fp-neutral-medium': '#D1D5DB', 'fp-neutral-light': '#F9FAFB', 'fp-neutral-text-light': '#6B7280',
+                        'fp-neutral': '#9CA3AF', 'gray-100': '#f3f4f6', 'fp-error': '#DC3545',
+                    },
+                    boxShadow: { 'fp-cta': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)', 'fp-card': '0 2px 8px rgba(0,0,0,0.07)' },
+                    borderRadius: { 'fp': '0.5rem', }
+                }
+            }
+        }
+        const currentMonthYearEl = document.getElementById('current-month-year');
+        const calendarGridEl = document.getElementById('calendar-grid-dates');
+        const prevMonthBtn = document.getElementById('prev-month');
+        const nextMonthBtn = document.getElementById('next-month');
+        const daySummaryEl = document.getElementById('day-summary');
+        const summaryDateEl = document.getElementById('summary-date');
+        const summaryLegendEl = document.getElementById('summary-legend');
+        const summaryMealsEl = document.getElementById('summary-meals');
+        const summaryCaloriesEl = document.getElementById('summary-calories');
+        const summaryCostEl = document.getElementById('summary-cost');
+        const summaryTimeEl = document.getElementById('summary-time');
+        let currentDate = new Date(2023, 9, 1); // October 2023
+        let selectedDateElement = null;
+
+        // Sample meal data (replace with actual data source)
+        const mealPlans = {
+            "2023-10-03": { meals: [{name:"Oatmeal", type:"breakfast"}, {name:"Salad", type:"lunch"}], calories: 800, cost: 7.50, time: "10m / 15m" },
+            "2023-10-05": { meals: [{name:"Pasta", type:"dinner"}], calories: 600, cost: 5.00, time: "10m / 25m" },
+            "2023-10-10": { meals: [{name:"Smoothie", type:"breakfast"}, {name:"Sandwich", type:"lunch"}, {name:"Stir-fry", type:"dinner"}], calories: 1800, cost: 15.00, time: "15m / 40m" },
+            "2023-10-11": { meals: [{name:"Chicken Stir-fry", type:"dinner"}], calories: 700, cost: 8.00, time: "15m / 30m" }, // Example selected day
+            "2023-10-18": { meals: [{name:"Smoothie", type:"snack"}], calories: 250, cost: 3.00, time: "5m / 0m" },
+        };
+
+        const mealTypeToIndicatorClass = { breakfast: "meal-indicator-breakfast", lunch: "meal-indicator-lunch", dinner: "meal-indicator-dinner", snack: "meal-indicator-snack" };
+        const mealTypeToName = { breakfast: "Breakfast", lunch: "Lunch", dinner: "Dinner", snack: "Snack" };
+
+        function renderCalendar() {
+            calendarGridEl.innerHTML = ''; // Clear previous dates
+
+            // Add day headers
+            ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].forEach(day => {
+                const dayHeaderEl = document.createElement('div');
+                dayHeaderEl.classList.add('calendar-day-header');
+                dayHeaderEl.textContent = day;
+                calendarGridEl.appendChild(dayHeaderEl);
+            });
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            currentMonthYearEl.textContent = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+            const firstDayOfMonth = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Add empty cells for days before the first of the month
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                calendarGridEl.appendChild(document.createElement('div'));
+            }
+
+            // Add date cells for each day in the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateCell = document.createElement('div');
+                dateCell.classList.add('calendar-date-cell');
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                dateCell.dataset.date = dateStr;
+
+                const dateNumber = document.createElement('span');
+                dateNumber.classList.add('date-number');
+                dateNumber.textContent = day;
+                dateCell.appendChild(dateNumber);
+
+                // Highlight today's date
+                const today = new Date();
+                if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                    dateCell.classList.add('today');
+                }
+
+                // Add meal indicators if meals are planned
+                if (mealPlans[dateStr]) {
+                    const indicatorsContainer = document.createElement('div');
+                    indicatorsContainer.classList.add('meal-indicators-container');
+                    let mealTextSummary = [];
+                    mealPlans[dateStr].meals.slice(0,2).forEach(meal => { // Show max 2 indicators, 2 text items
+                        const indicator = document.createElement('span');
+                        indicator.classList.add('meal-indicator', mealTypeToIndicatorClass[meal.type] || 'bg-gray-400');
+                        indicatorsContainer.appendChild(indicator);
+                        mealTextSummary.push(meal.name);
+                    });
+                    dateCell.appendChild(indicatorsContainer);
+
+                    if (mealTextSummary.length > 0) {
+                        const mealIndicatorText = document.createElement('div');
+                        mealIndicatorText.classList.add('meal-indicator-text');
+                        mealIndicatorText.textContent = mealTextSummary.join(', ');
+                        dateCell.appendChild(mealIndicatorText);
+                    }
+                }
+
+                dateCell.onclick = () => selectDate(dateCell, dateStr);
+                calendarGridEl.appendChild(dateCell);
+            }
+             // Auto-select Oct 11, 2023 on initial load if it's October 2023
+            if (month === 9 && year === 2023) { // 9 is October (0-indexed)
+                const day11 = calendarGridEl.querySelector('[data-date="2023-10-11"]');
+                if (day11) selectDate(day11, "2023-10-11");
+            }
+        }
+
+        function selectDate(cellElement, dateStr) {
+            if (selectedDateElement) {
+                selectedDateElement.classList.remove('selected');
+            }
+            cellElement.classList.add('selected');
+            selectedDateElement = cellElement;
+
+            summaryDateEl.textContent = `Summary for ${new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
+            const plan = mealPlans[dateStr];
+
+            if (plan) {
+                summaryLegendEl.innerHTML = ''; // Clear previous
+                plan.meals.forEach(meal => {
+                    const legendItem = document.createElement('div');
+                    legendItem.classList.add('legend-item');
+                    const dot = document.createElement('span');
+                    dot.classList.add('legend-dot', mealTypeToIndicatorClass[meal.type] || 'bg-gray-400');
+                    legendItem.appendChild(dot);
+                    legendItem.append(`${mealTypeToName[meal.type] || 'Meal'}: ${meal.name}`);
+                    summaryLegendEl.appendChild(legendItem);
+                });
+
+                summaryMealsEl.innerHTML = ''; // Clear previous
+                plan.meals.forEach(meal => {
+                    const li = document.createElement('li');
+                    li.textContent = `${mealTypeToName[meal.type] || 'Meal'}: ${meal.name}`;
+                    summaryMealsEl.appendChild(li);
+                });
+                summaryCaloriesEl.textContent = `~${plan.calories} kcal`;
+                summaryCostEl.textContent = `$${plan.cost.toFixed(2)}`;
+                summaryTimeEl.textContent = plan.time;
+                daySummaryEl.classList.remove('hidden');
+            } else {
+                summaryLegendEl.innerHTML = '<span class="text-xs text-fp-neutral-text-light">No meals planned.</span>';
+                summaryMealsEl.innerHTML = '<li>No meals planned.</li>';
+                summaryCaloriesEl.textContent = 'N/A';
+                summaryCostEl.textContent = 'N/A';
+                summaryTimeEl.textContent = 'N/A';
+                daySummaryEl.classList.remove('hidden'); // Still show the panel, but with "No meals"
+            }
+        }
+
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+            daySummaryEl.classList.add('hidden'); // Hide summary when changing month
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+            daySummaryEl.classList.add('hidden'); // Hide summary when changing month
+        });
+
+        renderCalendar(); // Initial render
+    </script>
+</body>
+</html>

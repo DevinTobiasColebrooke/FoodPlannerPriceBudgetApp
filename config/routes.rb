@@ -1,10 +1,29 @@
 Rails.application.routes.draw do
+  get "settings/show"
+  get "settings/edit"
+  get "settings/update"
+  get "shopping_list_items/create"
+  get "shopping_list_items/update"
+  get "shopping_list_items/destroy"
+  get "shopping_lists/index"
+  get "shopping_lists/show"
+  get "shopping_lists/new"
+  get "shopping_lists/create"
+  get "shopping_lists/edit"
+  get "shopping_lists/update"
+  get "shopping_lists/destroy"
+  get "meal_plans/index"
+  get "recipes/show"
+  get "dashboard/show"
   # Authentication routes
   resource :session
   resources :passwords, param: :token
 
   # Root route
-  root "onboarding/welcome#show"
+  authenticated :user do
+    root 'dashboard#show', as: :authenticated_root
+  end
+  root "sessions#new" # if not authenticated
 
   # Onboarding routes
   namespace :onboarding do
