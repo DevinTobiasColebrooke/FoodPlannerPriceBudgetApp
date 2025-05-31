@@ -9,19 +9,19 @@
     <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">Your Cooking Style</h1>
   </header>
 
-  <%= form_with model: @profile, url: onboarding_time_prep_path, method: :post, class: "flex-grow space-y-8 overflow-y-auto" do |f| %>
+  <%= form_with scope: :onboarding_profile, model: @profile, url: onboarding_time_prep_path, method: :post, class: "flex-grow space-y-8 overflow-y-auto" do |f| %>
     <p class="text-fp-neutral-text text-center text-sm">How much time and effort do you typically like to spend?</p>
 
     <div>
-      <%= f.label :cooking_time, "Time spent on cooking/prep (per main meal):", class: "block font-sans text-sm font-medium text-fp-neutral-darkest mb-1" %>
-      <%= f.select :cooking_time,
+      <%= f.label :preferred_cook_time_max_minutes, "Time spent on cooking/prep (per main meal):", class: "block font-sans text-sm font-medium text-fp-neutral-darkest mb-1" %>
+      <%= f.select :preferred_cook_time_max_minutes,
         options_for_select([
-          ["Quick (15-30 minutes)", "quick"],
-          ["Moderate (30-60 minutes)", "moderate"],
-          ["Leisurely (60+ minutes)", "leisurely"],
-          ["It Varies Greatly", "varies"]
-        ], "moderate"),
-        {},
+          ["Quick (15-30 minutes)", 30],
+          ["Moderate (30-60 minutes)", 60],
+          ["Leisurely (60+ minutes)", 90],
+          ["It Varies Greatly", nil]
+        ], @profile.preferred_cook_time_max_minutes || 60),
+        { include_blank: "Select an option" },
         class: "block w-full p-3 rounded-fp border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green"
       %>
     </div>
@@ -52,16 +52,13 @@
 
         <% difficulty_options.each do |option| %>
           <div class="radio-card">
-            <%= f.radio_button :meal_difficulty,
+            <%= f.radio_button :meal_difficulty_preference,
               option[:value],
               id: option[:id],
               class: "sr-only",
-              checked: option[:value] == "easy"
+              checked: (@profile.meal_difficulty_preference || "easy") == option[:value]
             %>
-            <%= f.label :meal_difficulty,
-              class: "block p-3 bg-fp-white rounded-fp border-2 border-fp-neutral-medium hover:border-fp-primary-green cursor-pointer",
-              value: option[:value]
-            do %>
+            <%= f.label :meal_difficulty_preference, nil, class: "block p-3 bg-fp-white rounded-fp border-2 border-fp-neutral-medium hover:border-fp-primary-green cursor-pointer", for: option[:id] do %>
               <h3 class="font-semibold text-fp-neutral-darkest text-sm"><%= option[:title] %></h3>
               <p class="text-xs text-fp-neutral-text-light"><%= option[:description] %></p>
             <% end %>

@@ -9,7 +9,7 @@
     <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">Shopping Setup</h1>
   </header>
 
-  <%= form_with model: @profile, url: new_onboarding_avatar_path, method: :post, class: "flex-grow space-y-6 overflow-y-auto" do |f| %>
+  <%= form_with model: @profile, url: onboarding_shopping_path, method: :post, class: "flex-grow space-y-6 overflow-y-auto" do |f| %>
     <p class="text-fp-neutral-text text-center text-sm">Let's optimize your grocery runs!</p>
 
     <div>
@@ -83,10 +83,10 @@
               id: option[:id],
               class: "sr-only"
             %>
-            <%= f.label :location_type,
+            <%= f.label :location_type, {
               class: "block p-3 bg-fp-white rounded-fp border-2 border-fp-neutral-medium hover:border-fp-primary-green cursor-pointer",
-              value: option[:value]
-            do %>
+              for: option[:id]
+            } do %>
               <h3 class="font-semibold text-fp-neutral-darkest text-sm"><%= option[:title] %></h3>
               <p class="text-xs text-fp-neutral-text-light"><%= option[:description] %></p>
             <% end %>
@@ -95,20 +95,21 @@
 
         <%= f.text_field :region_zip,
           placeholder: "Enter Zip Code or Region",
+          id: "region-input",
           class: "hidden mt-2 w-full p-3 rounded-fp border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green"
         %>
       </div>
     </div>
 
     <footer class="pt-8 pb-6">
-      <%= f.submit "Next", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
+      <%= f.submit "Next", id: "next-button", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
     </footer>
   <% end %>
 </div>
 
 <% content_for :javascript do %>
   <script>
-    const locationRadios = document.querySelectorAll('input[name="location_type"]');
+    const locationRadios = document.querySelectorAll('input[name="profile[location_type]"]');
     const regionInput = document.getElementById('region-input');
     let currentlyCheckedId = null;
 
@@ -126,32 +127,34 @@
         }
 
         const regionRadio = document.getElementById('location-region');
-        if (regionRadio.checked) {
+        if (regionInput && regionRadio && regionRadio.checked) {
           regionInput.classList.remove('hidden');
           if (this.id === 'location-region') {
             regionInput.focus();
           }
-        } else {
+        } else if (regionInput) {
           regionInput.classList.add('hidden');
         }
       });
     });
 
-    const weeklyBudgetInput = document.getElementById('weekly-budget');
+    const weeklyBudgetInput = document.getElementById('profile_weekly_budget');
     const budgetError = document.getElementById('budget-error');
     const nextButton = document.getElementById('next-button');
 
     function validateBudget() {
-      const rawValueTrimmed = weeklyBudgetInput.value.trim();
-      const value = parseFloat(weeklyBudgetInput.value);
+      const rawValueTrimmed = weeklyBudgetInput ? weeklyBudgetInput.value.trim() : "";
+      const value = weeklyBudgetInput ? parseFloat(weeklyBudgetInput.value) : NaN;
 
       let isValid = true;
       let message = "";
 
       if (rawValueTrimmed === "") {
-        budgetError.classList.add('hidden');
-        weeklyBudgetInput.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
-        weeklyBudgetInput.classList.add('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
+        if (budgetError) budgetError.classList.add('hidden');
+        if (weeklyBudgetInput) {
+          weeklyBudgetInput.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
+          weeklyBudgetInput.classList.add('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
+        }
         return true;
       } else if (isNaN(value)) {
         isValid = false;
@@ -162,16 +165,22 @@
       }
 
       if (!isValid) {
-        budgetError.textContent = message;
-        budgetError.classList.remove('hidden');
+        if (budgetError) {
+          budgetError.textContent = message;
+          budgetError.classList.remove('hidden');
+        }
 
-        weeklyBudgetInput.classList.remove('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
-        weeklyBudgetInput.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
+        if (weeklyBudgetInput) {
+          weeklyBudgetInput.classList.remove('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
+          weeklyBudgetInput.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
+        }
         return false;
       } else {
-        budgetError.classList.add('hidden');
-        weeklyBudgetInput.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
-        weeklyBudgetInput.classList.add('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
+        if (budgetError) budgetError.classList.add('hidden');
+        if (weeklyBudgetInput) {
+          weeklyBudgetInput.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
+          weeklyBudgetInput.classList.add('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
+        }
         return true;
       }
     }
@@ -182,7 +191,7 @@
         if(weeklyBudgetInput.value.trim() !== "") {
           validateBudget();
         } else {
-          budgetError.classList.add('hidden');
+          if (budgetError) budgetError.classList.add('hidden');
           weeklyBudgetInput.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500');
           weeklyBudgetInput.classList.add('border-fp-neutral-medium', 'focus:border-fp-primary-green', 'focus:ring-fp-primary-green');
         }
@@ -193,7 +202,9 @@
       nextButton.addEventListener('click', function(event) {
         if (!validateBudget()) {
           event.preventDefault();
-          weeklyBudgetInput.focus();
+          if (weeklyBudgetInput) {
+             weeklyBudgetInput.focus();
+          }
         }
       });
     }
