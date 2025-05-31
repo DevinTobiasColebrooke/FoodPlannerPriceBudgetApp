@@ -4,13 +4,16 @@ class Onboarding::ShoppingController < Onboarding::BaseController
   end
 
   def create
-    update_onboarding_profile(shopping_params)
-
-    if @onboarding_profile.valid?
-      redirect_to new_onboarding_avatar_path
+    if update_onboarding_profile(shopping_params)
+      redirect_to next_step
     else
+      @profile = onboarding_profile
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private
@@ -21,9 +24,7 @@ class Onboarding::ShoppingController < Onboarding::BaseController
       :weekly_budget_amount,
       :budget_is_flexible,
       :location_preference_type,
-      :shopping_region,
-      :latitude,
-      :longitude
+      :zip_code
     )
   end
 end

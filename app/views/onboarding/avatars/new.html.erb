@@ -1,0 +1,122 @@
+<div class="w-full max-w-[430px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto bg-fp-body-bg flex flex-col min-h-screen shadow-xl p-6">
+  <header class="pt-10 pb-6">
+    <%= link_to new_onboarding_shopping_path, class: "text-fp-accent-blue hover:text-fp-accent-blue-dark inline-flex items-center" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Back
+    <% end %>
+    <h1 class="font-display text-3xl text-fp-neutral-darkest text-shadow-dark text-center mt-4">Pick Your Avatar</h1>
+  </header>
+
+  <%= form_with model: @profile, url: onboarding_avatars_path, method: :post, class: "flex-grow space-y-4 overflow-y-auto", id: "avatar-form" do |f| %>
+    <div class="sticky top-0 bg-fp-body-bg pt-2 pb-4 z-10">
+      <div class="relative">
+        <input type="text" id="avatar-search" placeholder="Search avatars..." class="w-full px-4 py-2 rounded-lg border border-fp-neutral-medium focus:outline-none focus:ring-2 focus:ring-fp-accent-blue">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-fp-neutral-medium" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="flex space-x-2 mt-3 overflow-x-auto pb-2">
+        <button type="button" class="category-btn active px-3 py-1 rounded-full text-sm whitespace-nowrap" data-category="all">All</button>
+        <button type="button" class="category-btn px-3 py-1 rounded-full text-sm whitespace-nowrap" data-category="professionals">Professionals</button>
+        <button type="button" class="category-btn px-3 py-1 rounded-full text-sm whitespace-nowrap" data-category="fantasy">Fantasy</button>
+        <button type="button" class="category-btn px-3 py-1 rounded-full text-sm whitespace-nowrap" data-category="sports">Sports</button>
+      </div>
+    </div>
+
+    <p class="text-fp-neutral-text text-center text-sm">Choose an avatar that represents you!</p>
+    <div class="grid grid-cols-3 gap-x-3 gap-y-4 px-2">
+      <% avatars = [
+        // ... existing code ...
+        { id: "065-pinup", alt: "Pinup", path: "svgs/920999-avatar/svg/065-pinup.svg", category: "all" }
+      ] %>
+
+      <% avatars.each do |avatar| %>
+        <div class="avatar-item aspect-square rounded-full border-2 border-fp-neutral-medium p-0.5 bg-white cursor-pointer hover:border-fp-accent-blue transition-colors duration-200" data-category="<%= avatar[:category] %>">
+          <%= f.radio_button :avatar_id, avatar[:id], class: "hidden" %>
+          <%= image_tag avatar[:path], alt: avatar[:alt], class: "w-full h-full object-contain rounded-full" %>
+        </div>
+      <% end %>
+
+      <div class="avatar-item aspect-square rounded-full border-2 border-fp-neutral-medium p-0.5 bg-white cursor-pointer flex items-center justify-center text-fp-neutral-text-light hover:border-fp-accent-blue transition-colors duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <%= link_to "Skip & Use Default Avatar", onboarding_finalize_path, class: "block w-full text-center text-sm text-fp-accent-blue hover:underline mt-6" %>
+  <% end %>
+
+  <footer class="pt-8 pb-6">
+    <button type="submit" form="avatar-form" class="w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark">
+      Finish Setup & Go to Dashboard!
+    </button>
+  </footer>
+</div>
+
+<% content_for :javascript do %>
+  <script>
+    const avatarItems = document.querySelectorAll('.avatar-item');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const searchInput = document.getElementById('avatar-search');
+    let selectedCategory = 'all';
+
+    // Handle avatar selection
+    avatarItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const radio = item.querySelector('input[type="radio"]');
+        if (radio) {
+          avatarItems.forEach(el => el.classList.remove('selected'));
+          item.classList.add('selected');
+          radio.checked = true;
+        }
+      });
+    });
+
+    // Handle category filtering
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        selectedCategory = button.dataset.category;
+        filterAvatars();
+      });
+    });
+
+    // Handle search
+    searchInput.addEventListener('input', filterAvatars);
+
+    function filterAvatars() {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      avatarItems.forEach(item => {
+        const category = item.dataset.category;
+        const alt = item.querySelector('img')?.alt.toLowerCase() || '';
+        const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+        const matchesSearch = alt.includes(searchTerm);
+
+        item.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+      });
+    }
+
+    // Add active state styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .category-btn {
+        background-color: #f3f4f6;
+        color: #4b5563;
+      }
+      .category-btn.active {
+        background-color: #3b82f6;
+        color: white;
+      }
+      .avatar-item.selected {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+<% end %>

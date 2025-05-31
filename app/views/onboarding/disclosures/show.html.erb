@@ -40,10 +40,10 @@
   </main>
 
   <footer class="pt-8 pb-6">
-    <%= form_with url: onboarding_disclosure_path, method: :patch do |form| %>
+    <%= form_with model: @profile, url: onboarding_disclosure_path, method: :patch do |form| %>
       <%= form.hidden_field :acknowledged, value: true %>
       <%= form.submit "I Understand, Let's Go!", class: "w-full text-center block font-semibold py-3 px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark" %>
     <% end %>
-    <%= link_to "Back to Welcome Screen", onboarding_welcome_path, class: "block text-center text-xs text-fp-neutral-text-light mt-4 hover:underline" %>
+    <%= button_to "Back to Welcome Screen", back_onboarding_disclosure_path, method: :get, class: "block text-center text-xs text-fp-neutral-text-light mt-4 hover:underline w-full" %>
   </footer>
 </div>

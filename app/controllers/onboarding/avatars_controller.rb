@@ -5,14 +5,17 @@ class Onboarding::AvatarsController < Onboarding::BaseController
   end
 
   def create
-    update_onboarding_profile(avatar_params)
-
-    if @onboarding_profile.valid?
-      redirect_to onboarding_finalize_path
+    if update_onboarding_profile(avatar_params)
+      redirect_to next_step
     else
+      @profile = onboarding_profile
       @avatars = Avatar.all
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private

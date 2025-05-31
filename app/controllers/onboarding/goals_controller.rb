@@ -1,18 +1,21 @@
 class Onboarding::GoalsController < Onboarding::BaseController
   def new
     @profile = onboarding_profile
-    @goals = Goal.all
+    @goals = ::UserManagement::Goal.all
   end
 
   def create
-    update_onboarding_profile(goal_params)
-
-    if @onboarding_profile.valid?
-      redirect_to new_onboarding_people_path
+    if update_onboarding_profile(goal_params)
+      redirect_to next_step
     else
-      @goals = Goal.all
+      @profile = onboarding_profile
+      @goals = ::UserManagement::Goal.all
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private

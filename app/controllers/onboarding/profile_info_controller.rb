@@ -1,29 +1,24 @@
 class Onboarding::ProfileInfoController < Onboarding::BaseController
-  def new
+  def show
     @profile = onboarding_profile
   end
 
-  def create
-    update_onboarding_profile(profile_params)
-
-    if @onboarding_profile.valid?
-      redirect_to new_onboarding_goal_path
+  def update
+    if update_onboarding_profile(profile_info_params)
+      redirect_to next_step
     else
-      render :new, status: :unprocessable_entity
+      @profile = onboarding_profile
+      render :show, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private
 
-  def profile_params
-    params.require(:onboarding_profile).permit(
-      :age,
-      :sex,
-      :height,
-      :weight,
-      :activity_level,
-      :pregnancy_status,
-      :lactation_status
-    )
+  def profile_info_params
+    params.require(:onboarding_profile).permit(:name, :email, :zip_code, :country_code, :state_code, :age, :sex, :height, :weight, :activity_level, :pregnancy_status, :lactation_status)
   end
 end

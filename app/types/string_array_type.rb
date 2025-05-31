@@ -1,4 +1,8 @@
 class StringArrayType < ActiveModel::Type::Value
+  def initialize(**options)
+    super
+  end
+
   def type
     :string_array
   end
@@ -7,7 +11,7 @@ class StringArrayType < ActiveModel::Type::Value
     return [] if value.nil?
     return value if value.is_a?(Array)
     return [] if value.empty?
-    [value.to_s]
+    [value]
   end
 
   def serialize(value)

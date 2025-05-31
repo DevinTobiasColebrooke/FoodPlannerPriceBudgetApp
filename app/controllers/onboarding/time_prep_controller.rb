@@ -4,13 +4,16 @@ class Onboarding::TimePrepController < Onboarding::BaseController
   end
 
   def create
-    update_onboarding_profile(time_prep_params)
-
-    if @onboarding_profile.valid?
-      redirect_to new_onboarding_shopping_path
+    if update_onboarding_profile(time_prep_params)
+      redirect_to next_step
     else
+      @profile = onboarding_profile
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private

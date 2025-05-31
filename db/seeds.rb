@@ -121,8 +121,8 @@ puts "Seeding Allergies..."
 [
   { name: "Dairy" }, { name: "Eggs" }, { name: "Tree Nuts" }, { name: "Peanuts" },
   { name: "Shellfish" }, { name: "Soy" }, { name: "Gluten" }, { name: "Fish" }, { name: "Sesame" }
-].each { |attrs| find_or_create_resource(Allergy, { name: attrs[:name] }, attrs.except(:name)) }
-puts "Allergies seeded: #{Allergy.count}"
+].each { |attrs| find_or_create_resource(UserManagement::Allergy, { name: attrs[:name] }, attrs.except(:name)) }
+puts "Allergies seeded: #{UserManagement::Allergy.count}"
 
 puts "Seeding Kitchen Equipment..."
 [

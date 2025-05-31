@@ -8,17 +8,57 @@ Rails.application.routes.draw do
 
   # Onboarding routes
   namespace :onboarding do
-    resource :welcome, only: [:show]
-    resource :disclosure, only: [:show, :update]
-    resource :profile_info, only: [:new, :create]
-    resource :goal, only: [:new, :create]
-    resource :people, only: [:new, :create]
-    resource :allergy, only: [:new, :create]
-    resource :equipment, only: [:new, :create]
-    resource :time_prep, only: [:new, :create]
-    resource :shopping, only: [:new, :create]
-    resource :avatar, only: [:new, :create]
-    resource :finalize, only: [:create]
+    resource :welcome, only: [:show], controller: 'welcome' do
+      member do
+        post :start
+      end
+    end
+    resource :disclosure, only: [:show, :update], controller: 'disclosures' do
+      member do
+        get :back
+      end
+    end
+    resource :profile_info, only: [:show, :update], controller: 'profile_info' do
+      member do
+        get :back
+      end
+    end
+    resource :goal, only: [:new, :create], controller: 'goals' do
+      member do
+        get :back
+      end
+    end
+    resource :people, only: [:new, :create], controller: 'people' do
+      member do
+        get :back
+      end
+    end
+    resource :allergy, only: [:new, :create], controller: 'allergies' do
+      member do
+        get :back
+      end
+    end
+    resource :equipment, only: [:new, :create], controller: 'equipment' do
+      member do
+        get :back
+      end
+    end
+    resource :time_prep, only: [:new, :create], controller: 'time_prep' do
+      member do
+        get :back
+      end
+    end
+    resource :shopping, only: [:new, :create], controller: 'shopping' do
+      member do
+        get :back
+      end
+    end
+    resource :avatar, only: [:new, :create], controller: 'avatars' do
+      member do
+        get :back
+      end
+    end
+    resource :finalize, only: [:new, :create], controller: 'finalize'
   end
 
   # Legal documents

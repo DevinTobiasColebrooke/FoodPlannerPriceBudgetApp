@@ -1,18 +1,21 @@
 class Onboarding::EquipmentController < Onboarding::BaseController
   def new
     @profile = onboarding_profile
-    @equipment = Equipment.all
+    @equipment_options = UserManagement::KitchenEquipment.all
   end
 
   def create
-    update_onboarding_profile(equipment_params)
-
-    if @onboarding_profile.valid?
-      redirect_to new_onboarding_time_prep_path
+    if update_onboarding_profile(equipment_params)
+      redirect_to next_step
     else
-      @equipment = Equipment.all
+      @profile = onboarding_profile
+      @equipment_options = UserManagement::KitchenEquipment.all
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def back
+    redirect_to previous_step
   end
 
   private
