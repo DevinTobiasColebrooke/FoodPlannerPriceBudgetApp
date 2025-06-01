@@ -25,6 +25,21 @@ class Onboarding::ShoppingController < Onboarding::BaseController
       :budget_is_flexible,
       :location_preference_type,
       :zip_code
-    )
+    ).transform_keys do |key|
+      case key
+      when 'shopping_difficulty_preference'
+        'shopping_difficulty'
+      when 'weekly_budget_amount'
+        'weekly_budget'
+      when 'budget_is_flexible'
+        'budget_flexible'
+      when 'location_preference_type'
+        'location_type'
+      when 'zip_code'
+        'region_zip'
+      else
+        key
+      end
+    end
   end
 end

@@ -5,11 +5,8 @@ class Onboarding::ProfileInfoController < Onboarding::BaseController
 
   def update
     @profile = OnboardingProfile.new(profile_info_params)
-    if @profile.valid? && update_onboarding_profile(profile_info_params)
-      redirect_to next_step
-    else
-      render :show, status: :unprocessable_entity
-    end
+    update_onboarding_profile(profile_info_params)
+    redirect_to next_step
   end
 
   def back

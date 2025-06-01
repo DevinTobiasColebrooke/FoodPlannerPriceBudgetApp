@@ -10,7 +10,6 @@
         <div>
           <%= form.label :age, class: "block text-sm font-medium text-fp-neutral-darkest mb-1" %>
           <%= form.number_field :age, class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :age %>
         </div>
 
         <div>
@@ -19,19 +18,16 @@
               [["Male", "male"], ["Female", "female"], ["Other", "other"]],
               { include_blank: "Select..." },
               class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :sex %>
         </div>
 
         <div>
           <%= form.label :height, "Height (cm)", class: "block text-sm font-medium text-fp-neutral-darkest mb-1" %>
           <%= form.number_field :height, step: 0.1, class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :height %>
         </div>
 
         <div>
           <%= form.label :weight, "Weight (kg)", class: "block text-sm font-medium text-fp-neutral-darkest mb-1" %>
           <%= form.number_field :weight, step: 0.1, class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :weight %>
         </div>
 
         <div>
@@ -46,7 +42,6 @@
               ],
               { include_blank: "Select..." },
               class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :activity_level %>
         </div>
 
         <div>
@@ -60,7 +55,6 @@
               ],
               { include_blank: "Select..." },
               class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :pregnancy_status %>
         </div>
 
         <div>
@@ -73,7 +67,6 @@
               ],
               { include_blank: "Select..." },
               class: "w-full rounded-fp border-fp-neutral-light focus:border-fp-primary-green focus:ring focus:ring-fp-primary-green focus:ring-opacity-50" %>
-          <%= render "shared/error_messages", resource: @profile, field: :lactation_status %>
         </div>
       </div>
 
