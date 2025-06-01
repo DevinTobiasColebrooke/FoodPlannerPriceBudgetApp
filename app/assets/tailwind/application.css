@@ -1,1 +1,227 @@
 @import "tailwindcss";
+
+
+@theme {
+  --font-display: "Poppins", "sans-serif";
+  --font-display: "Oddly Calming", "cursive";
+
+  /* Color Palette from design_system/colors.html */
+  --color-fp-body-bg: #E7F1D3;
+  --color-fp-primary-green: #5AD479;
+  --color-fp-primary-green-dark: #34C759;
+  --color-fp-accent-blue: #5A6AD4;
+  --color-fp-accent-yellow: #F0AB1F;
+  --color-fp-accent-yellow-alt: #D4D45A;
+  --color-fp-accent-orange: #FD7E14;
+  --color-fp-footer-bg: #BDDA83;
+  --color-fp-neutral-text: #111827;
+  --color-fp-neutral-text-light: #6B7280;
+  --color-fp-neutral-darkest: #333333;
+  --color-fp-neutral: #9CA3AF;
+  --color-fp-neutral-dark: #6B7280;
+  --color-fp-neutral-medium: #D1D5DB;
+  --color-fp-neutral-light: #F9FAFB;
+  --color-fp-neutral-lightest: #FBFDF8;
+  --color-fp-white: #FFFFFF;
+  --color-fp-success: #28A745;
+  --color-fp-success-bg: #D4EDDA;
+  --color-fp-error: #DC3545;
+  --color-fp-error-bg: #F8D7DA;
+  --color-fp-warning: #FFC107;
+  --color-fp-warning-bg: #FFF3CD;
+  --color-fp-info: #17A2B8;
+  --color-fp-info-bg: #D1ECF1;
+  --color-fp-tag1-bg: #F3F6D6;
+  --color-fp-tag1-text: #F0AB1F;
+
+  /* Button Styles */
+  --btn-padding-mobile: 0.625rem 1.25rem;  /* py-2.5 px-5 */
+  --btn-padding-desktop: 0.75rem 1.5rem;   /* py-3 px-6 */
+  --btn-radius: 0.5rem;                    /* rounded-lg */
+  --btn-radius-full: 9999px;               /* rounded-full */
+  --btn-transition: all 150ms ease-in-out;
+  --btn-shadow: 0 2px 4px rgba(0,0,0,0.1); /* shadow-fp-cta */
+  --btn-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --btn-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --btn-focus-ring: 2px;
+  --btn-focus-ring-offset: 2px;
+
+  /* Typography from design_system/typography.html */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Layout & Spacing from css_implementation_plan.md */
+  --spacing-navbar-height: 4rem;
+  --breakpoint-3xl: 1920px;
+  /* Add other layout/spacing tokens here based on your design_system/layout.html */
+
+  /* Shadows from css_implementation_plan.md */
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* Add other shadow tokens here based on your design_system/shadows.html */
+}
+
+/* Custom Utilities from css_implementation_plan.md (if any) */
+/* @utility .custom-utility { */
+  /* your custom styles */
+/* } */
+
+/* Base Styles from css_implementation_plan.md (if any, within @layer base) */
+/* @layer base { */
+  /* Your minimal global base styles */
+/* } */
+
+/* Form Base Styles */
+@layer base {
+  .form-input-fp,
+  .form-select-fp,
+  .form-textarea-fp {
+    @apply block w-full p-2.5 rounded-lg border border-fp-neutral-medium bg-fp-white shadow-sm focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green;
+  }
+
+  .form-label-fp {
+    @apply block font-sans text-sm font-medium text-fp-neutral-darkest mb-1;
+  }
+}
+
+/* Form Components */
+@layer components {
+  /* Checkbox and Radio Styles */
+  .form-checkbox-fp,
+  .form-radio-fp {
+    @apply appearance-none p-0 inline-block w-5 h-5 align-middle bg-origin-border select-none flex-shrink-0 text-fp-primary-green bg-fp-white border border-fp-neutral-medium;
+  }
+
+  .form-checkbox-fp {
+    @apply rounded;
+  }
+
+  .form-radio-fp {
+    @apply rounded-full;
+  }
+
+  .form-checkbox-fp:checked,
+  .form-radio-fp:checked {
+    @apply border-transparent bg-current bg-[length:100%_100%] bg-center bg-no-repeat;
+  }
+
+  .form-checkbox-fp:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  }
+
+  .form-radio-fp:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  }
+
+  .form-checkbox-fp:focus,
+  .form-radio-fp:focus {
+    @apply outline-none ring-2 ring-offset-2 ring-fp-primary-green border-fp-primary-green;
+  }
+
+  /* Tag Input Container */
+  .tag-input-container {
+    @apply flex flex-wrap gap-2 p-2 border border-fp-neutral-medium rounded-lg bg-fp-white;
+  }
+
+  .tag {
+    @apply inline-flex items-center bg-fp-primary-green text-fp-white px-3 py-1 rounded-full text-sm;
+  }
+
+  .tag button {
+    @apply ml-2 bg-transparent border-0 text-fp-white cursor-pointer font-bold;
+  }
+
+  /* Common Allergen Checkbox Labels */
+  .allergen-checkbox-label {
+    @apply flex items-center p-3 bg-fp-white rounded-fp border border-fp-neutral-medium hover:border-fp-primary-green has-[:checked]:border-fp-primary-green has-[:checked]:ring-1 has-[:checked]:ring-fp-primary-green;
+  }
+}
+
+/* Button Base Styles */
+@layer components {
+  .btn-fp {
+    @apply font-sans font-semibold transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  /* Tooltip Styles */
+  .tooltip-trigger {
+    @apply relative inline-block cursor-help border-b border-dotted border-fp-neutral-text-light;
+  }
+
+  .tooltip-content {
+    @apply invisible opacity-0 absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-2 bg-fp-neutral-darkest text-fp-white px-3 py-2 rounded-md text-xs leading-tight whitespace-nowrap z-10 shadow-md transition-all duration-200 ease-in-out;
+  }
+
+  .tooltip-trigger:hover .tooltip-content,
+  .tooltip-trigger:focus .tooltip-content {
+    @apply visible opacity-100 -translate-y-3;
+  }
+
+  .tooltip-trigger.tooltip-icon .tooltip-content {
+    @apply -translate-x-[10%];
+  }
+
+  .tooltip-trigger.tooltip-icon:hover .tooltip-content,
+  .tooltip-trigger.tooltip-icon:focus .tooltip-content {
+    @apply -translate-x-[10%] -translate-y-3;
+  }
+
+  /* Primary Button */
+  .btn-fp-primary {
+    @apply btn-fp py-2.5 px-5 md:py-3 md:px-6 rounded-fp bg-fp-primary-green text-fp-white shadow-fp-cta hover:bg-fp-primary-green-dark focus:ring-fp-primary-green;
+  }
+
+  /* Secondary Buttons */
+  .btn-fp-secondary {
+    @apply btn-fp py-2.5 px-5 md:py-3 md:px-6 rounded-fp shadow-sm focus:ring-fp-accent-blue;
+  }
+  .btn-fp-secondary-blue {
+    @apply btn-fp-secondary bg-fp-accent-blue text-fp-white hover:bg-blue-700;
+  }
+  .btn-fp-secondary-light {
+    @apply btn-fp-secondary bg-fp-neutral-light text-fp-accent-blue border border-fp-accent-blue hover:bg-fp-neutral-medium;
+  }
+
+  /* Text/Link Button */
+  .btn-fp-text {
+    @apply btn-fp font-medium px-1 rounded focus:ring-1;
+  }
+  .btn-fp-text-blue {
+    @apply btn-fp-text text-fp-accent-blue hover:text-blue-700 hover:underline focus:ring-fp-accent-blue;
+  }
+  .btn-fp-text-green {
+    @apply btn-fp-text text-fp-primary-green hover:text-fp-primary-green-dark hover:underline focus:ring-fp-primary-green;
+  }
+
+  /* Action/Eyebrow Buttons */
+  .btn-fp-action {
+    @apply btn-fp py-1.5 px-3 text-sm rounded-fp;
+  }
+  .btn-fp-emergency {
+    @apply btn-fp-action bg-fp-error text-fp-white shadow-md hover:bg-red-700 focus:ring-fp-error;
+  }
+  .btn-fp-yellow {
+    @apply btn-fp-action bg-fp-accent-yellow text-fp-neutral-darkest hover:bg-fp-accent-yellow-alt focus:ring-fp-accent-yellow;
+  }
+  .btn-fp-yellow-outline {
+    @apply btn-fp-action bg-fp-neutral-lightest border border-fp-accent-yellow text-fp-neutral-darkest hover:bg-fp-neutral-light focus:ring-fp-accent-yellow;
+  }
+  .btn-fp-icon {
+    @apply btn-fp-action text-fp-accent-blue hover:bg-blue-100 focus:ring-1 focus:ring-fp-accent-blue;
+  }
+}
+
+/* Rest of your global styles */

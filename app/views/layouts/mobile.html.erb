@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Planner</title> <%# Replace with your application's title logic if needed %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%# Ensure your Tailwind CSS setup (via application.css) includes the Poppins font and the custom fp-colors from your design system %>
+</head>
+<body class="bg-fp-body-bg font-sans text-fp-neutral-text m-0">
+  <main class="flex-grow p-4 pb-20"> <%# Added padding, pb-20 for space for fixed nav %>
+    <%= yield %>
+  </main>
+
+  <%= render 'shared/mobile_navigation' %>
+</body>
+</html>

@@ -1,4 +1,6 @@
 class ShoppingListsController < ApplicationController
+  layout 'mobile'
+
   def index
   end
 

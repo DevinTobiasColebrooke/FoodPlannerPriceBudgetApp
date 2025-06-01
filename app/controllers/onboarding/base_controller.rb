@@ -33,7 +33,8 @@ class Onboarding::BaseController < ApplicationController
 
   # Navigation methods
   def next_step
-    current_step = self.class.name.demodulize.underscore.gsub('_controller', '').singularize
+    current_step_raw = self.class.name.demodulize.underscore.gsub('_controller', '')
+    current_step = current_step_raw.singularize # Singularize the current step
     current_index = ONBOARDING_STEPS.index(current_step)
     next_step_name = ONBOARDING_STEPS[current_index + 1]
 
@@ -43,7 +44,13 @@ class Onboarding::BaseController < ApplicationController
     # For simplicity, assuming steps like 'goal', 'people', 'allergy', etc. are 'new' actions for now.
     # More robust check would inspect Rails.application.routes directly or use a convention.
     if %w[goal person allergy equipment time_prep shopping avatar finalize].include?(next_step_name)
-      send("new_onboarding_#{next_step_name}_path")
+      path_segment = next_step_name
+      if next_step_name == 'person'
+        path_segment = 'people'
+      elsif next_step_name == 'allergy'
+        path_segment = 'allergies'
+      end
+      send("new_onboarding_#{path_segment}_path")
     else
       # Assuming steps like 'welcome', 'disclosure', 'profile_info' map to 'show' actions (or similar direct resource path)
       send("onboarding_#{next_step_name}_path")
@@ -51,7 +58,7 @@ class Onboarding::BaseController < ApplicationController
   end
 
   def previous_step
-    current_step = self.class.name.demodulize.underscore.gsub('_controller', '').singularize
+    current_step = self.class.name.demodulize.underscore.gsub('_controller', '')
     prev_step = ONBOARDING_STEPS[ONBOARDING_STEPS.index(current_step) - 1]
     return onboarding_welcome_path if prev_step.nil?
     send("onboarding_#{prev_step}_path")
