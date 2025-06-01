@@ -28,10 +28,6 @@
         .eyebrow-buttons-container { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0 1rem 0; margin-bottom: 1rem; -ms-overflow-style: none; scrollbar-width: none; }
         .eyebrow-buttons-container::-webkit-scrollbar { display: none; }
         .eyebrow-btn { white-space: nowrap; }
-        .bottom-nav { background-color: #fbfdf8; border-top: 1px solid #D1D5DB; display: flex; justify-content: space-around; padding: 0.75rem 0; }
-        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #6B7280; padding: 0.25rem 0.5rem; }
-        .nav-item svg { margin-bottom: 0.125rem; }
-        .nav-item.active { color: #5AD479; }
 
         /* Added Circular Timer Demo CSS */
         .circular-timer-demo {
@@ -89,7 +85,7 @@
                 <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest">Good Morning!</h1>
             </div>
             <button type="button" id="profileStatsBtn"> <!-- Changed from <a> to <button> for better semantics -->
-                <img src="../svgs/920999-avatar/svg/002-girl.svg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white">
+                <%= image_tag @current_user&.avatar_url || "/assets/images/920999-avatar/svg/002-girl.svg", alt: "User Avatar", class: "w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white" %>
             </button>
         </header>
 
@@ -155,29 +151,8 @@
             </section>
         </main>
 
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav sticky bottom-0">
-            <a href="#" class="nav-item active">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                <span>Home</span>
-            </a>
-            <a href="calendar-dashboard.html" class="nav-item">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span>Calendar</span>
-            </a>
-            <a href="#" class="nav-item">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                <span>Search</span>
-            </a>
-            <a href="shopping.html" class="nav-item">
-                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span>Shop List</span>
-            </a>
-            <a href="settings.html" class="nav-item">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span>Settings</span>
-            </a>
-        </nav>
+        <!-- Bottom Navigation Removed: Now handled by mobile.html.erb layout -->
+        <!-- <nav class="bottom-nav sticky bottom-0"> ... </nav> -->
     </div>
 
     <!-- Personal Stats Popup (Hidden by default) -->

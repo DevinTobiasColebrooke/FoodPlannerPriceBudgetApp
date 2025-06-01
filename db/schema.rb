@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_30_053637) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_01_065152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -386,11 +386,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_30_053637) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email_address", null: false
-    t.string "password_digest", null: false
+    t.string "email_address"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "username", limit: 255, null: false
+    t.string "username", limit: 255
     t.string "avatar_url", limit: 255
     t.string "household_size", limit: 50
     t.string "cooking_time_preference", limit: 50
@@ -400,11 +400,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_30_053637) do
     t.boolean "flexible_budget", default: true, null: false
     t.string "location_preference_type", limit: 50
     t.string "zip_code", limit: 20
-    t.integer "age_in_months", null: false
-    t.string "sex", limit: 20, null: false
-    t.decimal "height_cm", precision: 5, scale: 1, null: false
-    t.decimal "weight_kg", precision: 5, scale: 2, null: false
-    t.string "physical_activity_level", limit: 50, null: false
+    t.integer "age_in_months"
+    t.string "sex", limit: 20
+    t.decimal "height_cm", precision: 5, scale: 1
+    t.decimal "weight_kg", precision: 5, scale: 2
+    t.string "physical_activity_level", limit: 50
     t.boolean "is_pregnant", default: false, null: false
     t.integer "pregnancy_trimester"
     t.boolean "is_lactating", default: false, null: false
@@ -412,6 +412,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_30_053637) do
     t.boolean "is_smoker", default: false, null: false
     t.boolean "is_vegetarian_or_vegan", default: false, null: false
     t.datetime "onboarding_completed_at", precision: nil
+    t.boolean "guest", default: false
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end

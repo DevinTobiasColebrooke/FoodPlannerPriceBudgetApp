@@ -20,10 +20,8 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
 
   # Root route
-  authenticated :user do
-    root 'dashboard#show', as: :authenticated_root
-  end
-  root "sessions#new" # if not authenticated
+  root to: 'onboarding/welcome#show'
+  get '/dashboard', to: 'dashboard#show', as: :authenticated_root
 
   # Onboarding routes
   namespace :onboarding do
@@ -52,7 +50,7 @@ Rails.application.routes.draw do
         get :back
       end
     end
-    resource :allergy, only: [:new, :create], controller: 'allergies' do
+    resource :allergies, only: [:new, :create], controller: 'allergies' do
       member do
         get :back
       end

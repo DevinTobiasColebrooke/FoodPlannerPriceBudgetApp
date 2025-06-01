@@ -21,6 +21,6 @@ class Onboarding::EquipmentController < Onboarding::BaseController
   private
 
   def equipment_params
-    params.require(:onboarding_profile).permit(equipment: [])
+    params.fetch(:onboarding_profile, {}).permit(equipment: [])
   end
 end
