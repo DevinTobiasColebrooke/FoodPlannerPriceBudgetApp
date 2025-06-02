@@ -84,8 +84,8 @@
                 <p class="text-xs text-fp-neutral-text-light">Tuesday, Oct 26</p>
                 <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest">Good Morning!</h1>
             </div>
-            <button type="button" id="profileStatsBtn"> <!-- Changed from <a> to <button> for better semantics -->
-                <%= image_tag @current_user&.avatar_url || "/assets/images/920999-avatar/svg/002-girl.svg", alt: "User Avatar", class: "w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white" %>
+            <button type="button" id="profileStatsBtn">
+                <%= image_tag @current_user.avatar_url, alt: "User Avatar", class: "w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white" %>
             </button>
         </header>
 

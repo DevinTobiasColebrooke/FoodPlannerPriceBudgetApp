@@ -3,7 +3,7 @@ module UserManagement
     attribute :guest, :boolean, default: false # Define attribute with default
 
     has_secure_password validations: false # Disable default has_secure_password validations
-    has_many :sessions, dependent: :destroy
+    has_many :sessions, class_name: 'UserManagement::Session', dependent: :destroy
 
     # Goals
     has_many :user_goals, dependent: :destroy

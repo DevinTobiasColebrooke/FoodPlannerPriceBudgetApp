@@ -20,26 +20,30 @@ class Onboarding::ShoppingController < Onboarding::BaseController
 
   def shopping_params
     params.require(:onboarding_profile).permit(
-      :shopping_difficulty_preference,
-      :weekly_budget_amount,
-      :budget_is_flexible,
-      :location_preference_type,
-      :zip_code
+      :shopping_difficulty,
+      :weekly_budget,
+      :budget_flexible,
+      :location_type,
+      :region_zip
     ).transform_keys do |key|
       case key
-      when 'shopping_difficulty_preference'
-        'shopping_difficulty'
-      when 'weekly_budget_amount'
-        'weekly_budget'
-      when 'budget_is_flexible'
-        'budget_flexible'
-      when 'location_preference_type'
-        'location_type'
-      when 'zip_code'
-        'region_zip'
+      when 'shopping_difficulty'
+        'shopping_difficulty_preference'
+      when 'weekly_budget'
+        'weekly_budget_amount'
+      when 'budget_flexible'
+        'budget_is_flexible'
+      when 'location_type'
+        'location_preference_type'
+      when 'region_zip'
+        'zip_code'
       else
         key
       end
+    end.tap do |params|
+      # Convert types to match OnboardingProfile attributes
+      params['weekly_budget_amount'] = params['weekly_budget_amount'].to_d if params['weekly_budget_amount'].present?
+      params['budget_is_flexible'] = ActiveModel::Type::Boolean.new.cast(params['budget_is_flexible']) if params['budget_is_flexible'].present?
     end
   end
 end

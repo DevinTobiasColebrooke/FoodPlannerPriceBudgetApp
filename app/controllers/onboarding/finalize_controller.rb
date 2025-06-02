@@ -101,11 +101,8 @@ class Onboarding::FinalizeController < Onboarding::BaseController
 
     if user.save
       session.delete(:onboarding_profile)
-      # If the user is a guest, start a session for them so they are "logged in" as a guest.
-      # For non-guest users, they would typically go through a login flow if not already logged in.
-      if user.guest?
-        start_new_session_for(user) # This method is from the Authentication concern
-      end
+      # Start a session for the user so they are logged in after onboarding
+      start_new_session_for(user)
       redirect_to authenticated_root_path, notice: "Welcome! Your profile is set up."
     else
       # Log the validation errors to help diagnose the issue
