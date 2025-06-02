@@ -48,8 +48,8 @@
             <!-- Location Context & Change -->
             <div class="mb-4 p-3 bg-fp-white rounded-fp shadow-fp-card">
                 <div class="flex justify-between items-center">
-                    <p class="text-xs text-fp-neutral-text-light">Prices for: <strong class="text-fp-neutral-text">Yourtown, CA 90210</strong></p>
-                    <button class="text-xs text-fp-accent-blue hover:underline">Change Location</button>
+                    <p class="text-xs text-fp-neutral-text-light">Prices for: <strong class="text-fp-neutral-text"><%= @user_location %></strong></p>
+                    <%= link_to "Change Location", edit_settings_path, class: "text-xs text-fp-accent-blue hover:underline" %>
                 </div>
             </div>
 
@@ -57,237 +57,145 @@
             <div class="mb-4 p-3 bg-fp-white rounded-fp shadow-fp-card space-y-2">
                 <div class="flex justify-between items-center text-sm">
                     <span class="text-fp-neutral-text-light">Overall Progress:</span>
-                    <span class="font-semibold text-fp-primary-green" id="overallProgressText">75% of items</span>
+                    <span class="font-semibold text-fp-primary-green" id="overallProgressText">
+                        <%= @shopping_list.shopping_list_items.checked.count %> of <%= @shopping_list.shopping_list_items.count %> items
+                    </span>
                 </div>
                 <div class="progress-bar-bg h-2.5">
-                    <div class="progress-bar-fill" id="overallProgressBar" style="width: 75%;"></div>
+                    <div class="progress-bar-fill" id="overallProgressBar" style="width: <%= @shopping_list.shopping_list_items.count.zero? ? 0 : (@shopping_list.shopping_list_items.checked.count.to_f / @shopping_list.shopping_list_items.count * 100).round %>%"></div>
                 </div>
                 <div class="flex justify-between items-center text-sm pt-1">
                     <span class="text-fp-neutral-text-light">Est. Total Cost:</span>
-                    <span class="font-semibold text-fp-neutral-darkest" id="overallCostText">$45.80</span>
-                </div>
-                <div class="flex justify-between items-center text-sm pt-1">
-                    <span class="text-fp-neutral-text-light">Preference:</span>
-                    <span class="font-medium text-fp-accent-blue bg-blue-100 px-2 py-0.5 rounded-full text-xs">In-Store Priority</span>
+                    <span class="font-semibold text-fp-neutral-darkest" id="overallCostText">$<%= number_with_precision(@shopping_list.estimated_total_cost, precision: 2) %></span>
                 </div>
             </div>
 
-            <!-- Sort/Filter Options (Conceptual) -->
+            <!-- Sort/Filter Options -->
             <div class="mb-4 flex items-center overflow-x-auto whitespace-nowrap gap-1.5 sm:flex-wrap sm:gap-2 sm:overflow-visible sm:whitespace-normal">
                 <span class="text-xs text-fp-neutral-text-light flex-shrink-0 sm:flex-shrink">Sort by:</span>
-                <button class="text-xs py-0.5 px-2 rounded-full bg-fp-neutral-light border border-fp-neutral-medium hover:bg-fp-neutral-medium text-fp-neutral-darkest flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink">Distance</button>
-                <button class="text-xs py-0.5 px-2 rounded-full bg-fp-primary-green text-white border border-fp-primary-green flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink">Price</button>
-                <button class="text-xs py-0.5 px-2 rounded-full bg-fp-neutral-light border border-fp-neutral-medium hover:bg-fp-neutral-medium text-fp-neutral-darkest flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink">Best Match</button>
-                <select class="text-xs py-0.5 px-2 rounded-full bg-fp-neutral-light border border-fp-neutral-medium text-fp-neutral-darkest focus:ring-0 focus:border-fp-primary-green flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink sm:ml-auto">
-                    <option>Filter</option>
-                    <option>In-Store</option>
-                    <option>Online</option>
-                </select>
+                <%= link_to "Distance", shopping_lists_path(sort: 'distance'), class: "text-xs py-0.5 px-2 rounded-full #{params[:sort] == 'distance' ? 'bg-fp-primary-green text-white' : 'bg-fp-neutral-light border border-fp-neutral-medium hover:bg-fp-neutral-medium text-fp-neutral-darkest'} flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink" %>
+                <%= link_to "Price", shopping_lists_path(sort: 'price'), class: "text-xs py-0.5 px-2 rounded-full #{params[:sort] == 'price' ? 'bg-fp-primary-green text-white' : 'bg-fp-neutral-light border border-fp-neutral-medium hover:bg-fp-neutral-medium text-fp-neutral-darkest'} flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink" %>
+                <%= link_to "Best Match", shopping_lists_path(sort: 'best_match'), class: "text-xs py-0.5 px-2 rounded-full #{params[:sort] == 'best_match' ? 'bg-fp-primary-green text-white' : 'bg-fp-neutral-light border border-fp-neutral-medium hover:bg-fp-neutral-medium text-fp-neutral-darkest'} flex-shrink-0 sm:py-1 sm:px-2.5 sm:flex-shrink" %>
             </div>
-
 
             <!-- Store Cards -->
             <div class="space-y-3">
-                <!-- Store Card 1 (Best Match Example) -->
-                <div class="store-card bg-fp-white rounded-fp shadow-fp-card p-3 border-2 border-transparent cursor-pointer selected-store" onclick="selectStore(this, 'store1')">
-                    <div class="flex items-start gap-3">
-                        <img src="../svgs/3176258-marketing/svg/014-online shop.svg" alt="Store Logo" class="w-10 h-10 object-contain bg-fp-neutral-lightest p-1 rounded">
-                        <div class="flex-1">
-                            <div class="flex justify-between items-start">
-                                <h3 class="font-semibold text-fp-neutral-darkest text-base leading-tight">Local Grocer</h3>
-                                <span class="text-xs font-medium py-0.5 px-1.5 rounded-full bg-fp-accent-yellow text-fp-neutral-darkest">Best Match!</span>
+                <% @stores.each do |store| %>
+                    <div class="store-card bg-fp-white rounded-fp shadow-fp-card p-3 border-2 border-transparent cursor-pointer" data-store-id="<%= store.id %>" onclick="selectStore(this, '<%= store.id %>')">
+                        <div class="flex items-start gap-3">
+                            <% if store.logo_url.present? %>
+                                <%= image_tag store.logo_url, alt: "#{store.name} Logo", class: "w-10 h-10 object-contain bg-fp-neutral-lightest p-1 rounded" %>
+                            <% else %>
+                                <div class="w-10 h-10 bg-fp-neutral-lightest p-1 rounded flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-fp-neutral-medium" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                </div>
+                            <% end %>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-fp-neutral-darkest text-base leading-tight"><%= store.name %></h3>
+                                    <% if store.store_type == 'online' %>
+                                        <span class="text-xs font-medium py-0.5 px-1.5 rounded-full bg-fp-accent-blue text-white">Online Only</span>
+                                    <% end %>
+                                </div>
+                                <p class="text-xs text-fp-neutral-text-light">
+                                    <%= store.address %>, <%= store.zip_code %> • <%= store.opening_hours %>
+                                </p>
                             </div>
-                            <p class="text-xs text-fp-neutral-text-light">1.2 miles away • Open until 9 PM</p>
                         </div>
-                    </div>
-                    <div class="mt-2 pt-2 border-t border-fp-neutral-medium space-y-1">
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-fp-primary-green font-medium">All items available</span>
-                            <span class="text-fp-neutral-darkest font-semibold">Est: $45.80</span>
-                        </div>
-                        <div class="flex items-center gap-1 text-xs text-fp-neutral-text-light">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-fp-primary-green" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
-                            <span>In-Store Shopping</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Store Card 2 -->
-                 <div class="store-card bg-fp-white rounded-fp shadow-fp-card p-3 border-2 border-transparent cursor-pointer" onclick="selectStore(this, 'store2')">
-                    <div class="flex items-start gap-3">
-                        <img src="../svgs/1046743-fast-food/svg/010-convenience-store.svg" alt="Store Logo" class="w-10 h-10 object-contain bg-fp-neutral-lightest p-1 rounded">
-                        <div class="flex-1">
-                            <h3 class="font-semibold text-fp-neutral-darkest text-base leading-tight">Quick Mart</h3>
-                            <p class="text-xs text-fp-neutral-text-light">0.5 miles away • Open 24 Hours</p>
-                        </div>
-                    </div>
-                    <div class="mt-2 pt-2 border-t border-fp-neutral-medium space-y-1">
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-fp-accent-orange font-medium">3 items unavailable</span>
-                            <span class="text-fp-neutral-darkest font-semibold">Est: $38.50 (for available)</span>
-                        </div>
-                         <div class="flex items-center gap-1 text-xs text-fp-neutral-text-light">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-fp-primary-green" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
-                            <span>In-Store Shopping</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Store Card 3 (Online Example) -->
-                 <div class="store-card bg-fp-white rounded-fp shadow-fp-card p-3 border-2 border-transparent cursor-pointer" onclick="selectStore(this, 'store3')">
-                    <div class="flex items-start gap-3">
-                        <img src="../svgs/3176258-marketing/svg/014-online shop.svg" alt="Store Logo" class="w-10 h-10 object-contain bg-fp-neutral-lightest p-1 rounded">
-                        <div class="flex-1">
-                             <div class="flex justify-between items-start">
-                                <h3 class="font-semibold text-fp-neutral-darkest text-base leading-tight">Web Grocer Inc.</h3>
-                                <span class="text-xs font-medium py-0.5 px-1.5 rounded-full bg-fp-accent-blue text-white">Online Only</span>
+                        <div class="mt-2 pt-2 border-t border-fp-neutral-medium space-y-1">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-fp-primary-green font-medium">All items available</span>
+                                <span class="text-fp-neutral-darkest font-semibold">Est: $<%= number_with_precision(store.estimated_total_cost(@shopping_list), precision: 2) %></span>
                             </div>
-                            <p class="text-xs text-fp-neutral-text-light">Ships in 2-3 days</p>
+                            <div class="flex items-center gap-1 text-xs text-fp-neutral-text-light">
+                                <% if store.store_type == 'online' %>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-fp-accent-blue" viewBox="0 0 20 20" fill="currentColor"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" /></svg>
+                                    <span>Online Delivery</span>
+                                <% else %>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-fp-primary-green" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                                    <span>In-Store Shopping</span>
+                                <% end %>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-2 pt-2 border-t border-fp-neutral-medium space-y-1">
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-fp-primary-green font-medium">Majority items available</span>
-                            <span class="text-fp-neutral-darkest font-semibold">Est: $52.10 + shipping</span>
-                        </div>
-                        <div class="flex items-center gap-1 text-xs text-fp-neutral-text-light">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-fp-accent-blue" viewBox="0 0 20 20" fill="currentColor"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" /></svg>
-                            <span>Online Delivery</span>
-                        </div>
-                    </div>
-                </div>
+                <% end %>
             </div>
         </main>
 
-       <!-- <nav class="bottom-nav"> ... </nav> -->
-    </div>
-
-    <!-- Shopping List Modal -->
-    <div id="shoppingListModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="text-lg font-semibold text-fp-neutral-darkest">My Shopping List</h2>
-                <button id="closeShoppingListModal" class="text-fp-neutral-text-light hover:text-fp-neutral-darkest">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <input type="text" placeholder="Add item to list..." class="w-full p-2.5 rounded-fp border border-fp-neutral-medium focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green text-sm">
+        <!-- Shopping List Modal -->
+        <div id="shoppingListModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-lg font-semibold text-fp-neutral-darkest">My Shopping List</h2>
+                    <button id="closeShoppingListModal" class="text-fp-neutral-text-light hover:text-fp-neutral-darkest">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
                 </div>
-                <div id="shopping-list-items-container" class="space-y-1">
-                    <div class="shopping-list-item">
-                        <label class="flex items-center gap-2 text-sm text-fp-neutral-text">
-                            <input type="checkbox" class="form-checkbox-custom">
-                            <span>Avocado <span class="text-xs text-fp-neutral-text-light">(2 large)</span></span>
-                        </label>
-                        <span class="text-xs text-fp-neutral-text-light">Local Grocer</span>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <%= form_with(model: [@shopping_list, ShoppingListItem.new], class: "w-full") do |f| %>
+                            <%= f.text_field :custom_item_name, placeholder: "Add item to list...", class: "w-full p-2.5 rounded-fp border border-fp-neutral-medium focus:border-fp-primary-green focus:ring-1 focus:ring-fp-primary-green text-sm" %>
+                        <% end %>
                     </div>
-                    <div class="shopping-list-item">
-                        <label class="flex items-center gap-2 text-sm text-fp-neutral-text">
-                            <input type="checkbox" class="form-checkbox-custom" checked>
-                            <span>Rolled Oats <span class="text-xs text-fp-neutral-text-light">(1 cup)</span></span>
-                        </label>
-                         <span class="text-xs text-fp-neutral-text-light">Local Grocer</span>
-                    </div>
-                    <div class="shopping-list-item">
-                        <label class="flex items-center gap-2 text-sm text-fp-neutral-text">
-                            <input type="checkbox" class="form-checkbox-custom">
-                            <span>Chicken Breast <span class="text-xs text-fp-neutral-text-light">(2 pieces)</span></span>
-                        </label>
-                         <span class="text-xs text-fp-neutral-text-light">Local Grocer</span>
-                    </div>
-                     <div class="shopping-list-item">
-                        <label class="flex items-center gap-2 text-sm text-fp-neutral-text">
-                            <input type="checkbox" class="form-checkbox-custom">
-                            <span>Blueberries <span class="text-xs text-fp-neutral-text-light">(1 pint)</span></span>
-                        </label>
-                         <span class="text-xs text-fp-error line-through">Unavailable at Quick Mart</span>
+                    <div id="shopping-list-items-container" class="space-y-1">
+                        <%= render partial: "shopping_list_items/item", collection: @shopping_list.shopping_list_items %>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="text-xs text-fp-neutral-text-light hover:underline">Clear Checked</button>
-                <button class="action-button bg-fp-primary-green text-white hover:bg-fp-primary-green-dark text-sm">Update List</button>
+                <div class="modal-footer">
+                    <%= button_to "Clear Checked", clear_checked_shopping_list_path(@shopping_list), method: :post, class: "text-xs text-fp-neutral-text-light hover:underline" %>
+                    <%= button_to "Update List", shopping_list_path(@shopping_list), method: :patch, class: "action-button bg-fp-primary-green text-white hover:bg-fp-primary-green-dark text-sm" %>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Poppins', 'sans-serif'], display: ['Satisfy', 'cursive'], },
-                    colors: {
-                        'fp-body-bg': '#E7F1D3', 'fp-primary-green': '#5AD479', 'fp-primary-green-dark': '#34C759',
-                        'fp-accent-blue': '#5A6AD4', 'fp-accent-blue-dark': '#4755c4', 'fp-accent-yellow': '#F0AB1F',
-                        'fp-accent-orange': '#FD7E14', 'fp-neutral-text': '#111827', 'fp-footer-bg': '#BDDA83',
-                        'fp-neutral-darkest': '#333333', 'fp-neutral-lightest': '#FBFDF8', 'fp-white': '#FFFFFF',
-                        'fp-neutral-medium': '#D1D5DB', 'fp-neutral-light': '#F9FAFB', 'fp-neutral-text-light': '#6B7280',
-                        'fp-neutral': '#9CA3AF', 'gray-100': '#f3f4f6', 'fp-error': '#DC3545',
-                    },
-                    boxShadow: { 'fp-cta': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)', 'fp-card': '0 4px 8px rgba(0,0,0,0.08)' },
-                    borderRadius: { 'fp': '0.5rem', }
-                }
-            }
-        }
-        const openShoppingListBtn = document.getElementById('openShoppingListBtn');
-        const closeShoppingListModalBtn = document.getElementById('closeShoppingListModal');
-        const shoppingListModal = document.getElementById('shoppingListModal');
+    <%= javascript_tag do %>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openShoppingListBtn = document.getElementById('openShoppingListBtn');
+            const closeShoppingListModalBtn = document.getElementById('closeShoppingListModal');
+            const shoppingListModal = document.getElementById('shoppingListModal');
 
-        openShoppingListBtn.addEventListener('click', () => shoppingListModal.classList.add('open'));
-        closeShoppingListModalBtn.addEventListener('click', () => shoppingListModal.classList.remove('open'));
-        shoppingListModal.addEventListener('click', function(event) {
-            if (event.target === shoppingListModal) {
-                shoppingListModal.classList.remove('open');
+            openShoppingListBtn.addEventListener('click', () => shoppingListModal.classList.add('open'));
+            closeShoppingListModalBtn.addEventListener('click', () => shoppingListModal.classList.remove('open'));
+
+            shoppingListModal.addEventListener('click', function(event) {
+                if (event.target === shoppingListModal) {
+                    shoppingListModal.classList.remove('open');
+                }
+            });
+
+            let selectedStoreElement = document.querySelector('.store-card.selected-store');
+
+            function selectStore(storeElement, storeId) {
+                if (selectedStoreElement) {
+                    selectedStoreElement.classList.remove('selected-store');
+                }
+                storeElement.classList.add('selected-store');
+                selectedStoreElement = storeElement;
+
+                // Update UI based on store selection
+                fetch(`/stores/${storeId}/availability`)
+                    .then(response => response.json())
+                    .then(data => {
+                        updateStoreAvailability(data);
+                    });
+            }
+
+            function updateStoreAvailability(data) {
+                const overallProgressText = document.getElementById('overallProgressText');
+                const overallProgressBar = document.getElementById('overallProgressBar');
+                const overallCostText = document.getElementById('overallCostText');
+
+                overallProgressText.textContent = data.progress_text;
+                overallProgressBar.style.width = data.progress_percentage + '%';
+                overallCostText.textContent = '$' + data.estimated_cost;
+            }
+
+            // Initial call if a store is pre-selected
+            if(selectedStoreElement) {
+                selectStore(selectedStoreElement, selectedStoreElement.dataset.storeId);
             }
         });
-
-        let selectedStoreElement = document.querySelector('.store-card.selected-store');
-
-        function selectStore(storeElement, storeId) {
-            if (selectedStoreElement) {
-                selectedStoreElement.classList.remove('selected-store');
-            }
-            storeElement.classList.add('selected-store');
-            selectedStoreElement = storeElement;
-
-            const overallProgressText = document.getElementById('overallProgressText');
-            const overallProgressBar = document.getElementById('overallProgressBar');
-            const overallCostText = document.getElementById('overallCostText');
-            const shoppingListItemsContainer = document.getElementById('shopping-list-items-container');
-
-
-            if (storeId === 'store1') {
-                overallProgressText.textContent = "All items available";
-                overallProgressBar.style.width = "100%";
-                overallCostText.textContent = "$45.80";
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').textContent = "Local Grocer";
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.remove('text-fp-error', 'line-through');
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.add('text-fp-neutral-text-light');
-
-
-            } else if (storeId === 'store2') {
-                overallProgressText.textContent = "85% of items (3 unavailable)";
-                overallProgressBar.style.width = "85%";
-                overallCostText.textContent = "$38.50 (for available)";
-                 shoppingListItemsContainer.children[3].querySelector('span:last-child').textContent = "Unavailable at Quick Mart";
-                 shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.add('text-fp-error', 'line-through');
-                 shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.remove('text-fp-neutral-text-light');
-
-
-            } else if (storeId === 'store3') {
-                overallProgressText.textContent = "Majority items available";
-                overallProgressBar.style.width = "90%";
-                overallCostText.textContent = "$52.10 + shipping";
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').textContent = "Web Grocer Inc.";
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.remove('text-fp-error', 'line-through');
-                shoppingListItemsContainer.children[3].querySelector('span:last-child').classList.add('text-fp-neutral-text-light');
-            }
-        }
-        if(selectedStoreElement) {
-            selectStore(selectedStoreElement, 'store1');
-        }
-    </script>
+    <% end %>
 </body>
 </html>

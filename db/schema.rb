@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_01_065152) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_02_035922) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -321,7 +321,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_01_065152) do
   end
 
   create_table "shopping_lists", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.string "name", limit: 255, default: "My Shopping List", null: false
     t.string "status", limit: 50, default: "active", null: false
     t.datetime "created_at", null: false
