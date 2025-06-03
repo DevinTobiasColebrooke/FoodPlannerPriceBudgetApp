@@ -95,8 +95,8 @@ class Onboarding::FinalizeController < Onboarding::BaseController
     end
 
     profile.equipment&.each do |equipment_name|
-      equipment = UserManagement::Equipment.find_by(name: equipment_name)
-      user.user_equipment.create(equipment: equipment) if equipment
+      equipment = UserManagement::KitchenEquipment.find_by(name: equipment_name)
+      user.user_kitchen_equipment.create(kitchen_equipment: equipment) if equipment
     end
 
     if user.save

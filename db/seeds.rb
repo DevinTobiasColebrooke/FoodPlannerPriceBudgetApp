@@ -61,45 +61,45 @@ end
 
 # --- Destruction Order ---
 puts "Destroying existing data..."
-UserGoal.destroy_all
-UserAllergy.destroy_all
-UserDietaryRestriction.destroy_all
-UserKitchenEquipment.destroy_all
-ShoppingListItem.destroy_all
-MealPlanEntry.destroy_all
-RecipeNutritionItem.destroy_all
-RecipeIngredient.destroy_all
+UserManagement::UserGoal.destroy_all
+UserManagement::UserAllergy.destroy_all
+UserManagement::UserDietaryRestriction.destroy_all
+UserManagement::UserKitchenEquipment.destroy_all
+Shopping::ShoppingListItem.destroy_all
+MealPlanning::MealPlanEntry.destroy_all
+MealPlanning::RecipeNutritionItem.destroy_all
+MealPlanning::RecipeIngredient.destroy_all
 
-DietaryPatternFoodGroupRecommendation.destroy_all
-DietaryPatternCalorieLevel.destroy_all
-DriValue.destroy_all # Depends on Nutrient and LifeStageGroup
-GrowthFactor.destroy_all
-PalDefinition.destroy_all
-ReferenceAnthropometry.destroy_all
-EerAdditiveComponent.destroy_all
-EerProfile.destroy_all
+Nutrition::DietaryPatternFoodGroupRecommendation.destroy_all
+Nutrition::DietaryPatternCalorieLevel.destroy_all
+Nutrition::DriValue.destroy_all # Depends on Nutrient and LifeStageGroup
+Nutrition::GrowthFactor.destroy_all
+Nutrition::PalDefinition.destroy_all
+Nutrition::ReferenceAnthropometry.destroy_all
+Nutrition::EerAdditiveComponent.destroy_all
+Nutrition::EerProfile.destroy_all
 
-ShoppingList.destroy_all
-Recipe.destroy_all
-Ingredient.destroy_all
-Store.destroy_all
-Session.destroy_all
-User.destroy_all
+Shopping::ShoppingList.destroy_all
+MealPlanning::Recipe.destroy_all
+MealPlanning::Ingredient.destroy_all
+Shopping::Store.destroy_all
+UserManagement::Session.destroy_all
+UserManagement::User.destroy_all
 
-Goal.destroy_all
-Allergy.destroy_all
-DietaryRestriction.destroy_all
-KitchenEquipment.destroy_all
+UserManagement::Goal.destroy_all
+UserManagement::Allergy.destroy_all
+UserManagement::DietaryRestriction.destroy_all
+UserManagement::KitchenEquipment.destroy_all
 
 # Critical: Nutrient must be destroyed before tables that reference it,
 # but after tables that it might reference (if any, none in this case).
 # It's referenced by DriValue, RecipeNutritionItem.
-Nutrient.destroy_all # Destroy Nutrients
+Nutrition::Nutrient.destroy_all # Destroy Nutrients
 
-FoodGroup.where.not(parent_food_group_id: nil).destroy_all
-FoodGroup.where(parent_food_group_id: nil).destroy_all
-DietaryPattern.destroy_all
-LifeStageGroup.destroy_all
+Nutrition::FoodGroup.where.not(parent_food_group_id: nil).destroy_all
+Nutrition::FoodGroup.where(parent_food_group_id: nil).destroy_all
+Nutrition::DietaryPattern.destroy_all
+Nutrition::LifeStageGroup.destroy_all
 
 puts "All specified existing data destroyed."
 puts "--------------------------------"
@@ -114,8 +114,8 @@ puts "Seeding Goals..."
   { name: "Save Money", description: "Budget-friendly recipes and smart shopping." },
   { name: "Learn to Cook", description: "Beginner-friendly recipes and cooking tips." },
   { name: "Meal Prep Efficiency", description: "Recipes suitable for batch cooking and quick assembly." }
-].each { |attrs| find_or_create_resource(Goal, { name: attrs[:name] }, attrs.except(:name)) }
-puts "Goals seeded: #{Goal.count}"
+].each { |attrs| find_or_create_resource(UserManagement::Goal, { name: attrs[:name] }, attrs.except(:name)) }
+puts "Goals seeded: #{UserManagement::Goal.count}"
 
 puts "Seeding Allergies..."
 [
@@ -129,16 +129,16 @@ puts "Seeding Kitchen Equipment..."
   { name: "Instapot / Pressure Cooker" }, { name: "Blender" }, { name: "Immersion Blender" },
   { name: "Food Processor" }, { name: "Strainer / Colander" }, { name: "Juicer" },
   { name: "Oven" }, { name: "Microwave" }, { name: "Air Fryer" }
-].each { |attrs| find_or_create_resource(KitchenEquipment, { name: attrs[:name] }, attrs.except(:name)) }
-puts "Kitchen Equipment seeded: #{KitchenEquipment.count}"
+].each { |attrs| find_or_create_resource(UserManagement::KitchenEquipment, { name: attrs[:name] }, attrs.except(:name)) }
+puts "Kitchen Equipment seeded: #{UserManagement::KitchenEquipment.count}"
 
 puts "Seeding Dietary Restrictions..."
 [
   { name: "Vegan", description: "Excludes all animal products and by-products" },
   { name: "Vegetarian", description: "Excludes meat, fish, and poultry" },
   { name: "Low-Carb", description: "Restricts carbohydrate intake" }
-].each { |attrs| find_or_create_resource(DietaryRestriction, { name: attrs[:name] }, attrs.except(:name)) }
-puts "Dietary Restrictions seeded: #{DietaryRestriction.count}"
+].each { |attrs| find_or_create_resource(UserManagement::DietaryRestriction, { name: attrs[:name] }, attrs.except(:name)) }
+puts "Dietary Restrictions seeded: #{UserManagement::DietaryRestriction.count}"
 
 puts "Seeding Legal Documents..."
 legal_docs = [
@@ -169,7 +169,7 @@ puts "Seeding Foundational Data from CSV files..."
 # 1. Nutrients (nutrients.csv) - MUST be seeded before DRI Values, RecipeNutritionItems etc.
 puts "Seeding Nutrients..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'nutrients.csv'), headers: true, header_converters: :symbol) do |row|
-  find_or_create_resource(Nutrient, { dri_identifier: row[:dri_identifier]&.strip }, {
+  find_or_create_resource(Nutrition::Nutrient, { dri_identifier: row[:dri_identifier]&.strip }, {
     name: row[:name]&.strip,
     category: row[:category]&.strip,
     default_unit: row[:default_unit]&.strip,
@@ -179,11 +179,11 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'nutrients.csv'), headers: tru
     sort_order: row[:sort_order].present? ? row[:sort_order].to_i : nil
   })
 end
-puts "Nutrients seeded: #{Nutrient.count}"
+puts "Nutrients seeded: #{Nutrition::Nutrient.count}"
 # Diagnostic output for Nutrients
-puts "Sample Nutrient (Protein/PROCNT): #{Nutrient.find_by(dri_identifier: 'PROCNT')&.attributes.inspect}"
-puts "Sample Nutrient (Calcium/CA): #{Nutrient.find_by(dri_identifier: 'CA')&.attributes.inspect}"
-puts "Nutrient count with nil dri_identifier: #{Nutrient.where(dri_identifier: nil).count}"
+puts "Sample Nutrient (Protein/PROCNT): #{Nutrition::Nutrient.find_by(dri_identifier: 'PROCNT')&.attributes.inspect}"
+puts "Sample Nutrient (Calcium/CA): #{Nutrition::Nutrient.find_by(dri_identifier: 'CA')&.attributes.inspect}"
+puts "Nutrient count with nil dri_identifier: #{Nutrition::Nutrient.where(dri_identifier: nil).count}"
 
 # 2. Life Stages (life_stages.csv -> LifeStageGroup model)
 puts "Seeding Life Stage Groups..."
@@ -194,7 +194,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'life_stages.csv'), headers: t
   # to signify no upper limit for practical purposes.
   max_age_months_int = max_age_val.present? && max_age_val.match?(/\A\d+\z/) ? max_age_val.to_i : 12000
 
-  find_or_create_resource(LifeStageGroup, { name: row[:name]&.strip }, {
+  find_or_create_resource(Nutrition::LifeStageGroup, { name: row[:name]&.strip }, {
     min_age_months: row[:min_age_months].to_i,
     max_age_months: max_age_months_int,
     sex: row[:sex]&.strip&.downcase,
@@ -204,32 +204,32 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'life_stages.csv'), headers: t
     notes: row[:notes].presence
   })
 end
-puts "Life Stage Groups seeded: #{LifeStageGroup.count}"
+puts "Life Stage Groups seeded: #{Nutrition::LifeStageGroup.count}"
 
 puts "--- Post LifeStageGroup Seeding Diagnostics ---"
-puts "Distinct values for 'sex' in LifeStageGroup: #{LifeStageGroup.distinct.pluck(:sex).inspect}"
-puts "Distinct values for 'special_condition' in LifeStageGroup: #{LifeStageGroup.distinct.pluck(:special_condition).inspect}"
-puts "Count of LSGs with sex='male': #{LifeStageGroup.where(sex: 'male').count}"
-puts "Count of LSGs with sex='female': #{LifeStageGroup.where(sex: 'female').count}"
-puts "Count of LSGs with sex='any': #{LifeStageGroup.where(sex: 'any').count}"
-puts "Count of LSGs with special_condition IS NULL: #{LifeStageGroup.where(special_condition: nil).count}"
-puts "Count of LSGs with special_condition = '': #{LifeStageGroup.where(special_condition: '').count}"
+puts "Distinct values for 'sex' in LifeStageGroup: #{Nutrition::LifeStageGroup.distinct.pluck(:sex).inspect}"
+puts "Distinct values for 'special_condition' in LifeStageGroup: #{Nutrition::LifeStageGroup.distinct.pluck(:special_condition).inspect}"
+puts "Count of LSGs with sex='male': #{Nutrition::LifeStageGroup.where(sex: 'male').count}"
+puts "Count of LSGs with sex='female': #{Nutrition::LifeStageGroup.where(sex: 'female').count}"
+puts "Count of LSGs with sex='any': #{Nutrition::LifeStageGroup.where(sex: 'any').count}"
+puts "Count of LSGs with special_condition IS NULL: #{Nutrition::LifeStageGroup.where(special_condition: nil).count}"
+puts "Count of LSGs with special_condition = '': #{Nutrition::LifeStageGroup.where(special_condition: '').count}"
 
-puts "Sample 'Males 19-30 years' LSG: #{LifeStageGroup.find_by(name: 'Males 19-30 years')&.attributes.inspect}"
-puts "Sample 'Children 4-8 years' LSG: #{LifeStageGroup.find_by(name: 'Children 4-8 years')&.attributes.inspect}"
-puts "Sample 'Children 3 years' LSG: #{LifeStageGroup.find_by(name: 'Children 3 years')&.attributes.inspect}"
+puts "Sample 'Males 19-30 years' LSG: #{Nutrition::LifeStageGroup.find_by(name: 'Males 19-30 years')&.attributes.inspect}"
+puts "Sample 'Children 4-8 years' LSG: #{Nutrition::LifeStageGroup.find_by(name: 'Children 4-8 years')&.attributes.inspect}"
+puts "Sample 'Children 3 years' LSG: #{Nutrition::LifeStageGroup.find_by(name: 'Children 3 years')&.attributes.inspect}"
 puts "--- End Post LifeStageGroup Seeding Diagnostics ---"
 
 # 3. Food Groups (food_groups.csv & food_subgroups.csv for FoodGroup model)
 puts "Seeding Food Groups (Parents)..."
 parent_groups_map = {}
 CSV.foreach(Rails.root.join('db', 'data_sources', 'food_groups.csv'), headers: true, header_converters: :symbol) do |row|
-  fg = find_or_create_resource(FoodGroup, { name: row[:name]&.strip }, {
+  fg = find_or_create_resource(Nutrition::FoodGroup, { name: row[:name]&.strip }, {
     default_unit_name: row[:default_unit_name].presence&.strip,
   })
   parent_groups_map[fg.name] = fg.id
 end
-puts "Food Groups (Parents) seeded: #{FoodGroup.where(parent_food_group_id: nil).count}"
+puts "Food Groups (Parents) seeded: #{Nutrition::FoodGroup.where(parent_food_group_id: nil).count}"
 
 puts "Seeding Food Subgroups..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'food_subgroups.csv'), headers: true, header_converters: :symbol) do |row|
@@ -240,23 +240,23 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'food_subgroups.csv'), headers
     next
   end
 
-  parent_food_group_for_subgroup = FoodGroup.find(parent_id)
-  find_or_create_resource(FoodGroup, { name: row[:name]&.strip }, {
+  parent_food_group_for_subgroup = Nutrition::FoodGroup.find(parent_id)
+  find_or_create_resource(Nutrition::FoodGroup, { name: row[:name]&.strip }, {
     parent_food_group_id: parent_id,
     default_unit_name: parent_food_group_for_subgroup.default_unit_name # Inherit default unit
   })
 end
-puts "Total Food Groups (incl. subgroups) seeded: #{FoodGroup.count}"
+puts "Total Food Groups (incl. subgroups) seeded: #{Nutrition::FoodGroup.count}"
 
 # 4. Dietary Patterns (dietary_patterns.csv)
 puts "Seeding Dietary Patterns..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_patterns.csv'), headers: true, header_converters: :symbol) do |row|
-  find_or_create_resource(DietaryPattern, { name: row[:name]&.strip }, {
+  find_or_create_resource(Nutrition::DietaryPattern, { name: row[:name]&.strip }, {
     description: row[:description].presence,
     source_document_reference: row[:source_document_reference].presence
   })
 end
-puts "Dietary Patterns seeded: #{DietaryPattern.count}"
+puts "Dietary Patterns seeded: #{Nutrition::DietaryPattern.count}"
 
 
 # --- Phase 3: Dependent DRI & EER Data from CSVs ---
@@ -264,10 +264,10 @@ puts "Dietary Patterns seeded: #{DietaryPattern.count}"
 # 5. EER Profiles (eer_profiles.csv)
 puts "Seeding EER Profiles..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_profiles.csv'), headers: true, header_converters: :symbol) do |row|
-  life_stage_group = LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
+  life_stage_group = Nutrition::LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
   # EER Profiles are uniquely identified by name for simplicity in CSV, but ensure consistency.
   # If LifeStageGroup is meant to be part of uniqueness, add it to find_by_hash.
-  find_or_create_resource(EerProfile, { name: row[:name]&.strip }, {
+  find_or_create_resource(Nutrition::EerProfile, { name: row[:name]&.strip }, {
     source_table_reference: row[:source_table_reference].presence,
     life_stage_group_id: life_stage_group&.id, # Can be nil if the profile is generic
     sex_filter: row[:sex_filter].presence&.strip,
@@ -286,12 +286,12 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_profiles.csv'), headers: 
     notes: row[:notes].presence
   })
 end
-puts "EER Profiles seeded: #{EerProfile.count}"
+puts "EER Profiles seeded: #{Nutrition::EerProfile.count}"
 
 # 6. EER Additive Components (eer_additive_components.csv)
 puts "Seeding EER Additive Components..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_additive_components.csv'), headers: true, header_converters: :symbol) do |row|
-  life_stage_group = LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
+  life_stage_group = Nutrition::LifeStageGroup.find_by(name: row[:life_stage_group_id_placeholder]&.strip) if row[:life_stage_group_id_placeholder].present?
 
   find_by_attrs = {
     component_type: row[:component_type]&.strip,
@@ -310,15 +310,15 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'eer_additive_components.csv')
     notes: row[:notes].presence,
     source_document_reference: row[:source_document_reference].presence
   }
-  find_or_create_resource(EerAdditiveComponent, find_by_attrs, update_attrs)
+  find_or_create_resource(Nutrition::EerAdditiveComponent, find_by_attrs, update_attrs)
 end
-puts "EER Additive Components seeded: #{EerAdditiveComponent.count}"
+puts "EER Additive Components seeded: #{Nutrition::EerAdditiveComponent.count}"
 
 # 7. Growth Factors (growth_factors.csv)
 puts "Seeding Growth Factors..."
 CSV.foreach(Rails.root.join('db', 'data_sources', 'growth_factors.csv'), headers: true, header_converters: :symbol) do |row|
   life_stage_group_name_csv = row[:life_stage_group_id_placeholder]&.strip
-  life_stage_group = LifeStageGroup.find_by(name: life_stage_group_name_csv)
+  life_stage_group = Nutrition::LifeStageGroup.find_by(name: life_stage_group_name_csv)
   unless life_stage_group
     puts "WARN: LifeStageGroup '#{life_stage_group_name_csv}' not found for GrowthFactor. CSV Row: #{row.to_h}. Skipping."
     next
@@ -329,22 +329,22 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'growth_factors.csv'), headers
     factor_value: row[:factor_value].to_f,
     source_document_reference: row[:source_document_reference].presence
   }
-  find_or_create_resource(GrowthFactor, find_by_attrs, update_attrs)
+  find_or_create_resource(Nutrition::GrowthFactor, find_by_attrs, update_attrs)
 end
-puts "Growth Factors seeded: #{GrowthFactor.count}"
+puts "Growth Factors seeded: #{Nutrition::GrowthFactor.count}"
 
 # 8. PAL Definitions (pal_definitions.csv)
 puts "Seeding PAL Definitions..."
 
 # Diagnostic: Check count for a known problematic query condition with more lenient special_condition check
 # And ensure sex is queried in lowercase to match stored value
-debug_gam_lsg_count = LifeStageGroup.where(sex: 'male') # Assuming 'male' is already lowercase from seeding
+debug_gam_lsg_count = Nutrition::LifeStageGroup.where(sex: 'male') # Assuming 'male' is already lowercase from seeding
                                     .where(special_condition: [nil, ''])
                                     .where("min_age_months >= ?", 228)
                                     .count
 puts "DEBUG (PAL section): Count of LSGs for 'General Adult Male' (male, >=228mo, spec_cond nil/''): #{debug_gam_lsg_count}"
 
-debug_child_3_8_lsg_count = LifeStageGroup.where(special_condition: [nil, ''])
+debug_child_3_8_lsg_count = Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                                           .where("min_age_months >= 36 AND max_age_months <= 107") # 3 to <9 years
                                           .count
 puts "DEBUG (PAL section): Count of LSGs for 'Children 3-8 years' (36-107mo, spec_cond nil/''): #{debug_child_3_8_lsg_count}"
@@ -357,103 +357,103 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'pal_definitions.csv'), header
   # and [nil, ''] for special_condition where applicable.
   target_life_stage_group_names = case life_stage_name_from_csv
   when "General Adult Male"
-    LifeStageGroup.where(sex: 'male')
+    Nutrition::LifeStageGroup.where(sex: 'male')
                   .where(special_condition: [nil, ''])
                   .where("min_age_months >= ?", 228)
                   .pluck(:name)
   when "General Adult Female"
-    LifeStageGroup.where(sex: 'female')
+    Nutrition::LifeStageGroup.where(sex: 'female')
                   .where(special_condition: [nil, ''])
                   .where("min_age_months >= ?", 228)
                   .pluck(:name)
   when "General Boys 3-18 years"
-    LifeStageGroup.where(sex: 'male')
+    Nutrition::LifeStageGroup.where(sex: 'male')
                   .where(special_condition: [nil, ''])
                   .where("min_age_months >= 36 AND max_age_months <= 227")
                   .pluck(:name)
   when "General Girls 3-18 years"
-    LifeStageGroup.where(sex: 'female')
+    Nutrition::LifeStageGroup.where(sex: 'female')
                   .where(special_condition: [nil, ''])
                   .where("min_age_months >= 36 AND max_age_months <= 227")
                   .pluck(:name)
   # ... (ensure all other case branches also use sex: 'male'/'female' in lowercase and special_condition: [nil, ''])
   when "Children 3-8 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where("min_age_months >= 36 AND max_age_months <= 107")
                   .pluck(:name)
   when "Children 9-13 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where("min_age_months >= 108 AND max_age_months <= 167")
                   .pluck(:name)
   when "Adolescents 14-18 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where("min_age_months >= 168 AND max_age_months <= 227")
                   .pluck(:name)
   when "Adults 19+ years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where("min_age_months >= ?", 228)
                   .pluck(:name)
   when "Infants 0-6 months" # These typically don't have sex-specific general PALs, but rely on name
-      LifeStageGroup.where(name: "Infants 0-6 months").pluck(:name)
+      Nutrition::LifeStageGroup.where(name: "Infants 0-6 months").pluck(:name)
   when "Infants 7-12 months"
-      LifeStageGroup.where(name: "Infants 7-12 months").pluck(:name)
+      Nutrition::LifeStageGroup.where(name: "Infants 7-12 months").pluck(:name)
   when "Children 1-3 years"
-      LifeStageGroup.where(name: "Children 1-3 years").pluck(:name)
+      Nutrition::LifeStageGroup.where(name: "Children 1-3 years").pluck(:name)
   when "Children 4-8 years" # This maps to the specific LifeStageGroup from CSV named "Children 4-8 years"
                             # and other relevant groups.
-      LifeStageGroup.where(name: "Children 4-8 years") # Direct name match
-                  .or(LifeStageGroup.where(special_condition: [nil, '']) # Broader match for other 'any' sex groups
+      Nutrition::LifeStageGroup.where(name: "Children 4-8 years") # Direct name match
+                  .or(Nutrition::LifeStageGroup.where(special_condition: [nil, '']) # Broader match for other 'any' sex groups
                                     .where(sex: ['any', 'male', 'female']) # Be explicit if needed
                                     .where("min_age_months >= 48 AND max_age_months <= 107"))
                   .pluck(:name).uniq
   when "Adults 19-30 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female']) # Assuming these can apply to 'any' sex groups if not gender specific
                   .where("min_age_months >= 228 AND max_age_months <= 371")
                   .pluck(:name)
   when "Adults 31-50 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 372 AND max_age_months <= 611")
                   .pluck(:name)
   when "Adults 51-70 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 612 AND max_age_months <= 851")
                   .pluck(:name)
   when "Children 0-2.99 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 0 AND max_age_months <= 35")
                   .pluck(:name)
   when "Children 3-8.99 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female']) # PALs for "Children" often apply to both sexes if not specified
                   .where("min_age_months >= 36 AND max_age_months <= 107")
                   .pluck(:name)
   when "Children 9-13.99 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 108 AND max_age_months <= 167")
                   .pluck(:name)
   when "Adolescents 14-18.99 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 168 AND max_age_months <= 227")
                   .pluck(:name)
   when "Adults 19-70.99 years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 228 AND max_age_months <= 851")
                   .pluck(:name)
   when "Adults 71+ years"
-    LifeStageGroup.where(special_condition: [nil, ''])
+    Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                   .where(sex: ['any', 'male', 'female'])
                   .where("min_age_months >= 852")
                   .pluck(:name)
   else
     # Fallback for direct match by name if not covered above
-    existing_group = LifeStageGroup.find_by(name: life_stage_name_from_csv)
+    existing_group = Nutrition::LifeStageGroup.find_by(name: life_stage_name_from_csv)
     target_life_stage_group_names = existing_group ? [existing_group.name] : []
   end
 
@@ -463,7 +463,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'pal_definitions.csv'), header
   end
 
   target_life_stage_group_names.uniq.each do |resolved_lsg_name|
-    life_stage_group = LifeStageGroup.find_by(name: resolved_lsg_name)
+    life_stage_group = Nutrition::LifeStageGroup.find_by(name: resolved_lsg_name)
     unless life_stage_group
       puts "ERROR: PAL seeding - Could not re-find LifeStageGroup for resolved name '#{resolved_lsg_name}' (Original CSV name: '#{life_stage_name_from_csv}'). Skipping."
       next
@@ -502,10 +502,10 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'pal_definitions.csv'), header
     update_attrs[:pal_category] = find_by_attrs[:pal_category] if find_by_attrs.key?(:pal_category)
     update_attrs[:percentile_value] = find_by_attrs[:percentile_value] if find_by_attrs.key?(:percentile_value)
 
-    find_or_create_resource(PalDefinition, find_by_attrs, update_attrs)
+    find_or_create_resource(Nutrition::PalDefinition, find_by_attrs, update_attrs)
   end
 end
-puts "PAL Definitions seeded: #{PalDefinition.count}"
+puts "PAL Definitions seeded: #{Nutrition::PalDefinition.count}"
 
 # 9. Reference Anthropometries (reference_anthropometries.csv)
 puts "Seeding Reference Anthropometries..."
@@ -557,30 +557,30 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'reference_anthropometries.csv
     # Covers groups overlapping with 12 to 107 months, no special conditions.
     age_min_filter = 12  # 1 year
     age_max_filter = 107 # 8 years and 11 months (up to, but not including, 9 years)
-    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+    resolved_lsg_names = Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                                        .where("min_age_months <= ? AND COALESCE(max_age_months, 12000) >= ?", age_max_filter, age_min_filter)
                                        .pluck(:name)
   when "Children 9-18 years DLW"
     # Covers groups overlapping with 108 to 227 months, no special conditions.
     age_min_filter = 108 # 9 years
     age_max_filter = 227 # 18 years and 11 months (up to, but not including, 19 years)
-    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+    resolved_lsg_names = Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                                        .where("min_age_months <= ? AND COALESCE(max_age_months, 12000) >= ?", age_max_filter, age_min_filter)
                                        .pluck(:name)
   when "Adults 19+ years DLW"
     # Covers groups from 228 months upwards, no special conditions.
-    resolved_lsg_names = LifeStageGroup.where(special_condition: [nil, ''])
+    resolved_lsg_names = Nutrition::LifeStageGroup.where(special_condition: [nil, ''])
                                        .where("min_age_months >= ?", 228)
                                        .pluck(:name)
   when "Pregnant/Lactating Women DLW"
     # Covers all pregnant or lactating female groups.
-    resolved_lsg_names = LifeStageGroup.where(sex: 'female')
+    resolved_lsg_names = Nutrition::LifeStageGroup.where(sex: 'female')
                                        .where(special_condition: ['pregnancy', 'lactation'])
                                        .pluck(:name)
   else
     # Fallback: Attempt a direct match by name if the placeholder wasn't handled above.
     # This can be useful if new, directly named placeholders are added to the CSV.
-    group = LifeStageGroup.find_by(name: life_stage_name_csv)
+    group = Nutrition::LifeStageGroup.find_by(name: life_stage_name_csv)
     resolved_lsg_names = [group.name] if group
   end
 
@@ -593,14 +593,14 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'reference_anthropometries.csv
   end
 
   resolved_lsg_names.each do |lsg_name|
-    life_stage_group = LifeStageGroup.find_by(name: lsg_name)
+    life_stage_group = Nutrition::LifeStageGroup.find_by(name: lsg_name)
     unless life_stage_group
       # This error should ideally not occur if the mapping logic above and LifeStageGroup seeding are correct.
       puts "ERROR: Reference Anthropometry - Resolved LifeStageGroup name '#{lsg_name}' (from CSV placeholder '#{life_stage_name_csv}') not found in database. Skipping this specific entry."
       next
     end
 
-    find_or_create_resource(ReferenceAnthropometry, { life_stage_group_id: life_stage_group.id }, {
+    find_or_create_resource(Nutrition::ReferenceAnthropometry, { life_stage_group_id: life_stage_group.id }, {
       reference_height_cm: row[:reference_height_cm].present? ? row[:reference_height_cm].to_f : nil,
       reference_weight_kg: row[:reference_weight_kg].present? ? row[:reference_weight_kg].to_f : nil,
       median_bmi: row[:median_bmi].present? ? row[:median_bmi].to_f : nil,
@@ -608,7 +608,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'reference_anthropometries.csv
     })
   end
 end
-puts "Reference Anthropometries seeded: #{ReferenceAnthropometry.count}"
+puts "Reference Anthropometries seeded: #{Nutrition::ReferenceAnthropometry.count}"
 
 
 # 10. DRI Values (dri_values.csv)
@@ -622,7 +622,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: tr
                            else nutrient_identifier_csv
                            end
 
-  nutrient = Nutrient.find_by(dri_identifier: db_nutrient_identifier)
+  nutrient = Nutrition::Nutrient.find_by(dri_identifier: db_nutrient_identifier)
   life_stage_name_csv = row[:life_stage_name]&.strip # The name from dri_values.csv
 
   unless nutrient
@@ -652,161 +652,161 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: tr
        "Lactation 19-30 years 0-6 months", "Lactation 19-30 years 7-12 months",
        "Lactation 31-50 years 0-6 months", "Lactation 31-50 years 7-12 months"
     # For these, the CSV name is expected to be a direct LifeStageGroup name
-    group = LifeStageGroup.find_by(name: life_stage_name_csv)
+    group = Nutrition::LifeStageGroup.find_by(name: life_stage_name_csv)
     resolved_life_stage_group_names = [group.name] if group
 
   # Category 2: Common DRI groupings that imply Male + Female counterparts
   when "Children 4-8 years" # General term implies all relevant groups
-    resolved_life_stage_group_names = LifeStageGroup.where(name: ["Children 4-8 years", "Males 4-8 years", "Females 4-8 years"]).pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Children 4-8 years", "Males 4-8 years", "Females 4-8 years"]).pluck(:name)
   when "Children 9-13 years", "Boys 9-13 years", "Girls 9-13 years" # Includes sex-specific synonyms
     # If "Children 9-13 years" appears, map to both. If "Boys..." or "Girls...", map to specific.
     if life_stage_name_csv == "Children 9-13 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 9-13 years", "Females 9-13 years"]).pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 9-13 years", "Females 9-13 years"]).pluck(:name)
     elsif life_stage_name_csv == "Boys 9-13 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 9-13 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 9-13 years").pluck(:name)
     elsif life_stage_name_csv == "Girls 9-13 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 9-13 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 9-13 years").pluck(:name)
     end
   when "Adolescents 14-18 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 14-18 years", "Females 14-18 years"]).pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 14-18 years", "Females 14-18 years"]).pluck(:name)
   when "Adults 19-30 years", "Men 19-30 years", "Women 19-30 years"
     if life_stage_name_csv == "Adults 19-30 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 19-30 years", "Females 19-30 years"]).pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 19-30 years", "Females 19-30 years"]).pluck(:name)
     elsif life_stage_name_csv == "Men 19-30 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 19-30 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 19-30 years").pluck(:name)
     elsif life_stage_name_csv == "Women 19-30 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 19-30 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 19-30 years").pluck(:name)
     end
   when "Adults 31-50 years", "Men 31-50 years", "Women 31-50 years"
     if life_stage_name_csv == "Adults 31-50 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 31-50 years", "Females 31-50 years"]).pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 31-50 years", "Females 31-50 years"]).pluck(:name)
     elsif life_stage_name_csv == "Men 31-50 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 31-50 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 31-50 years").pluck(:name)
     elsif life_stage_name_csv == "Women 31-50 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 31-50 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 31-50 years").pluck(:name)
     end
   when "Adults 51-70 years", "Males 51-70 years", "Females 51-70 years", "Men 51-70 years", "Women 51-70 years"
     # life_stages.csv has "Males 51-70 years" and "Females 51-70 years"
     if life_stage_name_csv == "Adults 51-70 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 51-70 years", "Females 51-70 years"]).pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 51-70 years", "Females 51-70 years"]).pluck(:name)
     elsif life_stage_name_csv == "Males 51-70 years" || life_stage_name_csv == "Men 51-70 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 51-70 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 51-70 years").pluck(:name)
     elsif life_stage_name_csv == "Females 51-70 years" || life_stage_name_csv == "Women 51-70 years"
-      resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 51-70 years").pluck(:name)
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 51-70 years").pluck(:name)
     end
   when "Adults >70 years", "Men >70 years", "Women >70 years" # Corresponds to "71+ years" in life_stages.csv
     if life_stage_name_csv == "Adults >70 years"
-        resolved_life_stage_group_names = LifeStageGroup.where(name: ["Males 71+ years", "Females 71+ years"]).pluck(:name)
+        resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Males 71+ years", "Females 71+ years"]).pluck(:name)
     elsif life_stage_name_csv == "Men >70 years" # Covered by direct match "Males 71+ years" if CSV used that
-        resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 71+ years").pluck(:name)
+        resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 71+ years").pluck(:name)
     elsif life_stage_name_csv == "Women >70 years"
-        resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 71+ years").pluck(:name)
+        resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 71+ years").pluck(:name)
     end
   # Need to handle "Males >70 years" and "Females >70 years" if they are distinct from "Men >70 years" in CSV
   when "Males >70 years" # From your error log
-    resolved_life_stage_group_names = LifeStageGroup.where(name: "Males 71+ years").pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Males 71+ years").pluck(:name)
   when "Females >70 years" # From your error log
-    resolved_life_stage_group_names = LifeStageGroup.where(name: "Females 71+ years").pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: "Females 71+ years").pluck(:name)
 
 
   # Category 3: Broader Age/Sex Categories or Special Conditions
   when "Pregnancy <=18 years", "Pregnancy 14-18 years" # CSV term maps to specific trimesters
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Pregnancy 14-18 years 1st Trimester", "Pregnancy 14-18 years 2nd Trimester", "Pregnancy 14-18 years 3rd Trimester"
     ]).pluck(:name)
   when "Pregnancy 19-30 years" # CSV specific term, maps to its trimesters
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Pregnancy 19-30 years 1st Trimester", "Pregnancy 19-30 years 2nd Trimester", "Pregnancy 19-30 years 3rd Trimester"
     ]).pluck(:name)
   when "Pregnancy 31-50 years" # CSV specific term
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Pregnancy 31-50 years 1st Trimester", "Pregnancy 31-50 years 2nd Trimester", "Pregnancy 31-50 years 3rd Trimester"
     ]).pluck(:name)
   when "Pregnancy 19-50 years", "Pregnancy >=19 years" # CSV Broader term
-    resolved_life_stage_group_names = LifeStageGroup.where(special_condition: 'pregnancy').where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(special_condition: 'pregnancy').where(name: [
         "Pregnancy 19-30 years 1st Trimester", "Pregnancy 19-30 years 2nd Trimester", "Pregnancy 19-30 years 3rd Trimester",
         "Pregnancy 31-50 years 1st Trimester", "Pregnancy 31-50 years 2nd Trimester", "Pregnancy 31-50 years 3rd Trimester"
     ]).pluck(:name)
   when "Pregnancy 14-50 years", "Pregnancy (all ages)"
-    resolved_life_stage_group_names = LifeStageGroup.where(special_condition: 'pregnancy').pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(special_condition: 'pregnancy').pluck(:name)
 
   when "Lactation <=18 years", "Lactation 14-18 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Lactation 14-18 years 0-6 months", "Lactation 14-18 years 7-12 months"
     ]).pluck(:name)
   when "Lactation 19-30 years" # CSV specific term
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Lactation 19-30 years 0-6 months", "Lactation 19-30 years 7-12 months"
     ]).pluck(:name)
   when "Lactation 31-50 years" # CSV specific term
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Lactation 31-50 years 0-6 months", "Lactation 31-50 years 7-12 months"
     ]).pluck(:name)
   when "Lactation 19-50 years", "Lactation >=19 years" # CSV Broader term
-      resolved_life_stage_group_names = LifeStageGroup.where(special_condition: 'lactation').where(name: [
+      resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(special_condition: 'lactation').where(name: [
           "Lactation 19-30 years 0-6 months", "Lactation 19-30 years 7-12 months",
           "Lactation 31-50 years 0-6 months", "Lactation 31-50 years 7-12 months"
       ]).pluck(:name)
   when "Lactation 14-50 years", "Lactation (all ages)"
-    resolved_life_stage_group_names = LifeStageGroup.where(special_condition: 'lactation').pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(special_condition: 'lactation').pluck(:name)
 
   # Ranges spanning multiple standard groups
   when "Males 19-70 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
                                         .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 851).pluck(:name) # 19y to end of 70y
   when "Females 19-70 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
                                         .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 851).pluck(:name)
   when "Adolescents 9-18 years" # Broader than specific 9-13 and 14-18
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Males 9-13 years", "Females 9-13 years", "Males 14-18 years", "Females 14-18 years"
     ]).pluck(:name)
   when "Adults 19-70 years" # General term for both sexes
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
                                         .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 851).pluck(:name)
   when "Adults >=19 years", "Adults >18 years" # Synonyms
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 228).pluck(:name) # min_age_months for 19 years
   when "Males >18 years", "Males >=19 years", "Males >19 years" # Synonyms
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 228).pluck(:name)
   when "Females >18 years", "Females >=19 years", "Females >19 years" # Synonyms
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 228).pluck(:name)
   when "Adults 19-50 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
                                         .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 611).pluck(:name) # Up to end of 50y
   when "Males 19-50 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
                                          .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 611).pluck(:name)
   when "Females 19-50 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
                                          .where("min_age_months >= ? AND COALESCE(max_age_months, 12000) <= ?", 228, 611).pluck(:name)
   when "Males >=51 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'male', special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 612).pluck(:name) # min_age_months for 51 years
   when "Females >=51 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: 'female', special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 612).pluck(:name)
   when "Adults >=51 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 612).pluck(:name)
   when "Adults >=31 years"
-    resolved_life_stage_group_names = LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(sex: ['male', 'female'], special_condition: [nil, ''])
                                         .where("min_age_months >= ?", 372).pluck(:name) # min_age_months for 31 years
   when "Children 4-13 years" # Covers 4-8 and 9-13
-    resolved_life_stage_group_names = LifeStageGroup.where(name: [
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: [
       "Children 4-8 years", "Males 4-8 years", "Females 4-8 years",
       "Males 9-13 years", "Females 9-13 years"
     ]).pluck(:name)
   when "Infants 0-12 months" # Covers 0-6 and 7-12
-    resolved_life_stage_group_names = LifeStageGroup.where(name: ["Infants 0-6 months", "Infants 7-12 months"]).pluck(:name)
+    resolved_life_stage_group_names = Nutrition::LifeStageGroup.where(name: ["Infants 0-6 months", "Infants 7-12 months"]).pluck(:name)
 
 
   # Category 4: Fallback for any unhandled exact matches
   else
     # This is a safety net. Ideally, all CSV values should be explicitly handled above.
-    group = LifeStageGroup.find_by(name: life_stage_name_csv)
+    group = Nutrition::LifeStageGroup.find_by(name: life_stage_name_csv)
     resolved_life_stage_group_names = [group.name] if group
   end
   # --- END LifeStageGroup Mapping ---
@@ -819,7 +819,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: tr
   end
 
   resolved_life_stage_group_names.each do |resolved_name|
-    life_stage_group = LifeStageGroup.find_by(name: resolved_name)
+    life_stage_group = Nutrition::LifeStageGroup.find_by(name: resolved_name)
     unless life_stage_group
       # This error means a name was "resolved" but doesn't actually exist in the DB.
       # Indicates an issue with the mapping logic itself or LifeStageGroup seeding.
@@ -843,17 +843,17 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dri_values.csv'), headers: tr
       notes: row[:notes].presence,
       source_document_reference: row[:source_document].presence
     }
-    find_or_create_resource(DriValue, find_by_attrs.compact, update_attrs)
+    find_or_create_resource(Nutrition::DriValue, find_by_attrs.compact, update_attrs)
   end
 end
-puts "DRI Values seeded: #{DriValue.count}"
+puts "DRI Values seeded: #{Nutrition::DriValue.count}"
 
 
 # 11. Dietary Pattern Components
 puts "Seeding Dietary Pattern Components (Food Group Recommendations and Calorie Level Limits)..."
 dietary_pattern_calorie_levels_cache = {} # Cache to avoid repeated DB lookups
 dietary_pattern_food_group_recommendations_amount_value_nullable =
-  DietaryPatternFoodGroupRecommendation.columns_hash['amount_value'].null # Check if amount_value can be null
+  Nutrition::DietaryPatternFoodGroupRecommendation.columns_hash['amount_value'].null # Check if amount_value can be null
 
 CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.csv'), headers: true, header_converters: :symbol) do |row|
   dietary_pattern_name = row[:dietary_pattern_name]&.strip
@@ -864,7 +864,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.cs
     next
   end
 
-  dietary_pattern = DietaryPattern.find_by(name: dietary_pattern_name)
+  dietary_pattern = Nutrition::DietaryPattern.find_by(name: dietary_pattern_name)
   unless dietary_pattern
     puts "ERROR: DietaryPattern '#{dietary_pattern_name}' not found for row: #{row.to_h}. Skipping."
     next
@@ -874,7 +874,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.cs
   dietary_pattern_calorie_level = dietary_pattern_calorie_levels_cache[dpcl_key]
 
   unless dietary_pattern_calorie_level
-    dietary_pattern_calorie_level = DietaryPatternCalorieLevel.find_or_initialize_by(
+    dietary_pattern_calorie_level = Nutrition::DietaryPatternCalorieLevel.find_or_initialize_by(
       dietary_pattern_id: dietary_pattern.id,
       calorie_level: calorie_level_val
     )
@@ -903,7 +903,7 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.cs
       next
     end
 
-    food_group = FoodGroup.find_by(name: target_food_group_name)
+    food_group = Nutrition::FoodGroup.find_by(name: target_food_group_name)
     unless food_group
       puts "WARN: Dietary Pattern Component - FoodGroup '#{target_food_group_name}' not found. CSV Row: #{row.to_h}. Skipping."
       next
@@ -924,12 +924,12 @@ CSV.foreach(Rails.root.join('db', 'data_sources', 'dietary_pattern_components.cs
       dietary_pattern_calorie_level_id: dietary_pattern_calorie_level.id,
       food_group_id: food_group.id
     }
-    find_or_create_resource(DietaryPatternFoodGroupRecommendation, recommendation_find_by, recommendation_attrs_to_update)
+    find_or_create_resource(Nutrition::DietaryPatternFoodGroupRecommendation, recommendation_find_by, recommendation_attrs_to_update)
   end
 end
 
-puts "Dietary Pattern Calorie Levels processed: #{DietaryPatternCalorieLevel.count}"
-puts "Dietary Pattern Food Group Recommendations seeded: #{DietaryPatternFoodGroupRecommendation.count}"
+puts "Dietary Pattern Calorie Levels processed: #{Nutrition::DietaryPatternCalorieLevel.count}"
+puts "Dietary Pattern Food Group Recommendations seeded: #{Nutrition::DietaryPatternFoodGroupRecommendation.count}"
 
 
 puts "--------------------------------"
