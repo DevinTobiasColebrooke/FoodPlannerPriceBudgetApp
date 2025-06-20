@@ -33,8 +33,8 @@ class DashboardController < ApplicationController
     if (user_input_attributes[:age_in_months].present? || user_input_attributes[:age].present?) &&
        user_input_attributes[:height].present? &&
        user_input_attributes[:weight].present?
-      user_input_dto = NutrientCalculator::UserInputDTO.new(user_input_attributes)
-      @nutrient_calculation = NutrientCalculatorService.new(user_input_dto).calculate
+      user_input_dto = NutrientCalculator::DataContracts::Inputs::UserInputDto.new(user_input_attributes)
+      @nutrient_calculation = NutrientCalculator::Orchestration::NutrientCalculatorService.new(user_input_dto).calculate
     end
   end
 end
