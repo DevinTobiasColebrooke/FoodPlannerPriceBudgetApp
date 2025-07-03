@@ -1,0 +1,16 @@
+<div class="shopping-list-item" id="shopping-list-item-<%= item.id %>">
+  <label class="flex items-center gap-2 text-sm text-fp-neutral-text">
+    <%= form_with(model: item, class: "flex items-center gap-2") do |f| %>
+      <%= f.check_box :is_checked, class: "form-checkbox-custom", onchange: "this.form.requestSubmit()" %>
+      <span>
+        <%= item.custom_item_name || item.ingredient&.name %>
+        <% if item.quantity_description.present? %>
+          <span class="text-xs text-fp-neutral-text-light">(<%= item.quantity_description %>)</span>
+        <% end %>
+      </span>
+    <% end %>
+  </label>
+  <span class="text-xs <%= item.available_at_store?(@store) ? 'text-fp-neutral-text-light' : 'text-fp-error line-through' %>">
+    <%= item.available_at_store?(@store) ? @store&.name : "Unavailable at #{@store&.name}" %>
+  </span>
+</div>

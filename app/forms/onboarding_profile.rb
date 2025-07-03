@@ -26,6 +26,7 @@ class OnboardingProfile
   attribute :allergies_input, :string
   attribute :allergy_severities, :hash, default: {}
   attribute :allergy_notes, :hash, default: {}
+  attribute :common_allergies, :string_array, default: []
 
   # Equipment
   attribute :equipment, :string_array, default: []

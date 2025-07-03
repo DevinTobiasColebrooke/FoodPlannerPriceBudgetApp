@@ -114,7 +114,7 @@
     let currentlyCheckedId = null;
 
     locationRadios.forEach(radio => {
-      radio.addEventListener('click', function() {
+      radio.addEventListener('change', function() {
         if (this.id === currentlyCheckedId && this.checked) {
           this.checked = false;
           currentlyCheckedId = null;

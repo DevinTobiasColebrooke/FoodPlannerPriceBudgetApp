@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Food Planner</title> <%# Replace with your application's title logic if needed %>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <title><%= content_for(:title) || "Food Planner Price Budget App" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-  <%# Ensure your Tailwind CSS setup (via application.css) includes the Poppins font and the custom fp-colors from your design system %>
-</head>
+    <%= yield :head %>
+
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
 <body class="bg-fp-body-bg font-sans text-fp-neutral-text m-0">
-  <main class="flex-grow p-4 pb-20"> <%# Added padding, pb-20 for space for fixed nav %>
+  <main class="flex-grow p-4 pb-20">
     <%= yield %>
   </main>
 

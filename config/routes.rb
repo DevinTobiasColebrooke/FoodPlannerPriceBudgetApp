@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get "settings/show"
-  get "settings/edit"
-  get "settings/update"
+  resource :settings, only: [:show, :edit, :update]
   get "shopping_list_items/create"
   get "shopping_list_items/update"
   get "shopping_list_items/destroy"
@@ -12,9 +10,7 @@ Rails.application.routes.draw do
   get "shopping_lists/edit"
   get "shopping_lists/update"
   get "shopping_lists/destroy"
-  get "meal_plans/index"
   get "recipes/show"
-  get "dashboard/show"
   # Authentication routes
   resource :session
   resources :passwords, param: :token
@@ -22,6 +18,9 @@ Rails.application.routes.draw do
   # Root route
   root to: 'onboarding/welcome#show'
   get '/dashboard', to: 'dashboard#show', as: :authenticated_root
+
+  # Add regular dashboard resource
+  resource :dashboard, only: [:show]
 
   # Onboarding routes
   namespace :onboarding do
@@ -91,4 +90,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :stores, only: [:index, :show] do
+    member do
+      get :availability
+    end
+  end
+
+  resources :shopping_lists do
+    member do
+      post :clear_checked
+    end
+    resources :shopping_list_items, only: [:create, :update, :destroy]
+  end
+
+  resources :meal_plans, only: [:index, :show]
 end

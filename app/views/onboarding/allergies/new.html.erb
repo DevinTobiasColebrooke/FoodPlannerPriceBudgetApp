@@ -35,24 +35,14 @@
     <div class="mt-4">
       <p class="block font-sans text-sm font-medium text-fp-neutral-darkest mb-2">Common Allergens (optional quick select):</p>
       <div class="grid grid-cols-2 gap-3">
-        <% common_allergies = [
-          ["Dairy", "dairy"],
-          ["Eggs", "eggs"],
-          ["Tree Nuts", "nuts"],
-          ["Peanuts", "peanuts"],
-          ["Shellfish", "shellfish"],
-          ["Soy", "soy"],
-          ["Gluten", "gluten"]
-        ] %>
-
-        <% common_allergies.each do |label, value| %>
+        <% @common_allergies.each do |allergy| %>
           <label class="flex items-center p-3 bg-fp-white rounded-fp border border-fp-neutral-medium hover:border-fp-primary-green has-[:checked]:border-fp-primary-green has-[:checked]:ring-1 has-[:checked]:ring-fp-primary-green">
             <%= f.check_box :common_allergies,
               { multiple: true, class: "form-checkbox-custom common-allergy-checkbox mr-2" },
-              value,
+              allergy.name.downcase,
               nil
             %>
-            <span class="text-sm text-fp-neutral-darkest"><%= label %></span>
+            <span class="text-sm text-fp-neutral-darkest"><%= allergy.name %></span>
           </label>
         <% end %>
       </div>

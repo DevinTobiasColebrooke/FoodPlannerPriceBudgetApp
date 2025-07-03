@@ -84,8 +84,8 @@
                 <p class="text-xs text-fp-neutral-text-light">Tuesday, Oct 26</p>
                 <h1 class="font-display-prototype text-2xl text-fp-neutral-darkest">Good Morning!</h1>
             </div>
-            <button type="button" id="profileStatsBtn"> <!-- Changed from <a> to <button> for better semantics -->
-                <%= image_tag @current_user&.avatar_url || "/assets/images/920999-avatar/svg/002-girl.svg", alt: "User Avatar", class: "w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white" %>
+            <button type="button" id="profileStatsBtn">
+                <%= image_tag @current_user.avatar_url, alt: "User Avatar", class: "w-10 h-10 rounded-full border-2 border-fp-primary-green p-0.5 bg-white" %>
             </button>
         </header>
 
@@ -100,14 +100,211 @@
             </div>
 
             <!-- Conceptual Meal Timer -->
-            <div class="circular-timer-demo" id="dashboardLiveTimer">
-                <div class="timer-layer timer-layer-until-prep"></div>
-                <div class="timer-layer timer-layer-prep"></div>
-                <div class="timer-layer timer-layer-cook"></div>
-                <div class="timer-layer timer-layer-eat"></div>
-                <div class="inner-circle">
-                    <div class="time-left">03:45</div>
-                    <div class="status">Until Prep</div>
+            <div class="flex gap-6">
+                <div class="circular-timer-demo" id="dashboardLiveTimer">
+                    <div class="timer-layer timer-layer-until-prep"></div>
+                    <div class="timer-layer timer-layer-prep"></div>
+                    <div class="timer-layer timer-layer-cook"></div>
+                    <div class="timer-layer timer-layer-eat"></div>
+                    <div class="inner-circle">
+                        <div class="time-left">03:45</div>
+                        <div class="status">Until Prep</div>
+                    </div>
+                </div>
+
+                <!-- Nutrient Stats Section -->
+                <div class="flex-1 bg-white p-4 rounded-fp shadow-fp-card">
+                    <h2 class="text-lg font-semibold text-fp-neutral-darkest mb-3">Daily Nutrient Targets</h2>
+
+                    <!-- Energy -->
+                    <div class="mb-4">
+                        <h3 class="text-sm font-medium text-fp-neutral-text-light mb-1">Energy</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-fp-primary-green"><%= @nutrient_calculation&.dig(:energy, :eer_kcal_day) || '--' %> kcal</span>
+                            <span class="text-xs text-fp-neutral-text-light">Daily Target</span>
+                        </div>
+                    </div>
+
+                    <!-- Macronutrients -->
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <!-- Protein -->
+                        <div class="text-center">
+                            <h4 class="text-xs font-medium text-fp-neutral-text-light mb-1">Protein</h4>
+                            <div class="text-lg font-semibold text-fp-accent-blue">
+                                <%= @nutrient_calculation&.dig(:macronutrients, :protein, :rda_g_total) || '--' %>g
+                            </div>
+                        </div>
+                        <!-- Carbs -->
+                        <div class="text-center">
+                            <h4 class="text-xs font-medium text-fp-neutral-text-light mb-1">Carbs</h4>
+                            <div class="text-lg font-semibold text-fp-accent-yellow">
+                                <%= @nutrient_calculation&.dig(:macronutrients, :carbohydrates, :rda_g) || '--' %>g
+                            </div>
+                        </div>
+                        <!-- Fat -->
+                        <div class="text-center">
+                            <h4 class="text-xs font-medium text-fp-neutral-text-light mb-1">Fat</h4>
+                            <div class="text-lg font-semibold text-fp-primary-green">
+                                <%= @nutrient_calculation&.dig(:macronutrients, :fat, :total_fat, :amdr, :grams, :min_grams) || '--' %>g
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BMI -->
+                    <div class="border-t border-fp-neutral-medium pt-3">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-sm font-medium text-fp-neutral-text-light">BMI</h3>
+                                <div class="text-lg font-semibold text-fp-neutral-darkest">
+                                    <%= @nutrient_calculation&.dig(:bmi, :value) || '--' %>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-fp-neutral-text-light">Status</span>
+                                <div class="text-sm font-medium <%= bmi_status_color(@nutrient_calculation&.dig(:bmi, :category)) %>">
+                                    <%= @nutrient_calculation&.dig(:bmi, :category) || '--' %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full DRI Report Button -->
+                    <div class="mt-4">
+                        <button id="fullDriReportBtn" class="w-full bg-fp-accent-blue text-white text-sm font-medium py-2 px-4 rounded-fp shadow-fp-cta hover:bg-fp-accent-blue-dark transition-colors">
+                            Full DRI Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full DRI Report Modal -->
+            <div id="fullDriReportModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold">Complete Dietary Reference Intake Report</h2>
+                        <button id="closeDriReportBtn" class="text-fp-neutral-text-light hover:text-fp-neutral-darkest">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- Energy Section -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Energy Requirements</h3>
+                        <div class="bg-fp-neutral-lightest p-4 rounded-fp">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm text-fp-neutral-text-light">Estimated Energy Requirement (EER)</p>
+                                    <p class="text-lg font-semibold text-fp-primary-green">
+                                        <%= @nutrient_calculation&.dig(:energy, :eer_kcal_day) || '--' %> kcal/day
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-fp-neutral-text-light">Prediction Interval</p>
+                                    <p class="text-lg font-semibold text-fp-neutral-darkest">
+                                        <%= @nutrient_calculation&.dig(:energy, :prediction_interval_kcal_day) || '--' %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Macronutrients Section -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Macronutrients</h3>
+                        <div class="bg-fp-neutral-lightest p-4 rounded-fp space-y-4">
+                            <!-- Protein -->
+                            <div>
+                                <h4 class="text-sm font-medium text-fp-accent-blue mb-1">Protein</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">RDA per kg</p>
+                                        <p class="text-sm font-semibold"><%= @nutrient_calculation&.dig(:macronutrients, :protein, :rda_g_per_kg) || '--' %> g/kg</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">Total RDA</p>
+                                        <p class="text-sm font-semibold"><%= @nutrient_calculation&.dig(:macronutrients, :protein, :rda_g_total) || '--' %> g</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">AMDR Range</p>
+                                        <p class="text-sm font-semibold">
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :protein, :amdr, :percent_min) || '--' %>% -
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :protein, :amdr, :percent_max) || '--' %>%
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carbohydrates -->
+                            <div>
+                                <h4 class="text-sm font-medium text-fp-accent-yellow mb-1">Carbohydrates</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">RDA</p>
+                                        <p class="text-sm font-semibold"><%= @nutrient_calculation&.dig(:macronutrients, :carbohydrates, :rda_g) || '--' %> g</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">AMDR Range</p>
+                                        <p class="text-sm font-semibold">
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :carbohydrates, :amdr_percent_min) || '--' %>% -
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :carbohydrates, :amdr_percent_max) || '--' %>%
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fat -->
+                            <div>
+                                <h4 class="text-sm font-medium text-fp-primary-green mb-1">Fat</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">Total Fat AMDR</p>
+                                        <p class="text-sm font-semibold">
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :fat, :total_fat, :amdr, :percent_min) || '--' %>% -
+                                            <%= @nutrient_calculation&.dig(:macronutrients, :fat, :total_fat, :amdr, :percent_max) || '--' %>%
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-fp-neutral-text-light">Saturated Fat Limit</p>
+                                        <p class="text-sm font-semibold">
+                                            < <%= @nutrient_calculation&.dig(:macronutrients, :fat, :saturated_fat, :limit_grams) || '--' %> g
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Micronutrients Section -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Micronutrients</h3>
+                        <div class="bg-fp-neutral-lightest p-4 rounded-fp">
+                            <div class="grid grid-cols-2 gap-4">
+                                <% if @nutrient_calculation&.dig(:micronutrients) %>
+                                    <% @nutrient_calculation[:micronutrients].each do |nutrient, values| %>
+                                        <div class="mb-3">
+                                            <h4 class="text-sm font-medium text-fp-neutral-darkest mb-1"><%= nutrient.to_s.titleize %></h4>
+                                            <div class="space-y-1">
+                                                <% if values[:rda] %>
+                                                    <p class="text-xs text-fp-neutral-text-light">RDA</p>
+                                                    <p class="text-sm font-semibold"><%= values[:rda][:value] %> <%= values[:rda][:unit] %></p>
+                                                <% end %>
+                                                <% if values[:ai] %>
+                                                    <p class="text-xs text-fp-neutral-text-light">AI</p>
+                                                    <p class="text-sm font-semibold"><%= values[:ai][:value] %> <%= values[:ai][:unit] %></p>
+                                                <% end %>
+                                                <% if values[:ul] %>
+                                                    <p class="text-xs text-fp-neutral-text-light">UL</p>
+                                                    <p class="text-sm font-semibold"><%= values[:ul][:value] %> <%= values[:ul][:unit] %></p>
+                                                <% end %>
+                                            </div>
+                                        </div>
+                                    <% end %>
+                                <% else %>
+                                    <p class="text-sm text-fp-neutral-text-light">No micronutrient data available</p>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -341,7 +538,28 @@
                     }
                 });
             }
-            // Any other DOMContentLoaded logic for dashboard.html can go here
+
+            // Full DRI Report Modal Logic
+            const fullDriReportBtn = document.getElementById('fullDriReportBtn');
+            const fullDriReportModal = document.getElementById('fullDriReportModal');
+            const closeDriReportBtn = document.getElementById('closeDriReportBtn');
+
+            if (fullDriReportBtn && fullDriReportModal && closeDriReportBtn) {
+                fullDriReportBtn.addEventListener('click', () => {
+                    fullDriReportModal.classList.remove('hidden');
+                });
+
+                closeDriReportBtn.addEventListener('click', () => {
+                    fullDriReportModal.classList.add('hidden');
+                });
+
+                // Close modal if clicked outside the content
+                fullDriReportModal.addEventListener('click', (event) => {
+                    if (event.target === fullDriReportModal) {
+                        fullDriReportModal.classList.add('hidden');
+                    }
+                });
+            }
         });
     </script>
 </body>

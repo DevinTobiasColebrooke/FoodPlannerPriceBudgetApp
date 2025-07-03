@@ -3,33 +3,36 @@ module UserManagement
     attribute :guest, :boolean, default: false # Define attribute with default
 
     has_secure_password validations: false # Disable default has_secure_password validations
-    has_many :sessions, dependent: :destroy
+    has_many :sessions, class_name: 'UserManagement::Session', dependent: :destroy
 
     # Goals
-    has_many :user_goals, dependent: :destroy
-    has_many :goals, through: :user_goals
-    has_one :primary_user_goal, -> { where(is_primary: true) }, class_name: 'UserGoal'
-    has_one :primary_goal, through: :primary_user_goal, source: :goal
+    has_many :user_goals, class_name: 'UserManagement::UserGoal', dependent: :destroy
+    has_many :goals, through: :user_goals, class_name: 'UserManagement::Goal'
+    has_one :primary_user_goal, -> { where(is_primary: true) }, class_name: 'UserManagement::UserGoal'
+    has_one :primary_goal, through: :primary_user_goal, source: :goal, class_name: 'UserManagement::Goal'
 
     # Allergies
-    has_many :user_allergies, dependent: :destroy
-    has_many :allergies, through: :user_allergies
+    has_many :user_allergies, class_name: 'UserManagement::UserAllergy', dependent: :destroy
+    has_many :allergies, through: :user_allergies, class_name: 'UserManagement::Allergy'
 
     # Dietary Restrictions
-    has_many :user_dietary_restrictions, dependent: :destroy
-    has_many :dietary_restrictions, through: :user_dietary_restrictions
+    has_many :user_dietary_restrictions, class_name: 'UserManagement::UserDietaryRestriction', dependent: :destroy
+    has_many :dietary_restrictions, through: :user_dietary_restrictions, class_name: 'UserManagement::DietaryRestriction'
 
     # Kitchen Equipment
-    has_many :user_kitchen_equipments, dependent: :destroy
-    has_many :kitchen_equipments, through: :user_kitchen_equipments
+    has_many :user_kitchen_equipments, class_name: 'UserManagement::UserKitchenEquipment', dependent: :destroy
+    has_many :kitchen_equipments, through: :user_kitchen_equipments, class_name: 'UserManagement::KitchenEquipment'
 
     # Recipes
-    has_many :recipes, foreign_key: :creator_id
-    has_many :meal_plan_entries, dependent: :destroy
-    has_many :planned_recipes, through: :meal_plan_entries, source: :recipe
+    has_many :recipes, foreign_key: :creator_id, class_name: 'MealPlanning::Recipe'
+    has_many :meal_plan_entries, class_name: 'MealPlanning::MealPlanEntry', dependent: :destroy
+    has_many :planned_recipes, through: :meal_plan_entries, source: :recipe, class_name: 'MealPlanning::Recipe'
 
     # Shopping Lists
-    has_many :shopping_lists, dependent: :destroy
+    has_many :shopping_lists, class_name: 'Shopping::ShoppingList', dependent: :destroy
+    has_many :shopping_list_items, through: :shopping_lists, class_name: 'Shopping::ShoppingListItem'
+    has_many :ingredients, through: :shopping_list_items, class_name: 'MealPlanning::Ingredient'
+    has_many :preferred_stores, through: :shopping_list_items, source: :preferred_store, class_name: 'Shopping::Store'
 
     # Enums
     enum :cooking_time_preference, { quick: 'quick', moderate: 'moderate', leisurely: 'leisurely' }, prefix: true
