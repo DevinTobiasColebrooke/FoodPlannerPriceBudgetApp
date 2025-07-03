@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class ArsenicService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, Nutrition::Nutrient.find_by(name: 'Arsenic'))
+          super(user_input_dto, dri_lookup, 'ARSENIC')
         end
 
         def calculate
@@ -16,9 +16,14 @@ module NutrientCalculator
         private
 
         def generate_notes
-          notes = super
-          notes << "UL applies to inorganic arsenic only"
-          notes.join(", ")
+          base_notes = super
+          additional_notes = "UL applies to inorganic arsenic only"
+
+          if base_notes.empty?
+            additional_notes
+          else
+            "#{base_notes}, #{additional_notes}"
+          end
         end
       end
     end

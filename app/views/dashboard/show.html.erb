@@ -266,7 +266,7 @@
                                     <div>
                                         <p class="text-xs text-fp-neutral-text-light">Saturated Fat Limit</p>
                                         <p class="text-sm font-semibold">
-                                            <%= @nutrient_calculation&.dig(:macronutrients, :fat, :saturated_fat, :limit_percent_eer) || '--' %>% of EER
+                                            < <%= @nutrient_calculation&.dig(:macronutrients, :fat, :saturated_fat, :limit_grams) || '--' %> g
                                         </p>
                                     </div>
                                 </div>

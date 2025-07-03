@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class BoronService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, Nutrition::Nutrient.find_by(name: 'Boron'))
+          super(user_input_dto, dri_lookup, 'BORON')
         end
 
         def calculate
@@ -16,9 +16,14 @@ module NutrientCalculator
         private
 
         def generate_notes
-          notes = super
-          notes << "UL applies to supplemental forms only"
-          notes.join(", ")
+          base_notes = super
+          additional_notes = "UL applies to supplemental forms only"
+
+          if base_notes.empty?
+            additional_notes
+          else
+            "#{base_notes}, #{additional_notes}"
+          end
         end
       end
     end

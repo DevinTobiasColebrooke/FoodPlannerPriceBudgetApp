@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class CalciumService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, Nutrition::Nutrient.find_by(name: 'Calcium'))
+          super(user_input_dto, dri_lookup, 'CA')
         end
 
         def calculate

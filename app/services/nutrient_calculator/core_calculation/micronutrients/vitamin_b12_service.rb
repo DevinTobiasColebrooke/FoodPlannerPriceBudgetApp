@@ -10,7 +10,7 @@ module NutrientCalculator
           base_calculation = super
           return nil unless base_calculation
 
-          if @user_input.vegetarian
+          if @user_input.is_vegetarian_or_vegan?
             base_calculation[:notes] = "Consider supplementation for vegetarian diets"
           end
 

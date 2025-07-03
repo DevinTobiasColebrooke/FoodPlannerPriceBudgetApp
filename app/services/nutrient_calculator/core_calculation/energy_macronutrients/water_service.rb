@@ -8,8 +8,8 @@ module NutrientCalculator
           age = @user_input.age_years
           sex = @user_input.sex
           weight_kg = @user_input.weight_kg
-          activity_level = @user_input.activity_level
-          climate = @user_input.climate || :temperate
+          activity_level = @user_input.physical_activity_level
+          climate = @user_input.respond_to?(:climate) ? (@user_input.climate || :temperate) : :temperate
           pregnancy_status = @user_input.pregnancy_status
           lactation_status = @user_input.lactation_status
 
@@ -71,14 +71,12 @@ module NutrientCalculator
           case activity_level
           when :sedentary
             1.0
-          when :lightly_active
+          when :low_active
             1.1
-          when :moderately_active
+          when :active
             1.2
           when :very_active
             1.3
-          when :extra_active
-            1.4
           else
             1.0
           end

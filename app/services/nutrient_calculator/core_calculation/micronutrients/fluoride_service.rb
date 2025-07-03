@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class FluorideService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, 'F')
+          super(user_input_dto, dri_lookup, 'FL')
         end
 
         def calculate

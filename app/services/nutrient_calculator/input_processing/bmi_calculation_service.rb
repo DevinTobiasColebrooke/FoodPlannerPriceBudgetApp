@@ -9,6 +9,10 @@ module NutrientCalculator
         calculate_with_weight(@user_input.weight_kg)
       end
 
+      def calculate_pre_pregnancy_bmi
+        calculate_with_weight(@user_input.pre_pregnancy_weight_kg)
+      end
+
       def calculate_with_weight(weight_kg)
         return nil unless @user_input.height_cm && weight_kg && @user_input.height_cm > 0
 

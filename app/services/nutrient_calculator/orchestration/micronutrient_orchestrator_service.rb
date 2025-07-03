@@ -25,6 +25,7 @@ module NutrientCalculator
         phosphorus: CoreCalculation::Micronutrients::PhosphorusService,
         potassium: CoreCalculation::Micronutrients::PotassiumService,
         sodium: CoreCalculation::Micronutrients::SodiumService,
+        chloride: CoreCalculation::Micronutrients::ChlorideService,
 
         # Trace Minerals
         zinc: CoreCalculation::Micronutrients::ZincService,
@@ -35,10 +36,9 @@ module NutrientCalculator
         molybdenum: CoreCalculation::Micronutrients::MolybdenumService,
         iodine: CoreCalculation::Micronutrients::IodineService,
         fluoride: CoreCalculation::Micronutrients::FluorideService,
-        chloride: CoreCalculation::Micronutrients::ChlorideService,
 
-        # Other Micronutrients
-        carotenoids: CoreCalculation::Micronutrients::CarotenoidsService,
+        # Other Micronutrients / Trace Elements with ULs
+        # carotenoids: CoreCalculation::Micronutrients::CarotenoidsService, # Disabled as no 'CAROT' nutrient exists
         vanadium: CoreCalculation::Micronutrients::VanadiumService,
         silicon: CoreCalculation::Micronutrients::SiliconService,
         nickel: CoreCalculation::Micronutrients::NickelService,

@@ -9,13 +9,13 @@ module NutrientCalculator
           total_fat_g_max = total_fat_result.dig(:amdr, :grams, :max_grams)
           return nil unless total_fat_g_max
 
-          sat_fat_g_limit = saturated_fat_result[:max_grams]
-          trans_fat_g_limit = trans_fat_result[:max_grams] # Effectively 0
+          sat_fat_g_limit = saturated_fat_result[:limit_grams] || 0
+          trans_fat_g_limit = trans_fat_result[:max_grams] || 0 # Effectively 0
           pufa_g_ai = (polyunsaturated_fat_result.dig(:linoleic_acid, :grams) || 0) + (polyunsaturated_fat_result.dig(:ala, :grams) || 0)
 
           # Calculate MUFA as the residual of the AMDR range for total fat
           mufa_max = total_fat_g_max - sat_fat_g_limit - trans_fat_g_limit - pufa_g_ai
-          mufa_min = total_fat_g_min - sat_fat_g_limit - trans_fat_g_limit - pufa_g_ai
+          mufa_min = (total_fat_g_min || 0) - sat_fat_g_limit - trans_fat_g_limit - pufa_g_ai
 
           {
             mufa_calculated_range_g_min: [0, mufa_min.round].max,

@@ -13,12 +13,19 @@ module NutrientCalculator
         energy_result = calculate_energy
         macronutrients_result = calculate_macronutrients(energy_result)
 
-        {
+        result = {
           bmi: calculate_bmi,
           energy: energy_result,
           macronutrients: macronutrients_result,
           micronutrients: calculate_micronutrients
         }
+
+        # LOGGING: See the fully orchestrated result before returning
+        Rails.logger.debug "########### NUTRIENT ORCHESTRATOR SERVICE ###########"
+        Rails.logger.debug "Final Orchestrated Result: #{result.inspect}"
+        Rails.logger.debug "#####################################################"
+
+        result
       end
 
       private
@@ -53,11 +60,13 @@ module NutrientCalculator
         {
           protein: protein_service.calculate,
           carbohydrates: carb_service.calculate,
-          total_fat: total_fat,
-          saturated_fat: sat_fat,
-          trans_fat: trans_fat,
-          polyunsaturated_fat: pufa,
-          monounsaturated_fat: mufa_service.calculate(total_fat, sat_fat, trans_fat, pufa),
+          fat: {
+            total_fat: total_fat,
+            saturated_fat: sat_fat,
+            trans_fat: trans_fat,
+            polyunsaturated_fat: pufa,
+            monounsaturated_fat: mufa_service.calculate(total_fat, sat_fat, trans_fat, pufa)
+          },
           added_sugars: added_sugars_service.calculate,
           fiber: fiber_service.calculate,
           amino_acids: amino_acids_service.calculate,

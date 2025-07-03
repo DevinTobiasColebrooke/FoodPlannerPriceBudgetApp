@@ -4,14 +4,22 @@ module NutrientCalculator
       class EnergyRequirementService
         def initialize(user_input_dto)
           @user_input = user_input_dto
-          @pal_service = PhysicalActivityCoefficientService.new(user_input_dto)
-          @dri_lookup = DriLookupService.new(user_input_dto)
-          @bmi_service = BmiCalculationService.new(user_input_dto)
-          @weight_status_service = WeightStatusCategorizationService.new(user_input_dto)
+          @pal_service = NutrientCalculator::InputProcessing::PhysicalActivityCoefficientService.new(user_input_dto)
+          @dri_lookup = NutrientCalculator::Utility::DriLookupService.new(user_input_dto)
         end
 
         def calculate
-          base_eer = calculate_base_eer
+          # LOGGING: Check inputs and profile lookup
+          Rails.logger.debug "########### ENERGY REQUIREMENT SERVICE ###########"
+          Rails.logger.debug "User Input DTO: #{@user_input.inspect}"
+
+          # Fetch the profile once and use it for all subsequent calculations
+          profile = @dri_lookup.get_eer_profile
+          Rails.logger.debug "EER Profile found: #{profile.inspect}"
+          return nil unless profile
+
+          base_eer = calculate_base_eer(profile)
+          Rails.logger.debug "Calculated Base EER: #{base_eer.inspect}"
           return nil unless base_eer
 
           components = {
@@ -22,106 +30,83 @@ module NutrientCalculator
           }
 
           eer = components.values.compact.sum
+          sepv = profile.standard_error_of_predicted_value_kcal
 
-          {
+          result = {
             nutrient: "Energy",
-            eer_kcal: eer.round,
-            sepv_kcal: calculate_sepv(eer),
+            eer_kcal_day: eer.round,
+            sepv_kcal: sepv,
             components: components,
-            prediction_interval_kcal_day: calculate_prediction_interval(eer),
+            prediction_interval_kcal_day: calculate_prediction_interval(eer, sepv),
             notes: generate_notes(components)
           }
+
+          Rails.logger.debug "Final Energy Result: #{result.inspect}"
+          Rails.logger.debug "##############################################"
+          result
         end
 
         private
 
-        def calculate_base_eer
-          profile = @dri_lookup.get_eer_formula_coefficients
-          return nil unless profile
+        def calculate_base_eer(profile)
+          # Handle the two main types of EER profiles found in the data
+          if profile.equation_basis == 'EER_direct'
+            # For DGA reference tables, the intercept is the final EER value.
+            return profile.coefficient_intercept
+          end
 
-          pal = @pal_service.calculate
-          return nil unless pal
+          # For IOM formula-based profiles, apply the full equation.
+          # Start with the base intercept of the equation
+          eer = profile.coefficient_intercept || 0
 
-          profile.coefficient_intercept +
-            (profile.coefficient_age_years * (@user_input.age_in_months / 12.0)) +
-            (profile.coefficient_height_cm * @user_input.height_cm) +
-            (profile.coefficient_weight_kg * @user_input.weight_kg) +
-            (profile.coefficient_pal_value * pal)
+          # Add components based on which coefficients are present in the profile.
+          eer += (profile.coefficient_age_years || 0) * @user_input.age_years if profile.coefficient_age_years.present?
+          eer += (profile.coefficient_age_months || 0) * @user_input.age_in_months if profile.coefficient_age_months.present?
+          eer += (profile.coefficient_height_cm || 0) * @user_input.height_cm if profile.coefficient_height_cm.present?
+          eer += (profile.coefficient_weight_kg || 0) * @user_input.weight_kg if profile.coefficient_weight_kg.present?
+
+          if profile.coefficient_pal_value.present?
+            pal_coefficient = @pal_service.calculate
+            return nil unless pal_coefficient
+            eer += profile.coefficient_pal_value * pal_coefficient
+          end
+
+          if profile.coefficient_gestation_weeks.present? && @user_input.is_pregnant?
+            gestational_weeks = @user_input.gestational_weeks || 0
+            eer += profile.coefficient_gestation_weeks * gestational_weeks
+          end
+
+          eer
         end
 
         def calculate_growth_adjustment
-          return nil unless is_child_or_adolescent?
-
-          # Get Energy Cost of Growth (ECG) from Tables 5-11 & 5-12
-          growth_data = @dri_lookup.get_energy_cost_of_growth(
-            age_in_months: @user_input.age_in_months,
-            sex: @user_input.sex
-          )
-          return nil unless growth_data
-
-          growth_data.value_kcal_day
+          return nil unless @user_input.age_in_months < 228 # < 19 years
+          @dri_lookup.get_additive_component('growth')&.value_kcal_day
         end
 
         def calculate_pregnancy_adjustment
           return nil unless @user_input.is_pregnant?
-          return 0 if @user_input.pregnancy_trimester == 1 # First trimester uses non-pregnant TEE
-
-          pre_pregnancy_bmi = @bmi_service.calculate_pre_pregnancy_bmi
-          weight_status = @weight_status_service.get_category(pre_pregnancy_bmi)
-
-          case weight_status
-          when 'underweight'
-            300 # +300 kcal/d
-          when 'normal_weight'
-            200 # +200 kcal/d
-          when 'overweight'
-            150 # +150 kcal/d
-          when 'obese'
-            -50 # -50 kcal/d (mobilization)
-          else
-            0
-          end
+          @dri_lookup.get_additive_component('pregnancy')&.value_kcal_day || 0
         end
 
         def calculate_lactation_adjustment
           return nil unless @user_input.is_lactating?
-
-          if @user_input.lactation_period <= 6 && @user_input.is_exclusive_breastfeeding
-            400 # TEE + 400 kcal/d for 0-6 months exclusive
-          elsif @user_input.lactation_period <= 12
-            380 # TEE + 380 kcal/d for 7-12 months partial
-          else
-            0
-          end
+          @dri_lookup.get_additive_component('lactation')&.value_kcal_day || 0
         end
 
-        def calculate_sepv(eer)
-          profile = @dri_lookup.get_eer_formula_coefficients
-          return nil unless profile&.standard_error_of_prediction
-
-          profile.standard_error_of_prediction
-        end
-
-        def calculate_prediction_interval(eer)
-          sepv = calculate_sepv(eer)
-          return nil unless sepv
-
+        def calculate_prediction_interval(eer, sepv)
+          return nil unless eer && sepv
           lower = (eer - (1.96 * sepv)).round
           upper = (eer + (1.96 * sepv)).round
-
           "#{lower}-#{upper} kcal"
         end
 
         def generate_notes(components)
           notes = []
-          notes << "Growth adjustment applied" if components[:growth_adjustment]
-          notes << "Pregnancy adjustment applied" if components[:pregnancy_adjustment]
-          notes << "Lactation adjustment applied" if components[:lactation_adjustment]
+          notes << "Growth adjustment applied" if components[:growth_adjustment].to_i > 0
+          notes << "Pregnancy adjustment applied" if components[:pregnancy_adjustment].to_i > 0
+          notes << "Lactation adjustment applied" if components[:lactation_adjustment].to_i > 0
           notes.join(", ")
-        end
-
-        def is_child_or_adolescent?
-          @user_input.age_in_months < 216 # 18 years * 12 months
         end
       end
     end

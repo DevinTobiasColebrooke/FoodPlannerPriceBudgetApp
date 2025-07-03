@@ -10,10 +10,16 @@ module Nutrition
 
     validates :name, presence: true, uniqueness: true
     validates :min_age_months, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-    validates :max_age_months, presence: true, numericality: { only_integer: true, greater_than: :min_age_months }
+
+    # FIX: Removed `presence: true` and added `allow_nil: true` to the numericality validation.
+    # This allows open-ended age ranges (e.g., 71+ years) where max_age_months is nil.
+    validates :max_age_months, numericality: { only_integer: true, greater_than: :min_age_months, allow_nil: true }
+
     validates :sex, presence: true
 
-    scope :for_age, ->(age_months) { where('min_age_months <= ? AND max_age_months >= ?', age_months, age_months) }
+    # FIX: Updated scope to correctly query for open-ended age ranges by checking for IS NULL.
+    scope :for_age, ->(age_months) { where("min_age_months <= ? AND (max_age_months IS NULL OR max_age_months >= ?)", age_months, age_months) }
+
     scope :for_sex, ->(sex) { where(sex: sex) }
     scope :for_pregnancy, ->(trimester) { where(special_condition: 'pregnancy', trimester: trimester) }
     scope :for_lactation, ->(period) { where(special_condition: 'lactation', lactation_period: period) }

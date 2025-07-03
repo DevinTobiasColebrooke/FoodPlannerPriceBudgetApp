@@ -2,22 +2,13 @@ module NutrientCalculator
   module CoreCalculation
     module Micronutrients
       class PantothenicAcidService < BaseMicronutrientService
+        def initialize(user_input_dto, dri_lookup)
+          super(user_input_dto, dri_lookup, 'PANTAC')
+        end
+
         def calculate
-          return nil unless @dri_lookup
-
-          age = @user_input.age_years
-          sex = @user_input.sex
-          pregnancy_status = @user_input.pregnancy_status
-          lactation_status = @user_input.lactation_status
-
-          # Get AI from DRI lookup
-          dri = @dri_lookup.get_pantothenic_acid(age, sex, pregnancy_status, lactation_status)
-          return nil unless dri
-
-          {
-            milligrams: dri[:ai],
-            recommendation: "Adequate Intake (AI) for pantothenic acid"
-          }
+          # The base service will correctly find the AI values, as no RDA is defined.
+          super
         end
       end
     end

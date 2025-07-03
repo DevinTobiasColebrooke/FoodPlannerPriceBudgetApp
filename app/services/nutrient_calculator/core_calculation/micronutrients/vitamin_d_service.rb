@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class VitaminDService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, 'VITD')
+          super(user_input_dto, dri_lookup, 'VITD_MCG')
         end
 
         def calculate

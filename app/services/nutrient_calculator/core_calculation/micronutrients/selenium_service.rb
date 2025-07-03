@@ -3,7 +3,7 @@ module NutrientCalculator
     module Micronutrients
       class SeleniumService < BaseMicronutrientService
         def initialize(user_input_dto, dri_lookup)
-          super(user_input_dto, dri_lookup, Nutrition::Nutrient.find_by(name: 'Selenium'))
+          super(user_input_dto, dri_lookup, 'SE')
         end
 
         def calculate

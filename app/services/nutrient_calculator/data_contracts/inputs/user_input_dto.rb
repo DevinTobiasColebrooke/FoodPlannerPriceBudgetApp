@@ -31,6 +31,30 @@ module NutrientCalculator
           # Assume pre_pregnancy_weight_kg is passed if relevant, otherwise default to current weight
           @pre_pregnancy_weight_kg = attributes[:pre_pregnancy_weight_kg] || @weight_kg
         end
+
+        def is_smoker?
+          @is_smoker
+        end
+
+        def is_pregnant?
+          @is_pregnant
+        end
+
+        def is_lactating?
+          @is_lactating
+        end
+
+        def pregnancy_status
+          @is_pregnant ? @pregnancy_trimester : nil
+        end
+
+        def lactation_status
+          @is_lactating ? @lactation_period : nil
+        end
+
+        def is_vegetarian_or_vegan?
+          @is_vegetarian_or_vegan
+        end
       end
     end
   end

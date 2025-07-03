@@ -9,10 +9,11 @@ module NutrientCalculator
       def calculate
         return nil unless @life_stage_group && @user_input.physical_activity_level
 
-        pal = Nutrition::PalDefinition.find_by(
-          life_stage_group: @life_stage_group,
-          pal_category: @user_input.physical_activity_level.to_s
-        )
+        # Make the search for pal_category case-insensitive to avoid issues with 'sedentary' vs 'Sedentary'.
+        pal = Nutrition::PalDefinition
+                .where(life_stage_group: @life_stage_group)
+                .where('lower(pal_category) = ?', @user_input.physical_activity_level.to_s.downcase)
+                .first
 
         pal&.coefficient_for_eer_equation
       end

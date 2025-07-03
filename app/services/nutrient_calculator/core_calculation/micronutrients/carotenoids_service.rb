@@ -39,9 +39,14 @@ module NutrientCalculator
         end
 
         def generate_notes
-          notes = super
-          notes << "Non-provitamin A carotenoids"
-          notes.join(", ")
+          base_notes = super
+          additional_notes = "Non-provitamin A carotenoids"
+
+          if base_notes.empty?
+            additional_notes
+          else
+            "#{base_notes}, #{additional_notes}"
+          end
         end
       end
     end
