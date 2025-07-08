@@ -1,0 +1,115 @@
+<!-- Energy Section -->
+<div class="mb-6">
+    <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Energy Requirements</h3>
+    <div class="bg-fp-neutral-lightest p-4 rounded-fp">
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <p class="text-sm text-fp-neutral-text-light">Estimated Energy Requirement (EER)</p>
+                <p class="text-lg font-semibold text-fp-primary-green">
+                    <%= nutrient_calculation&.dig(:energy, :eer_kcal_day) || '--' %> kcal/day
+                </p>
+            </div>
+            <div>
+                <p class="text-sm text-fp-neutral-text-light">Prediction Interval</p>
+                <p class="text-lg font-semibold text-fp-neutral-darkest">
+                    <%= nutrient_calculation&.dig(:energy, :prediction_interval_kcal_day) || '--' %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Macronutrients Section -->
+<div class="mb-6">
+    <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Macronutrients</h3>
+    <div class="bg-fp-neutral-lightest p-4 rounded-fp space-y-4">
+        <!-- Protein -->
+        <div>
+            <h4 class="text-sm font-medium text-fp-accent-blue mb-1">Protein</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">RDA per kg</p>
+                    <p class="text-sm font-semibold"><%= nutrient_calculation&.dig(:macronutrients, :protein, :rda_g_per_kg) || '--' %> g/kg</p>
+                </div>
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">Total RDA</p>
+                    <p class="text-sm font-semibold"><%= nutrient_calculation&.dig(:macronutrients, :protein, :rda_g_total) || '--' %> g</p>
+                </div>
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">AMDR Range</p>
+                    <p class="text-sm font-semibold">
+                        <%= nutrient_calculation&.dig(:macronutrients, :protein, :amdr, :grams, :min_grams) || '--' %> -
+                        <%= nutrient_calculation&.dig(:macronutrients, :protein, :amdr, :grams, :max_grams) || '--' %> g
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carbohydrates -->
+        <div>
+            <h4 class="text-sm font-medium text-fp-accent-yellow mb-1">Carbohydrates</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">RDA</p>
+                    <p class="text-sm font-semibold"><%= nutrient_calculation&.dig(:macronutrients, :carbohydrates, :rda_g) || '--' %> g</p>
+                </div>
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">AMDR Range</p>
+                    <p class="text-sm font-semibold">
+                        <%= nutrient_calculation&.dig(:macronutrients, :carbohydrates, :amdr_g_min) || '--' %> -
+                        <%= nutrient_calculation&.dig(:macronutrients, :carbohydrates, :amdr_g_max) || '--' %> g
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fat -->
+        <div>
+            <h4 class="text-sm font-medium text-fp-primary-green mb-1">Fat</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">Total Fat AMDR</p>
+                    <p class="text-sm font-semibold">
+                        <%= nutrient_calculation&.dig(:macronutrients, :fat, :total_fat, :amdr, :grams, :min_grams) || '--' %> -
+                        <%= nutrient_calculation&.dig(:macronutrients, :fat, :total_fat, :amdr, :grams, :max_grams) || '--' %> g
+                    </p>
+                </div>
+                <div>
+                    <p class="text-xs text-fp-neutral-text-light">Saturated Fat Limit</p>
+                    <p class="text-sm font-semibold">
+                        < <%= nutrient_calculation&.dig(:macronutrients, :fat, :saturated_fat, :limit_grams) || '--' %> g
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Micronutrients Section -->
+<div class="mb-6">
+    <h3 class="text-lg font-semibold text-fp-neutral-darkest mb-2">Micronutrients</h3>
+    <div class="bg-fp-neutral-lightest p-4 rounded-fp">
+        <div class="grid grid-cols-2 gap-4">
+            <% if nutrient_calculation&.dig(:micronutrients) %>
+                <% nutrient_calculation[:micronutrients].each do |nutrient, values| %>
+                    <% next if ['silicon', 'arsenic', 'nickel', 'boron', 'vanadium'].include?(nutrient.to_s.downcase) %>
+                    <div class="mb-3">
+                        <h4 class="text-sm font-medium text-fp-neutral-darkest mb-1"><%= nutrient.to_s.titleize %></h4>
+                        <div class="space-y-1">
+                            <% if values[:rda] %>
+                                <p class="text-xs text-fp-neutral-text-light">RDA</p>
+                                <p class="text-sm font-semibold"><%= values[:rda][:value] %> <%= values[:rda][:unit] %></p>
+                            <% end %>
+                            <% if values[:ai] %>
+                                <p class="text-xs text-fp-neutral-text-light">AI</p>
+                                <p class="text-sm font-semibold"><%= values[:ai][:value] %> <%= values[:ai][:unit] %></p>
+                            <% end %>
+                        </div>
+                    </div>
+                <% end %>
+            <% else %>
+                <p class="text-sm text-fp-neutral-text-light">No micronutrient data available</p>
+            <% end %>
+        </div>
+    </div>
+</div>
