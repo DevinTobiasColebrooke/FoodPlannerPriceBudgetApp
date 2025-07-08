@@ -281,6 +281,7 @@
                             <div class="grid grid-cols-2 gap-4">
                                 <% if @nutrient_calculation&.dig(:micronutrients) %>
                                     <% @nutrient_calculation[:micronutrients].each do |nutrient, values| %>
+                                        <% next if ['silicon', 'arsenic', 'nickel', 'boron', 'vanadium'].include?(nutrient.to_s.downcase) %>
                                         <div class="mb-3">
                                             <h4 class="text-sm font-medium text-fp-neutral-darkest mb-1"><%= nutrient.to_s.titleize %></h4>
                                             <div class="space-y-1">
@@ -291,10 +292,6 @@
                                                 <% if values[:ai] %>
                                                     <p class="text-xs text-fp-neutral-text-light">AI</p>
                                                     <p class="text-sm font-semibold"><%= values[:ai][:value] %> <%= values[:ai][:unit] %></p>
-                                                <% end %>
-                                                <% if values[:ul] %>
-                                                    <p class="text-xs text-fp-neutral-text-light">UL</p>
-                                                    <p class="text-sm font-semibold"><%= values[:ul][:value] %> <%= values[:ul][:unit] %></p>
                                                 <% end %>
                                             </div>
                                         </div>
